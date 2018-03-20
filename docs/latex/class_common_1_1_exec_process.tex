@@ -1,0 +1,139 @@
+\hypertarget{class_common_1_1_exec_process}{\section{Common\-:\-:Exec\-Process Class Reference}
+\label{class_common_1_1_exec_process}\index{Common\-::\-Exec\-Process@{Common\-::\-Exec\-Process}}
+}
+
+
+Executes a program as a child of the current process.  
+
+
+
+
+{\ttfamily \#include $<$Process.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Exec\-Process\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_exec_process}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Status} \{ \\*
+{\bfseries st\-Out\-Ready}, 
+{\bfseries st\-Out\-Eof}, 
+{\bfseries st\-Err\-Ready}, 
+{\bfseries st\-Err\-Eof}, 
+\\*
+{\bfseries st\-Timeout}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_exec_process_a3893a568fd996514f18877b5cbf05065}{Exec\-Process} (std\-::string const \&program\-Path, char $\ast$const argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_exec_process_aa8771f96b42438bbcce9474fe2ad1e8f}{Start} ()
+\begin{DoxyCompactList}\small\item\em Executes the program. \end{DoxyCompactList}\item 
+Status \hyperlink{class_common_1_1_exec_process_a2b4ac9c756fcf3b3e9c8ddc4d6a9d5a6}{Wait\-For\-Event} (char $\ast$buffer, int buf\-Size, int \&bytes\-Read, \hyperlink{class_common_1_1_time_value}{Time\-Value} $\ast$timeout=0)
+\begin{DoxyCompactList}\small\item\em Waits until an event is placed on any of the outputs of the process or the time limit is reached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_exec_process_a2f79359e3f1c40dfc080186ddeb28379}{\hyperlink{class_common_1_1_exec_process_a2f79359e3f1c40dfc080186ddeb28379}{Exec\-Process} ()}\label{class_common_1_1_exec_process_a2f79359e3f1c40dfc080186ddeb28379}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_exec_process_abf41d59985934b3d78cf2e244a6fc5db}{int \hyperlink{class_common_1_1_exec_process_abf41d59985934b3d78cf2e244a6fc5db}{Run} ()}\label{class_common_1_1_exec_process_abf41d59985934b3d78cf2e244a6fc5db}
+
+\begin{DoxyCompactList}\small\item\em Executes de process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Executes a program as a child of the current process. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2001 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_exec_process_a3893a568fd996514f18877b5cbf05065}{\index{Common\-::\-Exec\-Process@{Common\-::\-Exec\-Process}!Exec\-Process@{Exec\-Process}}
+\index{Exec\-Process@{Exec\-Process}!Common::ExecProcess@{Common\-::\-Exec\-Process}}
+\subsubsection[{Exec\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Exec\-Process\-::\-Exec\-Process (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{program\-Path, }
+\item[{char $\ast$const}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_exec_process_a3893a568fd996514f18877b5cbf05065}
+
+
+Constructor. 
+
+Example usage\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} * argv [] = \{ \textcolor{stringliteral}{"/usr/bin/vi"}, \textcolor{stringliteral}{"param1"}, \textcolor{stringliteral}{"param2"}, 0 \};
+\hyperlink{class_common_1_1_exec_process_a2f79359e3f1c40dfc080186ddeb28379}{ExecProcess} p (\textcolor{stringliteral}{"/usr/bin/vi"}, argv);
+\end{DoxyCode}
+ Notes\-:
+\begin{DoxyItemize}
+\item first element of argv must be program path
+\item last element of argv table must be 0
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em program\-Path} & Path of the program to execute. \\
+\hline
+{\em argv} & Arguments to pass to the execution of the program. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_exec_process_aa8771f96b42438bbcce9474fe2ad1e8f}{\index{Common\-::\-Exec\-Process@{Common\-::\-Exec\-Process}!Start@{Start}}
+\index{Start@{Start}!Common::ExecProcess@{Common\-::\-Exec\-Process}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Exec\-Process\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_common_1_1_exec_process_aa8771f96b42438bbcce9474fe2ad1e8f}
+
+
+Executes the program. 
+
+The standard outputs and inputs of the program will be redirected to internal pipes, to be handled on the \hyperlink{class_common_1_1_exec_process_a2b4ac9c756fcf3b3e9c8ddc4d6a9d5a6}{Wait\-For\-Event()} method. 
+
+Reimplemented from \hyperlink{class_common_1_1_process_ae92f973fc379f7020f29d08288685c33}{Common\-::\-Process}.
+
+\hypertarget{class_common_1_1_exec_process_a2b4ac9c756fcf3b3e9c8ddc4d6a9d5a6}{\index{Common\-::\-Exec\-Process@{Common\-::\-Exec\-Process}!Wait\-For\-Event@{Wait\-For\-Event}}
+\index{Wait\-For\-Event@{Wait\-For\-Event}!Common::ExecProcess@{Common\-::\-Exec\-Process}}
+\subsubsection[{Wait\-For\-Event}]{\setlength{\rightskip}{0pt plus 5cm}Exec\-Process\-::\-Status Exec\-Process\-::\-Wait\-For\-Event (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buf\-Size, }
+\item[{int \&}]{bytes\-Read, }
+\item[{{\bf Time\-Value} $\ast$}]{timeout = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_exec_process_a2b4ac9c756fcf3b3e9c8ddc4d6a9d5a6}
+
+
+Waits until an event is placed on any of the outputs of the process or the time limit is reached. 
+
+If any event was sent by the process, it is placed on the buffer.
+
+\begin{DoxyReturn}{Returns}
+Information about how the function ended and what was placed on the buffer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Process.\-h\item 
+Common/Process.\-cpp\end{DoxyCompactItemize}

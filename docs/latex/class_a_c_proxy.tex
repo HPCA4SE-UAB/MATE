@@ -1,0 +1,386 @@
+\hypertarget{class_a_c_proxy}{\section{A\-C\-Proxy Class Reference}
+\label{class_a_c_proxy}\index{A\-C\-Proxy@{A\-C\-Proxy}}
+}
+
+
+Creates a connection with A\-C and acts as an interface with it. This class has a socket object to represent the connection and a P\-T\-P\-Protocol object for making requests in a common language.  
+
+
+
+
+{\ttfamily \#include $<$A\-C\-Proxy.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_c_proxy_a395f873fbecc46af138ab7a40652495d}{A\-C\-Proxy} (std\-::string const \&host, int const port)
+\begin{DoxyCompactList}\small\item\em Constructor, creates a connection with the given host\-:port. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_ab02ac264f88bf1211cd9e4545b68464c}{Start\-Application} (char const $\ast$app\-Path, int argc, char const $\ast$$\ast$argv, char const $\ast$analyzer\-Host)
+\begin{DoxyCompactList}\small\item\em Starts the execution of the application in the A\-C host. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a42bc3e502d4323977709754c151a84dc}{Add\-Instr} (int tid, int event\-Id, std\-::string const \&f\-Name, Instr\-Place place, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs)
+\begin{DoxyCompactList}\small\item\em Requests for adding an instruction in the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a7108a2970c45fdb383e6e489c4ecf1de}{Add\-Instr} (int tid, int event\-Id, std\-::string const \&f\-Name, Instr\-Place place, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, int n\-Papi, std\-::string $\ast$Papi\-Metrics)
+\begin{DoxyCompactList}\small\item\em Requests for adding an instruction in the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a6ce9980791670743c670cc216080530e}{Remove\-Instr} (int tid, int event\-Id, Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Requests for removing an instruction from the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a8e0711448c89cdacf4b7dc89ac4f6e0b}{Load\-Library} (int tid, std\-::string const \&lib\-Path)
+\begin{DoxyCompactList}\small\item\em Requests for loading a library in the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_ac08ee2268ac7826fe4be1d75bad18749}{Set\-Variable\-Value} (int tid, std\-::string const \&var\-Name, \hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} const \&var\-Value, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for changing the value of a variable in the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a0165a205df42a8b4e26caa17fe314299}{Replace\-Function} (int tid, std\-::string const \&old\-Func, std\-::string const \&new\-Func, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for changing all the instances of a function from the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a3f00d83a2bfb56762dc635657647aacb}{Insert\-Function\-Call} (int tid, std\-::string const \&func\-Name, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, std\-::string const \&dest\-Func, Instr\-Place dest\-Place, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for the insertion of a function call in a point of the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_ad5270b7ea8af6ee1bc0765d17f99629c}{One\-Time\-Func\-Call} (int tid, std\-::string const \&func\-Name, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for the call of a function in this point of the target application execution. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a340ad6583b95f1bfb6bd2e81902d8a44}{Remove\-Func\-Call} (int tid, std\-::string const \&func\-Name, std\-::string const \&caller\-Func, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for removing all the calls to a function in the target application. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_proxy_a7cc2108467fa50d0272cfaaaafb287f0}{Func\-Param\-Change} (int tid, std\-::string const \&func\-Name, int param\-Idx, int new\-Value, int $\ast$required\-Old\-Value, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Requests for the changing of the value of a certain parameter in one function of the target application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates a connection with A\-C and acts as an interface with it. This class has a socket object to represent the connection and a P\-T\-P\-Protocol object for making requests in a common language. 
+
+Its methods encapsulate the requests in the adequate kind of request object and use the protocol to serialize and write them in the socket.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_c_proxy_a395f873fbecc46af138ab7a40652495d}{\index{A\-C\-Proxy@{A\-C\-Proxy}!A\-C\-Proxy@{A\-C\-Proxy}}
+\index{A\-C\-Proxy@{A\-C\-Proxy}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{A\-C\-Proxy}]{\setlength{\rightskip}{0pt plus 5cm}A\-C\-Proxy\-::\-A\-C\-Proxy (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{host, }
+\item[{int const}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_a_c_proxy_a395f873fbecc46af138ab7a40652495d}
+
+
+Constructor, creates a connection with the given host\-:port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & host were the target A\-C is running \\
+\hline
+{\em port} & port for the A\-C process in the host \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_c_proxy_a42bc3e502d4323977709754c151a84dc}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Add\-Instr@{Add\-Instr}}
+\index{Add\-Instr@{Add\-Instr}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Add\-Instr}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Add\-Instr (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{int}]{event\-Id, }
+\item[{std\-::string const \&}]{f\-Name, }
+\item[{Instr\-Place}]{place, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a42bc3e502d4323977709754c151a84dc}
+
+
+Requests for adding an instruction in the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which we will add the instruction \\
+\hline
+{\em event\-Id} & identifier of the event \\
+\hline
+{\em f\-Name} & name of the function in which we will add the instruction \\
+\hline
+{\em place} & place in the function where we will add the instruction values are\-: instr\-Unknown, ip\-Func\-Entry \& ip\-Func\-Exit \\
+\hline
+{\em n\-Attrs} & number of Attributes \\
+\hline
+{\em attrs} & Attributes array \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a7108a2970c45fdb383e6e489c4ecf1de}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Add\-Instr@{Add\-Instr}}
+\index{Add\-Instr@{Add\-Instr}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Add\-Instr}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Add\-Instr (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{int}]{event\-Id, }
+\item[{std\-::string const \&}]{f\-Name, }
+\item[{Instr\-Place}]{place, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{int}]{n\-Papi, }
+\item[{std\-::string $\ast$}]{Papi\-Metrics}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a7108a2970c45fdb383e6e489c4ecf1de}
+
+
+Requests for adding an instruction in the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which we will add the instruction \\
+\hline
+{\em event\-Id} & identifier of the event \\
+\hline
+{\em f\-Name} & name of the function in which we will add the instruction \\
+\hline
+{\em place} & place in the function where we will add the instruction values are\-: instr\-Unknown, ip\-Func\-Entry \& ip\-Func\-Exit \\
+\hline
+{\em n\-Attrs} & number of Attributes \\
+\hline
+{\em attrs} & Attributes array \\
+\hline
+{\em n\-Papi} & number of Papi Metrics \\
+\hline
+{\em Papi\-Metrics} & array of Papi Metrics \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a7cc2108467fa50d0272cfaaaafb287f0}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Func\-Param\-Change@{Func\-Param\-Change}}
+\index{Func\-Param\-Change@{Func\-Param\-Change}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Func\-Param\-Change}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Func\-Param\-Change (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{int}]{param\-Idx, }
+\item[{int}]{new\-Value, }
+\item[{int $\ast$}]{required\-Old\-Value, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a7cc2108467fa50d0272cfaaaafb287f0}
+
+
+Requests for the changing of the value of a certain parameter in one function of the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the function is placed \\
+\hline
+{\em func\-Name} & name of the function \\
+\hline
+{\em param\-Idx} & position of the parameter in the parameter list \\
+\hline
+{\em new\-Value} & new value for the argument \\
+\hline
+{\em required\-Old\-Value} & old value required to change for the new one \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a3f00d83a2bfb56762dc635657647aacb}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Insert\-Function\-Call@{Insert\-Function\-Call}}
+\index{Insert\-Function\-Call@{Insert\-Function\-Call}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Insert\-Function\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Insert\-Function\-Call (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{std\-::string const \&}]{dest\-Func, }
+\item[{Instr\-Place}]{dest\-Place, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a3f00d83a2bfb56762dc635657647aacb}
+
+
+Requests for the insertion of a function call in a point of the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the call will be placed \\
+\hline
+{\em func\-Name} & name of the function \\
+\hline
+{\em n\-Attrs} & number of attributes \\
+\hline
+{\em attrs} & attributes vector \\
+\hline
+{\em dest\-Func} & name of the destination function \\
+\hline
+{\em dest\-Place} & point where the call will be placed \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a8e0711448c89cdacf4b7dc89ac4f6e0b}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Load\-Library@{Load\-Library}}
+\index{Load\-Library@{Load\-Library}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Load\-Library}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Load\-Library (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{lib\-Path}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a8e0711448c89cdacf4b7dc89ac4f6e0b}
+
+
+Requests for loading a library in the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which we will load the library  library path \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_ad5270b7ea8af6ee1bc0765d17f99629c}{\index{A\-C\-Proxy@{A\-C\-Proxy}!One\-Time\-Func\-Call@{One\-Time\-Func\-Call}}
+\index{One\-Time\-Func\-Call@{One\-Time\-Func\-Call}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{One\-Time\-Func\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-One\-Time\-Func\-Call (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_ad5270b7ea8af6ee1bc0765d17f99629c}
+
+
+Requests for the call of a function in this point of the target application execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the call will be placed \\
+\hline
+{\em func\-Name} & name of the function \\
+\hline
+{\em n\-Attrs} & number of attributes \\
+\hline
+{\em attrs} & attributes vector \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a340ad6583b95f1bfb6bd2e81902d8a44}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Remove\-Func\-Call@{Remove\-Func\-Call}}
+\index{Remove\-Func\-Call@{Remove\-Func\-Call}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Remove\-Func\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Remove\-Func\-Call (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{std\-::string const \&}]{caller\-Func, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a340ad6583b95f1bfb6bd2e81902d8a44}
+
+
+Requests for removing all the calls to a function in the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the call will be removed \\
+\hline
+{\em func\-Name} & name of the function to be removed \\
+\hline
+{\em caller\-Func} & function which makes the call \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a6ce9980791670743c670cc216080530e}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Remove\-Instr@{Remove\-Instr}}
+\index{Remove\-Instr@{Remove\-Instr}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Remove\-Instr}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Remove\-Instr (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a6ce9980791670743c670cc216080530e}
+
+
+Requests for removing an instruction from the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which we will remove the instruction \\
+\hline
+{\em envent\-Id} & identifier of the associated event \\
+\hline
+{\em place} & place in the function where the instruction will be removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_a0165a205df42a8b4e26caa17fe314299}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Replace\-Function@{Replace\-Function}}
+\index{Replace\-Function@{Replace\-Function}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Replace\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Replace\-Function (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{old\-Func, }
+\item[{std\-::string const \&}]{new\-Func, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_a0165a205df42a8b4e26caa17fe314299}
+
+
+Requests for changing all the instances of a function from the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the function is placed \\
+\hline
+{\em old\-Func} & name of the function to be changed \\
+\hline
+{\em new\-Func} & name of the new function \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_ac08ee2268ac7826fe4be1d75bad18749}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Set\-Variable\-Value@{Set\-Variable\-Value}}
+\index{Set\-Variable\-Value@{Set\-Variable\-Value}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Set\-Variable\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Set\-Variable\-Value (
+\begin{DoxyParamCaption}
+\item[{int}]{tid, }
+\item[{std\-::string const \&}]{var\-Name, }
+\item[{{\bf Attribute\-Value} const \&}]{var\-Value, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_ac08ee2268ac7826fe4be1d75bad18749}
+
+
+Requests for changing the value of a variable in the target application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & identifier of the thread in which the variable is placed \\
+\hline
+{\em var\-Name} & name of the variable to change \\
+\hline
+{\em var\-Value} & new value for the variable \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_proxy_ab02ac264f88bf1211cd9e4545b68464c}{\index{A\-C\-Proxy@{A\-C\-Proxy}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ACProxy@{A\-C\-Proxy}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-Proxy\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{app\-Path, }
+\item[{int}]{argc, }
+\item[{char const $\ast$$\ast$}]{argv, }
+\item[{char const $\ast$}]{analyzer\-Host}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_proxy_ab02ac264f88bf1211cd9e4545b68464c}
+
+
+Starts the execution of the application in the A\-C host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app\-Path} & path to the application executable \\
+\hline
+{\em argc} & number of arguments to the application main \\
+\hline
+{\em argv} & argument vector to the application main \\
+\hline
+{\em analyzer\-Host} & node where the analyzer is executed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/A\-C\-Proxy.\-h\item 
+Analyzer/A\-C\-Proxy.\-cpp\end{DoxyCompactItemize}

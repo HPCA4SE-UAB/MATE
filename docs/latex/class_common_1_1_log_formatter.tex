@@ -1,0 +1,52 @@
+\hypertarget{class_common_1_1_log_formatter}{\section{Common\-:\-:Log\-Formatter Class Reference}
+\label{class_common_1_1_log_formatter}\index{Common\-::\-Log\-Formatter@{Common\-::\-Log\-Formatter}}
+}
+
+
+Abstract class, Gives logs the correct format.  
+
+
+
+
+{\ttfamily \#include $<$Syslog.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Log\-Formatter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_log_formatter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_log_formatter_a881b7156070a525a8c48fd24e2843ccd}{virtual \hyperlink{class_common_1_1_log_formatter_a881b7156070a525a8c48fd24e2843ccd}{$\sim$\-Log\-Formatter} ()}\label{class_common_1_1_log_formatter_a881b7156070a525a8c48fd24e2843ccd}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_log_formatter_a41ac9630f001955dd3496a4f74f8a50b}{virtual std\-::string \hyperlink{class_common_1_1_log_formatter_a41ac9630f001955dd3496a4f74f8a50b}{Get\-Log\-Header} () const =0}\label{class_common_1_1_log_formatter_a41ac9630f001955dd3496a4f74f8a50b}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the log header. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_log_formatter_abb4ac3da1d04937ec42925a2da41a749}{virtual std\-::string \hyperlink{class_common_1_1_log_formatter_abb4ac3da1d04937ec42925a2da41a749}{Get\-Log\-Footer} () const =0}\label{class_common_1_1_log_formatter_abb4ac3da1d04937ec42925a2da41a749}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the log footer. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_log_formatter_a4e4298a6c1f65b3cf40c757ca705b57d}{virtual std\-::string \hyperlink{class_common_1_1_log_formatter_a4e4298a6c1f65b3cf40c757ca705b57d}{Format} (\hyperlink{class_common_1_1_log_entry}{Log\-Entry} const \&entry) const =0}\label{class_common_1_1_log_formatter_a4e4298a6c1f65b3cf40c757ca705b57d}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the \hyperlink{class_common_1_1_log_entry}{Log\-Entry} object formatted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class, Gives logs the correct format. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/Syslog.\-h\end{DoxyCompactItemize}

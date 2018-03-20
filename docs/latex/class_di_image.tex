@@ -1,0 +1,65 @@
+\hypertarget{class_di_image}{\section{Di\-Image Class Reference}
+\label{class_di_image}\index{Di\-Image@{Di\-Image}}
+}
+
+
+Reads the program's image and gets an associated image object (the executable associated with a thread). It can also find a variable in the image and return it.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_di_image_afd1a854b23db70ddf7f25c82e60102a2}{{\bfseries Di\-Image} (B\-Patch\-\_\-process \&bp\-Process)}\label{class_di_image_afd1a854b23db70ddf7f25c82e60102a2}
+
+\item 
+B\-Patch\-\_\-variable\-Expr $\ast$ \hyperlink{class_di_image_a1442d33b97ad72a1ddd6aa4a7e9db916}{Find\-Variable} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Finds the variable from \-\_\-bp\-Image via name and returns it. \end{DoxyCompactList}\item 
+\hypertarget{class_di_image_a2dd2df8fbb5a872bb79132d57df858ef}{{\bfseries operator B\-Patch\-\_\-image \&} ()}\label{class_di_image_a2dd2df8fbb5a872bb79132d57df858ef}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reads the program's image and gets an associated image object (the executable associated with a thread). It can also find a variable in the image and return it. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_di_image_a1442d33b97ad72a1ddd6aa4a7e9db916}{\index{Di\-Image@{Di\-Image}!Find\-Variable@{Find\-Variable}}
+\index{Find\-Variable@{Find\-Variable}!DiImage@{Di\-Image}}
+\subsubsection[{Find\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-\_\-variable\-Expr $\ast$ Di\-Image\-::\-Find\-Variable (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_di_image_a1442d33b97ad72a1ddd6aa4a7e9db916}
+
+
+Finds the variable from \-\_\-bp\-Image via name and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Global variable matching $<$name$>$ in the image. N\-U\-L\-L if not found. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\item 
+Common/di.\-cpp\end{DoxyCompactItemize}

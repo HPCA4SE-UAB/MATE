@@ -1,0 +1,150 @@
+\hypertarget{class_factoring_tunlet}{\section{Factoring\-Tunlet Class Reference}
+\label{class_factoring_tunlet}\index{Factoring\-Tunlet@{Factoring\-Tunlet}}
+}
+
+
+Factoring optimization tunlet for m/w apps.  
+
+
+
+
+{\ttfamily \#include $<$Factoring\-Tunlet\-\_\-nw.\-h$>$}
+
+Inheritance diagram for Factoring\-Tunlet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_factoring_tunlet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_factoring_tunlet_a5aab3bb67f4bd4eeec882d42f96a308c}{\hyperlink{class_factoring_tunlet_a5aab3bb67f4bd4eeec882d42f96a308c}{Factoring\-Tunlet} ()}\label{class_factoring_tunlet_a5aab3bb67f4bd4eeec882d42f96a308c}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_factoring_tunlet_a0b71dcf56237028c84570a91b86ef818}{\hyperlink{class_factoring_tunlet_a0b71dcf56237028c84570a91b86ef818}{$\sim$\-Factoring\-Tunlet} ()}\label{class_factoring_tunlet_a0b71dcf56237028c84570a91b86ef818}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}{Initialize} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)
+\item 
+\hypertarget{class_factoring_tunlet_a72678a4eaea3f9559a542cf0ffa29e03}{void \hyperlink{class_factoring_tunlet_a72678a4eaea3f9559a542cf0ffa29e03}{Before\-App\-Start} ()}\label{class_factoring_tunlet_a72678a4eaea3f9559a542cf0ffa29e03}
+
+\begin{DoxyCompactList}\small\item\em Asserts that \-\_\-app != 0 and sets the task handler of the app to the current one. \end{DoxyCompactList}\item 
+\hypertarget{class_factoring_tunlet_a3604567541e57a0dfd59d44cac44ecd2}{void \hyperlink{class_factoring_tunlet_a3604567541e57a0dfd59d44cac44ecd2}{Destroy} ()}\label{class_factoring_tunlet_a3604567541e57a0dfd59d44cac44ecd2}
+
+\begin{DoxyCompactList}\small\item\em Sets \-\_\-app = 0. \end{DoxyCompactList}\item 
+void \hyperlink{class_factoring_tunlet_aeb954297fd00f2801c807ef3ae2384f1}{Handle\-Event} (\hyperlink{class_model_1_1_event_record}{Model\-::\-Event\-Record} const \&r)
+\begin{DoxyCompactList}\small\item\em Handles all incoming events. \end{DoxyCompactList}\item 
+void \hyperlink{class_factoring_tunlet_ae99ec15c1e80a9fbfaf5f6e23bf8e7ef}{Task\-Started} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Increments the number of workers by 1 and inserts an event to the worker. \end{DoxyCompactList}\item 
+void \hyperlink{class_factoring_tunlet_a08e03f7b58081ee5477af2fd47a5844a}{Task\-Terminated} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Decrements the number of workers by 1. \end{DoxyCompactList}\item 
+\hypertarget{class_factoring_tunlet_a03bee1e1e468cb8cd2a4aacd7d5fd7de}{void \hyperlink{class_factoring_tunlet_a03bee1e1e468cb8cd2a4aacd7d5fd7de}{Create\-Event} ()}\label{class_factoring_tunlet_a03bee1e1e468cb8cd2a4aacd7d5fd7de}
+
+\begin{DoxyCompactList}\small\item\em Creates events by using the configuration specified in the file tunlet.\-ini. \end{DoxyCompactList}\item 
+void \hyperlink{class_factoring_tunlet_ad91b45da36e3a108d74bb43fd98c7683}{Create\-Event} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Creates events by using the configuration specified in the file tunlet.\-ini and a given task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factoring optimization tunlet for m/w apps. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_factoring_tunlet_ad91b45da36e3a108d74bb43fd98c7683}{\index{Factoring\-Tunlet@{Factoring\-Tunlet}!Create\-Event@{Create\-Event}}
+\index{Create\-Event@{Create\-Event}!FactoringTunlet@{Factoring\-Tunlet}}
+\subsubsection[{Create\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Factoring\-Tunlet\-::\-Create\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_factoring_tunlet_ad91b45da36e3a108d74bb43fd98c7683}
+
+
+Creates events by using the configuration specified in the file tunlet.\-ini and a given task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_factoring_tunlet_aeb954297fd00f2801c807ef3ae2384f1}{\index{Factoring\-Tunlet@{Factoring\-Tunlet}!Handle\-Event@{Handle\-Event}}
+\index{Handle\-Event@{Handle\-Event}!FactoringTunlet@{Factoring\-Tunlet}}
+\subsubsection[{Handle\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Factoring\-Tunlet\-::\-Handle\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Event\-Record} const \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_factoring_tunlet_aeb954297fd00f2801c807ef3ae2384f1}
+
+
+Handles all incoming events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Event\-Record where its I\-D can be found \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_event_handler_a0a84c727f41c358350a2f3522ffba03b}{Model\-::\-Event\-Handler}.
+
+\hypertarget{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}{\index{Factoring\-Tunlet@{Factoring\-Tunlet}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!FactoringTunlet@{Factoring\-Tunlet}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Factoring\-Tunlet\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Application} \&}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}
+
+\begin{DoxyParams}{Parameters}
+{\em app} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Tunlet}.
+
+\hypertarget{class_factoring_tunlet_ae99ec15c1e80a9fbfaf5f6e23bf8e7ef}{\index{Factoring\-Tunlet@{Factoring\-Tunlet}!Task\-Started@{Task\-Started}}
+\index{Task\-Started@{Task\-Started}!FactoringTunlet@{Factoring\-Tunlet}}
+\subsubsection[{Task\-Started}]{\setlength{\rightskip}{0pt plus 5cm}void Factoring\-Tunlet\-::\-Task\-Started (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_factoring_tunlet_ae99ec15c1e80a9fbfaf5f6e23bf8e7ef}
+
+
+Increments the number of workers by 1 and inserts an event to the worker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}{Model\-::\-Task\-Handler}.
+
+\hypertarget{class_factoring_tunlet_a08e03f7b58081ee5477af2fd47a5844a}{\index{Factoring\-Tunlet@{Factoring\-Tunlet}!Task\-Terminated@{Task\-Terminated}}
+\index{Task\-Terminated@{Task\-Terminated}!FactoringTunlet@{Factoring\-Tunlet}}
+\subsubsection[{Task\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}void Factoring\-Tunlet\-::\-Task\-Terminated (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_factoring_tunlet_a08e03f7b58081ee5477af2fd47a5844a}
+
+
+Decrements the number of workers by 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}{Model\-::\-Task\-Handler}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Factoring\-Tunlet\-\_\-nw.\-h\item 
+Analyzer/Factoring\-Tunlet\-\_\-nw.\-cpp\end{DoxyCompactItemize}

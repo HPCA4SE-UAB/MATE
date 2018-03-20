@@ -1,0 +1,66 @@
+\hypertarget{class_d_t_library_factory}{\section{D\-T\-Library\-Factory Class Reference}
+\label{class_d_t_library_factory}\index{D\-T\-Library\-Factory@{D\-T\-Library\-Factory}}
+}
+
+
+Handles the creation and destruction of D\-T Libraries.  
+
+
+
+
+{\ttfamily \#include $<$D\-T\-A\-P\-I.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_d_t_library}{D\-T\-Library} $\ast$ \hyperlink{class_d_t_library_factory_ab52622245da4d6c4adce2a63da510036}{Create\-Library} (\hyperlink{class_common_1_1_config}{Config} const \&cfg)
+\begin{DoxyCompactList}\small\item\em Creates and initializes the D\-T Library. Implements the singleton design pattern, so if the library is already created it returns a reference to it. \end{DoxyCompactList}\item 
+static void \hyperlink{class_d_t_library_factory_a4bb94d59eeb3fc6584e9b7c6324b7960}{Destroy\-Library} (\hyperlink{class_d_t_library}{D\-T\-Library} $\ast$lib)
+\begin{DoxyCompactList}\small\item\em Destroys the library if there is only one last reference to the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the creation and destruction of D\-T Libraries. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_t_library_factory_ab52622245da4d6c4adce2a63da510036}{\index{D\-T\-Library\-Factory@{D\-T\-Library\-Factory}!Create\-Library@{Create\-Library}}
+\index{Create\-Library@{Create\-Library}!DTLibraryFactory@{D\-T\-Library\-Factory}}
+\subsubsection[{Create\-Library}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-T\-Library} $\ast$ D\-T\-Library\-Factory\-::\-Create\-Library (
+\begin{DoxyParamCaption}
+\item[{{\bf Config} const \&}]{cfg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_d_t_library_factory_ab52622245da4d6c4adce2a63da510036}
+
+
+Creates and initializes the D\-T Library. Implements the singleton design pattern, so if the library is already created it returns a reference to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfg} & Reference to the configuration object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the library. 
+\end{DoxyReturn}
+\hypertarget{class_d_t_library_factory_a4bb94d59eeb3fc6584e9b7c6324b7960}{\index{D\-T\-Library\-Factory@{D\-T\-Library\-Factory}!Destroy\-Library@{Destroy\-Library}}
+\index{Destroy\-Library@{Destroy\-Library}!DTLibraryFactory@{D\-T\-Library\-Factory}}
+\subsubsection[{Destroy\-Library}]{\setlength{\rightskip}{0pt plus 5cm}void D\-T\-Library\-Factory\-::\-Destroy\-Library (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-T\-Library} $\ast$}]{lib}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_d_t_library_factory_a4bb94d59eeb3fc6584e9b7c6324b7960}
+
+
+Destroys the library if there is only one last reference to the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & Reference to the library. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/D\-T\-A\-P\-I.\-h\item 
+Analyzer/D\-T\-A\-P\-I.\-cpp\end{DoxyCompactItemize}

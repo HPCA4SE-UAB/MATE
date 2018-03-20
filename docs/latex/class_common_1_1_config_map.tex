@@ -1,0 +1,134 @@
+\hypertarget{class_common_1_1_config_map}{\section{Common\-:\-:Config\-Map Class Reference}
+\label{class_common_1_1_config_map}\index{Common\-::\-Config\-Map@{Common\-::\-Config\-Map}}
+}
+
+
+Contains and manages a collection of \hyperlink{class_common_1_1_config}{Config} objects.  
+
+
+
+
+{\ttfamily \#include $<$Config\-Map.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_common_1_1_config_map_1_1_iterator}{Iterator}
+\begin{DoxyCompactList}\small\item\em Iterates over a \hyperlink{class_common_1_1_config_map}{Config\-Map} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_config_map_ab77330842979d80d4e36ea9783b085e0}{\hyperlink{class_common_1_1_config_map_ab77330842979d80d4e36ea9783b085e0}{Config\-Map} ()}\label{class_common_1_1_config_map_ab77330842979d80d4e36ea9783b085e0}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_config_map_a4a68d6cba9ca84fa4702cdbd45faf487}{Add} (std\-::string const \&section, std\-::string const \&key, std\-::string const \&value)
+\begin{DoxyCompactList}\small\item\em Adds a new value to the map. \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{class_common_1_1_config_map_a6fb312a35a095f2f9b1c1d171f8446d1}{Get\-Value} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Returns a requested value on the map. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_config_map_a8bffcbff829a85af63db5189e37d0b66}{Contains} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Looks for the entry specified by the parameters of the function. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_config_map_a1dbd03a3079d3b79d5c4107e963980e2}{int \hyperlink{class_common_1_1_config_map_a1dbd03a3079d3b79d5c4107e963980e2}{Get\-Size} () const }\label{class_common_1_1_config_map_a1dbd03a3079d3b79d5c4107e963980e2}
+
+\begin{DoxyCompactList}\small\item\em Returns size of the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_config_map_a9830fc407400559db7e7783cc10a9394}{class {\bfseries Iterator}}\label{class_common_1_1_config_map_a9830fc407400559db7e7783cc10a9394}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains and manages a collection of \hyperlink{class_common_1_1_config}{Config} objects. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2000 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_config_map_a4a68d6cba9ca84fa4702cdbd45faf487}{\index{Common\-::\-Config\-Map@{Common\-::\-Config\-Map}!Add@{Add}}
+\index{Add@{Add}!Common::ConfigMap@{Common\-::\-Config\-Map}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}bool Config\-Map\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key, }
+\item[{std\-::string const \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_config_map_a4a68d6cba9ca84fa4702cdbd45faf487}
+
+
+Adds a new value to the map. 
+
+If the entry already exists on the map returns false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section of the new entry. \\
+\hline
+{\em key} & Key of the new entry. \\
+\hline
+{\em value} & Value of the new entry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the insertion was successful, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_map_a8bffcbff829a85af63db5189e37d0b66}{\index{Common\-::\-Config\-Map@{Common\-::\-Config\-Map}!Contains@{Contains}}
+\index{Contains@{Contains}!Common::ConfigMap@{Common\-::\-Config\-Map}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Config\-Map\-::\-Contains (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_config_map_a8bffcbff829a85af63db5189e37d0b66}
+
+
+Looks for the entry specified by the parameters of the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the entry. \\
+\hline
+{\em key} & Key to find the entry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the entry was found, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_map_a6fb312a35a095f2f9b1c1d171f8446d1}{\index{Common\-::\-Config\-Map@{Common\-::\-Config\-Map}!Get\-Value@{Get\-Value}}
+\index{Get\-Value@{Get\-Value}!Common::ConfigMap@{Common\-::\-Config\-Map}}
+\subsubsection[{Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}string const \& Config\-Map\-::\-Get\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_config_map_a6fb312a35a095f2f9b1c1d171f8446d1}
+
+
+Returns a requested value on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_config_exception}{Config\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Config\-Map.\-h\item 
+Common/Config\-Map.\-cpp\end{DoxyCompactItemize}

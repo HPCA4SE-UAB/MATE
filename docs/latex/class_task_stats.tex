@@ -1,0 +1,173 @@
+\hypertarget{class_task_stats}{\section{Task\-Stats Class Reference}
+\label{class_task_stats}\index{Task\-Stats@{Task\-Stats}}
+}
+
+
+Class that deals with the statistics of a certain task e.\-g. the communication costs, optimal fragment size or the total number of changes.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_task_stats_a4c00d60236fe3dd0a2c1da0f1aa8e8b8}{Task\-Stats} (int tid)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_stats_a758649d8f3437261d21597d2eae4e96c}{Change\-Frag\-Size} (int size)
+\begin{DoxyCompactList}\small\item\em Changes the fragment size to the one provided by the parameter and increments \-\_\-n\-Changes by 1. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_stats_a2929cead9403326c179e0e5632eb0a6f}{Update} (int count, int size)
+\begin{DoxyCompactList}\small\item\em Updates the number of messages by {\itshape count} and the sum size by {\itshape size} \end{DoxyCompactList}\item 
+double \hyperlink{class_task_stats_a9b7159820ffada0da0d8c73a4ec16888}{Get\-Comm\-Cost} () const 
+\begin{DoxyCompactList}\small\item\em Returns the communication costs by multiplying the number of messages and the sum size by two factors and then adding their results together. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_stats_a6a1b62f5be5c194e22e1a335c0c25561}{Get\-Optimal\-Frag\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Finds the optimal fragment size based on the current number of messages and the sum size. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_stats_aee5c9c8e4ab4e3c24ddea02b377caf19}{Get\-Current\-Frag\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the current fragment size. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_stats_abdf3b4975fbacb2eaef5dbc940b20337}{Get\-Num\-Changes} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the current number of changes. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_stats_a72f87cf49957a8c896479f0bce70316a}{Get\-Tid} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the Tid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that deals with the statistics of a certain task e.\-g. the communication costs, optimal fragment size or the total number of changes. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_task_stats_a4c00d60236fe3dd0a2c1da0f1aa8e8b8}{\index{Task\-Stats@{Task\-Stats}!Task\-Stats@{Task\-Stats}}
+\index{Task\-Stats@{Task\-Stats}!TaskStats@{Task\-Stats}}
+\subsubsection[{Task\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}Task\-Stats\-::\-Task\-Stats (
+\begin{DoxyParamCaption}
+\item[{int}]{tid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a4c00d60236fe3dd0a2c1da0f1aa8e8b8}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tid} & Id to assign to the task \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_task_stats_a758649d8f3437261d21597d2eae4e96c}{\index{Task\-Stats@{Task\-Stats}!Change\-Frag\-Size@{Change\-Frag\-Size}}
+\index{Change\-Frag\-Size@{Change\-Frag\-Size}!TaskStats@{Task\-Stats}}
+\subsubsection[{Change\-Frag\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Stats\-::\-Change\-Frag\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a758649d8f3437261d21597d2eae4e96c}
+
+
+Changes the fragment size to the one provided by the parameter and increments \-\_\-n\-Changes by 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Value of the new frag size \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_stats_a9b7159820ffada0da0d8c73a4ec16888}{\index{Task\-Stats@{Task\-Stats}!Get\-Comm\-Cost@{Get\-Comm\-Cost}}
+\index{Get\-Comm\-Cost@{Get\-Comm\-Cost}!TaskStats@{Task\-Stats}}
+\subsubsection[{Get\-Comm\-Cost}]{\setlength{\rightskip}{0pt plus 5cm}double Task\-Stats\-::\-Get\-Comm\-Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a9b7159820ffada0da0d8c73a4ec16888}
+
+
+Returns the communication costs by multiplying the number of messages and the sum size by two factors and then adding their results together. 
+
+\begin{DoxyReturn}{Returns}
+Communication costs in {\itshape ms} 
+\end{DoxyReturn}
+\hypertarget{class_task_stats_aee5c9c8e4ab4e3c24ddea02b377caf19}{\index{Task\-Stats@{Task\-Stats}!Get\-Current\-Frag\-Size@{Get\-Current\-Frag\-Size}}
+\index{Get\-Current\-Frag\-Size@{Get\-Current\-Frag\-Size}!TaskStats@{Task\-Stats}}
+\subsubsection[{Get\-Current\-Frag\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Stats\-::\-Get\-Current\-Frag\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_aee5c9c8e4ab4e3c24ddea02b377caf19}
+
+
+Getter of the current fragment size. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-frag\-Size 
+\end{DoxyReturn}
+\hypertarget{class_task_stats_abdf3b4975fbacb2eaef5dbc940b20337}{\index{Task\-Stats@{Task\-Stats}!Get\-Num\-Changes@{Get\-Num\-Changes}}
+\index{Get\-Num\-Changes@{Get\-Num\-Changes}!TaskStats@{Task\-Stats}}
+\subsubsection[{Get\-Num\-Changes}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Stats\-::\-Get\-Num\-Changes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_abdf3b4975fbacb2eaef5dbc940b20337}
+
+
+Getter of the current number of changes. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-n\-Changes 
+\end{DoxyReturn}
+\hypertarget{class_task_stats_a6a1b62f5be5c194e22e1a335c0c25561}{\index{Task\-Stats@{Task\-Stats}!Get\-Optimal\-Frag\-Size@{Get\-Optimal\-Frag\-Size}}
+\index{Get\-Optimal\-Frag\-Size@{Get\-Optimal\-Frag\-Size}!TaskStats@{Task\-Stats}}
+\subsubsection[{Get\-Optimal\-Frag\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Stats\-::\-Get\-Optimal\-Frag\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a6a1b62f5be5c194e22e1a335c0c25561}
+
+
+Finds the optimal fragment size based on the current number of messages and the sum size. 
+
+\begin{DoxyReturn}{Returns}
+Optimal fragment size 
+\end{DoxyReturn}
+\hypertarget{class_task_stats_a72f87cf49957a8c896479f0bce70316a}{\index{Task\-Stats@{Task\-Stats}!Get\-Tid@{Get\-Tid}}
+\index{Get\-Tid@{Get\-Tid}!TaskStats@{Task\-Stats}}
+\subsubsection[{Get\-Tid}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Stats\-::\-Get\-Tid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a72f87cf49957a8c896479f0bce70316a}
+
+
+Getter of the Tid. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-tid 
+\end{DoxyReturn}
+\hypertarget{class_task_stats_a2929cead9403326c179e0e5632eb0a6f}{\index{Task\-Stats@{Task\-Stats}!Update@{Update}}
+\index{Update@{Update}!TaskStats@{Task\-Stats}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Stats\-::\-Update (
+\begin{DoxyParamCaption}
+\item[{int}]{count, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_stats_a2929cead9403326c179e0e5632eb0a6f}
+
+
+Updates the number of messages by {\itshape count} and the sum size by {\itshape size} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Increments the number of messages by its value \\
+\hline
+{\em size} & Increments the sum size by its value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Analysis.\-cpp\end{DoxyCompactItemize}

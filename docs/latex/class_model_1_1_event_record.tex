@@ -1,0 +1,182 @@
+\hypertarget{class_model_1_1_event_record}{\section{Model\-:\-:Event\-Record Class Reference}
+\label{class_model_1_1_event_record}\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}}
+}
+
+
+Particular instance of the event abstraction. Holds information about the kind of event, the task that produced, the message sent and the values it contained. On the one hand it provides methods to get/set the information above, on the other hand, it provides methods to parse messages and get the information that they contain.  
+
+
+
+
+{\ttfamily \#include $<$App\-Event.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_model_1_1_event_record_ab1145e8722fedee49238ff1a6405be42}{Get\-Event\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Id getter. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_event}{Event} const \& \hyperlink{class_model_1_1_event_record_a3d66d97ef8974c34bd185ccf673f20cc}{Get\-Event} () const 
+\begin{DoxyCompactList}\small\item\em Associated event getter. \end{DoxyCompactList}\item 
+long\-\_\-t \hyperlink{class_model_1_1_event_record_a7417afb1ef1f92ef77041cb6f1d91b02}{Get\-Timestamp} () const 
+\begin{DoxyCompactList}\small\item\em Time stamp getter. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_task}{Task} \& \hyperlink{class_model_1_1_event_record_a2b47dc5a78e03c3b2208f4621529dd5a}{Get\-Task} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_1_1_task}{Task} getter. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} $\ast$ \hyperlink{class_model_1_1_event_record_a98f4c816d126df0b8b0e844a22265ebf}{Get\-Attribute\-Values} () const 
+\begin{DoxyCompactList}\small\item\em Values getter. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} const \& \hyperlink{class_model_1_1_event_record_a383b3d1ef44052fabab08df8bb634c31}{Get\-Attribute\-Value} (int index) const 
+\begin{DoxyCompactList}\small\item\em Gets the i-\/th attribute from the list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_event_record_aeec12aa3a0cf5340e24a6e831ad9b938}{Event\-Record} (\hyperlink{class_model_1_1_event}{Event} const \&e, \hyperlink{class_model_1_1_task}{Task} \&t, \hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \&msg)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_event_record_a52f2fc868d5900f7d3750c99c1363afc}{Parse\-Attrs} (\hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \&msg)
+\begin{DoxyCompactList}\small\item\em Reads from the message and sets the value of the attributes depending on their type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_model_1_1_event_record_aaa7728226b6ce66782e8816b1658dd9a}{class {\bfseries Task}}\label{class_model_1_1_event_record_aaa7728226b6ce66782e8816b1658dd9a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Particular instance of the event abstraction. Holds information about the kind of event, the task that produced, the message sent and the values it contained. On the one hand it provides methods to get/set the information above, on the other hand, it provides methods to parse messages and get the information that they contain. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_event_record_aeec12aa3a0cf5340e24a6e831ad9b938}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Event\-Record@{Event\-Record}}
+\index{Event\-Record@{Event\-Record}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Event\-Record}]{\setlength{\rightskip}{0pt plus 5cm}Event\-Record\-::\-Event\-Record (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} const \&}]{e, }
+\item[{{\bf Task} \&}]{t, }
+\item[{{\bf Event\-Msg} const \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_1_1_event_record_aeec12aa3a0cf5340e24a6e831ad9b938}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{class_model_1_1_event}{Event} object this record is associated to \\
+\hline
+{\em t} & \hyperlink{class_model_1_1_task}{Task} object which produces the event \\
+\hline
+{\em msg} & Message produced by the event \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_event_record_a383b3d1ef44052fabab08df8bb634c31}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Attribute\-Value@{Get\-Attribute\-Value}}
+\index{Get\-Attribute\-Value@{Get\-Attribute\-Value}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Attribute\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Attribute\-Value} const\& Model\-::\-Event\-Record\-::\-Get\-Attribute\-Value (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_a383b3d1ef44052fabab08df8bb634c31}
+
+
+Gets the i-\/th attribute from the list of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of the attribute from which we want the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The recorded value for the i-\/th attribute 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_a98f4c816d126df0b8b0e844a22265ebf}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Attribute\-Values@{Get\-Attribute\-Values}}
+\index{Get\-Attribute\-Values@{Get\-Attribute\-Values}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Attribute\-Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Attribute\-Value}$\ast$ Model\-::\-Event\-Record\-::\-Get\-Attribute\-Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_a98f4c816d126df0b8b0e844a22265ebf}
+
+
+Values getter. 
+
+\begin{DoxyReturn}{Returns}
+A collection of recorded attribute values 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_a3d66d97ef8974c34bd185ccf673f20cc}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Event@{Get\-Event}}
+\index{Get\-Event@{Get\-Event}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event} const\& Model\-::\-Event\-Record\-::\-Get\-Event (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_a3d66d97ef8974c34bd185ccf673f20cc}
+
+
+Associated event getter. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_model_1_1_event}{Event} object this record is associated to 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_ab1145e8722fedee49238ff1a6405be42}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Event\-Id@{Get\-Event\-Id}}
+\index{Get\-Event\-Id@{Get\-Event\-Id}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Event\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Event\-Record\-::\-Get\-Event\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_ab1145e8722fedee49238ff1a6405be42}
+
+
+Id getter. 
+
+\begin{DoxyReturn}{Returns}
+Globally unique event id 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_a2b47dc5a78e03c3b2208f4621529dd5a}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Task@{Get\-Task}}
+\index{Get\-Task@{Get\-Task}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Task}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task}\& Model\-::\-Event\-Record\-::\-Get\-Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_a2b47dc5a78e03c3b2208f4621529dd5a}
+
+
+\hyperlink{class_model_1_1_task}{Task} getter. 
+
+\begin{DoxyReturn}{Returns}
+The task that generated this event 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_a7417afb1ef1f92ef77041cb6f1d91b02}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Get\-Timestamp@{Get\-Timestamp}}
+\index{Get\-Timestamp@{Get\-Timestamp}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Get\-Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}long\-\_\-t Model\-::\-Event\-Record\-::\-Get\-Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_record_a7417afb1ef1f92ef77041cb6f1d91b02}
+
+
+Time stamp getter. 
+
+\begin{DoxyReturn}{Returns}
+Time stamp that indicates when the event happened 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_record_a52f2fc868d5900f7d3750c99c1363afc}{\index{Model\-::\-Event\-Record@{Model\-::\-Event\-Record}!Parse\-Attrs@{Parse\-Attrs}}
+\index{Parse\-Attrs@{Parse\-Attrs}!Model::EventRecord@{Model\-::\-Event\-Record}}
+\subsubsection[{Parse\-Attrs}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-Record\-::\-Parse\-Attrs (
+\begin{DoxyParamCaption}
+\item[{{\bf Common\-::\-Event\-Msg} const \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_1_1_event_record_a52f2fc868d5900f7d3750c99c1363afc}
+
+
+Reads from the message and sets the value of the attributes depending on their type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Reference to the msg to be read. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Event.\-h\item 
+Analyzer/App\-Event.\-cpp\end{DoxyCompactItemize}

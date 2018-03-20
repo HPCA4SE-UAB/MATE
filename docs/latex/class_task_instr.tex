@@ -1,0 +1,155 @@
+\hypertarget{class_task_instr}{\section{Task\-Instr Class Reference}
+\label{class_task_instr}\index{Task\-Instr@{Task\-Instr}}
+}
+
+
+Adds and remove instrumentation from the process in execution.  
+
+
+
+
+{\ttfamily \#include $<$Task\-Instr.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_task_instr_aecef8b4b1b380baf8a9a45c4df3d822e}{\hyperlink{class_task_instr_aecef8b4b1b380baf8a9a45c4df3d822e}{Task\-Instr} ()}\label{class_task_instr_aecef8b4b1b380baf8a9a45c4df3d822e}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_task_instr_acea41f0e1f0f649e4243c65bc708ed5b}{\hyperlink{class_task_instr_acea41f0e1f0f649e4243c65bc708ed5b}{$\sim$\-Task\-Instr} ()}\label{class_task_instr_acea41f0e1f0f649e4243c65bc708ed5b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_instr_af86afc6744a258a4d71b5b2925fb6141}{Get\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the size of the variable \-\_\-map. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_instr_a9f3d3c2ca46842757d0ee1b21a7713cb}{Add} (int event\-Id, string const \&function\-Name, Instr\-Place instr\-Place, B\-Patch\-Snippet\-Handle $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Adds a new snippet (handler) to the group in the map under the event\-Id key. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_instr_a0edd583400eae845f2e7ca082b1607da}{Remove} (int event\-Id, Instr\-Place instr\-Place)
+\begin{DoxyCompactList}\small\item\em Eliminates all the snippets to be inserted on the same event and place. \end{DoxyCompactList}\item 
+\hyperlink{class_instr_group}{Instr\-Group} $\ast$ \hyperlink{class_task_instr_a291ea95979da598ccc659eae96b84afe}{Find\-Group} (int event\-Id)
+\begin{DoxyCompactList}\small\item\em Finds an instrumentation group for a given event\-Id. \end{DoxyCompactList}\item 
+\hypertarget{class_task_instr_a5a576d37852868d097b45f473b0c4ed5}{void \hyperlink{class_task_instr_a5a576d37852868d097b45f473b0c4ed5}{Set\-Breakpoint} (B\-Patch\-Snippet\-Handle $\ast$h)}\label{class_task_instr_a5a576d37852868d097b45f473b0c4ed5}
+
+\begin{DoxyCompactList}\small\item\em Setter of the variable \-\_\-brkpt\-Handle which represents a place in the process where it should be stopped. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_task_instr_a663ce67945f6efdf6c08716e9ba038ad}{Get\-Breakpoint} ()
+\begin{DoxyCompactList}\small\item\em Getter of the variable \-\_\-brkpt\-Handle which represents a place in the process where it should be stopped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Adds and remove instrumentation from the process in execution. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_task_instr_a9f3d3c2ca46842757d0ee1b21a7713cb}{\index{Task\-Instr@{Task\-Instr}!Add@{Add}}
+\index{Add@{Add}!TaskInstr@{Task\-Instr}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Instr\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{string const \&}]{function\-Name, }
+\item[{Instr\-Place}]{instr\-Place, }
+\item[{B\-Patch\-Snippet\-Handle $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}}\label{class_task_instr_a9f3d3c2ca46842757d0ee1b21a7713cb}
+
+
+Adds a new snippet (handler) to the group in the map under the event\-Id key. 
+
+If a group doesn't exist with that key one is created and added to the map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Identifier of the event used as key to store the instrumentation groups in the map. \\
+\hline
+{\em function\-Name} & Name of the function to be modified. \\
+\hline
+{\em instr\-Place} & Place of the function where the snippet will be inserted. \\
+\hline
+{\em handler} & Handle of the snippet to be inserted. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_instr_a291ea95979da598ccc659eae96b84afe}{\index{Task\-Instr@{Task\-Instr}!Find\-Group@{Find\-Group}}
+\index{Find\-Group@{Find\-Group}!TaskInstr@{Task\-Instr}}
+\subsubsection[{Find\-Group}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instr\-Group} $\ast$ Task\-Instr\-::\-Find\-Group (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_task_instr_a291ea95979da598ccc659eae96b84afe}
+
+
+Finds an instrumentation group for a given event\-Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Key to find the instrumentation group in the map.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Intr\-Group object that contains all the snippets to be added on a given event. 
+\end{DoxyReturn}
+\hypertarget{class_task_instr_a663ce67945f6efdf6c08716e9ba038ad}{\index{Task\-Instr@{Task\-Instr}!Get\-Breakpoint@{Get\-Breakpoint}}
+\index{Get\-Breakpoint@{Get\-Breakpoint}!TaskInstr@{Task\-Instr}}
+\subsubsection[{Get\-Breakpoint}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle$\ast$ Task\-Instr\-::\-Get\-Breakpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_instr_a663ce67945f6efdf6c08716e9ba038ad}
+
+
+Getter of the variable \-\_\-brkpt\-Handle which represents a place in the process where it should be stopped. 
+
+\begin{DoxyReturn}{Returns}
+Handle of the breakpoint. 
+\end{DoxyReturn}
+\hypertarget{class_task_instr_af86afc6744a258a4d71b5b2925fb6141}{\index{Task\-Instr@{Task\-Instr}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!TaskInstr@{Task\-Instr}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Instr\-::\-Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_instr_af86afc6744a258a4d71b5b2925fb6141}
+
+
+Getter of the size of the variable \-\_\-map. 
+
+\begin{DoxyReturn}{Returns}
+size of the map \-\_\-map. 
+\end{DoxyReturn}
+\hypertarget{class_task_instr_a0edd583400eae845f2e7ca082b1607da}{\index{Task\-Instr@{Task\-Instr}!Remove@{Remove}}
+\index{Remove@{Remove}!TaskInstr@{Task\-Instr}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Instr\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{instr\-Place}
+\end{DoxyParamCaption}
+)}}\label{class_task_instr_a0edd583400eae845f2e7ca082b1607da}
+
+
+Eliminates all the snippets to be inserted on the same event and place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Identifier of the event used as key to find and remove the instrumentation groups in the map. \\
+\hline
+{\em instr\-Place} & Place of the function where the snippet would have been.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Remove} & cannot find instrumentation group. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Task\-Instr.\-h\item 
+A\-C/Task\-Instr.\-cpp\end{DoxyCompactItemize}

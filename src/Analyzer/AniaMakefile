@@ -1,0 +1,83 @@
+# 
+# Analyzer Makefile
+#
+# Anna Morajko
+#
+# Imports:
+#  PVM_ARCH   = the official pvm-name of your processor
+#  ARCHCFLAGS = special cc flags
+#  ARCHLIB    = special libs needed for daemon
+#
+# Version for SunSolaris 2.6
+#
+
+SHELL		=	/bin/sh
+
+# Analyzer paths
+MATE_ROOT		= 	$(HOME)/work/MATE
+ANALYZER_ROOT	=	$(MATE_ROOT)/src/Analyzer
+ANALYZER_IDIR	=	$(MATE_ROOT)/src/Lib
+
+# PVM paths
+PVM_DIR		=	$(PVM_ROOT)
+PVM_IDIR	=	$(PVM_DIR)/include
+PVM_LDIR	=	$(PVM_DIR)/lib/$(PVM_ARCH)
+PVM_LIB		=	-lpvm3
+PVM_LIBDEP	=	$(PVM_LDIR)/libpvm3.a
+
+# DynInst paths
+DYNINST_DIR		=	$(DYNINST_ROOT)
+DYNINST_IDIR	=	$(DYNINST_DIR)/core/dyninstAPI/h
+DYNINST_LDIR	=	$(DYNINST_DIR)/lib/$(PLATFORM)
+#for Solaris only
+DYNINST_LIB	=	-ldyninstAPI -liberty -lelf
+
+#globals
+BDIR			=	$(HOME)/pvm3/bin
+INSTALL_DIR		=	$(BDIR)/$(PVM_ARCH)
+#INSTALL_DIR	= 	$(MATE_ROOT)/bin
+INCLUDES		=	-I$(PVM_IDIR) -I$(DYNINST_IDIR) -I$(ANALYZER_IDIR) 
+LDIRS			=	-L$(PVM_LDIR) -L$(DYNINST_LDIR)
+# use debug info
+CFLOPTS		= 	-g -Wno-deprecated
+CFLAGS		=	$(CFLOPTS) $(INCLUDES) $(ARCHCFLAGS) -DIMA_$(PVM_ARCH) $(ARCHCFLAGS)
+LIBS		=	$(LDIRS) $(PVM_LIB) $(DYNINST_LIB) -lsocket -lnsl -lpthread -lrt $(ARCHLIB)
+HEADERS		=	$(PVMIDIR)/pvm3.h $(PVMIDIR)/pvmproto.h
+
+CC		=	g++
+
+LIB_OBJS	=	PTPProtocol.o PTPMsg.o PTPMsgHeader.o \
+				Address.o Reactor.o Socket.o \
+				SysException.o Exception.o TimeValue.o DateTime.o \
+				Syslog.o configreader.o FuncDefs.o Utils.o sync.o thread.o activeobject.o
+							
+OBJECTS	=	AppEvent.o AppTask.o AppModel.o main.o Ctrl.o Service.o ECPHandler.o \
+			 ACProxy.o ECPProtocol.o ECPMsg.o ECPMsgHeader.o \
+			EventCollector.o DTAPI.o FactoringTunlet.o FactoringOptimizer.o FactoringStats.o
+#Analyzer.o							
+TEST_LIB_OBJS	=	ECPProtocol.o ECPMsg.o ECPEventMsg.o ECPMsgHeader.o \
+				Address.o Reactor.o Socket.o \
+				SysException.o Exception.o TimeValue.o DateTime.o \
+				Syslog.o configreader.o Utils.o				
+
+TEST_OBJECTS	=	CollectorTest.o ECPAcceptor.o Service.o EventCollHandler.o
+			
+
+# specifies where to look for source code
+VPATH	=	../Lib
+
+default:	$(INSTALL_DIR)/Analyzer
+
+test:	$(INSTALL_DIR)/CollectorTest
+
+$(INSTALL_DIR)/Analyzer: $(OBJECTS) $(LIB_OBJS) $(PVM_LIBDEP)
+	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(LIB_OBJS) $(LIBS)
+
+$(INSTALL_DIR)/CollectorTest: $(TEST_OBJECTS) $(TEST_LIB_OBJS) $(PVM_LIBDEP)
+	$(CC) $(CFLAGS) -o $@ $(TEST_OBJECTS) $(TEST_LIB_OBJS) $(LIBS)
+
+%.o:	%.cpp
+	$(CC) $(CFLAGS) -c $<
+
+clean:
+	rm -f *.o $(LIB_DIR)/*.o

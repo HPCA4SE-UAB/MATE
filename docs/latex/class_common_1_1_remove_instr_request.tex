@@ -1,0 +1,86 @@
+\hypertarget{class_common_1_1_remove_instr_request}{\section{Common\-:\-:Remove\-Instr\-Request Class Reference}
+\label{class_common_1_1_remove_instr_request}\index{Common\-::\-Remove\-Instr\-Request@{Common\-::\-Remove\-Instr\-Request}}
+}
+
+
+Represents message sent when analyzer requests to remove instrumentation.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Remove\-Instr\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_remove_instr_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_remove_instr_request_ad11aa72688176348501ac84364fb4784}{Remove\-Instr\-Request} (int pid=0, int event\-Id=0, Instr\-Place place=ip\-Func\-Entry)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_a23c844af4a248eae68aac682df45fe0e}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_remove_instr_request_a23c844af4a248eae68aac682df45fe0e}{Get\-Type} () const }\label{class_common_1_1_remove_instr_request_a23c844af4a248eae68aac682df45fe0e}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Remove\-Instr). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_a8bd7683fc30ee5f5fb531c2422e6a535}{int \hyperlink{class_common_1_1_remove_instr_request_a8bd7683fc30ee5f5fb531c2422e6a535}{Get\-Pid} () const }\label{class_common_1_1_remove_instr_request_a8bd7683fc30ee5f5fb531c2422e6a535}
+
+\begin{DoxyCompactList}\small\item\em Returns the process id. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_a53090f42338ccb963d38799b0cc4ef4b}{int \hyperlink{class_common_1_1_remove_instr_request_a53090f42338ccb963d38799b0cc4ef4b}{Get\-Event\-Id} () const }\label{class_common_1_1_remove_instr_request_a53090f42338ccb963d38799b0cc4ef4b}
+
+\begin{DoxyCompactList}\small\item\em Returns the event id. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_af6bd2c0ffb341be5427e04de01140a8c}{Instr\-Place \hyperlink{class_common_1_1_remove_instr_request_af6bd2c0ffb341be5427e04de01140a8c}{Get\-Instr\-Place} () const }\label{class_common_1_1_remove_instr_request_af6bd2c0ffb341be5427e04de01140a8c}
+
+\begin{DoxyCompactList}\small\item\em Returns the place where the instruction should be removed. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_ac8c54f924e923d990eec86f6fe3d0594}{void \hyperlink{class_common_1_1_remove_instr_request_ac8c54f924e923d990eec86f6fe3d0594}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_remove_instr_request_ac8c54f924e923d990eec86f6fe3d0594}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remove_instr_request_a0d4fd00d0e6a4579e5b180c07959d239}{void \hyperlink{class_common_1_1_remove_instr_request_a0d4fd00d0e6a4579e5b180c07959d239}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_remove_instr_request_a0d4fd00d0e6a4579e5b180c07959d239}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents message sent when analyzer requests to remove instrumentation. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_remove_instr_request_ad11aa72688176348501ac84364fb4784}{\index{Common\-::\-Remove\-Instr\-Request@{Common\-::\-Remove\-Instr\-Request}!Remove\-Instr\-Request@{Remove\-Instr\-Request}}
+\index{Remove\-Instr\-Request@{Remove\-Instr\-Request}!Common::RemoveInstrRequest@{Common\-::\-Remove\-Instr\-Request}}
+\subsubsection[{Remove\-Instr\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Remove\-Instr\-Request\-::\-Remove\-Instr\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{int}]{event\-Id = {\ttfamily 0}, }
+\item[{Instr\-Place}]{place = {\ttfamily ipFuncEntry}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_remove_instr_request_ad11aa72688176348501ac84364fb4784}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the instrumentation will be removed, default 0. \\
+\hline
+{\em event\-Id} & \hyperlink{class_common_1_1_event}{Event} id, default 0. \\
+\hline
+{\em place} & Place where the instrumentation will be removed, default ip\-Func\-Entry. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

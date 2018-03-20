@@ -1,0 +1,76 @@
+\hypertarget{class_model_1_1_task_handler}{\section{Model\-:\-:Task\-Handler Class Reference}
+\label{class_model_1_1_task_handler}\index{Model\-::\-Task\-Handler@{Model\-::\-Task\-Handler}}
+}
+
+
+Abstract class that provides methods to determine if a task is started or terminated.  
+
+
+
+
+{\ttfamily \#include $<$App\-Task.\-h$>$}
+
+Inheritance diagram for Model\-:\-:Task\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model_1_1_task_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}{Task\-Started} (\hyperlink{class_model_1_1_task}{Task} \&t)=0
+\begin{DoxyCompactList}\small\item\em Called when a new task is started. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}{Task\-Terminated} (\hyperlink{class_model_1_1_task}{Task} \&t)=0
+\begin{DoxyCompactList}\small\item\em Called when a task is terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class that provides methods to determine if a task is started or terminated. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}{\index{Model\-::\-Task\-Handler@{Model\-::\-Task\-Handler}!Task\-Started@{Task\-Started}}
+\index{Task\-Started@{Task\-Started}!Model::TaskHandler@{Model\-::\-Task\-Handler}}
+\subsubsection[{Task\-Started}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Model\-::\-Task\-Handler\-::\-Task\-Started (
+\begin{DoxyParamCaption}
+\item[{{\bf Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}
+
+
+Called when a new task is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Started task object. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_factoring_tunlet_ae99ec15c1e80a9fbfaf5f6e23bf8e7ef}{Factoring\-Tunlet}.
+
+\hypertarget{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}{\index{Model\-::\-Task\-Handler@{Model\-::\-Task\-Handler}!Task\-Terminated@{Task\-Terminated}}
+\index{Task\-Terminated@{Task\-Terminated}!Model::TaskHandler@{Model\-::\-Task\-Handler}}
+\subsubsection[{Task\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Model\-::\-Task\-Handler\-::\-Task\-Terminated (
+\begin{DoxyParamCaption}
+\item[{{\bf Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}
+
+
+Called when a task is terminated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Terminated task object. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_factoring_tunlet_a08e03f7b58081ee5477af2fd47a5844a}{Factoring\-Tunlet}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Task.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{class_model_1_1_events}{\section{Model\-:\-:Events Class Reference}
+\label{class_model_1_1_events}\index{Model\-::\-Events@{Model\-::\-Events}}
+}
+
+
+Encapsulates information to create and manage events lists. Uses a data structure based on a vector to keep data and a map to retrieve it. Provides methods to add, remove and find elements in the list.  
+
+
+
+
+{\ttfamily \#include $<$App\-Event.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_model_1_1_events_a821b31ddcebae7ffb66fc02b5e802e57}{\hyperlink{class_model_1_1_events_a821b31ddcebae7ffb66fc02b5e802e57}{Events} ()}\label{class_model_1_1_events_a821b31ddcebae7ffb66fc02b5e802e57}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_events_af86366e9d7e4cc08d2b0fcca120c0728}{Add} (\hyperlink{class_model_1_1_event}{Event} const \&e)
+\begin{DoxyCompactList}\small\item\em Maps and adds an event to the events list. \end{DoxyCompactList}\item 
+bool \hyperlink{class_model_1_1_events_a404efb2e611382efe37327198cde55ba}{Remove} (int event\-Id, Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Removes an event from the events list. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_event}{Event} $\ast$ \hyperlink{class_model_1_1_events_acd039067632868b806a6804c12804a15}{Find} (int event\-Id, Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Searches for an event in the event list. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_events_a8bd6124811e97bed5aee844c00e64244}{Size} () const 
+\begin{DoxyCompactList}\small\item\em Size getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates information to create and manage events lists. Uses a data structure based on a vector to keep data and a map to retrieve it. Provides methods to add, remove and find elements in the list. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_events_af86366e9d7e4cc08d2b0fcca120c0728}{\index{Model\-::\-Events@{Model\-::\-Events}!Add@{Add}}
+\index{Add@{Add}!Model::Events@{Model\-::\-Events}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Events\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} const \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_events_af86366e9d7e4cc08d2b0fcca120c0728}
+
+
+Maps and adds an event to the events list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The event to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_events_acd039067632868b806a6804c12804a15}{\index{Model\-::\-Events@{Model\-::\-Events}!Find@{Find}}
+\index{Find@{Find}!Model::Events@{Model\-::\-Events}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event} $\ast$ Events\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_events_acd039067632868b806a6804c12804a15}
+
+
+Searches for an event in the event list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Unique Id of the event. \\
+\hline
+{\em place} & Instruction where the event is placed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the found event or N\-U\-L\-L if not found 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_events_a404efb2e611382efe37327198cde55ba}{\index{Model\-::\-Events@{Model\-::\-Events}!Remove@{Remove}}
+\index{Remove@{Remove}!Model::Events@{Model\-::\-Events}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}bool Events\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_events_a404efb2e611382efe37327198cde55ba}
+
+
+Removes an event from the events list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Unique Id of the event \\
+\hline
+{\em place} & Instruction where the event is placed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if found \&removed, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_events_a8bd6124811e97bed5aee844c00e64244}{\index{Model\-::\-Events@{Model\-::\-Events}!Size@{Size}}
+\index{Size@{Size}!Model::Events@{Model\-::\-Events}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int Events\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_model_1_1_events_a8bd6124811e97bed5aee844c00e64244}
+
+
+Size getter. 
+
+\begin{DoxyReturn}{Returns}
+Number of events 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Event.\-h\item 
+Analyzer/App\-Event.\-cpp\end{DoxyCompactItemize}

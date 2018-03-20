@@ -1,0 +1,486 @@
+\hypertarget{class_common_1_1_socket_base}{\section{Common\-:\-:Socket\-Base Class Reference}
+\label{class_common_1_1_socket_base}\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}}
+}
+
+
+Represents an endpoint for communication between two machines.  
+
+
+
+
+{\ttfamily \#include $<$Socket.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_socket_base_a7dc95f4ca43f1d674b79efb1a6a43e68}{Socket\-Base} (int family=A\-F\-\_\-\-I\-N\-E\-T, int type=S\-O\-C\-K\-\_\-\-S\-T\-R\-E\-A\-M, int protocol=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_socket_base_a0519076dcfe1c83d4eefc081e072d3b1}{Socket\-Base} (int h\-Socket, \hyperlink{class_common_1_1_address}{Address} \&addr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_a3ee0c99be6b08809491108d120404973}{virtual \hyperlink{class_common_1_1_socket_base_a3ee0c99be6b08809491108d120404973}{$\sim$\-Socket\-Base} ()}\label{class_common_1_1_socket_base_a3ee0c99be6b08809491108d120404973}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_acc7a3a7e0d0e440d405ae432310e4a0b}{Socket\-Ptr \hyperlink{class_common_1_1_socket_base_acc7a3a7e0d0e440d405ae432310e4a0b}{Accept} ()}\label{class_common_1_1_socket_base_acc7a3a7e0d0e440d405ae432310e4a0b}
+
+\begin{DoxyCompactList}\small\item\em Accepts a connection and creates a socket. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_a5ac8f268c4f54938020823311472b082}{Bind} (int port)
+\begin{DoxyCompactList}\small\item\em Associates the socket with a local endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_af7bb8eb4ea1fac57d78b850f353cab41}{Listen} (int back\-Log)
+\begin{DoxyCompactList}\small\item\em Sets the socket to a listening state. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_a9018b85960affcedf32541f9f8ffcd84}{void \hyperlink{class_common_1_1_socket_base_a9018b85960affcedf32541f9f8ffcd84}{Connect} (\hyperlink{class_common_1_1_address}{Address} \&address)}\label{class_common_1_1_socket_base_a9018b85960affcedf32541f9f8ffcd84}
+
+\begin{DoxyCompactList}\small\item\em Connects a socket on the given address. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_a01645452e874dbf03d95d5abb5a35dcc}{void \hyperlink{class_common_1_1_socket_base_a01645452e874dbf03d95d5abb5a35dcc}{Connect} (std\-::string const \&host, int port)}\label{class_common_1_1_socket_base_a01645452e874dbf03d95d5abb5a35dcc}
+
+\begin{DoxyCompactList}\small\item\em Connects a socket on the given host and port. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_aaa38eba12e24be6a7af1e5acaea86e35}{Send} (char const $\ast$buf, int buf\-Size, int flags=0)
+\begin{DoxyCompactList}\small\item\em Sends the data through the socket converted to network byte order. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_a5e77e1c8181ad417afc35ac0d2523fd3}{Send} (std\-::string const \&str, int flags=0)
+\begin{DoxyCompactList}\small\item\em Sends the data through the socket converted to network byte order. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_a447176247b0a6dd871f3dbfc80f15792}{Send} (\hyperlink{class_common_1_1_byte_stream}{Byte\-Stream} \&stream, int flags=0)
+\begin{DoxyCompactList}\small\item\em Sends the data through the socket converted to network byte order. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_a6c7ca728c80f1453c16b286cfd1a6846}{Receive} (char $\ast$buf, int buf\-Size, int flags=0)
+\begin{DoxyCompactList}\small\item\em Gets data from the socket. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_a99507fbca09521a8af3c1d053728521c}{Receive\-N} (char $\ast$buf, int buf\-Size, int flags=0)
+\begin{DoxyCompactList}\small\item\em Gets data from the socket, performs multiple \hyperlink{class_common_1_1_socket_base_a6c7ca728c80f1453c16b286cfd1a6846}{Receive()} calls until the buffer is full. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_a86a329397a9e7ed24f59676a678f28a3}{\hyperlink{class_common_1_1_socket_base_a86a329397a9e7ed24f59676a678f28a3}{operator int} ()}\label{class_common_1_1_socket_base_a86a329397a9e7ed24f59676a678f28a3}
+
+\begin{DoxyCompactList}\small\item\em Cast to int returns the socket handle. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_af24b8fc3cae37f4c9b237b6470f61140}{int \hyperlink{class_common_1_1_socket_base_af24b8fc3cae37f4c9b237b6470f61140}{Get\-Handle} () const }\label{class_common_1_1_socket_base_af24b8fc3cae37f4c9b237b6470f61140}
+
+\begin{DoxyCompactList}\small\item\em Returns socket handle. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_ad3cf7e66213c658fa8555477f0ad3410}{Set\-T\-C\-P\-No\-Delay} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the T\-C\-P\-No\-Delay property. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_acd5f86f8c326c5acd74da14a4fe8aa32}{Set\-Keep\-Alive} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the Keep\-Alive property. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_a1dd5cf7c38c563ffd31831288d055580}{Set\-Reuse\-Address} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the Reuse\-Address property. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_a02c77942c75996fe2f83abb3d27affba}{Set\-Receive\-Timeout} (int timeout\-Ms)
+\begin{DoxyCompactList}\small\item\em Sets the Receive\-Timeout property. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_socket_base_af5951b6fb2de4e252acbbd6911edcf87}{Set\-Send\-Timeout} (int timeout\-Ms)
+\begin{DoxyCompactList}\small\item\em Sets the Send\-Timeout property. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_af78c9fc6d72218fcff3dd9debe710120}{Get\-Receive\-Timeout} ()
+\begin{DoxyCompactList}\small\item\em Gets the Receive\-Timeout property. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_ab6506aebdbc5a128a79f6c562ebadcb7}{Get\-Send\-Timeout} ()
+\begin{DoxyCompactList}\small\item\em Gets the Send\-Timeout property. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_a99f8ec3cd9d625a9e1fc25f8bdb35514}{\hyperlink{class_common_1_1_address}{Address} const \& \hyperlink{class_common_1_1_socket_base_a99f8ec3cd9d625a9e1fc25f8bdb35514}{Get\-Address} () const }\label{class_common_1_1_socket_base_a99f8ec3cd9d625a9e1fc25f8bdb35514}
+
+\begin{DoxyCompactList}\small\item\em Returns the address where the socket is connected. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_socket_base_acaa47e72141198c31f0a00d138d3b5dd}{int \hyperlink{class_common_1_1_socket_base_acaa47e72141198c31f0a00d138d3b5dd}{Get\-Local\-Port} () const }\label{class_common_1_1_socket_base_acaa47e72141198c31f0a00d138d3b5dd}
+
+\begin{DoxyCompactList}\small\item\em Returns the port the socket is listening. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_common_1_1_socket_base_a69b836d84796dd832a6d11cfddb063ad}{Set\-Option} (int level, int option, char const $\ast$value, int value\-Size)
+\begin{DoxyCompactList}\small\item\em Sets a socket option. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_a27f7a61c9ceed20ef25f1d065ba43f9b}{Get\-Option} (int level, int option, char $\ast$value, int \&value\-Size)
+\begin{DoxyCompactList}\small\item\em Gets the value of a socket option. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_socket_base_a3dea32372a026c14eb2449423d712f55}{Do\-Send} (char const $\ast$buf, int buf\-Size, int flags=0)
+\begin{DoxyCompactList}\small\item\em Sends the data through the socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_socket_base_a3923ae765d527acad5334bee8793a496}{int {\bfseries \-\_\-h\-Socket}}\label{class_common_1_1_socket_base_a3923ae765d527acad5334bee8793a496}
+
+\item 
+\hypertarget{class_common_1_1_socket_base_ac1beb15ed02aa737be32a7218f46525a}{\hyperlink{class_common_1_1_address}{Address} {\bfseries \-\_\-addr}}\label{class_common_1_1_socket_base_ac1beb15ed02aa737be32a7218f46525a}
+
+\item 
+\hypertarget{class_common_1_1_socket_base_ae99426b4c4b9979c1d2b5d67b6782068}{int {\bfseries \-\_\-local\-Port}}\label{class_common_1_1_socket_base_ae99426b4c4b9979c1d2b5d67b6782068}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an endpoint for communication between two machines. 
+
+This class works as an adapter for the socket functions included on the sys/socket library.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_socket_base_a7dc95f4ca43f1d674b79efb1a6a43e68}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Socket\-Base@{Socket\-Base}}
+\index{Socket\-Base@{Socket\-Base}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Socket\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Socket\-Base\-::\-Socket\-Base (
+\begin{DoxyParamCaption}
+\item[{int}]{family = {\ttfamily AF\-\_\-INET}, }
+\item[{int}]{type = {\ttfamily SOCK\-\_\-STREAM}, }
+\item[{int}]{protocol = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a7dc95f4ca43f1d674b79efb1a6a43e68}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em family} & \hyperlink{class_common_1_1_socket}{Socket} family, default A\-F\-\_\-\-I\-N\-E\-T. \\
+\hline
+{\em type} & \hyperlink{class_common_1_1_socket}{Socket} type, default S\-O\-C\-K\-\_\-\-S\-T\-R\-E\-A\-M. \\
+\hline
+{\em protocol} & \hyperlink{class_common_1_1_socket}{Socket} protocol, default 0.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a0519076dcfe1c83d4eefc081e072d3b1}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Socket\-Base@{Socket\-Base}}
+\index{Socket\-Base@{Socket\-Base}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Socket\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Socket\-Base\-::\-Socket\-Base (
+\begin{DoxyParamCaption}
+\item[{int}]{h\-Socket, }
+\item[{{\bf Address} \&}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a0519076dcfe1c83d4eefc081e072d3b1}
+
+
+Constructor. 
+
+Sets the socket to the given handle with the given address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\-Socket} & \hyperlink{class_common_1_1_socket}{Socket} handle. \\
+\hline
+{\em addr} & \hyperlink{class_common_1_1_socket}{Socket} address. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_socket_base_a5ac8f268c4f54938020823311472b082}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Bind@{Bind}}
+\index{Bind@{Bind}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Bind (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a5ac8f268c4f54938020823311472b082}
+
+
+Associates the socket with a local endpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port where the socket will perform the connection. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_socket_base_a3dea32372a026c14eb2449423d712f55}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Do\-Send@{Do\-Send}}
+\index{Do\-Send@{Do\-Send}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Do\-Send}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Do\-Send (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{buf, }
+\item[{int}]{buf\-Size, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_common_1_1_socket_base_a3dea32372a026c14eb2449423d712f55}
+
+
+Sends the data through the socket. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a27f7a61c9ceed20ef25f1d065ba43f9b}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Get\-Option@{Get\-Option}}
+\index{Get\-Option@{Get\-Option}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Get\-Option}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Get\-Option (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{int}]{option, }
+\item[{char $\ast$}]{value, }
+\item[{int \&}]{value\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_common_1_1_socket_base_a27f7a61c9ceed20ef25f1d065ba43f9b}
+
+
+Gets the value of a socket option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Protocol level at which the option resides. \\
+\hline
+{\em option} & Option name. \\
+\hline
+{\em value} & Buffer to save the value. \\
+\hline
+{\em value\-Size} & Integer to save the size of the value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_af78c9fc6d72218fcff3dd9debe710120}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Get\-Receive\-Timeout@{Get\-Receive\-Timeout}}
+\index{Get\-Receive\-Timeout@{Get\-Receive\-Timeout}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Get\-Receive\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Get\-Receive\-Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_af78c9fc6d72218fcff3dd9debe710120}
+
+
+Gets the Receive\-Timeout property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_ab6506aebdbc5a128a79f6c562ebadcb7}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Get\-Send\-Timeout@{Get\-Send\-Timeout}}
+\index{Get\-Send\-Timeout@{Get\-Send\-Timeout}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Get\-Send\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Get\-Send\-Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_ab6506aebdbc5a128a79f6c562ebadcb7}
+
+
+Gets the Send\-Timeout property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_af7bb8eb4ea1fac57d78b850f353cab41}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Listen@{Listen}}
+\index{Listen@{Listen}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Listen}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Listen (
+\begin{DoxyParamCaption}
+\item[{int}]{back\-Log}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_af7bb8eb4ea1fac57d78b850f353cab41}
+
+
+Sets the socket to a listening state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\-Log} & Maximum length of the queue for pending connections. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_socket_base_a6c7ca728c80f1453c16b286cfd1a6846}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Receive@{Receive}}
+\index{Receive@{Receive}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Receive}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Receive (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{buf\-Size, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a6c7ca728c80f1453c16b286cfd1a6846}
+
+
+Gets data from the socket. 
+
+If no incoming data is available at the socket, the call blocks and waits for data to arrive.
+
+\begin{DoxyReturn}{Returns}
+Number of bytes received.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a99507fbca09521a8af3c1d053728521c}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Receive\-N@{Receive\-N}}
+\index{Receive\-N@{Receive\-N}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Receive\-N}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\-Base\-::\-Receive\-N (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{buf\-Size, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a99507fbca09521a8af3c1d053728521c}
+
+
+Gets data from the socket, performs multiple \hyperlink{class_common_1_1_socket_base_a6c7ca728c80f1453c16b286cfd1a6846}{Receive()} calls until the buffer is full. 
+
+\begin{DoxyReturn}{Returns}
+Number of bytes received.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_aaa38eba12e24be6a7af1e5acaea86e35}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Send@{Send}}
+\index{Send@{Send}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{buf, }
+\item[{int}]{buf\-Size, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_aaa38eba12e24be6a7af1e5acaea86e35}
+
+
+Sends the data through the socket converted to network byte order. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a5e77e1c8181ad417afc35ac0d2523fd3}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Send@{Send}}
+\index{Send@{Send}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{str, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a5e77e1c8181ad417afc35ac0d2523fd3}
+
+
+Sends the data through the socket converted to network byte order. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a447176247b0a6dd871f3dbfc80f15792}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Send@{Send}}
+\index{Send@{Send}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf Byte\-Stream} \&}]{stream, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a447176247b0a6dd871f3dbfc80f15792}
+
+
+Sends the data through the socket converted to network byte order. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_acd5f86f8c326c5acd74da14a4fe8aa32}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-Keep\-Alive@{Set\-Keep\-Alive}}
+\index{Set\-Keep\-Alive@{Set\-Keep\-Alive}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-Keep\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-Keep\-Alive (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_acd5f86f8c326c5acd74da14a4fe8aa32}
+
+
+Sets the Keep\-Alive property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a69b836d84796dd832a6d11cfddb063ad}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-Option@{Set\-Option}}
+\index{Set\-Option@{Set\-Option}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-Option}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-Option (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{int}]{option, }
+\item[{char const $\ast$}]{value, }
+\item[{int}]{value\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_common_1_1_socket_base_a69b836d84796dd832a6d11cfddb063ad}
+
+
+Sets a socket option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Protocol level at which the option resides. \\
+\hline
+{\em option} & Option name. \\
+\hline
+{\em value} & Option value to set. \\
+\hline
+{\em value\-Size} & Size of the value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a02c77942c75996fe2f83abb3d27affba}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-Receive\-Timeout@{Set\-Receive\-Timeout}}
+\index{Set\-Receive\-Timeout@{Set\-Receive\-Timeout}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-Receive\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-Receive\-Timeout (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-Ms}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a02c77942c75996fe2f83abb3d27affba}
+
+
+Sets the Receive\-Timeout property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_a1dd5cf7c38c563ffd31831288d055580}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-Reuse\-Address@{Set\-Reuse\-Address}}
+\index{Set\-Reuse\-Address@{Set\-Reuse\-Address}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-Reuse\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-Reuse\-Address (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_a1dd5cf7c38c563ffd31831288d055580}
+
+
+Sets the Reuse\-Address property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_af5951b6fb2de4e252acbbd6911edcf87}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-Send\-Timeout@{Set\-Send\-Timeout}}
+\index{Set\-Send\-Timeout@{Set\-Send\-Timeout}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-Send\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-Send\-Timeout (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-Ms}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_af5951b6fb2de4e252acbbd6911edcf87}
+
+
+Sets the Send\-Timeout property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_socket_base_ad3cf7e66213c658fa8555477f0ad3410}{\index{Common\-::\-Socket\-Base@{Common\-::\-Socket\-Base}!Set\-T\-C\-P\-No\-Delay@{Set\-T\-C\-P\-No\-Delay}}
+\index{Set\-T\-C\-P\-No\-Delay@{Set\-T\-C\-P\-No\-Delay}!Common::SocketBase@{Common\-::\-Socket\-Base}}
+\subsubsection[{Set\-T\-C\-P\-No\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-Base\-::\-Set\-T\-C\-P\-No\-Delay (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_socket_base_ad3cf7e66213c658fa8555477f0ad3410}
+
+
+Sets the T\-C\-P\-No\-Delay property. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Socket.\-h\item 
+Common/Socket.\-cpp\end{DoxyCompactItemize}

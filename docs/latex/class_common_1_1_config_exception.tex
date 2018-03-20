@@ -1,0 +1,110 @@
+\hypertarget{class_common_1_1_config_exception}{\section{Common\-:\-:Config\-Exception Class Reference}
+\label{class_common_1_1_config_exception}\index{Common\-::\-Config\-Exception@{Common\-::\-Config\-Exception}}
+}
+
+
+\hyperlink{class_common_1_1_config}{Config}, \hyperlink{class_common_1_1_config_reader}{Config\-Reader} and \hyperlink{class_common_1_1_config_map}{Config\-Map} exceptions.  
+
+
+
+
+{\ttfamily \#include $<$Config\-Exception.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Config\-Exception\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_config_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_config_exception_a3b6738ec7ab3614f5b2e0d61d9316014}{Config\-Exception} (std\-::string const \&msg, std\-::string const \&obj\-Name=std\-::string())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_config_exception_ad4ee85d0f156157abdde32b4fbf23369}{Display} (std\-::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em Displays exception message on the given output stream. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_config_exception_a1a340225bc9583bb9794e5ea8730020a}{void \hyperlink{class_common_1_1_config_exception_a1a340225bc9583bb9794e5ea8730020a}{Display} () const }\label{class_common_1_1_config_exception_a1a340225bc9583bb9794e5ea8730020a}
+
+\begin{DoxyCompactList}\small\item\em Displays exception message on the standard error output. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_common_1_1_config_exception_a95f96a5d70b3a4ab3aa82f934bf74a7f}{Get\-Reason} () const 
+\begin{DoxyCompactList}\small\item\em Returns a string containing the error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_common_1_1_config}{Config}, \hyperlink{class_common_1_1_config_reader}{Config\-Reader} and \hyperlink{class_common_1_1_config_map}{Config\-Map} exceptions. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Noel De Martin, 2011 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_config_exception_a3b6738ec7ab3614f5b2e0d61d9316014}{\index{Common\-::\-Config\-Exception@{Common\-::\-Config\-Exception}!Config\-Exception@{Config\-Exception}}
+\index{Config\-Exception@{Config\-Exception}!Common::ConfigException@{Common\-::\-Config\-Exception}}
+\subsubsection[{Config\-Exception}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Config\-Exception\-::\-Config\-Exception (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{msg, }
+\item[{std\-::string const \&}]{obj\-Name = {\ttfamily std\-:\-:string~()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_exception_a3b6738ec7ab3614f5b2e0d61d9316014}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \hyperlink{class_common_1_1_exception}{Exception} message. \\
+\hline
+{\em obj\-Name} & Name of the object causing the exception, \char`\"{}\char`\"{} by default. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_config_exception_ad4ee85d0f156157abdde32b4fbf23369}{\index{Common\-::\-Config\-Exception@{Common\-::\-Config\-Exception}!Display@{Display}}
+\index{Display@{Display}!Common::ConfigException@{Common\-::\-Config\-Exception}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void Common\-::\-Config\-Exception\-::\-Display (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_common_1_1_config_exception_ad4ee85d0f156157abdde32b4fbf23369}
+
+
+Displays exception message on the given output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream to display the message. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_common_1_1_exception_a2633eeaab3220268739977a04643a3cf}{Common\-::\-Exception}.
+
+\hypertarget{class_common_1_1_config_exception_a95f96a5d70b3a4ab3aa82f934bf74a7f}{\index{Common\-::\-Config\-Exception@{Common\-::\-Config\-Exception}!Get\-Reason@{Get\-Reason}}
+\index{Get\-Reason@{Get\-Reason}!Common::ConfigException@{Common\-::\-Config\-Exception}}
+\subsubsection[{Get\-Reason}]{\setlength{\rightskip}{0pt plus 5cm}string Config\-Exception\-::\-Get\-Reason (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_config_exception_a95f96a5d70b3a4ab3aa82f934bf74a7f}
+
+
+Returns a string containing the error message. 
+
+\begin{DoxyReturn}{Returns}
+String with the error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Config\-Exception.\-h\item 
+Common/Config\-Exception.\-cpp\end{DoxyCompactItemize}

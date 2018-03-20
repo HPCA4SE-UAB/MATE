@@ -1,0 +1,83 @@
+\hypertarget{class_shut_down_manager}{\section{Shut\-Down\-Manager Class Reference}
+\label{class_shut_down_manager}\index{Shut\-Down\-Manager@{Shut\-Down\-Manager}}
+}
+
+
+Handles the shut down of M\-A\-T\-E (\hyperlink{class_analyzer}{Analyzer} and A\-C's) The data structure consists basically in a reference to the application model (to know the hosts where the A\-C's are running in real time) and a boolean to determine if M\-A\-T\-E is finished (to let the main process know, and make it stop). Provides a method to set the application model from outside (when it is ready, the main process of the \hyperlink{class_analyzer}{Analyzer} will set it). On the other hand, this class inherits from Active\-Object, so its objects are execution threads, this is done to wait for the user to stop M\-A\-T\-E without stopping its own execution.  
+
+
+
+
+{\ttfamily \#include $<$Shut\-Down\-Manager.\-h$>$}
+
+Inheritance diagram for Shut\-Down\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shut_down_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shut_down_manager_a373a3e5c8f679f267bb28137fe07ce30}{\hyperlink{class_shut_down_manager_a373a3e5c8f679f267bb28137fe07ce30}{Shut\-Down\-Manager} ()}\label{class_shut_down_manager_a373a3e5c8f679f267bb28137fe07ce30}
+
+\begin{DoxyCompactList}\small\item\em Constructor. Sets the finished member to false and starts the thread. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_manager_a2e0806790f911ea1a55a57a0d500688c}{virtual \hyperlink{class_shut_down_manager_a2e0806790f911ea1a55a57a0d500688c}{$\sim$\-Shut\-Down\-Manager} ()}\label{class_shut_down_manager_a2e0806790f911ea1a55a57a0d500688c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_manager_ac62ac5b8a6874ebfedd803441e9632f1}{void \hyperlink{class_shut_down_manager_ac62ac5b8a6874ebfedd803441e9632f1}{Run} ()}\label{class_shut_down_manager_ac62ac5b8a6874ebfedd803441e9632f1}
+
+\begin{DoxyCompactList}\small\item\em Function that is executed by the thread. Waits for the user to stop M\-A\-T\-E, when receives the commandment sends a stop signal to A\-C's and sets the variable finished to true in order to stop the \hyperlink{class_analyzer}{Analyzer} itself. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_manager_a462837aa4f84a45d7a1a674bdd2d691f}{void \hyperlink{class_shut_down_manager_a462837aa4f84a45d7a1a674bdd2d691f}{Init\-Thread} ()}\label{class_shut_down_manager_a462837aa4f84a45d7a1a674bdd2d691f}
+
+\begin{DoxyCompactList}\small\item\em Not implemented (Here for compatibility reasons). \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_manager_a03feeacd729d3c55a2367c0859c1474b}{void \hyperlink{class_shut_down_manager_a03feeacd729d3c55a2367c0859c1474b}{Flush\-Thread} ()}\label{class_shut_down_manager_a03feeacd729d3c55a2367c0859c1474b}
+
+\begin{DoxyCompactList}\small\item\em Not implemented (Here for compatibility reasons). \end{DoxyCompactList}\item 
+bool \hyperlink{class_shut_down_manager_ae5e81242bd55b4e24a6cffed6800d2ad}{is\-Finished} ()
+\begin{DoxyCompactList}\small\item\em Getter of finished boolean. \end{DoxyCompactList}\item 
+void \hyperlink{class_shut_down_manager_a1085a8cd2c5f64902114ad48b4097567}{set\-App} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)
+\begin{DoxyCompactList}\small\item\em Application model reference setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Handles the shut down of M\-A\-T\-E (\hyperlink{class_analyzer}{Analyzer} and A\-C's) The data structure consists basically in a reference to the application model (to know the hosts where the A\-C's are running in real time) and a boolean to determine if M\-A\-T\-E is finished (to let the main process know, and make it stop). Provides a method to set the application model from outside (when it is ready, the main process of the \hyperlink{class_analyzer}{Analyzer} will set it). On the other hand, this class inherits from Active\-Object, so its objects are execution threads, this is done to wait for the user to stop M\-A\-T\-E without stopping its own execution. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shut_down_manager_ae5e81242bd55b4e24a6cffed6800d2ad}{\index{Shut\-Down\-Manager@{Shut\-Down\-Manager}!is\-Finished@{is\-Finished}}
+\index{is\-Finished@{is\-Finished}!ShutDownManager@{Shut\-Down\-Manager}}
+\subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Shut\-Down\-Manager\-::is\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_shut_down_manager_ae5e81242bd55b4e24a6cffed6800d2ad}
+
+
+Getter of finished boolean. 
+
+\begin{DoxyReturn}{Returns}
+True if the user stopped M\-A\-T\-E, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_shut_down_manager_a1085a8cd2c5f64902114ad48b4097567}{\index{Shut\-Down\-Manager@{Shut\-Down\-Manager}!set\-App@{set\-App}}
+\index{set\-App@{set\-App}!ShutDownManager@{Shut\-Down\-Manager}}
+\subsubsection[{set\-App}]{\setlength{\rightskip}{0pt plus 5cm}void Shut\-Down\-Manager\-::set\-App (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Application} \&}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_shut_down_manager_a1085a8cd2c5f64902114ad48b4097567}
+
+
+Application model reference setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Reference to the application model \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Shut\-Down\-Manager.\-h\item 
+Analyzer/Shut\-Down\-Manager.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,261 @@
+\hypertarget{class_task}{\section{Task Class Reference}
+\label{class_task}\index{Task@{Task}}
+}
+
+
+Represents each of the processes that we can modify using Dyninst.  
+
+
+
+
+{\ttfamily \#include $<$Task.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_task_a9ee6282b02f7482503aec3ba06bed4ec}{Task} (const std\-::string \&path, char $\ast$args\mbox{[}$\,$\mbox{]}, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&clock\-Diff, string const \&analyzer\-Host, int analyzer\-Port, int debug\-Level, int debug\-Std\-Err, string const \&D\-M\-Lib\-Name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_task_a3ecf499ea35fb4a96853969a1e1cbbce}{\hyperlink{class_task_a3ecf499ea35fb4a96853969a1e1cbbce}{$\sim$\-Task} ()}\label{class_task_a3ecf499ea35fb4a96853969a1e1cbbce}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_a73c8e2b6750749bd9e47b8aff2eb1f82}{Get\-Pid} ()
+\begin{DoxyCompactList}\small\item\em Getter of the identifier of the process being modified. \end{DoxyCompactList}\item 
+\hypertarget{class_task_a819086ab95a2dd56f2d7817e17a72305}{int \hyperlink{class_task_a819086ab95a2dd56f2d7817e17a72305}{Get\-Mpi\-Rank} ()}\label{class_task_a819086ab95a2dd56f2d7817e17a72305}
+
+\begin{DoxyCompactList}\small\item\em Getter of the M\-P\-I\-Rank attribute. \end{DoxyCompactList}\item 
+\hypertarget{class_task_a9c91bd3729255eea4a17829475d61199}{void \hyperlink{class_task_a9c91bd3729255eea4a17829475d61199}{Continue} ()}\label{class_task_a9c91bd3729255eea4a17829475d61199}
+
+\begin{DoxyCompactList}\small\item\em Restarts the execution of the process after breakpoint. \end{DoxyCompactList}\item 
+\hypertarget{class_task_a0c7dd0bccd7f0ef1c21c5813c3f405a5}{void \hyperlink{class_task_a0c7dd0bccd7f0ef1c21c5813c3f405a5}{Wait\-For} ()}\label{class_task_a0c7dd0bccd7f0ef1c21c5813c3f405a5}
+
+\begin{DoxyCompactList}\small\item\em Waits for the process to be terminated. \end{DoxyCompactList}\item 
+\hyperlink{class_di_process}{Di\-Process} \& \hyperlink{class_task_ab62e2702d3e95ea5f9ca9c2c15191929}{Get\-Process} ()
+\begin{DoxyCompactList}\small\item\em Getter of the variable \-\_\-process. \end{DoxyCompactList}\item 
+\hyperlink{class_di_image}{Di\-Image} \& \hyperlink{class_task_af3d3e0f8585121ebfea01168bbda467e}{Get\-Image} ()
+\begin{DoxyCompactList}\small\item\em Getter of the variable \-\_\-image. \end{DoxyCompactList}\item 
+\hyperlink{class_task_instr}{Task\-Instr} \& \hyperlink{class_task_a5d4738dd77fc65f19ed8e976c70e1256}{Get\-Instr} ()
+\begin{DoxyCompactList}\small\item\em Getter of the variable \-\_\-instr. \end{DoxyCompactList}\item 
+bool \hyperlink{class_task_ac499ecac78bddd28affec97159b2a3af}{Is\-Stopped} ()
+\begin{DoxyCompactList}\small\item\em Checks if the process is running. \end{DoxyCompactList}\item 
+bool \hyperlink{class_task_ad2c779f5d3b27466f16563737bce3fdc}{Terminate} ()
+\begin{DoxyCompactList}\small\item\em Terminates a running process and invokes the callback function if exists. \end{DoxyCompactList}\item 
+bool \hyperlink{class_task_a2a65e096239de200eafa7f37e104a830}{Is\-Terminated} ()
+\begin{DoxyCompactList}\small\item\em Checks if the process is terminated. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_a10e365e3c6b897c55a3097ac3450dc7a}{Add\-Delayed\-Tuning} (\hyperlink{class_common_1_1_tuning_request}{Common\-::\-Tuning\-Request} $\ast$req)
+\begin{DoxyCompactList}\small\item\em Adds a tuning request to the pending list. \end{DoxyCompactList}\item 
+bool \hyperlink{class_task_a3d665187f05c68a2f88fcf4e4592e4c0}{Is\-Stopped\-On\-Breakpoint} ()
+\begin{DoxyCompactList}\small\item\em Checks if the process is stopped in a breakpoint. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_a3a884f2e52a962062a748ca2da93f338}{Process\-Breakpoint} (\hyperlink{class_tuner}{Tuner} \&t)
+\begin{DoxyCompactList}\small\item\em It is called when the process hits a breakpoint and needs to be handled. \end{DoxyCompactList}\item 
+\hypertarget{class_task_a3e85217f0de32db942ac280342af0d48}{void \hyperlink{class_task_a3e85217f0de32db942ac280342af0d48}{Unload\-Library} ()}\label{class_task_a3e85217f0de32db942ac280342af0d48}
+
+\begin{DoxyCompactList}\small\item\em Unload the D\-M\-Lib from a process which has terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents each of the processes that we can modify using Dyninst. 
+
+Provides the necessary function to manage the process to be modified and to control its execution during the modifications.
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_task_a9ee6282b02f7482503aec3ba06bed4ec}{\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection[{Task}]{\setlength{\rightskip}{0pt plus 5cm}Task\-::\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Time\-Value} const \&}]{clock\-Diff, }
+\item[{string const \&}]{analyzer\-Host, }
+\item[{int}]{analyzer\-Port, }
+\item[{int}]{debug\-Level, }
+\item[{int}]{debug\-Std\-Err, }
+\item[{string const \&}]{D\-M\-Lib\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_task_a9ee6282b02f7482503aec3ba06bed4ec}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the executable of the application. \\
+\hline
+{\em args\mbox{[}$\,$\mbox{]}} & Array that contains the arguments with which the application should be executed. \\
+\hline
+{\em clock\-Diff} & Correction of the clock difference. \\
+\hline
+{\em anayzer\-Host} & Address of the host in which the analyzer is running. \\
+\hline
+{\em analyzer\-Port} & Port through which the analyzer communicates. \\
+\hline
+{\em debug\-Level} & Selected level of debugging. \\
+\hline
+{\em debug\-Std\-Err} & Debug messages output. \\
+\hline
+{\em D\-M\-Lib\-Name} & Name of the dynamic library to be loaded into the process. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_task_a10e365e3c6b897c55a3097ac3450dc7a}{\index{Task@{Task}!Add\-Delayed\-Tuning@{Add\-Delayed\-Tuning}}
+\index{Add\-Delayed\-Tuning@{Add\-Delayed\-Tuning}!Task@{Task}}
+\subsubsection[{Add\-Delayed\-Tuning}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Add\-Delayed\-Tuning (
+\begin{DoxyParamCaption}
+\item[{{\bf Common\-::\-Tuning\-Request} $\ast$}]{req}
+\end{DoxyParamCaption}
+)}}\label{class_task_a10e365e3c6b897c55a3097ac3450dc7a}
+
+
+Adds a tuning request to the pending list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Request for tuning procedure. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_af3d3e0f8585121ebfea01168bbda467e}{\index{Task@{Task}!Get\-Image@{Get\-Image}}
+\index{Get\-Image@{Get\-Image}!Task@{Task}}
+\subsubsection[{Get\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Di\-Image}\& Task\-::\-Get\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_af3d3e0f8585121ebfea01168bbda467e}
+
+
+Getter of the variable \-\_\-image. 
+
+\begin{DoxyReturn}{Returns}
+Image of the process that is being modified. 
+\end{DoxyReturn}
+\hypertarget{class_task_a5d4738dd77fc65f19ed8e976c70e1256}{\index{Task@{Task}!Get\-Instr@{Get\-Instr}}
+\index{Get\-Instr@{Get\-Instr}!Task@{Task}}
+\subsubsection[{Get\-Instr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\-Instr}\& Task\-::\-Get\-Instr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_a5d4738dd77fc65f19ed8e976c70e1256}
+
+
+Getter of the variable \-\_\-instr. 
+
+\begin{DoxyReturn}{Returns}
+Instrumentation to be inserted. 
+\end{DoxyReturn}
+\hypertarget{class_task_a73c8e2b6750749bd9e47b8aff2eb1f82}{\index{Task@{Task}!Get\-Pid@{Get\-Pid}}
+\index{Get\-Pid@{Get\-Pid}!Task@{Task}}
+\subsubsection[{Get\-Pid}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-::\-Get\-Pid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_a73c8e2b6750749bd9e47b8aff2eb1f82}
+
+
+Getter of the identifier of the process being modified. 
+
+\begin{DoxyReturn}{Returns}
+Pid of the process being modified. 
+\end{DoxyReturn}
+\hypertarget{class_task_ab62e2702d3e95ea5f9ca9c2c15191929}{\index{Task@{Task}!Get\-Process@{Get\-Process}}
+\index{Get\-Process@{Get\-Process}!Task@{Task}}
+\subsubsection[{Get\-Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Di\-Process}\& Task\-::\-Get\-Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_ab62e2702d3e95ea5f9ca9c2c15191929}
+
+
+Getter of the variable \-\_\-process. 
+
+\begin{DoxyReturn}{Returns}
+Process that is being modified. 
+\end{DoxyReturn}
+\hypertarget{class_task_ac499ecac78bddd28affec97159b2a3af}{\index{Task@{Task}!Is\-Stopped@{Is\-Stopped}}
+\index{Is\-Stopped@{Is\-Stopped}!Task@{Task}}
+\subsubsection[{Is\-Stopped}]{\setlength{\rightskip}{0pt plus 5cm}bool Task\-::\-Is\-Stopped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_ac499ecac78bddd28affec97159b2a3af}
+
+
+Checks if the process is running. 
+
+\begin{DoxyReturn}{Returns}
+False if its running, true if stopped. 
+\end{DoxyReturn}
+\hypertarget{class_task_a3d665187f05c68a2f88fcf4e4592e4c0}{\index{Task@{Task}!Is\-Stopped\-On\-Breakpoint@{Is\-Stopped\-On\-Breakpoint}}
+\index{Is\-Stopped\-On\-Breakpoint@{Is\-Stopped\-On\-Breakpoint}!Task@{Task}}
+\subsubsection[{Is\-Stopped\-On\-Breakpoint}]{\setlength{\rightskip}{0pt plus 5cm}bool Task\-::\-Is\-Stopped\-On\-Breakpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_a3d665187f05c68a2f88fcf4e4592e4c0}
+
+
+Checks if the process is stopped in a breakpoint. 
+
+\begin{DoxyReturn}{Returns}
+True if process is currently stopped and situated in a breakpoint . 
+\end{DoxyReturn}
+\hypertarget{class_task_a2a65e096239de200eafa7f37e104a830}{\index{Task@{Task}!Is\-Terminated@{Is\-Terminated}}
+\index{Is\-Terminated@{Is\-Terminated}!Task@{Task}}
+\subsubsection[{Is\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}bool Task\-::\-Is\-Terminated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_a2a65e096239de200eafa7f37e104a830}
+
+
+Checks if the process is terminated. 
+
+\begin{DoxyReturn}{Returns}
+True if the process has exited. 
+\end{DoxyReturn}
+\hypertarget{class_task_a3a884f2e52a962062a748ca2da93f338}{\index{Task@{Task}!Process\-Breakpoint@{Process\-Breakpoint}}
+\index{Process\-Breakpoint@{Process\-Breakpoint}!Task@{Task}}
+\subsubsection[{Process\-Breakpoint}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Process\-Breakpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Tuner} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_task_a3a884f2e52a962062a748ca2da93f338}
+
+
+It is called when the process hits a breakpoint and needs to be handled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_tuner}{Tuner} that will apply the changes specified in the request for each task. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_ad2c779f5d3b27466f16563737bce3fdc}{\index{Task@{Task}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!Task@{Task}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}bool Task\-::\-Terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_ad2c779f5d3b27466f16563737bce3fdc}
+
+
+Terminates a running process and invokes the callback function if exists. 
+
+\begin{DoxyReturn}{Returns}
+True for success, false for failure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Task.\-h\item 
+A\-C/Task.\-cpp\end{DoxyCompactItemize}

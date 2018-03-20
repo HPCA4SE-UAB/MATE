@@ -1,0 +1,52 @@
+# Version for LINUX.
+#
+#********************************************************
+# global options
+#********************************************************
+SHELL=@SHELL@
+PREFIX=@prefix@
+ARCH=@ARCH@ 
+MPI_IDIR=@MPI_IDIR@
+MPI_LDIR=@MPI_LDIR@ 
+MPI_FLAGS=@MPI_FLAGS@
+
+ARC=@ARCH@
+MPI_IDIR=@MPI_IDIR@
+MPI_LDIR=@MPI_LDIR@
+
+LDFLAGS=@LDFLAGS@
+CXXFLAGS=@CXXFLAGS@
+
+# Destinations for library and executable installation (relative to src directory)
+GCC=@CC@
+GXX=@CXX@
+
+LIBRARY_DEST=@prefix@/lib
+PROGRAMS_DEST=@prefix@/bin
+PROGRAMS_CONF=./conf
+# Doxygen binary path
+DOXYGEN_DIR = .
+ 
+MAKE=make
+LINKER=ld
+MV=mv
+CP=cp
+RM=rm -f
+MKDIR=mkdir -p
+
+#********************************************************
+# DynInst configuration and dependencies                *
+#********************************************************
+DYNINST_IDIR=@DYNINST_IDIR@
+DYNINST_LDIR=@DYNINST_LDIR@
+DYNINST_LIB=@LIBS@
+
+#********************************************************
+# Compiler configuration and default paths              *
+#********************************************************
+# Compiler include paths
+IFLAGS=-I. @CXXFLAGS@ 
+# Default compiler options
+OPT_FLAG=-g -Wno-deprecated -Wall
+# Flags for normal source files
+CFLAGS=-std=c++11 $(IFLAGS) $(OPT_FLAG) -DIMA_LINUX 

@@ -1,0 +1,52 @@
+\hypertarget{class_common_1_1_reactor}{\section{Common\-:\-:Reactor Class Reference}
+\label{class_common_1_1_reactor}\index{Common\-::\-Reactor@{Common\-::\-Reactor}}
+}
+
+
+Registers, removes and dispatches \hyperlink{class_common_1_1_event_handler}{Event\-Handler} objects.  
+
+
+
+
+{\ttfamily \#include $<$Reactor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_reactor_a16df779ef6429f9e6cf69389d72a2ec8}{\hyperlink{class_common_1_1_reactor_a16df779ef6429f9e6cf69389d72a2ec8}{Reactor} ()}\label{class_common_1_1_reactor_a16df779ef6429f9e6cf69389d72a2ec8}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_reactor_ae399a96760dc6d217c5fd601331d1980}{void \hyperlink{class_common_1_1_reactor_ae399a96760dc6d217c5fd601331d1980}{Register} (\hyperlink{class_common_1_1_event_handler}{Event\-Handler} \&handler)}\label{class_common_1_1_reactor_ae399a96760dc6d217c5fd601331d1980}
+
+\begin{DoxyCompactList}\small\item\em Registers a new \hyperlink{class_common_1_1_event_handler}{Event\-Handler}. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_reactor_ac95750fd117060a6c8b09d4b149da56b}{void \hyperlink{class_common_1_1_reactor_ac95750fd117060a6c8b09d4b149da56b}{Un\-Register} (\hyperlink{class_common_1_1_event_handler}{Event\-Handler} \&handler)}\label{class_common_1_1_reactor_ac95750fd117060a6c8b09d4b149da56b}
+
+\begin{DoxyCompactList}\small\item\em Removes given \hyperlink{class_common_1_1_event_handler}{Event\-Handler}. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_reactor_a68f0ad9661a926fbe0af29e3edb3f38b}{void \hyperlink{class_common_1_1_reactor_a68f0ad9661a926fbe0af29e3edb3f38b}{Handle\-Events} (\hyperlink{class_common_1_1_time_value}{Time\-Value} $\ast$timeout=0)}\label{class_common_1_1_reactor_a68f0ad9661a926fbe0af29e3edb3f38b}
+
+\begin{DoxyCompactList}\small\item\em Runs event loop. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_reactor_a086f50bf8357cf8921ae2b9f2a4ce15e}{\hyperlink{class_common_1_1_event_handler}{Event\-Handler} \& \hyperlink{class_common_1_1_reactor_a086f50bf8357cf8921ae2b9f2a4ce15e}{Get\-Handler} (int handle)}\label{class_common_1_1_reactor_a086f50bf8357cf8921ae2b9f2a4ce15e}
+
+\begin{DoxyCompactList}\small\item\em Returns selected handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Registers, removes and dispatches \hyperlink{class_common_1_1_event_handler}{Event\-Handler} objects. 
+
+Uses reactor design pattern.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Reactor.\-h\item 
+Common/Reactor.\-cpp\end{DoxyCompactItemize}

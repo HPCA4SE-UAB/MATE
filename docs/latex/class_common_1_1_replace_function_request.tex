@@ -1,0 +1,87 @@
+\hypertarget{class_common_1_1_replace_function_request}{\section{Common\-:\-:Replace\-Function\-Request Class Reference}
+\label{class_common_1_1_replace_function_request}\index{Common\-::\-Replace\-Function\-Request@{Common\-::\-Replace\-Function\-Request}}
+}
+
+
+Encapsulates a tuning request to replace all calls to a function inside a process with calls to another function.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Replace\-Function\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_common_1_1_replace_function_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_replace_function_request_a10fc14a5a61d9497d972a2ec57b02ebe}{Replace\-Function\-Request} (int pid=0, std\-::string const \&old\-Func=std\-::string(), std\-::string const \&new\-Func=std\-::string(), \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_replace_function_request_a7bb3f7efba25a1566efe4ccc3054cd63}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_replace_function_request_a7bb3f7efba25a1566efe4ccc3054cd63}{Get\-Type} () const }\label{class_common_1_1_replace_function_request_a7bb3f7efba25a1566efe4ccc3054cd63}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Replace\-Function). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_replace_function_request_a86dc0fe0546f0b4d331116f68f8c45f0}{std\-::string const \& \hyperlink{class_common_1_1_replace_function_request_a86dc0fe0546f0b4d331116f68f8c45f0}{Get\-Old\-Function} () const }\label{class_common_1_1_replace_function_request_a86dc0fe0546f0b4d331116f68f8c45f0}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the name of the function to replace. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_replace_function_request_a0285b26773d41dc9b2b6289ce104102c}{std\-::string const \& \hyperlink{class_common_1_1_replace_function_request_a0285b26773d41dc9b2b6289ce104102c}{Get\-New\-Function} () const }\label{class_common_1_1_replace_function_request_a0285b26773d41dc9b2b6289ce104102c}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the name of the function added. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_replace_function_request_a1ba53378e26e28ff1052285492c50fd4}{void \hyperlink{class_common_1_1_replace_function_request_a1ba53378e26e28ff1052285492c50fd4}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_replace_function_request_a1ba53378e26e28ff1052285492c50fd4}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_replace_function_request_ad000a60b1e0bc5c06ec40fd15e8f7080}{void \hyperlink{class_common_1_1_replace_function_request_ad000a60b1e0bc5c06ec40fd15e8f7080}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_replace_function_request_ad000a60b1e0bc5c06ec40fd15e8f7080}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request to replace all calls to a function inside a process with calls to another function. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_replace_function_request_a10fc14a5a61d9497d972a2ec57b02ebe}{\index{Common\-::\-Replace\-Function\-Request@{Common\-::\-Replace\-Function\-Request}!Replace\-Function\-Request@{Replace\-Function\-Request}}
+\index{Replace\-Function\-Request@{Replace\-Function\-Request}!Common::ReplaceFunctionRequest@{Common\-::\-Replace\-Function\-Request}}
+\subsubsection[{Replace\-Function\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Replace\-Function\-Request\-::\-Replace\-Function\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{old\-Func = {\ttfamily std\-:\-:string()}, }
+\item[{std\-::string const \&}]{new\-Func = {\ttfamily std\-:\-:string()}, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_replace_function_request_a10fc14a5a61d9497d972a2ec57b02ebe}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the function will be replaced, default 0. \\
+\hline
+{\em old\-Func} & Name of the function to replace, default \char`\"{}\char`\"{}. \\
+\hline
+{\em new\-Func} & Name of the function to add, default \char`\"{}\char`\"{}. \\
+\hline
+{\em brkpt} & Used for synchronization purposes, the actual tuning will be executed when the execution reaches the breakpoint, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

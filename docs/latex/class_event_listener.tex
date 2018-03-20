@@ -1,0 +1,57 @@
+\hypertarget{class_event_listener}{\section{Event\-Listener Class Reference}
+\label{class_event_listener}\index{Event\-Listener@{Event\-Listener}}
+}
+
+
+Provides an interface for event listeners, which consist in methods to respond to events and errors.  
+
+
+
+
+{\ttfamily \#include $<$Event\-Collector.\-h$>$}
+
+Inheritance diagram for Event\-Listener\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_listener}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_event_listener_a0e6f686e8d0abb100c3fbce37586b04b}{On\-Event} (\hyperlink{class_common_1_1_e_c_p_message}{E\-C\-P\-Message} $\ast$msg)=0
+\begin{DoxyCompactList}\small\item\em Function which is triggered when an event happens. \end{DoxyCompactList}\item 
+\hypertarget{class_event_listener_a77e58660b8b6910d36a961384032697e}{virtual void \hyperlink{class_event_listener_a77e58660b8b6910d36a961384032697e}{On\-Fatal\-Error} ()=0}\label{class_event_listener_a77e58660b8b6910d36a961384032697e}
+
+\begin{DoxyCompactList}\small\item\em Function which is triggered when a fatal error happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides an interface for event listeners, which consist in methods to respond to events and errors. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_event_listener_a0e6f686e8d0abb100c3fbce37586b04b}{\index{Event\-Listener@{Event\-Listener}!On\-Event@{On\-Event}}
+\index{On\-Event@{On\-Event}!EventListener@{Event\-Listener}}
+\subsubsection[{On\-Event}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Event\-Listener\-::\-On\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-C\-P\-Message} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_event_listener_a0e6f686e8d0abb100c3fbce37586b04b}
+
+
+Function which is triggered when an event happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message that contains the event data. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_model_1_1_application_aeb4e28cb6431a3b073dcf379731ec614}{Model\-::\-Application}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Event\-Collector.\-h\end{DoxyCompactItemize}

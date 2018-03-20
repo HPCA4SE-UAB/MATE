@@ -1,0 +1,96 @@
+\hypertarget{class_common_1_1_one_time_function_call_request}{\section{Common\-:\-:One\-Time\-Function\-Call\-Request Class Reference}
+\label{class_common_1_1_one_time_function_call_request}\index{Common\-::\-One\-Time\-Function\-Call\-Request@{Common\-::\-One\-Time\-Function\-Call\-Request}}
+}
+
+
+Encapsulates a tuning request to invoke one time a given function in a given application process.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:One\-Time\-Function\-Call\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_common_1_1_one_time_function_call_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_one_time_function_call_request_a72c2db45188d05a5cd661d970c1734dd}{One\-Time\-Function\-Call\-Request} (int pid=0, std\-::string const \&func\-Name=std\-::string(), int n\-Attrs=0, \hyperlink{class_common_1_1_attribute}{Attribute} const $\ast$attrs=0, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} const $\ast$brkpt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_aee6880cf937a5a1af6027036b0a1c14d}{\hyperlink{class_common_1_1_one_time_function_call_request_aee6880cf937a5a1af6027036b0a1c14d}{$\sim$\-One\-Time\-Function\-Call\-Request} ()}\label{class_common_1_1_one_time_function_call_request_aee6880cf937a5a1af6027036b0a1c14d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_a7c624b493dc20db48d8c6ccfc0f14693}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_one_time_function_call_request_a7c624b493dc20db48d8c6ccfc0f14693}{Get\-Type} () const }\label{class_common_1_1_one_time_function_call_request_a7c624b493dc20db48d8c6ccfc0f14693}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-One\-Time\-Func\-Call). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_ad2a24593ef19e0d6efa1c7970b548427}{std\-::string const \& \hyperlink{class_common_1_1_one_time_function_call_request_ad2a24593ef19e0d6efa1c7970b548427}{Get\-Func\-Name} () const }\label{class_common_1_1_one_time_function_call_request_ad2a24593ef19e0d6efa1c7970b548427}
+
+\begin{DoxyCompactList}\small\item\em Returns name of the function to be added. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_af8640c5332f513916aa5861f0c81b6c5}{int \hyperlink{class_common_1_1_one_time_function_call_request_af8640c5332f513916aa5861f0c81b6c5}{Get\-Attr\-Count} () const }\label{class_common_1_1_one_time_function_call_request_af8640c5332f513916aa5861f0c81b6c5}
+
+\begin{DoxyCompactList}\small\item\em Returns number of attributes the function has. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_a6bea986467c6378d109aba2127fb2430}{\hyperlink{class_common_1_1_attribute}{Attribute} $\ast$ \hyperlink{class_common_1_1_one_time_function_call_request_a6bea986467c6378d109aba2127fb2430}{Get\-Attributes} () const }\label{class_common_1_1_one_time_function_call_request_a6bea986467c6378d109aba2127fb2430}
+
+\begin{DoxyCompactList}\small\item\em Returns array of attributes. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_a57294d4635ce2e919478291cc663b7af}{void \hyperlink{class_common_1_1_one_time_function_call_request_a57294d4635ce2e919478291cc663b7af}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_one_time_function_call_request_a57294d4635ce2e919478291cc663b7af}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_one_time_function_call_request_a92632184f0dd15656ff30cd436bc0594}{void \hyperlink{class_common_1_1_one_time_function_call_request_a92632184f0dd15656ff30cd436bc0594}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_one_time_function_call_request_a92632184f0dd15656ff30cd436bc0594}
+
+\begin{DoxyCompactList}\small\item\em Gets the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request to invoke one time a given function in a given application process. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_one_time_function_call_request_a72c2db45188d05a5cd661d970c1734dd}{\index{Common\-::\-One\-Time\-Function\-Call\-Request@{Common\-::\-One\-Time\-Function\-Call\-Request}!One\-Time\-Function\-Call\-Request@{One\-Time\-Function\-Call\-Request}}
+\index{One\-Time\-Function\-Call\-Request@{One\-Time\-Function\-Call\-Request}!Common::OneTimeFunctionCallRequest@{Common\-::\-One\-Time\-Function\-Call\-Request}}
+\subsubsection[{One\-Time\-Function\-Call\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-One\-Time\-Function\-Call\-Request\-::\-One\-Time\-Function\-Call\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{func\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{int}]{n\-Attrs = {\ttfamily 0}, }
+\item[{{\bf Attribute} const $\ast$}]{attrs = {\ttfamily 0}, }
+\item[{{\bf Breakpoint} const $\ast$}]{brkpt = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_one_time_function_call_request_a72c2db45188d05a5cd661d970c1734dd}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the call will be inserted, default 0. \\
+\hline
+{\em func\-Name} & Name of the function to call, default \char`\"{}\char`\"{}. \\
+\hline
+{\em n\-Attrs} & Number of attributes the function has, default 0. \\
+\hline
+{\em attrs} & \hyperlink{class_common_1_1_attribute}{Attribute} array, default 0. \\
+\hline
+{\em brkpt} & Used for synchronization purposes, the actual tuning will be executed when the execution reaches the breakpoint, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

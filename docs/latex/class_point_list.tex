@@ -1,0 +1,122 @@
+\hypertarget{class_point_list}{\section{Point\-List Class Reference}
+\label{class_point_list}\index{Point\-List@{Point\-List}}
+}
+
+
+Class that stores a vector of B\-Patch\-\_\-points and handles it. Can also get the address and function names of a given point.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point_list_a120d3da68f779570c3470594824aecb5}{Point\-List} (\hyperlink{class_di_function}{Di\-Function} \&func)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_point_list_a2aeb6e16818aca9c31c8eb876d755168}{Get\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the vector size. \end{DoxyCompactList}\item 
+void \hyperlink{class_point_list_aee028324ff3fae28e4a36856acf7f598}{Get\-Called\-Func\-Name} (B\-Patch\-\_\-point \&point, char $\ast$name, int length)
+\begin{DoxyCompactList}\small\item\em Gets the name of the function called at the given point. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_point_list_a7c950aded53ab52480b235889ea5e2ba}{Get\-Address} (B\-Patch\-\_\-point \&point)
+\begin{DoxyCompactList}\small\item\em Gets the address of the given point. \end{DoxyCompactList}\item 
+\hypertarget{class_point_list_acf7afef0c6265b89ab42e1a12e042313}{B\-Patch\-\_\-point \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i) const }\label{class_point_list_acf7afef0c6265b89ab42e1a12e042313}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that stores a vector of B\-Patch\-\_\-points and handles it. Can also get the address and function names of a given point. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_point_list_a120d3da68f779570c3470594824aecb5}{\index{Point\-List@{Point\-List}!Point\-List@{Point\-List}}
+\index{Point\-List@{Point\-List}!PointList@{Point\-List}}
+\subsubsection[{Point\-List}]{\setlength{\rightskip}{0pt plus 5cm}Point\-List\-::\-Point\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf Di\-Function} \&}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_point_list_a120d3da68f779570c3470594824aecb5}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_point_list_a7c950aded53ab52480b235889ea5e2ba}{\index{Point\-List@{Point\-List}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!PointList@{Point\-List}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Point\-List\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-point \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_point_list_a7c950aded53ab52480b235889ea5e2ba}
+
+
+Gets the address of the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Given point to look get address from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of the given point 
+\end{DoxyReturn}
+\hypertarget{class_point_list_aee028324ff3fae28e4a36856acf7f598}{\index{Point\-List@{Point\-List}!Get\-Called\-Func\-Name@{Get\-Called\-Func\-Name}}
+\index{Get\-Called\-Func\-Name@{Get\-Called\-Func\-Name}!PointList@{Point\-List}}
+\subsubsection[{Get\-Called\-Func\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Point\-List\-::\-Get\-Called\-Func\-Name (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-point \&}]{point, }
+\item[{char $\ast$}]{name, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_point_list_aee028324ff3fae28e4a36856acf7f598}
+
+
+Gets the name of the function called at the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Point where the function is \\
+\hline
+{\em name} & Name of the function \\
+\hline
+{\em length} & Length of the name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_point_list_a2aeb6e16818aca9c31c8eb876d755168}{\index{Point\-List@{Point\-List}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!PointList@{Point\-List}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Point\-List\-::\-Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_point_list_a2aeb6e16818aca9c31c8eb876d755168}
+
+
+Getter of the vector size. 
+
+\begin{DoxyReturn}{Returns}
+Vector's size 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\end{DoxyCompactItemize}

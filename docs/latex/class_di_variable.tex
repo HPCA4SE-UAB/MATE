@@ -1,0 +1,152 @@
+\hypertarget{class_di_variable}{\section{Di\-Variable Class Reference}
+\label{class_di_variable}\index{Di\-Variable@{Di\-Variable}}
+}
+
+
+Deals with Dyninst's Variable class. This can create, read and delete a variable of a given type or size in memory.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+Inheritance diagram for Di\-Variable\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_di_variable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_di_variable_a909e93bc0684f53588b2875c2f6fc3aa}{Di\-Variable} (B\-Patch\-\_\-process \&bp\-Process, B\-Patch\-\_\-type const \&type)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_di_variable}{Di\-Variable} constructor of a given type. \end{DoxyCompactList}\item 
+\hyperlink{class_di_variable_ac9b7545cae8d71421296b9e076cb5a42}{Di\-Variable} (B\-Patch\-\_\-process \&bp\-Process, char const $\ast$type\-Name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_di_variable}{Di\-Variable} constructor of a given type name. \end{DoxyCompactList}\item 
+\hyperlink{class_di_variable_ad94dd879a61ffba2dfd3339602ac8d81}{Di\-Variable} (B\-Patch\-\_\-process \&bp\-Process, int size)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_di_variable}{Di\-Variable} constructor of a given size. \end{DoxyCompactList}\item 
+\hypertarget{class_di_variable_aacef58e456bbf5a5f74ec678859d4845}{\hyperlink{class_di_variable_aacef58e456bbf5a5f74ec678859d4845}{$\sim$\-Di\-Variable} ()}\label{class_di_variable_aacef58e456bbf5a5f74ec678859d4845}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_di_variable_a06fa020320e2d8852594f17605563522}{{\bfseries operator B\-Patch\-\_\-variable\-Expr \&} ()}\label{class_di_variable_a06fa020320e2d8852594f17605563522}
+
+\item 
+\hypertarget{class_di_variable_a8fd67253e046796a14afa17ced1b894c}{{\bfseries operator B\-Patch\-\_\-variable\-Expr $\ast$} ()}\label{class_di_variable_a8fd67253e046796a14afa17ced1b894c}
+
+\item 
+void \hyperlink{class_di_variable_a214103cfdd6e36e36ea7f90186450112}{Get\-Value} (void $\ast$dst) const 
+\begin{DoxyCompactList}\small\item\em Reads the value of a variable in a thread's address space. $<$dst$>$ is assumed to be the same size as the variable. \end{DoxyCompactList}\item 
+long int \hyperlink{class_di_variable_ab75a5f7155896262273505b9f80afab7}{Get\-Address} () const 
+\begin{DoxyCompactList}\small\item\em Returns base address of this variable in the target's address space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Deals with Dyninst's Variable class. This can create, read and delete a variable of a given type or size in memory. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_di_variable_a909e93bc0684f53588b2875c2f6fc3aa}{\index{Di\-Variable@{Di\-Variable}!Di\-Variable@{Di\-Variable}}
+\index{Di\-Variable@{Di\-Variable}!DiVariable@{Di\-Variable}}
+\subsubsection[{Di\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Variable\-::\-Di\-Variable (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-process \&}]{bp\-Process, }
+\item[{B\-Patch\-\_\-type const \&}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_variable_a909e93bc0684f53588b2875c2f6fc3aa}
+
+
+\hyperlink{class_di_variable}{Di\-Variable} constructor of a given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bp\-Process} & Process \\
+\hline
+{\em type} & Type of the variable \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_variable_ac9b7545cae8d71421296b9e076cb5a42}{\index{Di\-Variable@{Di\-Variable}!Di\-Variable@{Di\-Variable}}
+\index{Di\-Variable@{Di\-Variable}!DiVariable@{Di\-Variable}}
+\subsubsection[{Di\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Variable\-::\-Di\-Variable (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-process \&}]{bp\-Process, }
+\item[{char const $\ast$}]{type\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_variable_ac9b7545cae8d71421296b9e076cb5a42}
+
+
+\hyperlink{class_di_variable}{Di\-Variable} constructor of a given type name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bp\-Process} & Process \\
+\hline
+{\em type\-Name} & Type name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_variable_ad94dd879a61ffba2dfd3339602ac8d81}{\index{Di\-Variable@{Di\-Variable}!Di\-Variable@{Di\-Variable}}
+\index{Di\-Variable@{Di\-Variable}!DiVariable@{Di\-Variable}}
+\subsubsection[{Di\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Variable\-::\-Di\-Variable (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-process \&}]{bp\-Process, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_variable_ad94dd879a61ffba2dfd3339602ac8d81}
+
+
+\hyperlink{class_di_variable}{Di\-Variable} constructor of a given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bp\-Process} & Process \\
+\hline
+{\em size} & Size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_di_variable_ab75a5f7155896262273505b9f80afab7}{\index{Di\-Variable@{Di\-Variable}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!DiVariable@{Di\-Variable}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}long int Di\-Variable\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_variable_ab75a5f7155896262273505b9f80afab7}
+
+
+Returns base address of this variable in the target's address space. 
+
+\begin{DoxyReturn}{Returns}
+Base address of the variable 
+\end{DoxyReturn}
+\hypertarget{class_di_variable_a214103cfdd6e36e36ea7f90186450112}{\index{Di\-Variable@{Di\-Variable}!Get\-Value@{Get\-Value}}
+\index{Get\-Value@{Get\-Value}!DiVariable@{Di\-Variable}}
+\subsubsection[{Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Variable\-::\-Get\-Value (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dst}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_variable_a214103cfdd6e36e36ea7f90186450112}
+
+
+Reads the value of a variable in a thread's address space. $<$dst$>$ is assumed to be the same size as the variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Reads value from here \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\end{DoxyCompactItemize}

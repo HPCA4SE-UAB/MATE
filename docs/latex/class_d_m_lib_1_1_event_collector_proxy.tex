@@ -1,0 +1,50 @@
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy}{\section{D\-M\-Lib\-:\-:Event\-Collector\-Proxy Class Reference}
+\label{class_d_m_lib_1_1_event_collector_proxy}\index{D\-M\-Lib\-::\-Event\-Collector\-Proxy@{D\-M\-Lib\-::\-Event\-Collector\-Proxy}}
+}
+
+
+Connects to the analyzer host and sends requests.  
+
+
+
+
+{\ttfamily \#include $<$E\-C\-P\-Proxy.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy_a363b2b90626f1d08102b6628a65b61a1}{\hyperlink{class_d_m_lib_1_1_event_collector_proxy_a363b2b90626f1d08102b6628a65b61a1}{Event\-Collector\-Proxy} (std\-::string const \&host, int port)}\label{class_d_m_lib_1_1_event_collector_proxy_a363b2b90626f1d08102b6628a65b61a1}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy_a6a43500ceae0fc7bcf3bf958e1e0689b}{\hyperlink{class_d_m_lib_1_1_event_collector_proxy_a6a43500ceae0fc7bcf3bf958e1e0689b}{$\sim$\-Event\-Collector\-Proxy} ()}\label{class_d_m_lib_1_1_event_collector_proxy_a6a43500ceae0fc7bcf3bf958e1e0689b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy_a2e030001e9d2649f020f02455aa5ebea}{void \hyperlink{class_d_m_lib_1_1_event_collector_proxy_a2e030001e9d2649f020f02455aa5ebea}{Register\-Lib} (int pid, int mpi\-Rank, std\-::string host, std\-::string task\-Name, int A\-Cport)}\label{class_d_m_lib_1_1_event_collector_proxy_a2e030001e9d2649f020f02455aa5ebea}
+
+\begin{DoxyCompactList}\small\item\em Sends a request to the \hyperlink{class_analyzer}{Analyzer} to register a new worker. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy_a3c35713deece278377a1f265af7e1371}{void \hyperlink{class_d_m_lib_1_1_event_collector_proxy_a3c35713deece278377a1f265af7e1371}{Send\-Event} (\hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \&event)}\label{class_d_m_lib_1_1_event_collector_proxy_a3c35713deece278377a1f265af7e1371}
+
+\begin{DoxyCompactList}\small\item\em Sends a message to the analyzer. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_collector_proxy_ab65910277b0b1a35011f0a8b945417f0}{void \hyperlink{class_d_m_lib_1_1_event_collector_proxy_ab65910277b0b1a35011f0a8b945417f0}{Unregister\-Library} (int pid)}\label{class_d_m_lib_1_1_event_collector_proxy_ab65910277b0b1a35011f0a8b945417f0}
+
+\begin{DoxyCompactList}\small\item\em Sends a request to the \hyperlink{class_analyzer}{Analyzer} to unregister a worker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connects to the analyzer host and sends requests. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+D\-M\-Lib/E\-C\-P\-Proxy.\-h\item 
+D\-M\-Lib/E\-C\-P\-Proxy.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+# Version for LINUX.
+#
+#********************************************************
+# global options
+#********************************************************
+SHELL=/bin/bash
+PREFIX=/home/alberto/soft/final-mate/src/install
+ARCH=i686 
+MPI_IDIR=
+MPI_LDIR= 
+MPI_FLAGS=
+
+ARC=i686
+MPI_IDIR=
+MPI_LDIR=
+
+LDFLAGS=-L/home/alberto/soft/dyninst/install/lib 
+CXXFLAGS=-I/home/alberto/soft/dyninst/install/include -g -O2
+
+# Destinations for library and executable installation (relative to src directory)
+GCC=gcc
+GXX=g++
+
+LIBRARY_DEST=/home/alberto/soft/final-mate/src/install/lib
+PROGRAMS_DEST=/home/alberto/soft/final-mate/src/install/bin
+PROGRAMS_CONF=./conf
+# Doxygen binary path
+DOXYGEN_DIR = .
+ 
+MAKE=make
+LINKER=ld
+MV=mv
+CP=cp
+RM=rm -f
+MKDIR=mkdir -p
+
+#********************************************************
+# DynInst configuration and dependencies                *
+#********************************************************
+DYNINST_IDIR=/home/alberto/soft/dyninst/install/include
+DYNINST_LDIR=/home/alberto/soft/dyninst/install/lib
+DYNINST_LIB=-lsymtabAPI -lcommon -ldyninstAPI -ldwarf -ldw -liberty -lelf 
+
+#********************************************************
+# Compiler configuration and default paths              *
+#********************************************************
+# Compiler include paths
+IFLAGS=-I. -I/home/alberto/soft/dyninst/install/include 
+# Default compiler options
+OPT_FLAG=-g -Wno-deprecated -Wall
+# Flags for normal source files
+CFLAGS=-std=c++11 $(IFLAGS) $(OPT_FLAG) -DIMA_LINUX 
+# Paths for libraries
+LDFLAGS=-L/home/alberto/soft/dyninst/install/lib  

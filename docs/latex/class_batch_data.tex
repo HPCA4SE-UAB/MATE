@@ -1,0 +1,308 @@
+\hypertarget{class_batch_data}{\section{Batch\-Data Class Reference}
+\label{class_batch_data}\index{Batch\-Data@{Batch\-Data}}
+}
+
+
+Statistics of a single batch.  
+
+
+
+
+{\ttfamily \#include $<$Factoring\-Stats\-\_\-nw.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_batch_data_a42d0d69acb80a85ab740fd5bdc933051}{Batch\-Data} (int batch\-Idx)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_batch_data_ad55477d0f59b5076e7efcc7711c04e90}{\hyperlink{class_batch_data_ad55477d0f59b5076e7efcc7711c04e90}{$\sim$\-Batch\-Data} ()}\label{class_batch_data_ad55477d0f59b5076e7efcc7711c04e90}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_batch_data_a47092a16aeb1356f6932c7a5ce71c773}{On\-New\-Batch} (int num\-Chunks)
+\begin{DoxyCompactList}\small\item\em Sets the number of chunks to {\itshape num\-Chunks} \end{DoxyCompactList}\item 
+\hyperlink{class_worker_data}{Worker\-Data} \& \hyperlink{class_batch_data_a73d104e92d0272450f0d799eba8df047}{Get\-Worker\-Data} (int worker\-Tid)
+\begin{DoxyCompactList}\small\item\em Getter of the data in worker given by worker\-Tid. If it does not exist, creates a new one and returns it. \end{DoxyCompactList}\item 
+\hyperlink{class_worker_data}{Worker\-Data} \& \hyperlink{class_batch_data_a02cba9872dac0dc3e0f622149e14fd8f}{New\-Worker\-Data} (int worker\-Tid)
+\begin{DoxyCompactList}\small\item\em Creates a new worker data in worker\-Tid and returns it. If it already exists, returns it. \end{DoxyCompactList}\item 
+bool \hyperlink{class_batch_data_a2cb14e2d5412511ee26e5d6a1006d042}{Is\-Complete} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the current \hyperlink{class_batch_data}{Batch\-Data} is complete. \end{DoxyCompactList}\item 
+bool \hyperlink{class_batch_data_adf1ee749495ff1cd84df96123e15e70a}{Is\-Actualize} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the \-\_\-flag\-Actualize private var. \end{DoxyCompactList}\item 
+\hypertarget{class_batch_data_a27f36cd98d28c146d5c3f097d0d81fe4}{void \hyperlink{class_batch_data_a27f36cd98d28c146d5c3f097d0d81fe4}{Set\-Actualize} ()}\label{class_batch_data_a27f36cd98d28c146d5c3f097d0d81fe4}
+
+\begin{DoxyCompactList}\small\item\em Sets \-\_\-flag\-Actualize to 1. \end{DoxyCompactList}\item 
+bool \hyperlink{class_batch_data_ab599097b9e1f7fba2ad3b829ea80f266}{Are\-Workers\-Complete} () const 
+\begin{DoxyCompactList}\small\item\em Checks if all the workers {\bfseries in \hyperlink{class_batch_data}{Batch\-Data}} are complete. \end{DoxyCompactList}\item 
+\hyperlink{class_worker_data}{Worker\-Data} $\ast$$\ast$ \hyperlink{class_batch_data_aae7833fddc7826d093346e80c4b3eac6}{Alloc\-Workers\-Array} ()
+\begin{DoxyCompactList}\small\item\em Allocates a dynamic array of \hyperlink{class_worker_data}{Worker\-Data} and returns it. \end{DoxyCompactList}\item 
+double \hyperlink{class_batch_data_a68289b65f403f6b6a965cec4a2ceaa9e}{Deviation\-Computing\-Time} ()
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\item 
+double \hyperlink{class_batch_data_a09cf749b9fbad1213a44c19346b1bb14}{Mean\-Computing\-Time} ()
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\item 
+int \hyperlink{class_batch_data_ab2aa288ef12cf1f45b9bde2491c64178}{Get\-Num\-Chunks} () const 
+\begin{DoxyCompactList}\small\item\em Getter of \-\_\-num\-Chunks. \end{DoxyCompactList}\item 
+double \hyperlink{class_batch_data_ab44cab5811e64dcde891f900964ac2c8}{Get\-Mean\-Stats} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns the mean task processing time. \end{DoxyCompactList}\item 
+double \hyperlink{class_batch_data_aec492a90b67eb2c2affe84f4fc865a6c}{Get\-Std\-Stats} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns the standard deviation of the tasks. \end{DoxyCompactList}\item 
+void \hyperlink{class_batch_data_a37ac38b8105c484df0ea907ae43e7f5b}{Size\-Task\-Received} (int size\-Tasks)
+\begin{DoxyCompactList}\small\item\em Adds {\itshape size\-Tasks} to \-\_\-\-Total\-Task\-Received. \end{DoxyCompactList}\item 
+int \hyperlink{class_batch_data_a4bb41517a1f0ffb1f9ade0eb1573e7ed}{Get\-Size\-Task\-Received} () const 
+\begin{DoxyCompactList}\small\item\em \-\_\-\-Total\-Task\-Received getter \end{DoxyCompactList}\item 
+\hyperlink{struct_model_param}{Model\-Param} \hyperlink{class_batch_data_a8c6236018210381ec747c48be7623354}{Get\-Model\-Param} ()
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{struct_model_param}{Model\-Param} object with Total\-Data\-Volume, Total\-Data\-Send\-W and Total\-Comp\-Time updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Statistics of a single batch. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_batch_data_a42d0d69acb80a85ab740fd5bdc933051}{\index{Batch\-Data@{Batch\-Data}!Batch\-Data@{Batch\-Data}}
+\index{Batch\-Data@{Batch\-Data}!BatchData@{Batch\-Data}}
+\subsubsection[{Batch\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Batch\-Data\-::\-Batch\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{batch\-Idx}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a42d0d69acb80a85ab740fd5bdc933051}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\-Idx} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_batch_data_aae7833fddc7826d093346e80c4b3eac6}{\index{Batch\-Data@{Batch\-Data}!Alloc\-Workers\-Array@{Alloc\-Workers\-Array}}
+\index{Alloc\-Workers\-Array@{Alloc\-Workers\-Array}!BatchData@{Batch\-Data}}
+\subsubsection[{Alloc\-Workers\-Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Worker\-Data} $\ast$$\ast$ Batch\-Data\-::\-Alloc\-Workers\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_aae7833fddc7826d093346e80c4b3eac6}
+
+
+Allocates a dynamic array of \hyperlink{class_worker_data}{Worker\-Data} and returns it. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_worker_data}{Worker\-Data} array 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_ab599097b9e1f7fba2ad3b829ea80f266}{\index{Batch\-Data@{Batch\-Data}!Are\-Workers\-Complete@{Are\-Workers\-Complete}}
+\index{Are\-Workers\-Complete@{Are\-Workers\-Complete}!BatchData@{Batch\-Data}}
+\subsubsection[{Are\-Workers\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Batch\-Data\-::\-Are\-Workers\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_batch_data_ab599097b9e1f7fba2ad3b829ea80f266}
+
+
+Checks if all the workers {\bfseries in \hyperlink{class_batch_data}{Batch\-Data}} are complete. 
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a68289b65f403f6b6a965cec4a2ceaa9e}{\index{Batch\-Data@{Batch\-Data}!Deviation\-Computing\-Time@{Deviation\-Computing\-Time}}
+\index{Deviation\-Computing\-Time@{Deviation\-Computing\-Time}!BatchData@{Batch\-Data}}
+\subsubsection[{Deviation\-Computing\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double Batch\-Data\-::\-Deviation\-Computing\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a68289b65f403f6b6a965cec4a2ceaa9e}
+
+
+Not implemented. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_batch_data_ab44cab5811e64dcde891f900964ac2c8}{\index{Batch\-Data@{Batch\-Data}!Get\-Mean\-Stats@{Get\-Mean\-Stats}}
+\index{Get\-Mean\-Stats@{Get\-Mean\-Stats}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Mean\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}double Batch\-Data\-::\-Get\-Mean\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_ab44cab5811e64dcde891f900964ac2c8}
+
+
+Calculates and returns the mean task processing time. 
+
+\begin{DoxyReturn}{Returns}
+mean time in {\bfseries seconds?} 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a8c6236018210381ec747c48be7623354}{\index{Batch\-Data@{Batch\-Data}!Get\-Model\-Param@{Get\-Model\-Param}}
+\index{Get\-Model\-Param@{Get\-Model\-Param}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Model\-Param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\-Param} Batch\-Data\-::\-Get\-Model\-Param (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a8c6236018210381ec747c48be7623354}
+
+
+Returns the \hyperlink{struct_model_param}{Model\-Param} object with Total\-Data\-Volume, Total\-Data\-Send\-W and Total\-Comp\-Time updated. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_model_param}{Model\-Param} object 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_ab2aa288ef12cf1f45b9bde2491c64178}{\index{Batch\-Data@{Batch\-Data}!Get\-Num\-Chunks@{Get\-Num\-Chunks}}
+\index{Get\-Num\-Chunks@{Get\-Num\-Chunks}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Num\-Chunks}]{\setlength{\rightskip}{0pt plus 5cm}int Batch\-Data\-::\-Get\-Num\-Chunks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_ab2aa288ef12cf1f45b9bde2491c64178}
+
+
+Getter of \-\_\-num\-Chunks. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-num\-Chunks 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a4bb41517a1f0ffb1f9ade0eb1573e7ed}{\index{Batch\-Data@{Batch\-Data}!Get\-Size\-Task\-Received@{Get\-Size\-Task\-Received}}
+\index{Get\-Size\-Task\-Received@{Get\-Size\-Task\-Received}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Size\-Task\-Received}]{\setlength{\rightskip}{0pt plus 5cm}int Batch\-Data\-::\-Get\-Size\-Task\-Received (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_a4bb41517a1f0ffb1f9ade0eb1573e7ed}
+
+
+\-\_\-\-Total\-Task\-Received getter 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-\-Total\-Task\-Received 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_aec492a90b67eb2c2affe84f4fc865a6c}{\index{Batch\-Data@{Batch\-Data}!Get\-Std\-Stats@{Get\-Std\-Stats}}
+\index{Get\-Std\-Stats@{Get\-Std\-Stats}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Std\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}double Batch\-Data\-::\-Get\-Std\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_aec492a90b67eb2c2affe84f4fc865a6c}
+
+
+Calculates and returns the standard deviation of the tasks. 
+
+\begin{DoxyReturn}{Returns}
+standard deviation 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a73d104e92d0272450f0d799eba8df047}{\index{Batch\-Data@{Batch\-Data}!Get\-Worker\-Data@{Get\-Worker\-Data}}
+\index{Get\-Worker\-Data@{Get\-Worker\-Data}!BatchData@{Batch\-Data}}
+\subsubsection[{Get\-Worker\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Worker\-Data} \& Batch\-Data\-::\-Get\-Worker\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{worker\-Tid}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a73d104e92d0272450f0d799eba8df047}
+
+
+Getter of the data in worker given by worker\-Tid. If it does not exist, creates a new one and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker\-Tid} & Worker I\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_worker_data}{Worker\-Data} object 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_adf1ee749495ff1cd84df96123e15e70a}{\index{Batch\-Data@{Batch\-Data}!Is\-Actualize@{Is\-Actualize}}
+\index{Is\-Actualize@{Is\-Actualize}!BatchData@{Batch\-Data}}
+\subsubsection[{Is\-Actualize}]{\setlength{\rightskip}{0pt plus 5cm}bool Batch\-Data\-::\-Is\-Actualize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_adf1ee749495ff1cd84df96123e15e70a}
+
+
+Getter of the \-\_\-flag\-Actualize private var. 
+
+\begin{DoxyReturn}{Returns}
+returns \-\_\-flag\-Actualize 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a2cb14e2d5412511ee26e5d6a1006d042}{\index{Batch\-Data@{Batch\-Data}!Is\-Complete@{Is\-Complete}}
+\index{Is\-Complete@{Is\-Complete}!BatchData@{Batch\-Data}}
+\subsubsection[{Is\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Batch\-Data\-::\-Is\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_a2cb14e2d5412511ee26e5d6a1006d042}
+
+
+Checks if the current \hyperlink{class_batch_data}{Batch\-Data} is complete. 
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a09cf749b9fbad1213a44c19346b1bb14}{\index{Batch\-Data@{Batch\-Data}!Mean\-Computing\-Time@{Mean\-Computing\-Time}}
+\index{Mean\-Computing\-Time@{Mean\-Computing\-Time}!BatchData@{Batch\-Data}}
+\subsubsection[{Mean\-Computing\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double Batch\-Data\-::\-Mean\-Computing\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a09cf749b9fbad1213a44c19346b1bb14}
+
+
+Not implemented. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a02cba9872dac0dc3e0f622149e14fd8f}{\index{Batch\-Data@{Batch\-Data}!New\-Worker\-Data@{New\-Worker\-Data}}
+\index{New\-Worker\-Data@{New\-Worker\-Data}!BatchData@{Batch\-Data}}
+\subsubsection[{New\-Worker\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Worker\-Data} \& Batch\-Data\-::\-New\-Worker\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{worker\-Tid}
+\end{DoxyParamCaption}
+)}}\label{class_batch_data_a02cba9872dac0dc3e0f622149e14fd8f}
+
+
+Creates a new worker data in worker\-Tid and returns it. If it already exists, returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker\-Tid} & Worker I\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_worker_data}{Worker\-Data} Object 
+\end{DoxyReturn}
+\hypertarget{class_batch_data_a47092a16aeb1356f6932c7a5ce71c773}{\index{Batch\-Data@{Batch\-Data}!On\-New\-Batch@{On\-New\-Batch}}
+\index{On\-New\-Batch@{On\-New\-Batch}!BatchData@{Batch\-Data}}
+\subsubsection[{On\-New\-Batch}]{\setlength{\rightskip}{0pt plus 5cm}void Batch\-Data\-::\-On\-New\-Batch (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Chunks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_a47092a16aeb1356f6932c7a5ce71c773}
+
+
+Sets the number of chunks to {\itshape num\-Chunks} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\-Chunks} & Number of chunks \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_batch_data_a37ac38b8105c484df0ea907ae43e7f5b}{\index{Batch\-Data@{Batch\-Data}!Size\-Task\-Received@{Size\-Task\-Received}}
+\index{Size\-Task\-Received@{Size\-Task\-Received}!BatchData@{Batch\-Data}}
+\subsubsection[{Size\-Task\-Received}]{\setlength{\rightskip}{0pt plus 5cm}void Batch\-Data\-::\-Size\-Task\-Received (
+\begin{DoxyParamCaption}
+\item[{int}]{size\-Tasks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_batch_data_a37ac38b8105c484df0ea907ae43e7f5b}
+
+
+Adds {\itshape size\-Tasks} to \-\_\-\-Total\-Task\-Received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\-Tasks} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-h\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-cpp\end{DoxyCompactItemize}

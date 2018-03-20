@@ -1,0 +1,97 @@
+\hypertarget{class_snippet_maker}{\section{Snippet\-Maker Class Reference}
+\label{class_snippet_maker}\index{Snippet\-Maker@{Snippet\-Maker}}
+}
+
+
+Prepares the snippets to be inserted into the processes.  
+
+
+
+
+{\ttfamily \#include $<$Snippet\-Maker.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_snippet_maker_aabac23880a98e7c9adb75ad37852a541}{Snippet\-Maker} (\hyperlink{class_di_process}{Di\-Process} \&process, \hyperlink{class_di_image}{Di\-Image} \&image)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_snippet_maker_af1e250a58d103607a69c3319f8180b78}{Make\-Event\-Snippet} (int event\-Id, std\-::string const \&func\-Name, Instr\-Place instr\-Place, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, int n\-Papi, std\-::string $\ast$Papi\-Metrics)
+\begin{DoxyCompactList}\small\item\em Creates and inserts a snippet into the running process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prepares the snippets to be inserted into the processes. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_snippet_maker_aabac23880a98e7c9adb75ad37852a541}{\index{Snippet\-Maker@{Snippet\-Maker}!Snippet\-Maker@{Snippet\-Maker}}
+\index{Snippet\-Maker@{Snippet\-Maker}!SnippetMaker@{Snippet\-Maker}}
+\subsubsection[{Snippet\-Maker}]{\setlength{\rightskip}{0pt plus 5cm}Snippet\-Maker\-::\-Snippet\-Maker (
+\begin{DoxyParamCaption}
+\item[{{\bf Di\-Process} \&}]{process, }
+\item[{{\bf Di\-Image} \&}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_maker_aabac23880a98e7c9adb75ad37852a541}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & Dyninst process to be modified. \\
+\hline
+{\em image} & Dyninst image of the process to be modified. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_snippet_maker_af1e250a58d103607a69c3319f8180b78}{\index{Snippet\-Maker@{Snippet\-Maker}!Make\-Event\-Snippet@{Make\-Event\-Snippet}}
+\index{Make\-Event\-Snippet@{Make\-Event\-Snippet}!SnippetMaker@{Snippet\-Maker}}
+\subsubsection[{Make\-Event\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Snippet\-Maker\-::\-Make\-Event\-Snippet (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{Instr\-Place}]{instr\-Place, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{int}]{n\-Papi, }
+\item[{std\-::string $\ast$}]{Papi\-Metrics}
+\end{DoxyParamCaption}
+)}}\label{class_snippet_maker_af1e250a58d103607a69c3319f8180b78}
+
+
+Creates and inserts a snippet into the running process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Identifier of the event. \\
+\hline
+{\em func\-Name} & Name of the function to be modified. \\
+\hline
+{\em instr\-Place} & Place in the function where the snippet will be inserted. \\
+\hline
+{\em n\-Attrs} & Number of attributes. \\
+\hline
+{\em attrs} & Array of attributes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle for the prepared snippet. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Snippet\-Maker.\-h\item 
+A\-C/Snippet\-Maker.\-cpp\end{DoxyCompactItemize}

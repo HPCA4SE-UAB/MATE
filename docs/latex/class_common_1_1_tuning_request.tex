@@ -1,0 +1,74 @@
+\hypertarget{class_common_1_1_tuning_request}{\section{Common\-:\-:Tuning\-Request Class Reference}
+\label{class_common_1_1_tuning_request}\index{Common\-::\-Tuning\-Request@{Common\-::\-Tuning\-Request}}
+}
+
+
+Encapsulates a tuning request from the analyzer.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Tuning\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.295547cm]{class_common_1_1_tuning_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_tuning_request_acae0764e80b1f5808634a4b657f2ee5e}{\hyperlink{class_common_1_1_tuning_request_acae0764e80b1f5808634a4b657f2ee5e}{$\sim$\-Tuning\-Request} ()}\label{class_common_1_1_tuning_request_acae0764e80b1f5808634a4b657f2ee5e}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_tuning_request_acf7f45374392751fcc14fadbac737217}{int \hyperlink{class_common_1_1_tuning_request_acf7f45374392751fcc14fadbac737217}{Get\-Pid} () const }\label{class_common_1_1_tuning_request_acf7f45374392751fcc14fadbac737217}
+
+\begin{DoxyCompactList}\small\item\em Returns the pid of the process associated with the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_tuning_request_a214a3956bcf42e3f77d375ecff81bc18}{\hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$ \hyperlink{class_common_1_1_tuning_request_a214a3956bcf42e3f77d375ecff81bc18}{Get\-Breakpoint} () const }\label{class_common_1_1_tuning_request_a214a3956bcf42e3f77d375ecff81bc18}
+
+\begin{DoxyCompactList}\small\item\em Returns breakpoint. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_tuning_request_a144d686921a117ddc6480cae69c28a85}{void \hyperlink{class_common_1_1_tuning_request_a144d686921a117ddc6480cae69c28a85}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_tuning_request_a144d686921a117ddc6480cae69c28a85}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_tuning_request_a9ea5f3f99cee99247bc1dfa533a8da72}{void \hyperlink{class_common_1_1_tuning_request_a9ea5f3f99cee99247bc1dfa533a8da72}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_tuning_request_a9ea5f3f99cee99247bc1dfa533a8da72}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_tuning_request_a8a83c67314d30a6b78fd7510219c3a01}{void \hyperlink{class_common_1_1_tuning_request_a8a83c67314d30a6b78fd7510219c3a01}{Clear\-Breakpoint} ()}\label{class_common_1_1_tuning_request_a8a83c67314d30a6b78fd7510219c3a01}
+
+\begin{DoxyCompactList}\small\item\em Clears breakpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_tuning_request_a77112081462dd30e0dc053a6c1d58eb4}{{\bfseries Tuning\-Request} (int pid, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} const $\ast$brkpt=0)}\label{class_common_1_1_tuning_request_a77112081462dd30e0dc053a6c1d58eb4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_tuning_request_a706eb2eae0198721cf0d6147ad379f34}{int {\bfseries \-\_\-pid}}\label{class_common_1_1_tuning_request_a706eb2eae0198721cf0d6147ad379f34}
+
+\item 
+\hypertarget{class_common_1_1_tuning_request_a3ed959da237f66730d29348b251f8c28}{\hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$ {\bfseries \-\_\-brkpt}}\label{class_common_1_1_tuning_request_a3ed959da237f66730d29348b251f8c28}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request from the analyzer. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

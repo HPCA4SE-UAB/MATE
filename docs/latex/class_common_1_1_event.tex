@@ -1,0 +1,93 @@
+\hypertarget{class_common_1_1_event}{\section{Common\-:\-:Event Class Reference}
+\label{class_common_1_1_event}\index{Common\-::\-Event@{Common\-::\-Event}}
+}
+
+
+Encapsulates information to record an event.  
+
+
+
+
+{\ttfamily \#include $<$Event.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_event_a63afd3d081602539044c6ee3cc5cca54}{Event} (long64\-\_\-t timestamp, int event\-Id, Event\-Place \&place, int tid, int param\-Count, std\-::string const \&machine)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_aee9cb3b6f8e45fc94b04a684644b9893}{\hyperlink{class_common_1_1_event_aee9cb3b6f8e45fc94b04a684644b9893}{$\sim$\-Event} ()}\label{class_common_1_1_event_aee9cb3b6f8e45fc94b04a684644b9893}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_a6b8338c64703c64682432d27835742db}{long64\-\_\-t \hyperlink{class_common_1_1_event_a6b8338c64703c64682432d27835742db}{Get\-Timestamp} () const }\label{class_common_1_1_event_a6b8338c64703c64682432d27835742db}
+
+\begin{DoxyCompactList}\small\item\em Returns timestamp. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_afecf0af6bd52fd51203eac8f8bf07dc9}{int \hyperlink{class_common_1_1_event_afecf0af6bd52fd51203eac8f8bf07dc9}{Get\-Place} ()}\label{class_common_1_1_event_afecf0af6bd52fd51203eac8f8bf07dc9}
+
+\begin{DoxyCompactList}\small\item\em Returns place \{Event\-Entry, Event\-Exit\}. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_a46985808c16eda5934a6f6506351727a}{int \hyperlink{class_common_1_1_event_a46985808c16eda5934a6f6506351727a}{Get\-Event\-Id} () const }\label{class_common_1_1_event_a46985808c16eda5934a6f6506351727a}
+
+\begin{DoxyCompactList}\small\item\em Returns event id. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_a9bdf8d9094f35739c9da78dd4e5fd51f}{int \hyperlink{class_common_1_1_event_a9bdf8d9094f35739c9da78dd4e5fd51f}{Get\-Tid} ()}\label{class_common_1_1_event_a9bdf8d9094f35739c9da78dd4e5fd51f}
+
+\begin{DoxyCompactList}\small\item\em Returns tid attribute. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_a5349c49a0cdb128a3f041914ad7e4079}{int \hyperlink{class_common_1_1_event_a5349c49a0cdb128a3f041914ad7e4079}{Get\-Param\-Count} ()}\label{class_common_1_1_event_a5349c49a0cdb128a3f041914ad7e4079}
+
+\begin{DoxyCompactList}\small\item\em Returns count of the parameters. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_acc26570c393a466b02cbb57178a5a251}{std\-::string const \& \hyperlink{class_common_1_1_event_acc26570c393a466b02cbb57178a5a251}{Get\-Machine} ()}\label{class_common_1_1_event_acc26570c393a466b02cbb57178a5a251}
+
+\begin{DoxyCompactList}\small\item\em Returns name of the machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates information to record an event. 
+
+This information will be sent to the \hyperlink{class_analyzer}{Analyzer}, who will do the actual recording of the event attributes.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2004 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_event_a63afd3d081602539044c6ee3cc5cca54}{\index{Common\-::\-Event@{Common\-::\-Event}!Event@{Event}}
+\index{Event@{Event}!Common::Event@{Common\-::\-Event}}
+\subsubsection[{Event}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Event\-::\-Event (
+\begin{DoxyParamCaption}
+\item[{long64\-\_\-t}]{timestamp, }
+\item[{int}]{event\-Id, }
+\item[{Event\-Place \&}]{place, }
+\item[{int}]{tid, }
+\item[{int}]{param\-Count, }
+\item[{std\-::string const \&}]{machine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_event_a63afd3d081602539044c6ee3cc5cca54}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & Time stamp when the event was initialized. \\
+\hline
+{\em event\-Id} & Id of the event. \\
+\hline
+{\em place} & Part on the program where it'll take place. \{Event\-Entry, Event\-Exit\} \\
+\hline
+{\em tid} & \hyperlink{class_task}{Task} id. \\
+\hline
+{\em param\-Count} & Number of parameters. \\
+\hline
+{\em machine} & String representing the machine where the event takes place. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/Event.\-h\end{DoxyCompactItemize}

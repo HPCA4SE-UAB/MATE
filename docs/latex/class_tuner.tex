@@ -1,0 +1,103 @@
+\hypertarget{class_tuner}{\section{Tuner Class Reference}
+\label{class_tuner}\index{Tuner@{Tuner}}
+}
+
+
+Contains the tools necessary to handle the requests from the \hyperlink{class_analyzer}{Analyzer}. Performs the different tuning jobs and handles breakpoints by delaying the tuning until the target point is reached.  
+
+
+
+
+{\ttfamily \#include $<$Tuner.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tuner_a83a645b0a50c00ed9660c61c4536104a}{Tuner} (\hyperlink{class_task_collection}{Task\-Collection} \&tasks)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_tuner_aef720f1354b4d8ec43ef79fb2aaffac1}{Process} (\hyperlink{class_common_1_1_tuning_request}{Common\-::\-Tuning\-Request} $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handles the tuning requests received from the \hyperlink{class_analyzer}{Analyzer}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tuner_a1d78518d27a143232ef68a962c070462}{Remove\-Last\-Breakpoint} (\hyperlink{class_task}{Task} \&task)
+\begin{DoxyCompactList}\small\item\em Removes the breakpoint snippet inserted in the process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the tools necessary to handle the requests from the \hyperlink{class_analyzer}{Analyzer}. Performs the different tuning jobs and handles breakpoints by delaying the tuning until the target point is reached. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tuner_a83a645b0a50c00ed9660c61c4536104a}{\index{Tuner@{Tuner}!Tuner@{Tuner}}
+\index{Tuner@{Tuner}!Tuner@{Tuner}}
+\subsubsection[{Tuner}]{\setlength{\rightskip}{0pt plus 5cm}Tuner\-::\-Tuner (
+\begin{DoxyParamCaption}
+\item[{{\bf Task\-Collection} \&}]{tasks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tuner_a83a645b0a50c00ed9660c61c4536104a}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tuner_aef720f1354b4d8ec43ef79fb2aaffac1}{\index{Tuner@{Tuner}!Process@{Process}}
+\index{Process@{Process}!Tuner@{Tuner}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void Tuner\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{{\bf Common\-::\-Tuning\-Request} $\ast$}]{req}
+\end{DoxyParamCaption}
+)}}\label{class_tuner_aef720f1354b4d8ec43ef79fb2aaffac1}
+
+
+Handles the tuning requests received from the \hyperlink{class_analyzer}{Analyzer}. 
+
+Applies the required changes in the target process. If there's a breakpoint for the request instead of processing the request it is pushed back to the pending requests list and a breakpoint is inserted and its handler is passed to the task.
+
+When the breakpoint in the process is reached its removed and the tuning is performed.
+
+After applying changes the request is deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Tuning request to be applied on the target process. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tuner_a1d78518d27a143232ef68a962c070462}{\index{Tuner@{Tuner}!Remove\-Last\-Breakpoint@{Remove\-Last\-Breakpoint}}
+\index{Remove\-Last\-Breakpoint@{Remove\-Last\-Breakpoint}!Tuner@{Tuner}}
+\subsubsection[{Remove\-Last\-Breakpoint}]{\setlength{\rightskip}{0pt plus 5cm}void Tuner\-::\-Remove\-Last\-Breakpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Task} \&}]{task}
+\end{DoxyParamCaption}
+)}}\label{class_tuner_a1d78518d27a143232ef68a962c070462}
+
+
+Removes the breakpoint snippet inserted in the process. 
+
+To be called when a breakpoint is processed and therefore has not further purpose.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \hyperlink{class_task}{Task} to which executes the process. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Tuner.\-h\item 
+A\-C/Tuner.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,265 @@
+\hypertarget{class_adjusting_n_w_tunlet}{\section{Adjusting\-N\-W\-Tunlet Class Reference}
+\label{class_adjusting_n_w_tunlet}\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}}
+}
+
+
+{\bfseries N\-W}  
+
+
+
+
+{\ttfamily \#include $<$Adjusting\-N\-W\-Tunlet.\-h$>$}
+
+Inheritance diagram for Adjusting\-N\-W\-Tunlet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_adjusting_n_w_tunlet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a8429c48adb69204d6c5c7f8968637e27}{\hyperlink{class_adjusting_n_w_tunlet_a8429c48adb69204d6c5c7f8968637e27}{Adjusting\-N\-W\-Tunlet} ()}\label{class_adjusting_n_w_tunlet_a8429c48adb69204d6c5c7f8968637e27}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_adjusting_n_w_tunlet_aa00265880edabed6a7bab6436a4dcc5d}{\hyperlink{class_adjusting_n_w_tunlet_aa00265880edabed6a7bab6436a4dcc5d}{$\sim$\-Adjusting\-N\-W\-Tunlet} ()}\label{class_adjusting_n_w_tunlet_aa00265880edabed6a7bab6436a4dcc5d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_a4f75a1810a225f7fe3038188c5089d1d}{Initialize} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)
+\begin{DoxyCompactList}\small\item\em Initializes the given app. \end{DoxyCompactList}\item 
+\hypertarget{class_adjusting_n_w_tunlet_a4f357cf28da828f4fad6dd45337336c7}{void \hyperlink{class_adjusting_n_w_tunlet_a4f357cf28da828f4fad6dd45337336c7}{Before\-App\-Start} ()}\label{class_adjusting_n_w_tunlet_a4f357cf28da828f4fad6dd45337336c7}
+
+\begin{DoxyCompactList}\small\item\em Checks if the app is started and sets the task handler to the current one. \end{DoxyCompactList}\item 
+\hypertarget{class_adjusting_n_w_tunlet_afcb5be039949649915dcb2e056f11e2c}{void \hyperlink{class_adjusting_n_w_tunlet_afcb5be039949649915dcb2e056f11e2c}{App\-Started} ()}\label{class_adjusting_n_w_tunlet_afcb5be039949649915dcb2e056f11e2c}
+
+\begin{DoxyCompactList}\small\item\em Sets tl=0.\-3 and lambda=0.\-5. \end{DoxyCompactList}\item 
+\hypertarget{class_adjusting_n_w_tunlet_a32d234877e91d1cb81e3470e126e9588}{void \hyperlink{class_adjusting_n_w_tunlet_a32d234877e91d1cb81e3470e126e9588}{Destroy} ()}\label{class_adjusting_n_w_tunlet_a32d234877e91d1cb81e3470e126e9588}
+
+\begin{DoxyCompactList}\small\item\em Destroys the \hyperlink{class_tunlet}{Tunlet} app. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_ab370126f43c0f535045a9cc934806661}{Handle\-Event} (\hyperlink{class_model_1_1_event_record}{Model\-::\-Event\-Record} const \&r)
+\begin{DoxyCompactList}\small\item\em Main Event handler of the class. It will act depending on the Event\-Id which can be\-: Iteration\-Starts, Iteration\-Finishes, Exec\-Start, Exec\-Update, M\-Sends\-Task\-W, W\-Replies\-M, W\-Starts\-Task, W\-Finishes\-Task. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_a03d88d318e66827d0211aad6dbaec250}{Task\-Started} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Inserts task t to worker or Master accordingly and increments worker counter. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_a9c0a9d17ac7e8afd43caf83c733f65ca}{Task\-Terminated} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Decreases the number of workers. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_aaeb5051f1a20e865fea2722546730a00}{Insert\-Worker\-Events} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Inserts event to a worker task and removes it. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_ad3e81d78c42451d66cc7c733d3f34330}{Insert\-Master\-Events} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em {\bfseries Inserts event to a master task} \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_a3b54d7d5c877af146bdf817fcd5582c3}{Insert\-Events} (\hyperlink{class_model_1_1_task}{Task} \&t)
+\begin{DoxyCompactList}\small\item\em Inserts events to the task t. \end{DoxyCompactList}\item 
+\hyperlink{class_iter_data}{Iter\-Data} $\ast$ \hyperlink{class_adjusting_n_w_tunlet_a49990bd7cd28c3f534ad103c5366084a}{Find\-Iter\-Data} (int iter\-Idx)
+\begin{DoxyCompactList}\small\item\em Finds and returns the data from {\bfseries an iteration given by iter\-Idx}. If there is no data at the end of the iteration, creates new one and returns it. \end{DoxyCompactList}\item 
+void \hyperlink{class_adjusting_n_w_tunlet_af837545545e62d1984d570bae171272c}{Try\-Tuning} (int iter\-Idx)
+\begin{DoxyCompactList}\small\item\em Tries to tune a given iteration\-: returns the optimal number of workers and current ones if successful. \end{DoxyCompactList}\item 
+\hypertarget{class_adjusting_n_w_tunlet_aeda7c15dfec965a740181711a340d7df}{void {\bfseries Calculate\-\_\-\-Vt} ()}\label{class_adjusting_n_w_tunlet_aeda7c15dfec965a740181711a340d7df}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a7337b15ce9fedfe1d5dbd1143e19f303}{void {\bfseries Calculate\-\_\-\-Ct} ()}\label{class_adjusting_n_w_tunlet_a7337b15ce9fedfe1d5dbd1143e19f303}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a81acbcff3c05d7b2e89abf09f88b069e}{void {\bfseries Calculate\-\_\-\-Vt\-\_\-\-Ct} ()}\label{class_adjusting_n_w_tunlet_a81acbcff3c05d7b2e89abf09f88b069e}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a88c91438ccb4e59cb870d85e93104c9d}{void {\bfseries Calculate\-\_\-\-Tt} ()}\label{class_adjusting_n_w_tunlet_a88c91438ccb4e59cb870d85e93104c9d}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a913d717413394228cf926ba93eda9131}{int {\bfseries Calculate\-\_\-\-Nopt} ()}\label{class_adjusting_n_w_tunlet_a913d717413394228cf926ba93eda9131}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a6142649ff55eb40dac6454cc032b207a}{void {\bfseries Tuning\-Param} ()}\label{class_adjusting_n_w_tunlet_a6142649ff55eb40dac6454cc032b207a}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a4d024f3ef88c43439a4e7a5b5e2ac7d7}{void {\bfseries Update\-\_\-n} (int nw)}\label{class_adjusting_n_w_tunlet_a4d024f3ef88c43439a4e7a5b5e2ac7d7}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_aaa672accb7ef76c76f62a7505a968882}{void {\bfseries Update\-\_\-tl} (double t)}\label{class_adjusting_n_w_tunlet_aaa672accb7ef76c76f62a7505a968882}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a1e1ecf7b384b0243daa910454c169ae2}{void {\bfseries Update\-\_\-lambda} (double l)}\label{class_adjusting_n_w_tunlet_a1e1ecf7b384b0243daa910454c169ae2}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_ad8db22c166672eb046fc2b16c1a37809}{void {\bfseries Update\-\_\-vi} (int v)}\label{class_adjusting_n_w_tunlet_ad8db22c166672eb046fc2b16c1a37809}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a05e174b4321a2e5099ad84fef09aa620}{void {\bfseries Update\-\_\-vm} (int v)}\label{class_adjusting_n_w_tunlet_a05e174b4321a2e5099ad84fef09aa620}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_a79e8c0b6ae51a9237b76f12bad3b8c03}{void {\bfseries Update\-\_\-cti} (struct \hyperlink{structcomptime}{comptime} $\ast$c)}\label{class_adjusting_n_w_tunlet_a79e8c0b6ae51a9237b76f12bad3b8c03}
+
+\item 
+\hypertarget{class_adjusting_n_w_tunlet_ad67aae58bdaea15b09c188853f94a846}{void {\bfseries Initialize\-\_\-cti} ()}\label{class_adjusting_n_w_tunlet_ad67aae58bdaea15b09c188853f94a846}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries N\-W} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_adjusting_n_w_tunlet_a49990bd7cd28c3f534ad103c5366084a}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Find\-Iter\-Data@{Find\-Iter\-Data}}
+\index{Find\-Iter\-Data@{Find\-Iter\-Data}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Find\-Iter\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iter\-Data} $\ast$ Adjusting\-N\-W\-Tunlet\-::\-Find\-Iter\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{iter\-Idx}
+\end{DoxyParamCaption}
+)}}\label{class_adjusting_n_w_tunlet_a49990bd7cd28c3f534ad103c5366084a}
+
+
+Finds and returns the data from {\bfseries an iteration given by iter\-Idx}. If there is no data at the end of the iteration, creates new one and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\-Idx} & Iteration Id \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_adjusting_n_w_tunlet_ab370126f43c0f535045a9cc934806661}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Handle\-Event@{Handle\-Event}}
+\index{Handle\-Event@{Handle\-Event}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Handle\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Handle\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Event\-Record} const \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_adjusting_n_w_tunlet_ab370126f43c0f535045a9cc934806661}
+
+
+Main Event handler of the class. It will act depending on the Event\-Id which can be\-: Iteration\-Starts, Iteration\-Finishes, Exec\-Start, Exec\-Update, M\-Sends\-Task\-W, W\-Replies\-M, W\-Starts\-Task, W\-Finishes\-Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event} & recorder r \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_event_handler_a0a84c727f41c358350a2f3522ffba03b}{Model\-::\-Event\-Handler}.
+
+\hypertarget{class_adjusting_n_w_tunlet_a4f75a1810a225f7fe3038188c5089d1d}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Application} \&}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_adjusting_n_w_tunlet_a4f75a1810a225f7fe3038188c5089d1d}
+
+
+Initializes the given app. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Tunlet}.
+
+\hypertarget{class_adjusting_n_w_tunlet_a3b54d7d5c877af146bdf817fcd5582c3}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Insert\-Events@{Insert\-Events}}
+\index{Insert\-Events@{Insert\-Events}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Insert\-Events}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Insert\-Events (
+\begin{DoxyParamCaption}
+\item[{{\bf Task} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_adjusting_n_w_tunlet_a3b54d7d5c877af146bdf817fcd5582c3}
+
+
+Inserts events to the task t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_adjusting_n_w_tunlet_ad3e81d78c42451d66cc7c733d3f34330}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Insert\-Master\-Events@{Insert\-Master\-Events}}
+\index{Insert\-Master\-Events@{Insert\-Master\-Events}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Insert\-Master\-Events}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Insert\-Master\-Events (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_adjusting_n_w_tunlet_ad3e81d78c42451d66cc7c733d3f34330}
+
+
+{\bfseries Inserts event to a master task} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Master \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_adjusting_n_w_tunlet_aaeb5051f1a20e865fea2722546730a00}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Insert\-Worker\-Events@{Insert\-Worker\-Events}}
+\index{Insert\-Worker\-Events@{Insert\-Worker\-Events}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Insert\-Worker\-Events}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Insert\-Worker\-Events (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_adjusting_n_w_tunlet_aaeb5051f1a20e865fea2722546730a00}
+
+
+Inserts event to a worker task and removes it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Worker \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_adjusting_n_w_tunlet_a03d88d318e66827d0211aad6dbaec250}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Task\-Started@{Task\-Started}}
+\index{Task\-Started@{Task\-Started}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Task\-Started}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Task\-Started (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_adjusting_n_w_tunlet_a03d88d318e66827d0211aad6dbaec250}
+
+
+Inserts task t to worker or Master accordingly and increments worker counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}{Model\-::\-Task\-Handler}.
+
+\hypertarget{class_adjusting_n_w_tunlet_a9c0a9d17ac7e8afd43caf83c733f65ca}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Task\-Terminated@{Task\-Terminated}}
+\index{Task\-Terminated@{Task\-Terminated}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Task\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Task\-Terminated (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_adjusting_n_w_tunlet_a9c0a9d17ac7e8afd43caf83c733f65ca}
+
+
+Decreases the number of workers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \hyperlink{class_task}{Task} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}{Model\-::\-Task\-Handler}.
+
+\hypertarget{class_adjusting_n_w_tunlet_af837545545e62d1984d570bae171272c}{\index{Adjusting\-N\-W\-Tunlet@{Adjusting\-N\-W\-Tunlet}!Try\-Tuning@{Try\-Tuning}}
+\index{Try\-Tuning@{Try\-Tuning}!AdjustingNWTunlet@{Adjusting\-N\-W\-Tunlet}}
+\subsubsection[{Try\-Tuning}]{\setlength{\rightskip}{0pt plus 5cm}void Adjusting\-N\-W\-Tunlet\-::\-Try\-Tuning (
+\begin{DoxyParamCaption}
+\item[{int}]{iter\-Idx}
+\end{DoxyParamCaption}
+)}}\label{class_adjusting_n_w_tunlet_af837545545e62d1984d570bae171272c}
+
+
+Tries to tune a given iteration\-: returns the optimal number of workers and current ones if successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\-Idx} & Iteration Id \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Adjusting\-N\-W\-Tunlet.\-h\item 
+Analyzer/Adjusting\-N\-W\-Tunlet.\-cpp\end{DoxyCompactItemize}

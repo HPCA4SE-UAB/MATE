@@ -1,0 +1,72 @@
+\hypertarget{class_common_1_1_e_c_p_message}{\section{Common\-:\-:E\-C\-P\-Message Class Reference}
+\label{class_common_1_1_e_c_p_message}\index{Common\-::\-E\-C\-P\-Message@{Common\-::\-E\-C\-P\-Message}}
+}
+
+
+Abstract class, Event\-Collector\-Protocol, represents message interchanged between D\-M\-Lib and analyzer.  
+
+
+
+
+{\ttfamily \#include $<$E\-C\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:E\-C\-P\-Message\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_e_c_p_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_e_c_p_message_ab89759d2977bde718b296573c308e1a0}{virtual E\-C\-P\-Msg\-Type \hyperlink{class_common_1_1_e_c_p_message_ab89759d2977bde718b296573c308e1a0}{Get\-Type} () const =0}\label{class_common_1_1_e_c_p_message_ab89759d2977bde718b296573c308e1a0}
+
+\begin{DoxyCompactList}\small\item\em To be implemented by subclasses. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_e_c_p_message_a9de0bc0ffea7a980b4f938d753c1e9f4}{virtual int \hyperlink{class_common_1_1_e_c_p_message_a9de0bc0ffea7a980b4f938d753c1e9f4}{Get\-Data\-Size} () const }\label{class_common_1_1_e_c_p_message_a9de0bc0ffea7a980b4f938d753c1e9f4}
+
+\begin{DoxyCompactList}\small\item\em Returns size of the data once serialized. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_e_c_p_message_a9288d23442703c5a58b8e56e0dd9ca53}{virtual void \hyperlink{class_common_1_1_e_c_p_message_a9288d23442703c5a58b8e56e0dd9ca53}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const =0}\label{class_common_1_1_e_c_p_message_a9288d23442703c5a58b8e56e0dd9ca53}
+
+\begin{DoxyCompactList}\small\item\em To be implemented by subclasses. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_e_c_p_message_afed137550ebd758400d93f7e9e019a44}{virtual void \hyperlink{class_common_1_1_e_c_p_message_afed137550ebd758400d93f7e9e019a44}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)=0}\label{class_common_1_1_e_c_p_message_afed137550ebd758400d93f7e9e019a44}
+
+\begin{DoxyCompactList}\small\item\em To be implemented by subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_e_c_p_message_a934360feea8d6cd1500810b7c17c168b}{E\-C\-P\-Message} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class, Event\-Collector\-Protocol, represents message interchanged between D\-M\-Lib and analyzer. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_e_c_p_message_a934360feea8d6cd1500810b7c17c168b}{\index{Common\-::\-E\-C\-P\-Message@{Common\-::\-E\-C\-P\-Message}!E\-C\-P\-Message@{E\-C\-P\-Message}}
+\index{E\-C\-P\-Message@{E\-C\-P\-Message}!Common::ECPMessage@{Common\-::\-E\-C\-P\-Message}}
+\subsubsection[{E\-C\-P\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-E\-C\-P\-Message\-::\-E\-C\-P\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_common_1_1_e_c_p_message_a934360feea8d6cd1500810b7c17c168b}
+
+
+Constructor. 
+
+Protected so that this base class cannot be explicitly instantiated. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/E\-C\-P\-Msg.\-h\item 
+Common/E\-C\-P\-Msg.\-cpp\end{DoxyCompactItemize}

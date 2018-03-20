@@ -1,0 +1,80 @@
+\hypertarget{class_common_1_1_log_entry}{\section{Common\-:\-:Log\-Entry Class Reference}
+\label{class_common_1_1_log_entry}\index{Common\-::\-Log\-Entry@{Common\-::\-Log\-Entry}}
+}
+
+
+Entry on a log.  
+
+
+
+
+{\ttfamily \#include $<$Syslog.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_log_entry_aea7d9e006bce770b70a2016b166facf7}{Log\-Entry} (Log\-Severity s, std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_log_entry_a25542669cbc352a384874c30ca36d3e2}{\hyperlink{class_common_1_1_date_time}{Date\-Time} const \& \hyperlink{class_common_1_1_log_entry_a25542669cbc352a384874c30ca36d3e2}{Get\-Timestamp} () const }\label{class_common_1_1_log_entry_a25542669cbc352a384874c30ca36d3e2}
+
+\begin{DoxyCompactList}\small\item\em Returns the date when the entry was performed. \end{DoxyCompactList}\item 
+Log\-Severity \hyperlink{class_common_1_1_log_entry_a7a86f1c5e30447a395c0c070e76dcfcb}{Get\-Severity} () const 
+\begin{DoxyCompactList}\small\item\em Returns log severity. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_log_entry_a618b6503e831e0656986df5aea7f3d4e}{std\-::string const \& \hyperlink{class_common_1_1_log_entry_a618b6503e831e0656986df5aea7f3d4e}{Get\-Message} () const }\label{class_common_1_1_log_entry_a618b6503e831e0656986df5aea7f3d4e}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the log message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entry on a log. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_log_entry_aea7d9e006bce770b70a2016b166facf7}{\index{Common\-::\-Log\-Entry@{Common\-::\-Log\-Entry}!Log\-Entry@{Log\-Entry}}
+\index{Log\-Entry@{Log\-Entry}!Common::LogEntry@{Common\-::\-Log\-Entry}}
+\subsubsection[{Log\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Log\-Entry\-::\-Log\-Entry (
+\begin{DoxyParamCaption}
+\item[{Log\-Severity}]{s, }
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_log_entry_aea7d9e006bce770b70a2016b166facf7}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Log severity, can be D\-E\-B\-U\-G, I\-N\-F\-O, W\-A\-R\-N\-I\-N\-G, E\-R\-R\-O\-R or F\-A\-T\-A\-L. \\
+\hline
+{\em message} & Message. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_log_entry_a7a86f1c5e30447a395c0c070e76dcfcb}{\index{Common\-::\-Log\-Entry@{Common\-::\-Log\-Entry}!Get\-Severity@{Get\-Severity}}
+\index{Get\-Severity@{Get\-Severity}!Common::LogEntry@{Common\-::\-Log\-Entry}}
+\subsubsection[{Get\-Severity}]{\setlength{\rightskip}{0pt plus 5cm}Log\-Severity Common\-::\-Log\-Entry\-::\-Get\-Severity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_log_entry_a7a86f1c5e30447a395c0c070e76dcfcb}
+
+
+Returns log severity. 
+
+D\-E\-B\-U\-G A log generated during debugging of the software. I\-N\-F\-O An informational message. W\-A\-R\-N\-I\-N\-G A warning message that the system administrator might want to know about E\-R\-R\-O\-R One of the software components caused an error or exception. F\-A\-T\-A\-L One of the software components is no longer functional. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/Syslog.\-h\end{DoxyCompactItemize}

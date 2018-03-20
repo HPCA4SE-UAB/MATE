@@ -1,0 +1,131 @@
+\hypertarget{class_snippet_handler}{\section{Snippet\-Handler Class Reference}
+\label{class_snippet_handler}\index{Snippet\-Handler@{Snippet\-Handler}}
+}
+
+
+Contains he necessary fields to manage snippets.  
+
+
+
+
+{\ttfamily \#include $<$Instr\-Set.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_snippet_handler_a9e730838c6bb4f666fe8e698c76c214b}{Snippet\-Handler} (int event\-Id, std\-::string const \&func\-Name, Instr\-Place place, B\-Patch\-Snippet\-Handle $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_snippet_handler_aeae6b14804f87bd05083a12e99083231}{Get\-Event\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the variable \-\_\-event\-Id. \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{class_snippet_handler_add5366fea9da46b6b2a014dbd876ce0f}{Get\-Func\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the variable \-\_\-func\-Name. \end{DoxyCompactList}\item 
+Instr\-Place \hyperlink{class_snippet_handler_aed03dbc332b0038541c95519ab6438a9}{Get\-Instr\-Place} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the variable \-\_\-place. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_snippet_handler_a093f1944ea0878911ffea7b471ccc45e}{Get\-Handle} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the variable \-\_\-handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains he necessary fields to manage snippets. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_snippet_handler_a9e730838c6bb4f666fe8e698c76c214b}{\index{Snippet\-Handler@{Snippet\-Handler}!Snippet\-Handler@{Snippet\-Handler}}
+\index{Snippet\-Handler@{Snippet\-Handler}!SnippetHandler@{Snippet\-Handler}}
+\subsubsection[{Snippet\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Snippet\-Handler\-::\-Snippet\-Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{Instr\-Place}]{place, }
+\item[{B\-Patch\-Snippet\-Handle $\ast$}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_handler_a9e730838c6bb4f666fe8e698c76c214b}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Unique identifier for the event. \\
+\hline
+{\em func\-Name} & Name of the function in which the snippet will be inserted. \\
+\hline
+{\em place} & Position in which the instrumentation will be added. \\
+\hline
+{\em handle} & Handle for the Dyninst snippet. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_snippet_handler_aeae6b14804f87bd05083a12e99083231}{\index{Snippet\-Handler@{Snippet\-Handler}!Get\-Event\-Id@{Get\-Event\-Id}}
+\index{Get\-Event\-Id@{Get\-Event\-Id}!SnippetHandler@{Snippet\-Handler}}
+\subsubsection[{Get\-Event\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Snippet\-Handler\-::\-Get\-Event\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_handler_aeae6b14804f87bd05083a12e99083231}
+
+
+Getter for the variable \-\_\-event\-Id. 
+
+\begin{DoxyReturn}{Returns}
+Id of the event. 
+\end{DoxyReturn}
+\hypertarget{class_snippet_handler_add5366fea9da46b6b2a014dbd876ce0f}{\index{Snippet\-Handler@{Snippet\-Handler}!Get\-Func\-Name@{Get\-Func\-Name}}
+\index{Get\-Func\-Name@{Get\-Func\-Name}!SnippetHandler@{Snippet\-Handler}}
+\subsubsection[{Get\-Func\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& Snippet\-Handler\-::\-Get\-Func\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_handler_add5366fea9da46b6b2a014dbd876ce0f}
+
+
+Getter for the variable \-\_\-func\-Name. 
+
+\begin{DoxyReturn}{Returns}
+Name of the function in which the snippet will be inserted. 
+\end{DoxyReturn}
+\hypertarget{class_snippet_handler_a093f1944ea0878911ffea7b471ccc45e}{\index{Snippet\-Handler@{Snippet\-Handler}!Get\-Handle@{Get\-Handle}}
+\index{Get\-Handle@{Get\-Handle}!SnippetHandler@{Snippet\-Handler}}
+\subsubsection[{Get\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle$\ast$ Snippet\-Handler\-::\-Get\-Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_handler_a093f1944ea0878911ffea7b471ccc45e}
+
+
+Getter for the variable \-\_\-handle. 
+
+\begin{DoxyReturn}{Returns}
+Handle of the snippet to be inserted. 
+\end{DoxyReturn}
+\hypertarget{class_snippet_handler_aed03dbc332b0038541c95519ab6438a9}{\index{Snippet\-Handler@{Snippet\-Handler}!Get\-Instr\-Place@{Get\-Instr\-Place}}
+\index{Get\-Instr\-Place@{Get\-Instr\-Place}!SnippetHandler@{Snippet\-Handler}}
+\subsubsection[{Get\-Instr\-Place}]{\setlength{\rightskip}{0pt plus 5cm}Instr\-Place Snippet\-Handler\-::\-Get\-Instr\-Place (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_snippet_handler_aed03dbc332b0038541c95519ab6438a9}
+
+
+Getter for the variable \-\_\-place. 
+
+\begin{DoxyReturn}{Returns}
+Position of the function in which the snippet will be inserted. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Instr\-Set.\-h\end{DoxyCompactItemize}

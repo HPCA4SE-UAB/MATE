@@ -1,0 +1,92 @@
+\hypertarget{class_service}{\section{Service Class Reference}
+\label{class_service}\index{Service@{Service}}
+}
+
+
+Provides methods to work with Event\-Collector\-Handlers lists. Holds a list of Event\-Coll\-Handler and a reference to the reactor. Provides methods to add and remove handlers from the list.  
+
+
+
+
+{\ttfamily \#include $<$Service.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_service_afdf4b841bca28fe00ee4525e2882ff72}{Service} (\hyperlink{class_common_1_1_reactor}{Reactor} \&reactor)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_service_af6c3577b59652ac817d1d76aaccee904}{\hyperlink{class_service_af6c3577b59652ac817d1d76aaccee904}{$\sim$\-Service} ()}\label{class_service_af6c3577b59652ac817d1d76aaccee904}
+
+\begin{DoxyCompactList}\small\item\em Destructor, deletes the handlers and the references to them. \end{DoxyCompactList}\item 
+void \hyperlink{class_service_a7e563ec252f817e5a1cdfb40d07dd8fb}{Add} (\hyperlink{class_e_c_p_handler}{E\-C\-P\-Handler} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Adds a handler to the list and sets its service to this. \end{DoxyCompactList}\item 
+void \hyperlink{class_service_a060c72a96167cd02b72287e607b0f21c}{Remove} (\hyperlink{class_e_c_p_handler}{E\-C\-P\-Handler} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Unregisters the handler from the reactor and removes it from the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides methods to work with Event\-Collector\-Handlers lists. Holds a list of Event\-Coll\-Handler and a reference to the reactor. Provides methods to add and remove handlers from the list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_service_afdf4b841bca28fe00ee4525e2882ff72}{\index{Service@{Service}!Service@{Service}}
+\index{Service@{Service}!Service@{Service}}
+\subsubsection[{Service}]{\setlength{\rightskip}{0pt plus 5cm}Service\-::\-Service (
+\begin{DoxyParamCaption}
+\item[{{\bf Reactor} \&}]{reactor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_service_afdf4b841bca28fe00ee4525e2882ff72}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reactor} & Reactor of the application \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_service_a7e563ec252f817e5a1cdfb40d07dd8fb}{\index{Service@{Service}!Add@{Add}}
+\index{Add@{Add}!Service@{Service}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Service\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-C\-P\-Handler} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}}\label{class_service_a7e563ec252f817e5a1cdfb40d07dd8fb}
+
+
+Adds a handler to the list and sets its service to this. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & E\-C\-P Handler. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_service_a060c72a96167cd02b72287e607b0f21c}{\index{Service@{Service}!Remove@{Remove}}
+\index{Remove@{Remove}!Service@{Service}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Service\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-C\-P\-Handler} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}}\label{class_service_a060c72a96167cd02b72287e607b0f21c}
+
+
+Unregisters the handler from the reactor and removes it from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & E\-C\-P Handler \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & when the handler does not exist in the list. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Service.\-h\item 
+Analyzer/Service.\-cpp\end{DoxyCompactItemize}

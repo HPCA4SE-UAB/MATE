@@ -1,0 +1,124 @@
+\hypertarget{class_common_1_1_pipe}{\section{Common\-:\-:Pipe Class Reference}
+\label{class_common_1_1_pipe}\index{Common\-::\-Pipe@{Common\-::\-Pipe}}
+}
+
+
+Element used to join output and input from two processes.  
+
+
+
+
+{\ttfamily \#include $<$Pipe.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_pipe_a91ddad07e89d5585b1cf27fa7860e201}{Pipe} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_af4519cc3f1f13857a724db7b2220eefa}{\hyperlink{class_common_1_1_pipe_af4519cc3f1f13857a724db7b2220eefa}{$\sim$\-Pipe} ()}\label{class_common_1_1_pipe_af4519cc3f1f13857a724db7b2220eefa}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_abff5b09eb4aa62f756dc5137239cc450}{bool \hyperlink{class_common_1_1_pipe_abff5b09eb4aa62f756dc5137239cc450}{Is\-Read\-Open} () const }\label{class_common_1_1_pipe_abff5b09eb4aa62f756dc5137239cc450}
+
+\begin{DoxyCompactList}\small\item\em Returns whether the read end is open or not. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_ab8d088b877cbaea297f6eb48fe790b46}{bool \hyperlink{class_common_1_1_pipe_ab8d088b877cbaea297f6eb48fe790b46}{Is\-Write\-Open} () const }\label{class_common_1_1_pipe_ab8d088b877cbaea297f6eb48fe790b46}
+
+\begin{DoxyCompactList}\small\item\em Returns whether the write end is open or not. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_a5af565c0e6f067bef9a458c54bfe22a3}{int \hyperlink{class_common_1_1_pipe_a5af565c0e6f067bef9a458c54bfe22a3}{Get\-Read} () const }\label{class_common_1_1_pipe_a5af565c0e6f067bef9a458c54bfe22a3}
+
+\begin{DoxyCompactList}\small\item\em Returns read file descriptor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_a8700c04b38ae865e1b94aafee03258b7}{int \hyperlink{class_common_1_1_pipe_a8700c04b38ae865e1b94aafee03258b7}{Get\-Write} () const }\label{class_common_1_1_pipe_a8700c04b38ae865e1b94aafee03258b7}
+
+\begin{DoxyCompactList}\small\item\em Returns write file descriptor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_ae03641ee676afb1b1494523262d0ef62}{void \hyperlink{class_common_1_1_pipe_ae03641ee676afb1b1494523262d0ef62}{Close\-Read} ()}\label{class_common_1_1_pipe_ae03641ee676afb1b1494523262d0ef62}
+
+\begin{DoxyCompactList}\small\item\em Closes the read end. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_pipe_ad04e98f2fe8628fbd35b1f2ad70590b4}{void \hyperlink{class_common_1_1_pipe_ad04e98f2fe8628fbd35b1f2ad70590b4}{Close\-Write} ()}\label{class_common_1_1_pipe_ad04e98f2fe8628fbd35b1f2ad70590b4}
+
+\begin{DoxyCompactList}\small\item\em Closes the write end. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_pipe_a9aeb05035180bec14dc7251c4a4dbc1c}{Read} (char $\ast$buf, int buf\-Size)
+\begin{DoxyCompactList}\small\item\em Reads from the read end and stores the content on the buffer. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_pipe_ae52a61f9bf69495df9dcdbdd3d4ec01d}{Write} (char const $\ast$buf, int buf\-Size)
+\begin{DoxyCompactList}\small\item\em Writes the content of the buffer on the write end. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Element used to join output and input from two processes. 
+
+A pair of channels that implements a unidirectional pipe.
+
+A pipe consists of a pair of channels\-: A writable sink channel and a readable source channel. Once some bytes are written to the sink channel these can be read from source channel in the exact order in which they were written.
+
+Whether or not a thread writing bytes to a pipe will block until another thread reads those bytes, or some previously-\/written bytes, from the pipe is system-\/dependent and therefore unspecified. Many pipe implementations will buffer up to a certain number of bytes between the sink and source channels, but such buffering should not be assumed.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2001 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_pipe_a91ddad07e89d5585b1cf27fa7860e201}{\index{Common\-::\-Pipe@{Common\-::\-Pipe}!Pipe@{Pipe}}
+\index{Pipe@{Pipe}!Common::Pipe@{Common\-::\-Pipe}}
+\subsubsection[{Pipe}]{\setlength{\rightskip}{0pt plus 5cm}Pipe\-::\-Pipe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_pipe_a91ddad07e89d5585b1cf27fa7860e201}
+
+
+Constructor. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_pipe_a9aeb05035180bec14dc7251c4a4dbc1c}{\index{Common\-::\-Pipe@{Common\-::\-Pipe}!Read@{Read}}
+\index{Read@{Read}!Common::Pipe@{Common\-::\-Pipe}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}int Pipe\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{buf\-Size}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_pipe_a9aeb05035180bec14dc7251c4a4dbc1c}
+
+
+Reads from the read end and stores the content on the buffer. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_pipe_ae52a61f9bf69495df9dcdbdd3d4ec01d}{\index{Common\-::\-Pipe@{Common\-::\-Pipe}!Write@{Write}}
+\index{Write@{Write}!Common::Pipe@{Common\-::\-Pipe}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}int Pipe\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{buf, }
+\item[{int}]{buf\-Size}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_pipe_ae52a61f9bf69495df9dcdbdd3d4ec01d}
+
+
+Writes the content of the buffer on the write end. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Pipe.\-h\item 
+Common/Pipe.\-cpp\end{DoxyCompactItemize}

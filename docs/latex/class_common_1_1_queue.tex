@@ -1,0 +1,98 @@
+\hypertarget{class_common_1_1_queue}{\section{Common\-:\-:Queue$<$ T $>$ Class Template Reference}
+\label{class_common_1_1_queue}\index{Common\-::\-Queue$<$ T $>$@{Common\-::\-Queue$<$ T $>$}}
+}
+
+
+Data structure that stores objects of any class.  
+
+
+
+
+{\ttfamily \#include $<$Queue.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_queue_a49b72b9ada539f35ee458059d6041c55}{\hyperlink{class_common_1_1_queue_a49b72b9ada539f35ee458059d6041c55}{Queue} (int max\-Size)}\label{class_common_1_1_queue_a49b72b9ada539f35ee458059d6041c55}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_queue_a00d119db8fa3050da37746e82cbcf94f}{\hyperlink{class_common_1_1_queue_a00d119db8fa3050da37746e82cbcf94f}{$\sim$\-Queue} ()}\label{class_common_1_1_queue_a00d119db8fa3050da37746e82cbcf94f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_queue_af062eb59a24128f6f431423f6e96b30f}{bool \hyperlink{class_common_1_1_queue_af062eb59a24128f6f431423f6e96b30f}{Is\-Empty} () const }\label{class_common_1_1_queue_af062eb59a24128f6f431423f6e96b30f}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the queue is empty, false otherwise. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_queue_a7423fbabf9eb5c6107efabd7f3e55492}{bool \hyperlink{class_common_1_1_queue_a7423fbabf9eb5c6107efabd7f3e55492}{Is\-Full} () const }\label{class_common_1_1_queue_a7423fbabf9eb5c6107efabd7f3e55492}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the queue is full, false otherwise. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_queue_a91687a9f762db2438ab1bb20b9f8cbc7}{int \hyperlink{class_common_1_1_queue_a91687a9f762db2438ab1bb20b9f8cbc7}{Get\-Max\-Size} () const }\label{class_common_1_1_queue_a91687a9f762db2438ab1bb20b9f8cbc7}
+
+\begin{DoxyCompactList}\small\item\em Returns the maximum quantity of objects the queue can store. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_queue_af4de096689b19a9a981f346b481f10b4}{int \hyperlink{class_common_1_1_queue_af4de096689b19a9a981f346b481f10b4}{Get\-Count} () const }\label{class_common_1_1_queue_af4de096689b19a9a981f346b481f10b4}
+
+\begin{DoxyCompactList}\small\item\em Returns current size of the queue. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_queue_a6e413c69288723a3be1988a281b1376d}{Get} (T \&item)
+\begin{DoxyCompactList}\small\item\em Returns first object of the queue and removes it. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_queue_ab2d57ae853e4c7134c9c68e349e88bbb}{Get\-B} (T \&item)
+\begin{DoxyCompactList}\small\item\em Returns first object of the queue and removes it. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_queue_a1beaac66f3ae562a726171f020aeb655}{Put} (T \&item)
+\begin{DoxyCompactList}\small\item\em Puts an object at the end of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Common\-::\-Queue$<$ T $>$}
+
+Data structure that stores objects of any class. 
+
+This data structure manages the objects using a F\-I\-F\-O priority.
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_queue_a6e413c69288723a3be1988a281b1376d}{\index{Common\-::\-Queue@{Common\-::\-Queue}!Get@{Get}}
+\index{Get@{Get}!Common::Queue@{Common\-::\-Queue}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool Queue\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{T \&}]{item}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_queue_a6e413c69288723a3be1988a281b1376d}
+
+
+Returns first object of the queue and removes it. 
+
+Returns false if the queue is empty. \hypertarget{class_common_1_1_queue_ab2d57ae853e4c7134c9c68e349e88bbb}{\index{Common\-::\-Queue@{Common\-::\-Queue}!Get\-B@{Get\-B}}
+\index{Get\-B@{Get\-B}!Common::Queue@{Common\-::\-Queue}}
+\subsubsection[{Get\-B}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void Queue\-::\-Get\-B (
+\begin{DoxyParamCaption}
+\item[{T \&}]{item}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_queue_ab2d57ae853e4c7134c9c68e349e88bbb}
+
+
+Returns first object of the queue and removes it. 
+
+If the queue is empty, waits until it has any object. \hypertarget{class_common_1_1_queue_a1beaac66f3ae562a726171f020aeb655}{\index{Common\-::\-Queue@{Common\-::\-Queue}!Put@{Put}}
+\index{Put@{Put}!Common::Queue@{Common\-::\-Queue}}
+\subsubsection[{Put}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void Queue\-::\-Put (
+\begin{DoxyParamCaption}
+\item[{T \&}]{item}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_queue_a1beaac66f3ae562a726171f020aeb655}
+
+
+Puts an object at the end of the queue. 
+
+If the queue is full, it waits until there's space. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/Queue.\-h\end{DoxyCompactItemize}

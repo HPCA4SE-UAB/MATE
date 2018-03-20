@@ -1,0 +1,101 @@
+\hypertarget{class_common_1_1_function_param_change_request}{\section{Common\-:\-:Function\-Param\-Change\-Request Class Reference}
+\label{class_common_1_1_function_param_change_request}\index{Common\-::\-Function\-Param\-Change\-Request@{Common\-::\-Function\-Param\-Change\-Request}}
+}
+
+
+Encapsulates a tuning request to set the value of an input parameter of a given function in a given application process.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Function\-Param\-Change\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_common_1_1_function_param_change_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_function_param_change_request_af7dda136dbc498eee347e102b7660e05}{Function\-Param\-Change\-Request} (int pid=0, std\-::string const \&func\-Name=std\-::string(), int param\-Idx=0, int new\-Value=0, int $\ast$required\-Old\-Value=0, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_a83084a194eab68eefac8f252f6069544}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_function_param_change_request_a83084a194eab68eefac8f252f6069544}{Get\-Type} () const }\label{class_common_1_1_function_param_change_request_a83084a194eab68eefac8f252f6069544}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Func\-Param\-Change). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_a4145f87ead31be5fefae3162497ea82d}{std\-::string const \& \hyperlink{class_common_1_1_function_param_change_request_a4145f87ead31be5fefae3162497ea82d}{Get\-Func\-Name} () const }\label{class_common_1_1_function_param_change_request_a4145f87ead31be5fefae3162497ea82d}
+
+\begin{DoxyCompactList}\small\item\em Returns name of the function. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_a97469c4fb80293552d3f541aef95e1c4}{int \hyperlink{class_common_1_1_function_param_change_request_a97469c4fb80293552d3f541aef95e1c4}{Get\-Param\-Idx} () const }\label{class_common_1_1_function_param_change_request_a97469c4fb80293552d3f541aef95e1c4}
+
+\begin{DoxyCompactList}\small\item\em Returns index of the parameter to change on the attributes array. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_a38fab3169cc0a5376eb08a3a548c84b3}{int \hyperlink{class_common_1_1_function_param_change_request_a38fab3169cc0a5376eb08a3a548c84b3}{Get\-New\-Value} () const }\label{class_common_1_1_function_param_change_request_a38fab3169cc0a5376eb08a3a548c84b3}
+
+\begin{DoxyCompactList}\small\item\em Returns the new value to replace on the function call. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_ace9a5ed080c6acc0f672dadb3ecf5b5c}{int const $\ast$ \hyperlink{class_common_1_1_function_param_change_request_ace9a5ed080c6acc0f672dadb3ecf5b5c}{Get\-Req\-Old\-Value} () const }\label{class_common_1_1_function_param_change_request_ace9a5ed080c6acc0f672dadb3ecf5b5c}
+
+\begin{DoxyCompactList}\small\item\em Returns the value the parameter should have for the tuning to be performed. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_a238498837adb7899625f0ec05f7216fa}{void \hyperlink{class_common_1_1_function_param_change_request_a238498837adb7899625f0ec05f7216fa}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_function_param_change_request_a238498837adb7899625f0ec05f7216fa}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_function_param_change_request_aed95dbd8bf62c573a4700980ae88b8b0}{void \hyperlink{class_common_1_1_function_param_change_request_aed95dbd8bf62c573a4700980ae88b8b0}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_function_param_change_request_aed95dbd8bf62c573a4700980ae88b8b0}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request to set the value of an input parameter of a given function in a given application process. 
+
+This parameter value is modified before the function body is invoked. It's also possible to change the parameter value under condition, namely if the parameter has a value equal to required\-Old\-Value, only then its value is changed to a new one. If the required\-Old\-Value is zero, then the value of the parameter is changed unconditionally.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_function_param_change_request_af7dda136dbc498eee347e102b7660e05}{\index{Common\-::\-Function\-Param\-Change\-Request@{Common\-::\-Function\-Param\-Change\-Request}!Function\-Param\-Change\-Request@{Function\-Param\-Change\-Request}}
+\index{Function\-Param\-Change\-Request@{Function\-Param\-Change\-Request}!Common::FunctionParamChangeRequest@{Common\-::\-Function\-Param\-Change\-Request}}
+\subsubsection[{Function\-Param\-Change\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Function\-Param\-Change\-Request\-::\-Function\-Param\-Change\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{func\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{int}]{param\-Idx = {\ttfamily 0}, }
+\item[{int}]{new\-Value = {\ttfamily 0}, }
+\item[{int $\ast$}]{required\-Old\-Value = {\ttfamily 0}, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_function_param_change_request_af7dda136dbc498eee347e102b7660e05}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the parameter will be changed, default 0. \\
+\hline
+{\em func\-Name} & Name of the function call to modify, default \char`\"{}\char`\"{}. \\
+\hline
+{\em param\-Idx} & Parameter index inside the attributes array, default 0. \\
+\hline
+{\em new\-Value} & New Value to set, default 0. \\
+\hline
+{\em required\-Old\-Value} & Current value the parameter should have to perform the tuning. If the value doesn't match this one, the tuning won't be performed. If this value is 0, the tuning will be performed without checking the old value, default 0. \\
+\hline
+{\em brkpt} & Used for synchronization purposes, the actual tuning will be executed when the execution reaches the breakpoint, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\hypertarget{class_common_1_1_time_value}{\section{Common\-:\-:Time\-Value Class Reference}
+\label{class_common_1_1_time_value}\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}}
+}
+
+
+Stores a time value up to microseconds.  
+
+
+
+
+{\ttfamily \#include $<$Time\-Value.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_time_value_aa85538c3483db43375221b8598094348}{Time\-Value} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_time_value_a869fbb26691f1509438b425ffe1fbe26}{Time\-Value} (long secs, long usecs=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_time_value_a13d279540289163e9db13c832cda10cc}{Time\-Value} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_time_value_af461d53d4da630ba62cb5a9df0991045}{Time\-Value} (timeval const \&t)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_time_value_a37f682d54fb449160837e8d3fa0d7a39}{Time\-Value} (struct timeb const \&tb)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_ad69d5bc4e4a289148c46406fddc5894d}{\hyperlink{class_common_1_1_time_value}{Time\-Value} \& {\bfseries operator=} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t)}\label{class_common_1_1_time_value_ad69d5bc4e4a289148c46406fddc5894d}
+
+\item 
+\hypertarget{class_common_1_1_time_value_ae507f82f36c4cdac33c8febbecc60282}{\hyperlink{class_common_1_1_time_value}{Time\-Value} \& {\bfseries operator=} (timeval const \&t)}\label{class_common_1_1_time_value_ae507f82f36c4cdac33c8febbecc60282}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a7c80df31b92e703d95fb48549058436d}{void {\bfseries operator+=} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t)}\label{class_common_1_1_time_value_a7c80df31b92e703d95fb48549058436d}
+
+\item 
+\hypertarget{class_common_1_1_time_value_ae7c09ef7194780501a7b61e86a9e67af}{void {\bfseries operator-\/=} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t)}\label{class_common_1_1_time_value_ae7c09ef7194780501a7b61e86a9e67af}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a3e2c72628c93f93771e09c3bfa0e0576}{long \hyperlink{class_common_1_1_time_value_a3e2c72628c93f93771e09c3bfa0e0576}{Get\-Seconds} () const }\label{class_common_1_1_time_value_a3e2c72628c93f93771e09c3bfa0e0576}
+
+\begin{DoxyCompactList}\small\item\em Returns seconds of the object. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_af00ccb1be5508c87c13d470c945f21ce}{long \hyperlink{class_common_1_1_time_value_af00ccb1be5508c87c13d470c945f21ce}{Get\-Microseconds} () const }\label{class_common_1_1_time_value_af00ccb1be5508c87c13d470c945f21ce}
+
+\begin{DoxyCompactList}\small\item\em Returns microseconds of the object without counting on the seconds. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_a39462abbaa179ed2877b93b21e962ae4}{long\-\_\-t \hyperlink{class_common_1_1_time_value_a39462abbaa179ed2877b93b21e962ae4}{Get\-Milliseconds} () const }\label{class_common_1_1_time_value_a39462abbaa179ed2877b93b21e962ae4}
+
+\begin{DoxyCompactList}\small\item\em Returns milliseconds of the object. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_a7a6074859ace662725d33da293566229}{long\-\_\-t \hyperlink{class_common_1_1_time_value_a7a6074859ace662725d33da293566229}{Get\-Total\-Microseconds} () const }\label{class_common_1_1_time_value_a7a6074859ace662725d33da293566229}
+
+\begin{DoxyCompactList}\small\item\em Returns microseconds of the object. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_a8288a4d18e721f9a23d2fbb9ca2c9532}{void \hyperlink{class_common_1_1_time_value_a8288a4d18e721f9a23d2fbb9ca2c9532}{Zero} ()}\label{class_common_1_1_time_value_a8288a4d18e721f9a23d2fbb9ca2c9532}
+
+\begin{DoxyCompactList}\small\item\em Sets seconds and microseconds to 0. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_a5aa68d6d56c6a9222a921bc1658365dd}{void \hyperlink{class_common_1_1_time_value_a5aa68d6d56c6a9222a921bc1658365dd}{Set\-Current\-Time} ()}\label{class_common_1_1_time_value_a5aa68d6d56c6a9222a921bc1658365dd}
+
+\begin{DoxyCompactList}\small\item\em Sets values to current time. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_time_value_abce9a10e223e47fa14b32b06ca16293f}{{\bfseries operator struct timeval $\ast$} ()}\label{class_common_1_1_time_value_abce9a10e223e47fa14b32b06ca16293f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_time_value_af99f84df29cfbfd8a560c20a70108037}{static \hyperlink{class_common_1_1_time_value}{Time\-Value} \hyperlink{class_common_1_1_time_value_af99f84df29cfbfd8a560c20a70108037}{Now} ()}\label{class_common_1_1_time_value_af99f84df29cfbfd8a560c20a70108037}
+
+\begin{DoxyCompactList}\small\item\em Returns current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_time_value_a9679fc995828812a8a942c584d00b2c9}{\hyperlink{class_common_1_1_time_value}{Time\-Value} {\bfseries operator+} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_a9679fc995828812a8a942c584d00b2c9}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a9a5c63fd148d5116e11b1335f90e7dfa}{\hyperlink{class_common_1_1_time_value}{Time\-Value} {\bfseries operator-\/} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_a9a5c63fd148d5116e11b1335f90e7dfa}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a2c375de762bc38f39e86f89dbdeeafb6}{\hyperlink{class_common_1_1_time_value}{Time\-Value} {\bfseries operator/} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, int value)}\label{class_common_1_1_time_value_a2c375de762bc38f39e86f89dbdeeafb6}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a4820ed59b33b1e8e812c0641aaf87b34}{bool {\bfseries operator$<$} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_a4820ed59b33b1e8e812c0641aaf87b34}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a79a305e78c09826a779f0710a20be056}{bool {\bfseries operator$>$} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_a79a305e78c09826a779f0710a20be056}
+
+\item 
+\hypertarget{class_common_1_1_time_value_a1f1fe68e6f7d1ab74e29f59c27bc3865}{bool {\bfseries operator==} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_a1f1fe68e6f7d1ab74e29f59c27bc3865}
+
+\item 
+\hypertarget{class_common_1_1_time_value_ab4606325e0becc78ef5746e6ef9d1671}{bool {\bfseries operator!=} (\hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t1, \hyperlink{class_common_1_1_time_value}{Time\-Value} const \&t2)}\label{class_common_1_1_time_value_ab4606325e0becc78ef5746e6ef9d1671}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores a time value up to microseconds. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_time_value_aa85538c3483db43375221b8598094348}{\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}!Time\-Value@{Time\-Value}}
+\index{Time\-Value@{Time\-Value}!Common::TimeValue@{Common\-::\-Time\-Value}}
+\subsubsection[{Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Time\-Value\-::\-Time\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_time_value_aa85538c3483db43375221b8598094348}
+
+
+Constructor. 
+
+By default the value of the time value is 0 seconds and 0 microseconds. \hypertarget{class_common_1_1_time_value_a869fbb26691f1509438b425ffe1fbe26}{\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}!Time\-Value@{Time\-Value}}
+\index{Time\-Value@{Time\-Value}!Common::TimeValue@{Common\-::\-Time\-Value}}
+\subsubsection[{Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Time\-Value\-::\-Time\-Value (
+\begin{DoxyParamCaption}
+\item[{long}]{secs, }
+\item[{long}]{usecs = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_time_value_a869fbb26691f1509438b425ffe1fbe26}
+
+
+Constructor. 
+
+Sets seconds and microseconds (microseconds are 0 by default).
+
+
+\begin{DoxyParams}{Parameters}
+{\em secs} & Seconds. \\
+\hline
+{\em usecs} & Microseconds. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_time_value_a13d279540289163e9db13c832cda10cc}{\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}!Time\-Value@{Time\-Value}}
+\index{Time\-Value@{Time\-Value}!Common::TimeValue@{Common\-::\-Time\-Value}}
+\subsubsection[{Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Time\-Value\-::\-Time\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\-Value} const \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_time_value_a13d279540289163e9db13c832cda10cc}
+
+
+Constructor. 
+
+Assigns the values of the \hyperlink{class_common_1_1_time_value}{Time\-Value} object. \hypertarget{class_common_1_1_time_value_af461d53d4da630ba62cb5a9df0991045}{\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}!Time\-Value@{Time\-Value}}
+\index{Time\-Value@{Time\-Value}!Common::TimeValue@{Common\-::\-Time\-Value}}
+\subsubsection[{Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Time\-Value\-::\-Time\-Value (
+\begin{DoxyParamCaption}
+\item[{timeval const \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_time_value_af461d53d4da630ba62cb5a9df0991045}
+
+
+Constructor. 
+
+Assigns values of the given structure. \hypertarget{class_common_1_1_time_value_a37f682d54fb449160837e8d3fa0d7a39}{\index{Common\-::\-Time\-Value@{Common\-::\-Time\-Value}!Time\-Value@{Time\-Value}}
+\index{Time\-Value@{Time\-Value}!Common::TimeValue@{Common\-::\-Time\-Value}}
+\subsubsection[{Time\-Value}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Time\-Value\-::\-Time\-Value (
+\begin{DoxyParamCaption}
+\item[{struct timeb const \&}]{tb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_time_value_a37f682d54fb449160837e8d3fa0d7a39}
+
+
+Constructor. 
+
+Assigns values of the given structure converted to the used format. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Time\-Value.\-h\item 
+Common/Time\-Value.\-cpp\end{DoxyCompactItemize}

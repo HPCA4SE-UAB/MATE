@@ -1,0 +1,268 @@
+\hypertarget{class_model_1_1_event}{\section{Model\-:\-:Event Class Reference}
+\label{class_model_1_1_event}\index{Model\-::\-Event@{Model\-::\-Event}}
+}
+
+
+Encapsulates information about the events that the target application generates. For each event holds identification information (id, name), the place where it is produced, its attributes (for example the parameters of a function) and a reference to a handler. As this is a model class the methods provided are for accessing and setting the members of the data structure.  
+
+
+
+
+{\ttfamily \#include $<$App\-Event.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_event_afcfebfa23d6c60c3632528aa58805617}{Event} (\hyperlink{class_model_1_1_event}{Event} const \&e)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_event_a0f311fa972df39b141bfdb8291f9d477}{Event} (int id, std\-::string const \&func\-Name, Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_model_1_1_event_a7704ec01ce91e673885792054214b3d2}{\hyperlink{class_model_1_1_event_a7704ec01ce91e673885792054214b3d2}{$\sim$\-Event} ()}\label{class_model_1_1_event_a7704ec01ce91e673885792054214b3d2}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_event_ac7b7d9607b8ea5c1ac0300120ad05807}{Get\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Globally unique event id getter. \end{DoxyCompactList}\item 
+string \hyperlink{class_model_1_1_event_a341b241b108db5bda1f388a2d3379047}{Get\-Function\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Name getter. \end{DoxyCompactList}\item 
+Instr\-Place \hyperlink{class_model_1_1_event_ab94faa4d80aac8a3bb0e580944fcc023}{Get\-Instr\-Place} () const 
+\begin{DoxyCompactList}\small\item\em Instruction place getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_event_a01daa5713432336487fce34d87fd1cc9}{Get\-Num\-Attributes} () const 
+\begin{DoxyCompactList}\small\item\em Number of attributes getter. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_attribute}{Attribute} $\ast$ \hyperlink{class_model_1_1_event_a90a9468086e076656f1bc910dbcb7a3f}{Get\-Attributes} () const 
+\begin{DoxyCompactList}\small\item\em Attributes getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_event_a22ee34f5b6028817a1b3175799c64ec2}{Set\-Attribute} (int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs)
+\begin{DoxyCompactList}\small\item\em Attributes setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_event_a9ff45caab649bc7dda897385e715596f}{Set\-N\-Events} (int n\-Events)
+\begin{DoxyCompactList}\small\item\em Attributes setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_event_a326a936a45b9a0923c8d6cc1ae99839e}{Set\-Event\-Handler} (\hyperlink{class_model_1_1_event_handler}{Event\-Handler} \&h)
+\begin{DoxyCompactList}\small\item\em Installs a callback function that is called each time a record of this event is delivered. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_event_handler}{Event\-Handler} $\ast$ \hyperlink{class_model_1_1_event_a4ccaa201a88d5134e41d5fc94af2063b}{Get\-Event\-Handler} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_1_1_event}{Event} handler getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_event_a246ade8614bdf20a642573280518ce0c}{Get\-N\-Events} () const 
+\begin{DoxyCompactList}\small\item\em Number of Papi metrics getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_event_a87c4fcf12c67448d5d9d1df8c43f90e5}{Get\-Num\-Papi\-Metrics} () const 
+\begin{DoxyCompactList}\small\item\em Number of Papi metrics getter. \end{DoxyCompactList}\item 
+\hypertarget{class_model_1_1_event_a99f40ff3240bde174c92e07228a208dc}{std\-::string $\ast$ {\bfseries Get\-Metrics} () const }\label{class_model_1_1_event_a99f40ff3240bde174c92e07228a208dc}
+
+\item 
+\hypertarget{class_model_1_1_event_a00e550f2db2bea0bab4632103e4a470e}{void {\bfseries Set\-Metric} (int n\-Papi, std\-::string $\ast$Papi\-Metrics)}\label{class_model_1_1_event_a00e550f2db2bea0bab4632103e4a470e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates information about the events that the target application generates. For each event holds identification information (id, name), the place where it is produced, its attributes (for example the parameters of a function) and a reference to a handler. As this is a model class the methods provided are for accessing and setting the members of the data structure. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_event_afcfebfa23d6c60c3632528aa58805617}{\index{Model\-::\-Event@{Model\-::\-Event}!Event@{Event}}
+\index{Event@{Event}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Event}]{\setlength{\rightskip}{0pt plus 5cm}Event\-::\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} const \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_event_afcfebfa23d6c60c3632528aa58805617}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the event to copy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_event_a0f311fa972df39b141bfdb8291f9d477}{\index{Model\-::\-Event@{Model\-::\-Event}!Event@{Event}}
+\index{Event@{Event}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Event}]{\setlength{\rightskip}{0pt plus 5cm}Event\-::\-Event (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{std\-::string const \&}]{func\-Name, }
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_event_a0f311fa972df39b141bfdb8291f9d477}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique identification number for the event \\
+\hline
+{\em func\-Name} & name of the function which the event is associated to \\
+\hline
+{\em place} & place of the function \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_event_a90a9468086e076656f1bc910dbcb7a3f}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Attributes@{Get\-Attributes}}
+\index{Get\-Attributes@{Get\-Attributes}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Attribute}$\ast$ Model\-::\-Event\-::\-Get\-Attributes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a90a9468086e076656f1bc910dbcb7a3f}
+
+
+Attributes getter. 
+
+\begin{DoxyReturn}{Returns}
+A collection of attributes to be recorded with this event 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a4ccaa201a88d5134e41d5fc94af2063b}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Event\-Handler@{Get\-Event\-Handler}}
+\index{Get\-Event\-Handler@{Get\-Event\-Handler}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Event\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\-Handler}$\ast$ Model\-::\-Event\-::\-Get\-Event\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a4ccaa201a88d5134e41d5fc94af2063b}
+
+
+\hyperlink{class_model_1_1_event}{Event} handler getter. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_model_1_1_event}{Event} handler 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a341b241b108db5bda1f388a2d3379047}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Function\-Name@{Get\-Function\-Name}}
+\index{Get\-Function\-Name@{Get\-Function\-Name}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Function\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Model\-::\-Event\-::\-Get\-Function\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a341b241b108db5bda1f388a2d3379047}
+
+
+Name getter. 
+
+\begin{DoxyReturn}{Returns}
+Name of the function this event is associated to 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_ac7b7d9607b8ea5c1ac0300120ad05807}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Id@{Get\-Id}}
+\index{Get\-Id@{Get\-Id}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Event\-::\-Get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_ac7b7d9607b8ea5c1ac0300120ad05807}
+
+
+Globally unique event id getter. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_model_1_1_event}{Event} id 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_ab94faa4d80aac8a3bb0e580944fcc023}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Instr\-Place@{Get\-Instr\-Place}}
+\index{Get\-Instr\-Place@{Get\-Instr\-Place}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Instr\-Place}]{\setlength{\rightskip}{0pt plus 5cm}Instr\-Place Model\-::\-Event\-::\-Get\-Instr\-Place (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_ab94faa4d80aac8a3bb0e580944fcc023}
+
+
+Instruction place getter. 
+
+\begin{DoxyReturn}{Returns}
+Either the function entry or exit 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a246ade8614bdf20a642573280518ce0c}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-N\-Events@{Get\-N\-Events}}
+\index{Get\-N\-Events@{Get\-N\-Events}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-N\-Events}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Event\-::\-Get\-N\-Events (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a246ade8614bdf20a642573280518ce0c}
+
+
+Number of Papi metrics getter. 
+
+\begin{DoxyReturn}{Returns}
+Number of Papi metrics 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a01daa5713432336487fce34d87fd1cc9}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Num\-Attributes@{Get\-Num\-Attributes}}
+\index{Get\-Num\-Attributes@{Get\-Num\-Attributes}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Num\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Event\-::\-Get\-Num\-Attributes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a01daa5713432336487fce34d87fd1cc9}
+
+
+Number of attributes getter. 
+
+\begin{DoxyReturn}{Returns}
+Number of event attributes 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a87c4fcf12c67448d5d9d1df8c43f90e5}{\index{Model\-::\-Event@{Model\-::\-Event}!Get\-Num\-Papi\-Metrics@{Get\-Num\-Papi\-Metrics}}
+\index{Get\-Num\-Papi\-Metrics@{Get\-Num\-Papi\-Metrics}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Get\-Num\-Papi\-Metrics}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Event\-::\-Get\-Num\-Papi\-Metrics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_event_a87c4fcf12c67448d5d9d1df8c43f90e5}
+
+
+Number of Papi metrics getter. 
+
+\begin{DoxyReturn}{Returns}
+Number of Papi metrics 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_event_a22ee34f5b6028817a1b3175799c64ec2}{\index{Model\-::\-Event@{Model\-::\-Event}!Set\-Attribute@{Set\-Attribute}}
+\index{Set\-Attribute@{Set\-Attribute}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Set\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-::\-Set\-Attribute (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_event_a22ee34f5b6028817a1b3175799c64ec2}
+
+
+Attributes setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\-Attrs} & Number of attributes \\
+\hline
+{\em attrs} & Collection of attributes to be recorded with this event \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_event_a326a936a45b9a0923c8d6cc1ae99839e}{\index{Model\-::\-Event@{Model\-::\-Event}!Set\-Event\-Handler@{Set\-Event\-Handler}}
+\index{Set\-Event\-Handler@{Set\-Event\-Handler}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Set\-Event\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-::\-Set\-Event\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Handler} \&}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_event_a326a936a45b9a0923c8d6cc1ae99839e}
+
+
+Installs a callback function that is called each time a record of this event is delivered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & \hyperlink{class_model_1_1_event}{Event} handler \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_event_a9ff45caab649bc7dda897385e715596f}{\index{Model\-::\-Event@{Model\-::\-Event}!Set\-N\-Events@{Set\-N\-Events}}
+\index{Set\-N\-Events@{Set\-N\-Events}!Model::Event@{Model\-::\-Event}}
+\subsubsection[{Set\-N\-Events}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-::\-Set\-N\-Events (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Events}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_event_a9ff45caab649bc7dda897385e715596f}
+
+
+Attributes setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\-Attrs} & Number of attributes \\
+\hline
+{\em attrs} & Collection of attributes to be recorded with this event \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Event.\-h\item 
+Analyzer/App\-Event.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{class_common_1_1_event_demultiplexer}{\section{Common\-:\-:Event\-Demultiplexer Class Reference}
+\label{class_common_1_1_event_demultiplexer}\index{Common\-::\-Event\-Demultiplexer@{Common\-::\-Event\-Demultiplexer}}
+}
+
+
+Part of the reactor design pattern, takes requests coming from the reactor and passes them to different handlers.  
+
+
+
+
+{\ttfamily \#include $<$Reactor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_event_demultiplexer_a1049691d966410037859a9f4375fa613}{\hyperlink{class_common_1_1_event_demultiplexer_a1049691d966410037859a9f4375fa613}{Event\-Demultiplexer} ()}\label{class_common_1_1_event_demultiplexer_a1049691d966410037859a9f4375fa613}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_demultiplexer_a23812d729f572fd906678cec99f3a2b8}{void \hyperlink{class_common_1_1_event_demultiplexer_a23812d729f572fd906678cec99f3a2b8}{Add\-Handle} (int handle)}\label{class_common_1_1_event_demultiplexer_a23812d729f572fd906678cec99f3a2b8}
+
+\begin{DoxyCompactList}\small\item\em Adds a new handle. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_demultiplexer_a87eafa05d0a9d188bdc2b1548a656f6b}{void \hyperlink{class_common_1_1_event_demultiplexer_a87eafa05d0a9d188bdc2b1548a656f6b}{Remove\-Handle} (int handle)}\label{class_common_1_1_event_demultiplexer_a87eafa05d0a9d188bdc2b1548a656f6b}
+
+\begin{DoxyCompactList}\small\item\em Removes selected handle. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_event_demultiplexer_a3174a4e1ce07e6ec8875fa8a1dd59379}{Select} (\hyperlink{class_common_1_1_time_value}{Time\-Value} $\ast$timeout=0)
+\begin{DoxyCompactList}\small\item\em Returns the number of socket handles ready or 0 if the time limit expired. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_demultiplexer_a4e4f26eb5cc25fe11ec2a3da90d732f0}{bool \hyperlink{class_common_1_1_event_demultiplexer_a4e4f26eb5cc25fe11ec2a3da90d732f0}{Is\-Handle\-Activated} (int handle) const }\label{class_common_1_1_event_demultiplexer_a4e4f26eb5cc25fe11ec2a3da90d732f0}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the given handle is activated, false otherwise. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_event_demultiplexer_a5555e8ce92aae4bd661d0283525252ac}{int \hyperlink{class_common_1_1_event_demultiplexer_a5555e8ce92aae4bd661d0283525252ac}{Get\-Max\-Handle} () const }\label{class_common_1_1_event_demultiplexer_a5555e8ce92aae4bd661d0283525252ac}
+
+\begin{DoxyCompactList}\small\item\em Returns value of the max handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Part of the reactor design pattern, takes requests coming from the reactor and passes them to different handlers. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_event_demultiplexer_a3174a4e1ce07e6ec8875fa8a1dd59379}{\index{Common\-::\-Event\-Demultiplexer@{Common\-::\-Event\-Demultiplexer}!Select@{Select}}
+\index{Select@{Select}!Common::EventDemultiplexer@{Common\-::\-Event\-Demultiplexer}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}int Event\-Demultiplexer\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\-Value} $\ast$}]{timeout = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_event_demultiplexer_a3174a4e1ce07e6ec8875fa8a1dd59379}
+
+
+Returns the number of socket handles ready or 0 if the time limit expired. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & If the parameter is a \hyperlink{class_common_1_1_time_value}{Time\-Value} object, it will wait the object value for events. In the event that the value is 0 it will check without blocking. If the parameter is a 0 (not a \hyperlink{class_common_1_1_time_value}{Time\-Value} object, default value) it will check and block in a forever loop. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Reactor.\-h\item 
+Common/Reactor.\-cpp\end{DoxyCompactItemize}

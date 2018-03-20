@@ -1,0 +1,275 @@
+\hypertarget{class_common_1_1_config}{\section{Common\-:\-:Config Class Reference}
+\label{class_common_1_1_config}\index{Common\-::\-Config@{Common\-::\-Config}}
+}
+
+
+Manages a configuration of the system.  
+
+
+
+
+{\ttfamily \#include $<$Config.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_common_1_1_config_1_1_key_iterator}{Key\-Iterator}
+\begin{DoxyCompactList}\small\item\em Iterates over the keys of a \hyperlink{class_common_1_1_config}{Config} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_config_ae5f62f67f9815ba0cb963ae78565e00d}{\hyperlink{class_common_1_1_config_ae5f62f67f9815ba0cb963ae78565e00d}{Config} ()}\label{class_common_1_1_config_ae5f62f67f9815ba0cb963ae78565e00d}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{class_common_1_1_config_ae4f60b0f7e86b4cf1887ec47afcdc485}{Get\-String\-Value} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Returns string value of the entry specified by the parameters. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_config_ac34ebeb553d7a1ab361346e7bb037140}{Get\-Int\-Value} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Returns integer value of the entry specified by the parameters. \end{DoxyCompactList}\item 
+int \hyperlink{class_common_1_1_config_ae22508ea700d687afd24b2de16831afb}{Get\-Int\-Value} (std\-::string const \&section, std\-::string const \&key, int default\-Value) const 
+\begin{DoxyCompactList}\small\item\em Returns integer value of the entry specified by the parameters. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_config_ac5c1ff98fb84f80f3cca85fd17e494f3}{Get\-Bool\-Value} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Returns boolean value of the entry specified by the parameters. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_config_aa802d8ef647dedec6261c330675b494b}{Get\-Bool\-Value} (std\-::string const \&section, std\-::string const \&key, bool default\-Value) const 
+\begin{DoxyCompactList}\small\item\em Returns boolean value of the entry specified by the parameters. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_config_a2db2d7a710a2da3c11f8f5e20267a9f5}{Contains} (std\-::string const \&section, std\-::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Finds an entry on the configuration. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_config_1_1_key_iterator}{Key\-Iterator} \hyperlink{class_common_1_1_config_a8c6a1b318de9e28f310763d2313bd69f}{Get\-Keys} (std\-::string const \&section) const 
+\begin{DoxyCompactList}\small\item\em Returns an iterator of the keys inside the requested section. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_config_a503736d04428c150b1b1610612615d48}{Add\-Entry} (std\-::string const \&section, std\-::string const \&key, std\-::string const \&value)
+\begin{DoxyCompactList}\small\item\em Adds a new entry to the configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_config_a4e34a259365f6965a16ab8b276d358d0}{class {\bfseries Key\-Iterator}}\label{class_common_1_1_config_a4e34a259365f6965a16ab8b276d358d0}
+
+\item 
+\hypertarget{class_common_1_1_config_ada75ae56b35b5bf88aca48da1012be67}{class {\bfseries Config\-Reader}}\label{class_common_1_1_config_ada75ae56b35b5bf88aca48da1012be67}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages a configuration of the system. 
+
+The configuration is based on section and keys, and the format is the following\-: 
+\begin{DoxyCode}
+[section]
+key = value
+key = value
+...
+
+[newsection]
+key = value
+...
+\end{DoxyCode}
+
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2000 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_config_a503736d04428c150b1b1610612615d48}{\index{Common\-::\-Config@{Common\-::\-Config}!Add\-Entry@{Add\-Entry}}
+\index{Add\-Entry@{Add\-Entry}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Add\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}void Common\-::\-Config\-::\-Add\-Entry (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key, }
+\item[{std\-::string const \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_a503736d04428c150b1b1610612615d48}
+
+
+Adds a new entry to the configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section of the new entry. \\
+\hline
+{\em key} & Key of the new entry. \\
+\hline
+{\em value} & Value of the new entry. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_config_a2db2d7a710a2da3c11f8f5e20267a9f5}{\index{Common\-::\-Config@{Common\-::\-Config}!Contains@{Contains}}
+\index{Contains@{Contains}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Contains}]{\setlength{\rightskip}{0pt plus 5cm}bool Common\-::\-Config\-::\-Contains (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_a2db2d7a710a2da3c11f8f5e20267a9f5}
+
+
+Finds an entry on the configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the entry. \\
+\hline
+{\em key} & Key to find the entry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the entry was found, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_ac5c1ff98fb84f80f3cca85fd17e494f3}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-Bool\-Value@{Get\-Bool\-Value}}
+\index{Get\-Bool\-Value@{Get\-Bool\-Value}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-Bool\-Value}]{\setlength{\rightskip}{0pt plus 5cm}bool Common\-::\-Config\-::\-Get\-Bool\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_config_ac5c1ff98fb84f80f3cca85fd17e494f3}
+
+
+Returns boolean value of the entry specified by the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean containing the requested value.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_config_exception}{Config\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_config_aa802d8ef647dedec6261c330675b494b}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-Bool\-Value@{Get\-Bool\-Value}}
+\index{Get\-Bool\-Value@{Get\-Bool\-Value}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-Bool\-Value}]{\setlength{\rightskip}{0pt plus 5cm}bool Common\-::\-Config\-::\-Get\-Bool\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key, }
+\item[{bool}]{default\-Value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_aa802d8ef647dedec6261c330675b494b}
+
+
+Returns boolean value of the entry specified by the parameters. 
+
+If the configuration doesn't contain the specified entry, returns the default value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value. \\
+\hline
+{\em default\-Value} & Value returned if the requested entry is not inside the configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean containing the requested value. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_ac34ebeb553d7a1ab361346e7bb037140}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-Int\-Value@{Get\-Int\-Value}}
+\index{Get\-Int\-Value@{Get\-Int\-Value}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-Int\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Common\-::\-Config\-::\-Get\-Int\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_config_ac34ebeb553d7a1ab361346e7bb037140}
+
+
+Returns integer value of the entry specified by the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_config_exception}{Config\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_config_ae22508ea700d687afd24b2de16831afb}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-Int\-Value@{Get\-Int\-Value}}
+\index{Get\-Int\-Value@{Get\-Int\-Value}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-Int\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Common\-::\-Config\-::\-Get\-Int\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key, }
+\item[{int}]{default\-Value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_ae22508ea700d687afd24b2de16831afb}
+
+
+Returns integer value of the entry specified by the parameters. 
+
+If the configuration doesn't contain the specified entry, returns the default value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value. \\
+\hline
+{\em default\-Value} & Value returned if the requested entry is not inside the configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer containing the requested value. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_a8c6a1b318de9e28f310763d2313bd69f}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-Keys@{Get\-Keys}}
+\index{Get\-Keys@{Get\-Keys}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-Iterator} Common\-::\-Config\-::\-Get\-Keys (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_a8c6a1b318de9e28f310763d2313bd69f}
+
+
+Returns an iterator of the keys inside the requested section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section requested.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the keys inside the section. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_config_ae4f60b0f7e86b4cf1887ec47afcdc485}{\index{Common\-::\-Config@{Common\-::\-Config}!Get\-String\-Value@{Get\-String\-Value}}
+\index{Get\-String\-Value@{Get\-String\-Value}!Common::Config@{Common\-::\-Config}}
+\subsubsection[{Get\-String\-Value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& Common\-::\-Config\-::\-Get\-String\-Value (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{section, }
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_config_ae4f60b0f7e86b4cf1887ec47afcdc485}
+
+
+Returns string value of the entry specified by the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to find the value. \\
+\hline
+{\em key} & Key to find the value.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_config_exception}{Config\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/Config.\-h\end{DoxyCompactItemize}

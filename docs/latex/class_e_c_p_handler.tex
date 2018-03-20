@@ -1,0 +1,80 @@
+\hypertarget{class_e_c_p_handler}{\section{E\-C\-P\-Handler Class Reference}
+\label{class_e_c_p_handler}\index{E\-C\-P\-Handler@{E\-C\-P\-Handler}}
+}
+
+
+Encapsulates data structures and methods to handle incoming event collector inputs.  
+
+
+
+
+{\ttfamily \#include $<$E\-C\-P\-Handler.\-h$>$}
+
+Inheritance diagram for E\-C\-P\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_c_p_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c_p_handler_abbb4765085c0b0e68882474214bd0336}{\hyperlink{class_e_c_p_handler_abbb4765085c0b0e68882474214bd0336}{E\-C\-P\-Handler} (Socket\-Ptr \&socket, \hyperlink{class_event_collector}{Event\-Collector} $\ast$collector)}\label{class_e_c_p_handler_abbb4765085c0b0e68882474214bd0336}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_e_c_p_handler_ac6fd0bc755f3dfe4bbac87c5c2be28be}{void \hyperlink{class_e_c_p_handler_ac6fd0bc755f3dfe4bbac87c5c2be28be}{Remove} ()}\label{class_e_c_p_handler_ac6fd0bc755f3dfe4bbac87c5c2be28be}
+
+\begin{DoxyCompactList}\small\item\em Not implemented (here for compatibility reasons) \end{DoxyCompactList}\item 
+\hypertarget{class_e_c_p_handler_ac0ca3a32612f0afc1323af8eb2af82c8}{void \hyperlink{class_e_c_p_handler_ac0ca3a32612f0afc1323af8eb2af82c8}{Handle\-Input} ()}\label{class_e_c_p_handler_ac0ca3a32612f0afc1323af8eb2af82c8}
+
+\begin{DoxyCompactList}\small\item\em Reads an incoming message and handles it depending on its type. First reads a message from the socket, then creates the proper type of message and the calls the on\-Event method of the listener of the events (if any). \end{DoxyCompactList}\item 
+int \hyperlink{class_e_c_p_handler_aae9a377a352483804795117312a72544}{Get\-Handle} ()
+\begin{DoxyCompactList}\small\item\em Handler getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_e_c_p_handler_a52c29fb21cd3e665dc45a60bf55f2ed0}{Set\-Service} (\hyperlink{class_service}{Service} $\ast$service)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_service}{Service} setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates data structures and methods to handle incoming event collector inputs. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_e_c_p_handler_aae9a377a352483804795117312a72544}{\index{E\-C\-P\-Handler@{E\-C\-P\-Handler}!Get\-Handle@{Get\-Handle}}
+\index{Get\-Handle@{Get\-Handle}!ECPHandler@{E\-C\-P\-Handler}}
+\subsubsection[{Get\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}int E\-C\-P\-Handler\-::\-Get\-Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_e_c_p_handler_aae9a377a352483804795117312a72544}
+
+
+Handler getter. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the handler object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_common_1_1_event_handler_aaf6cb56038c6fe6b91c9d1e34ee6b3af}{Common\-::\-Event\-Handler}.
+
+\hypertarget{class_e_c_p_handler_a52c29fb21cd3e665dc45a60bf55f2ed0}{\index{E\-C\-P\-Handler@{E\-C\-P\-Handler}!Set\-Service@{Set\-Service}}
+\index{Set\-Service@{Set\-Service}!ECPHandler@{E\-C\-P\-Handler}}
+\subsubsection[{Set\-Service}]{\setlength{\rightskip}{0pt plus 5cm}void E\-C\-P\-Handler\-::\-Set\-Service (
+\begin{DoxyParamCaption}
+\item[{{\bf Service} $\ast$}]{service}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_e_c_p_handler_a52c29fb21cd3e665dc45a60bf55f2ed0}
+
+
+\hyperlink{class_service}{Service} setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service} & Reference to the service. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/E\-C\-P\-Handler.\-h\item 
+Analyzer/E\-C\-P\-Handler.\-cpp\end{DoxyCompactItemize}

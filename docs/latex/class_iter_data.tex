@@ -1,0 +1,232 @@
+\hypertarget{class_iter_data}{\section{Iter\-Data Class Reference}
+\label{class_iter_data}\index{Iter\-Data@{Iter\-Data}}
+}
+
+
+Statistics for a single iteration.  
+
+
+
+
+{\ttfamily \#include $<$Factoring\-Stats\-\_\-nw.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_iter_data_afec41827476662cb1cac6d0f00931a80}{Iter\-Data} (int iter\-Idx)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_iter_data_a14ebf5f539d8941043b026513908f281}{\hyperlink{class_iter_data_a14ebf5f539d8941043b026513908f281}{$\sim$\-Iter\-Data} ()}\label{class_iter_data_a14ebf5f539d8941043b026513908f281}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_iter_data_ab6cc53385450be8716cae65eebb7757e}{On\-Iter\-Start} (long\-\_\-t time, int num\-Tuples, int size\-Bytes, int nw)
+\begin{DoxyCompactList}\small\item\em Sets the flag of the iteration started to 1, the iteration starting time to {\itshape time}, the number of tasks as {\itshape num\-Tuples}, the number of workers to {\itshape nw} and the size in Bytes to {\itshape size\-Bytes}. \end{DoxyCompactList}\item 
+void \hyperlink{class_iter_data_a4043a0cbd3de9f8e7e4b3438b6b861b2}{On\-Iter\-End} (long\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Sets the flag of the finishing iteration to 1 and makes sure that the final time stated in {\itshape time} is greater than the starting one. Finally, it computes the iteration's elapsed time. \end{DoxyCompactList}\item 
+\hypertarget{class_iter_data_ad771031edb8d8dfa35691bba78b94fd7}{void \hyperlink{class_iter_data_ad771031edb8d8dfa35691bba78b94fd7}{On\-New\-Batch} ()}\label{class_iter_data_ad771031edb8d8dfa35691bba78b94fd7}
+
+\begin{DoxyCompactList}\small\item\em Increments the number of batches by 1. \end{DoxyCompactList}\item 
+\hyperlink{class_batch_data}{Batch\-Data} \& \hyperlink{class_iter_data_ac437f6f1b288d95d07a341420985d560}{Get\-Batch\-Data} (int Idx\-Batch)
+\begin{DoxyCompactList}\small\item\em Gets the data in a batch by specifying the batch I\-D. If it's the last node from the iterator, adds a new \hyperlink{class_batch_data}{Batch\-Data} object and returns it. \end{DoxyCompactList}\item 
+bool \hyperlink{class_iter_data_af2ae93caf86c95f45c505846a698b9e2}{Is\-Complete} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the current iteration has a start and an end and whether all batches are complete. \end{DoxyCompactList}\item 
+bool \hyperlink{class_iter_data_a26f9b64165ba90f882aa7ca4e0896cc3}{Are\-Batchs\-Complete} () const 
+\begin{DoxyCompactList}\small\item\em Checks if all batches are complete. \end{DoxyCompactList}\item 
+int \hyperlink{class_iter_data_a41a194699551536e6a32b9558edee861}{Get\-Tuple\-Size\-In\-Bytes} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the tuple size in bytes. \end{DoxyCompactList}\item 
+\hyperlink{class_batch_data}{Batch\-Data} $\ast$$\ast$ \hyperlink{class_iter_data_a027f9296d3a93d9e5b15abc08519acfc}{Alloc\-Batchs\-Array} ()
+\begin{DoxyCompactList}\small\item\em Allocates a new batch data for each element in the array \-\_\-map\-B. \end{DoxyCompactList}\item 
+int \hyperlink{class_iter_data_a77586ae939bcca9bbbedf71bc692da89}{Get\-Num\-Workers} ()
+\begin{DoxyCompactList}\small\item\em Getter of the number of workers. \end{DoxyCompactList}\item 
+int \hyperlink{class_iter_data_ab2bf30bbc572a350ca4a492adc0f6bf9}{Get\-Total\-Tasks} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the number of tasks. \end{DoxyCompactList}\item 
+int \hyperlink{class_iter_data_acd80b709571a608eca0af0145c4ad684}{Get\-Num\-Batchs} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the number of batches. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Statistics for a single iteration. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_iter_data_afec41827476662cb1cac6d0f00931a80}{\index{Iter\-Data@{Iter\-Data}!Iter\-Data@{Iter\-Data}}
+\index{Iter\-Data@{Iter\-Data}!IterData@{Iter\-Data}}
+\subsubsection[{Iter\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Iter\-Data\-::\-Iter\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{iter\-Idx}
+\end{DoxyParamCaption}
+)}}\label{class_iter_data_afec41827476662cb1cac6d0f00931a80}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\-Idx} & I\-D of the iterator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_iter_data_a027f9296d3a93d9e5b15abc08519acfc}{\index{Iter\-Data@{Iter\-Data}!Alloc\-Batchs\-Array@{Alloc\-Batchs\-Array}}
+\index{Alloc\-Batchs\-Array@{Alloc\-Batchs\-Array}!IterData@{Iter\-Data}}
+\subsubsection[{Alloc\-Batchs\-Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batch\-Data} $\ast$$\ast$ Iter\-Data\-::\-Alloc\-Batchs\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_iter_data_a027f9296d3a93d9e5b15abc08519acfc}
+
+
+Allocates a new batch data for each element in the array \-\_\-map\-B. 
+
+\begin{DoxyReturn}{Returns}
+Array with all batches allocated 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_a26f9b64165ba90f882aa7ca4e0896cc3}{\index{Iter\-Data@{Iter\-Data}!Are\-Batchs\-Complete@{Are\-Batchs\-Complete}}
+\index{Are\-Batchs\-Complete@{Are\-Batchs\-Complete}!IterData@{Iter\-Data}}
+\subsubsection[{Are\-Batchs\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Iter\-Data\-::\-Are\-Batchs\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_iter_data_a26f9b64165ba90f882aa7ca4e0896cc3}
+
+
+Checks if all batches are complete. 
+
+\begin{DoxyReturn}{Returns}
+True if all batches are complete and False if not. 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_ac437f6f1b288d95d07a341420985d560}{\index{Iter\-Data@{Iter\-Data}!Get\-Batch\-Data@{Get\-Batch\-Data}}
+\index{Get\-Batch\-Data@{Get\-Batch\-Data}!IterData@{Iter\-Data}}
+\subsubsection[{Get\-Batch\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batch\-Data} \& Iter\-Data\-::\-Get\-Batch\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{Idx\-Batch}
+\end{DoxyParamCaption}
+)}}\label{class_iter_data_ac437f6f1b288d95d07a341420985d560}
+
+
+Gets the data in a batch by specifying the batch I\-D. If it's the last node from the iterator, adds a new \hyperlink{class_batch_data}{Batch\-Data} object and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Idx\-Batch} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data of the batch in a \hyperlink{class_batch_data}{Batch\-Data} object 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_acd80b709571a608eca0af0145c4ad684}{\index{Iter\-Data@{Iter\-Data}!Get\-Num\-Batchs@{Get\-Num\-Batchs}}
+\index{Get\-Num\-Batchs@{Get\-Num\-Batchs}!IterData@{Iter\-Data}}
+\subsubsection[{Get\-Num\-Batchs}]{\setlength{\rightskip}{0pt plus 5cm}int Iter\-Data\-::\-Get\-Num\-Batchs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_iter_data_acd80b709571a608eca0af0145c4ad684}
+
+
+Getter of the number of batches. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-nbatchs 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_a77586ae939bcca9bbbedf71bc692da89}{\index{Iter\-Data@{Iter\-Data}!Get\-Num\-Workers@{Get\-Num\-Workers}}
+\index{Get\-Num\-Workers@{Get\-Num\-Workers}!IterData@{Iter\-Data}}
+\subsubsection[{Get\-Num\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}int Iter\-Data\-::\-Get\-Num\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_iter_data_a77586ae939bcca9bbbedf71bc692da89}
+
+
+Getter of the number of workers. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-num\-Workers 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_ab2bf30bbc572a350ca4a492adc0f6bf9}{\index{Iter\-Data@{Iter\-Data}!Get\-Total\-Tasks@{Get\-Total\-Tasks}}
+\index{Get\-Total\-Tasks@{Get\-Total\-Tasks}!IterData@{Iter\-Data}}
+\subsubsection[{Get\-Total\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}int Iter\-Data\-::\-Get\-Total\-Tasks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_iter_data_ab2bf30bbc572a350ca4a492adc0f6bf9}
+
+
+Getter of the number of tasks. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-num\-Tasks 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_a41a194699551536e6a32b9558edee861}{\index{Iter\-Data@{Iter\-Data}!Get\-Tuple\-Size\-In\-Bytes@{Get\-Tuple\-Size\-In\-Bytes}}
+\index{Get\-Tuple\-Size\-In\-Bytes@{Get\-Tuple\-Size\-In\-Bytes}!IterData@{Iter\-Data}}
+\subsubsection[{Get\-Tuple\-Size\-In\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}int Iter\-Data\-::\-Get\-Tuple\-Size\-In\-Bytes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_iter_data_a41a194699551536e6a32b9558edee861}
+
+
+Getter of the tuple size in bytes. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-size\-Bytes 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_af2ae93caf86c95f45c505846a698b9e2}{\index{Iter\-Data@{Iter\-Data}!Is\-Complete@{Is\-Complete}}
+\index{Is\-Complete@{Is\-Complete}!IterData@{Iter\-Data}}
+\subsubsection[{Is\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Iter\-Data\-::\-Is\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_iter_data_af2ae93caf86c95f45c505846a698b9e2}
+
+
+Checks if the current iteration has a start and an end and whether all batches are complete. 
+
+\begin{DoxyReturn}{Returns}
+True if the current iteration is complete or False if not 
+\end{DoxyReturn}
+\hypertarget{class_iter_data_a4043a0cbd3de9f8e7e4b3438b6b861b2}{\index{Iter\-Data@{Iter\-Data}!On\-Iter\-End@{On\-Iter\-End}}
+\index{On\-Iter\-End@{On\-Iter\-End}!IterData@{Iter\-Data}}
+\subsubsection[{On\-Iter\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Iter\-Data\-::\-On\-Iter\-End (
+\begin{DoxyParamCaption}
+\item[{long\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_iter_data_a4043a0cbd3de9f8e7e4b3438b6b861b2}
+
+
+Sets the flag of the finishing iteration to 1 and makes sure that the final time stated in {\itshape time} is greater than the starting one. Finally, it computes the iteration's elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Ending time of the iteration. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_iter_data_ab6cc53385450be8716cae65eebb7757e}{\index{Iter\-Data@{Iter\-Data}!On\-Iter\-Start@{On\-Iter\-Start}}
+\index{On\-Iter\-Start@{On\-Iter\-Start}!IterData@{Iter\-Data}}
+\subsubsection[{On\-Iter\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Iter\-Data\-::\-On\-Iter\-Start (
+\begin{DoxyParamCaption}
+\item[{long\-\_\-t}]{time, }
+\item[{int}]{num\-Tuples, }
+\item[{int}]{size\-Bytes, }
+\item[{int}]{nw}
+\end{DoxyParamCaption}
+)}}\label{class_iter_data_ab6cc53385450be8716cae65eebb7757e}
+
+
+Sets the flag of the iteration started to 1, the iteration starting time to {\itshape time}, the number of tasks as {\itshape num\-Tuples}, the number of workers to {\itshape nw} and the size in Bytes to {\itshape size\-Bytes}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Starting time of the iteration in milliseconds \\
+\hline
+{\em num\-Tuples} & Number of tasks \\
+\hline
+{\em size\-Bytes} & \hyperlink{class_task}{Task} size in Bytes \\
+\hline
+{\em nw} & Number of workers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-h\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-cpp\end{DoxyCompactItemize}

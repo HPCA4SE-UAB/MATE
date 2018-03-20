@@ -1,0 +1,181 @@
+\hypertarget{class_task_collection}{\section{Task\-Collection Class Reference}
+\label{class_task_collection}\index{Task\-Collection@{Task\-Collection}}
+}
+
+
+Groups task in a single, easy to handle, collection.  
+
+
+
+
+{\ttfamily \#include $<$Tasks.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries Not\-Found} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_task_collection_a593ef694d38b929f49707a30233e0555}{\hyperlink{class_task_collection_a593ef694d38b929f49707a30233e0555}{Task\-Collection} ()}\label{class_task_collection_a593ef694d38b929f49707a30233e0555}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_collection_aba9ab69e1dc0d92eae5a49dd2878466d}{Add} (auto\-\_\-ptr$<$ \hyperlink{class_task}{Task} $>$ \&task)
+\begin{DoxyCompactList}\small\item\em Adds a new task to the collection. \end{DoxyCompactList}\item 
+void \hyperlink{class_task_collection_a8cb3410c9f8283b8297ec47588a34bb9}{Delete} (int index)
+\begin{DoxyCompactList}\small\item\em Removes a task from the collection. \end{DoxyCompactList}\item 
+\hypertarget{class_task_collection_ac07e8ebd5d073ab9d630b65fff593266}{void \hyperlink{class_task_collection_ac07e8ebd5d073ab9d630b65fff593266}{Clear} ()}\label{class_task_collection_ac07e8ebd5d073ab9d630b65fff593266}
+
+\begin{DoxyCompactList}\small\item\em Erases all the elements of the array. \end{DoxyCompactList}\item 
+\hyperlink{class_task}{Task} const $\ast$ \hyperlink{class_task_collection_a6d85221c73f4c7da31e2c7badb873106}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\begin{DoxyCompactList}\small\item\em Enables the use of the \mbox{[}\mbox{]} to select an element from the collection. \end{DoxyCompactList}\item 
+\hyperlink{class_task}{Task} $\ast$ \hyperlink{class_task_collection_a7ad1ec5c955a5849da7346b60a3c9aa6}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\begin{DoxyCompactList}\small\item\em Enables the use of the \mbox{[}\mbox{]} to select an element from the collection. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_collection_a742b1dbb987f919bf1e504b2b7eb79c5}{Find\-By\-Pid} (int pid)
+\begin{DoxyCompactList}\small\item\em Finds task by its P\-I\-D and returns its index. \end{DoxyCompactList}\item 
+int \hyperlink{class_task_collection_afa17cc63d9dcf0f12c300a7c19d51905}{Get\-Count} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the number of tasks contained. \end{DoxyCompactList}\item 
+\hyperlink{class_task}{Task} \& \hyperlink{class_task_collection_a75b63b65d83b6034f2c7f121da239a95}{Get\-By\-Pid} (int pid)
+\begin{DoxyCompactList}\small\item\em Looks for a task among the ones stored and returns its reference if found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Groups task in a single, easy to handle, collection. 
+
+Provides collection methods to a group of tasks to facilitate the handling of many tasks at once. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_task_collection_aba9ab69e1dc0d92eae5a49dd2878466d}{\index{Task\-Collection@{Task\-Collection}!Add@{Add}}
+\index{Add@{Add}!TaskCollection@{Task\-Collection}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Collection\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{auto\-\_\-ptr$<$ {\bf Task} $>$ \&}]{task}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_aba9ab69e1dc0d92eae5a49dd2878466d}
+
+
+Adds a new task to the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & Pointer to the task to be added. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_collection_a8cb3410c9f8283b8297ec47588a34bb9}{\index{Task\-Collection@{Task\-Collection}!Delete@{Delete}}
+\index{Delete@{Delete}!TaskCollection@{Task\-Collection}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-Collection\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_a8cb3410c9f8283b8297ec47588a34bb9}
+
+
+Removes a task from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position in the array of the task to be removed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_task_collection_a742b1dbb987f919bf1e504b2b7eb79c5}{\index{Task\-Collection@{Task\-Collection}!Find\-By\-Pid@{Find\-By\-Pid}}
+\index{Find\-By\-Pid@{Find\-By\-Pid}!TaskCollection@{Task\-Collection}}
+\subsubsection[{Find\-By\-Pid}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Collection\-::\-Find\-By\-Pid (
+\begin{DoxyParamCaption}
+\item[{int}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_a742b1dbb987f919bf1e504b2b7eb79c5}
+
+
+Finds task by its P\-I\-D and returns its index. 
+
+Checks if a task with the given P\-I\-D is being executed by the A\-C. 
+\begin{DoxyParams}{Parameters}
+{\em pid} & I\-D of the process which is executing the task.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Not\-Found if a task with given P\-I\-D is not stored in the collection 
+\end{DoxyReturn}
+\hypertarget{class_task_collection_a75b63b65d83b6034f2c7f121da239a95}{\index{Task\-Collection@{Task\-Collection}!Get\-By\-Pid@{Get\-By\-Pid}}
+\index{Get\-By\-Pid@{Get\-By\-Pid}!TaskCollection@{Task\-Collection}}
+\subsubsection[{Get\-By\-Pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task}\& Task\-Collection\-::\-Get\-By\-Pid (
+\begin{DoxyParamCaption}
+\item[{int}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_a75b63b65d83b6034f2c7f121da239a95}
+
+
+Looks for a task among the ones stored and returns its reference if found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & I\-D of the process executing the desired task.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The task if it's found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Task not found} & exception if there is no task with the required P\-I\-D. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_task_collection_afa17cc63d9dcf0f12c300a7c19d51905}{\index{Task\-Collection@{Task\-Collection}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!TaskCollection@{Task\-Collection}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Task\-Collection\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_afa17cc63d9dcf0f12c300a7c19d51905}
+
+
+Getter of the number of tasks contained. 
+
+\begin{DoxyReturn}{Returns}
+number of stored tasks 
+\end{DoxyReturn}
+\hypertarget{class_task_collection_a6d85221c73f4c7da31e2c7badb873106}{\index{Task\-Collection@{Task\-Collection}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!TaskCollection@{Task\-Collection}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task} const$\ast$ Task\-Collection\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_a6d85221c73f4c7da31e2c7badb873106}
+
+
+Enables the use of the \mbox{[}\mbox{]} to select an element from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position in the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant value of a pointer to the selected task. 
+\end{DoxyReturn}
+\hypertarget{class_task_collection_a7ad1ec5c955a5849da7346b60a3c9aa6}{\index{Task\-Collection@{Task\-Collection}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!TaskCollection@{Task\-Collection}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task}$\ast$ Task\-Collection\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_task_collection_a7ad1ec5c955a5849da7346b60a3c9aa6}
+
+
+Enables the use of the \mbox{[}\mbox{]} to select an element from the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position in the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the selected task. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Tasks.\-h\end{DoxyCompactItemize}

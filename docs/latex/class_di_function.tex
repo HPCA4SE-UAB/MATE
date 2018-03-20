@@ -1,0 +1,166 @@
+\hypertarget{class_di_function}{\section{Di\-Function Class Reference}
+\label{class_di_function}\index{Di\-Function@{Di\-Function}}
+}
+
+
+Dyninst's function class. It represents a function in the application.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_di_function_adeec90e7f3aff80b77c451cddc47941f}{{\bfseries Di\-Function} (B\-Patch\-\_\-image \&bp\-Image, string const \&func\-Name)}\label{class_di_function_adeec90e7f3aff80b77c451cddc47941f}
+
+\item 
+void \hyperlink{class_di_function_a0f72a27e659c6593d7b514507265dec8}{Get\-Line\-Number} (unsigned int \&start, unsigned int \&end, char $\ast$file\-Name, unsigned int \&max)
+\begin{DoxyCompactList}\small\item\em Gets the current line number and the file name. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_di_function_a84996228fdec848ff14b1b3f04cedcb3}{Get\-Address} ()
+\begin{DoxyCompactList}\small\item\em Reads the address of \-\_\-bp\-Var. \end{DoxyCompactList}\item 
+char const $\ast$ \hyperlink{class_di_function_a8fe2de104488ec6714cd44614b79e3ca}{Get\-Params} ()
+\begin{DoxyCompactList}\small\item\em Gets the parameters of \-\_\-bp\-Func. \end{DoxyCompactList}\item 
+Point\-Vector $\ast$ \hyperlink{class_di_function_aabc45084deadfa69588048023e538840}{Find\-Point} (B\-Patch\-\_\-procedure\-Location loc=B\-Patch\-\_\-subroutine)
+\begin{DoxyCompactList}\small\item\em Finds the procedure point for the given location. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_function_a4c471073fa7f0f0d313ff2fee7b6d988}{Get\-Name} (char $\ast$file\-Name, int len)
+\begin{DoxyCompactList}\small\item\em Getter of the file name. \end{DoxyCompactList}\item 
+\hypertarget{class_di_function_a7ea5b551ae1e57d98e617ba8ba3ddc3c}{{\bfseries operator B\-Patch\-\_\-function \&} ()}\label{class_di_function_a7ea5b551ae1e57d98e617ba8ba3ddc3c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_di_function_a0b3e0e96d8f5a35a0cf053d1c46ad31a}{Dump} (Func\-Vector \&fv)
+\begin{DoxyCompactList}\small\item\em Prints all functions from the Func\-Vector {\itshape fv} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dyninst's function class. It represents a function in the application. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_di_function_a0b3e0e96d8f5a35a0cf053d1c46ad31a}{\index{Di\-Function@{Di\-Function}!Dump@{Dump}}
+\index{Dump@{Dump}!DiFunction@{Di\-Function}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Function\-::\-Dump (
+\begin{DoxyParamCaption}
+\item[{Di\-Function\-::\-Func\-Vector \&}]{fv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_di_function_a0b3e0e96d8f5a35a0cf053d1c46ad31a}
+
+
+Prints all functions from the Func\-Vector {\itshape fv} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fv} & Func\-Vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_function_aabc45084deadfa69588048023e538840}{\index{Di\-Function@{Di\-Function}!Find\-Point@{Find\-Point}}
+\index{Find\-Point@{Find\-Point}!DiFunction@{Di\-Function}}
+\subsubsection[{Find\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Function\-::\-Point\-Vector $\ast$ Di\-Function\-::\-Find\-Point (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-procedure\-Location}]{loc = {\ttfamily BPatch\-\_\-subroutine}}
+\end{DoxyParamCaption}
+)}}\label{class_di_function_aabc45084deadfa69588048023e538840}
+
+
+Finds the procedure point for the given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & Location of the point to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Point Vector of the specified location 
+\end{DoxyReturn}
+\hypertarget{class_di_function_a84996228fdec848ff14b1b3f04cedcb3}{\index{Di\-Function@{Di\-Function}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!DiFunction@{Di\-Function}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Di\-Function\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_di_function_a84996228fdec848ff14b1b3f04cedcb3}
+
+
+Reads the address of \-\_\-bp\-Var. 
+
+\begin{DoxyReturn}{Returns}
+Address of \-\_\-bp\-Var 
+\end{DoxyReturn}
+\hypertarget{class_di_function_a0f72a27e659c6593d7b514507265dec8}{\index{Di\-Function@{Di\-Function}!Get\-Line\-Number@{Get\-Line\-Number}}
+\index{Get\-Line\-Number@{Get\-Line\-Number}!DiFunction@{Di\-Function}}
+\subsubsection[{Get\-Line\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Function\-::\-Get\-Line\-Number (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{start, }
+\item[{unsigned int \&}]{end, }
+\item[{char $\ast$}]{file\-Name, }
+\item[{unsigned int \&}]{max}
+\end{DoxyParamCaption}
+)}}\label{class_di_function_a0f72a27e659c6593d7b514507265dec8}
+
+
+Gets the current line number and the file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Address \\
+\hline
+{\em end} & Line \\
+\hline
+{\em file\-Name} & String where the file name will be saved \\
+\hline
+{\em max} & Length \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_function_a4c471073fa7f0f0d313ff2fee7b6d988}{\index{Di\-Function@{Di\-Function}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!DiFunction@{Di\-Function}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Function\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\-Name, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{class_di_function_a4c471073fa7f0f0d313ff2fee7b6d988}
+
+
+Getter of the file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & Parameter where the file name will be stored \\
+\hline
+{\em len} & max length of the file name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_function_a8fe2de104488ec6714cd44614b79e3ca}{\index{Di\-Function@{Di\-Function}!Get\-Params@{Get\-Params}}
+\index{Get\-Params@{Get\-Params}!DiFunction@{Di\-Function}}
+\subsubsection[{Get\-Params}]{\setlength{\rightskip}{0pt plus 5cm}char const $\ast$ Di\-Function\-::\-Get\-Params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_di_function_a8fe2de104488ec6714cd44614b79e3ca}
+
+
+Gets the parameters of \-\_\-bp\-Func. 
+
+\begin{DoxyReturn}{Returns}
+Parameters of the current function 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\item 
+Common/di.\-cpp\end{DoxyCompactItemize}

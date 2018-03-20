@@ -1,0 +1,179 @@
+\hypertarget{class_event_msg_reader}{\section{Event\-Msg\-Reader Class Reference}
+\label{class_event_msg_reader}\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}}
+}
+
+
+Provides methods for getting data from event messages. The data structure that supports the class consist in the message to be processed, a buffer to hold the data and a deserializer object to reconstruct the information.  
+
+
+
+
+{\ttfamily \#include $<$Event\-Msg\-Reader.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_event_msg_reader_adb478ebe048cf85cc6ea1fe7c1d900b4}{Event\-Msg\-Reader} (\hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \&msg)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_event_msg_reader_a87725095415b9cbc0938276423ab6ba2}{Get\-Param\-Count} () const 
+\begin{DoxyCompactList}\small\item\em Getter of Param\-Count. \end{DoxyCompactList}\item 
+Attr\-Value\-Type \hyperlink{class_event_msg_reader_a31d020728a4d984fd0e2d349f458d39a}{Get\-Attr\-Type} ()
+\begin{DoxyCompactList}\small\item\em getter of Attr\-Type. \end{DoxyCompactList}\item 
+int \hyperlink{class_event_msg_reader_a49dff56a337d6cd638e3df29064f12e0}{Get\-Int\-Value} ()
+\begin{DoxyCompactList}\small\item\em Gets an integer from the stream. \end{DoxyCompactList}\item 
+float \hyperlink{class_event_msg_reader_abba88cdac5d454e5684d320932155c0e}{Get\-Float\-Value} ()
+\begin{DoxyCompactList}\small\item\em Gets a float from the stream. \end{DoxyCompactList}\item 
+double \hyperlink{class_event_msg_reader_a151372639142577ffb57d99404babd5b}{Get\-Double\-Value} ()
+\begin{DoxyCompactList}\small\item\em Gets a double from the stream. \end{DoxyCompactList}\item 
+char \hyperlink{class_event_msg_reader_a2c7ff71a65e8f3e6140473df556874ea}{Get\-Char\-Value} ()
+\begin{DoxyCompactList}\small\item\em Gets a character from the stream. \end{DoxyCompactList}\item 
+short \hyperlink{class_event_msg_reader_af97d34d4b5c94a5bb7f1b88e9c285b8a}{Get\-Short\-Value} ()
+\begin{DoxyCompactList}\small\item\em Gets a short from the stream. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_event_msg_reader_a0f641dc44b5bd73d3ce14a9421248a88}{Get\-String\-Value} ()
+\begin{DoxyCompactList}\small\item\em Get a string from the stream. \end{DoxyCompactList}\item 
+\hypertarget{class_event_msg_reader_acbed2664630965aa69f635f3eeaf6d1a}{void \hyperlink{class_event_msg_reader_acbed2664630965aa69f635f3eeaf6d1a}{Dump\-Values} ()}\label{class_event_msg_reader_acbed2664630965aa69f635f3eeaf6d1a}
+
+\begin{DoxyCompactList}\small\item\em Gets the value of each E\-C\-P event parameter. For each parameter checks the type and use the proper getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides methods for getting data from event messages. The data structure that supports the class consist in the message to be processed, a buffer to hold the data and a deserializer object to reconstruct the information. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_event_msg_reader_adb478ebe048cf85cc6ea1fe7c1d900b4}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Event\-Msg\-Reader@{Event\-Msg\-Reader}}
+\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Event\-Msg\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}Event\-Msg\-Reader\-::\-Event\-Msg\-Reader (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Msg} const \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_adb478ebe048cf85cc6ea1fe7c1d900b4}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & input message. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_event_msg_reader_a31d020728a4d984fd0e2d349f458d39a}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Attr\-Type@{Get\-Attr\-Type}}
+\index{Get\-Attr\-Type@{Get\-Attr\-Type}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Attr\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Attr\-Value\-Type Event\-Msg\-Reader\-::\-Get\-Attr\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a31d020728a4d984fd0e2d349f458d39a}
+
+
+getter of Attr\-Type. 
+
+\begin{DoxyReturn}{Returns}
+Type of the attribute. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_a2c7ff71a65e8f3e6140473df556874ea}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Char\-Value@{Get\-Char\-Value}}
+\index{Get\-Char\-Value@{Get\-Char\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Char\-Value}]{\setlength{\rightskip}{0pt plus 5cm}char Event\-Msg\-Reader\-::\-Get\-Char\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a2c7ff71a65e8f3e6140473df556874ea}
+
+
+Gets a character from the stream. 
+
+\begin{DoxyReturn}{Returns}
+Character value. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_a151372639142577ffb57d99404babd5b}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Double\-Value@{Get\-Double\-Value}}
+\index{Get\-Double\-Value@{Get\-Double\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Double\-Value}]{\setlength{\rightskip}{0pt plus 5cm}double Event\-Msg\-Reader\-::\-Get\-Double\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a151372639142577ffb57d99404babd5b}
+
+
+Gets a double from the stream. 
+
+\begin{DoxyReturn}{Returns}
+Double value. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_abba88cdac5d454e5684d320932155c0e}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Float\-Value@{Get\-Float\-Value}}
+\index{Get\-Float\-Value@{Get\-Float\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Float\-Value}]{\setlength{\rightskip}{0pt plus 5cm}float Event\-Msg\-Reader\-::\-Get\-Float\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_abba88cdac5d454e5684d320932155c0e}
+
+
+Gets a float from the stream. 
+
+\begin{DoxyReturn}{Returns}
+Float value. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_a49dff56a337d6cd638e3df29064f12e0}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Int\-Value@{Get\-Int\-Value}}
+\index{Get\-Int\-Value@{Get\-Int\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Int\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Event\-Msg\-Reader\-::\-Get\-Int\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a49dff56a337d6cd638e3df29064f12e0}
+
+
+Gets an integer from the stream. 
+
+\begin{DoxyReturn}{Returns}
+Integer value. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_a87725095415b9cbc0938276423ab6ba2}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Param\-Count@{Get\-Param\-Count}}
+\index{Get\-Param\-Count@{Get\-Param\-Count}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Param\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Event\-Msg\-Reader\-::\-Get\-Param\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a87725095415b9cbc0938276423ab6ba2}
+
+
+Getter of Param\-Count. 
+
+\begin{DoxyReturn}{Returns}
+Number of parameters. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_af97d34d4b5c94a5bb7f1b88e9c285b8a}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-Short\-Value@{Get\-Short\-Value}}
+\index{Get\-Short\-Value@{Get\-Short\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-Short\-Value}]{\setlength{\rightskip}{0pt plus 5cm}short Event\-Msg\-Reader\-::\-Get\-Short\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_af97d34d4b5c94a5bb7f1b88e9c285b8a}
+
+
+Gets a short from the stream. 
+
+\begin{DoxyReturn}{Returns}
+Short value. 
+\end{DoxyReturn}
+\hypertarget{class_event_msg_reader_a0f641dc44b5bd73d3ce14a9421248a88}{\index{Event\-Msg\-Reader@{Event\-Msg\-Reader}!Get\-String\-Value@{Get\-String\-Value}}
+\index{Get\-String\-Value@{Get\-String\-Value}!EventMsgReader@{Event\-Msg\-Reader}}
+\subsubsection[{Get\-String\-Value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Event\-Msg\-Reader\-::\-Get\-String\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_event_msg_reader_a0f641dc44b5bd73d3ce14a9421248a88}
+
+
+Get a string from the stream. 
+
+\begin{DoxyReturn}{Returns}
+String value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Event\-Msg\-Reader.\-h\item 
+Analyzer/Event\-Msg\-Reader.\-cpp\end{DoxyCompactItemize}

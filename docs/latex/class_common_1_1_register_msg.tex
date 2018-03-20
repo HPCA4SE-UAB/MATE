@@ -1,0 +1,94 @@
+\hypertarget{class_common_1_1_register_msg}{\section{Common\-:\-:Register\-Msg Class Reference}
+\label{class_common_1_1_register_msg}\index{Common\-::\-Register\-Msg@{Common\-::\-Register\-Msg}}
+}
+
+
+Represents message that is sent when D\-M\-Lib is registered with analyzer to send event messages.  
+
+
+
+
+{\ttfamily \#include $<$E\-C\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Register\-Msg\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_register_msg}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_register_msg_ab97869aa4d99b10fad4df118f91784eb}{Register\-Msg} (int pid=0, int mpi\-Rank=0, std\-::string host=std\-::string(), std\-::string task\-Name=std\-::string(), int A\-Cport=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a307245b2ff871bf0e4d8167b3773eaff}{E\-C\-P\-Msg\-Type \hyperlink{class_common_1_1_register_msg_a307245b2ff871bf0e4d8167b3773eaff}{Get\-Type} () const }\label{class_common_1_1_register_msg_a307245b2ff871bf0e4d8167b3773eaff}
+
+\begin{DoxyCompactList}\small\item\em Returns the type of event. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a21510f554bed14f14c600da80d6cc030}{int \hyperlink{class_common_1_1_register_msg_a21510f554bed14f14c600da80d6cc030}{Get\-Pid} () const }\label{class_common_1_1_register_msg_a21510f554bed14f14c600da80d6cc030}
+
+\begin{DoxyCompactList}\small\item\em Returns Id of the process where the library will be loaded. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a931519d8c96b3af0408b274f23ec7d01}{int \hyperlink{class_common_1_1_register_msg_a931519d8c96b3af0408b274f23ec7d01}{Get\-Mpi\-Rank} () const }\label{class_common_1_1_register_msg_a931519d8c96b3af0408b274f23ec7d01}
+
+\begin{DoxyCompactList}\small\item\em Returns mpi rank. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a6a84fcf95b5e4a616fbe52b6c807bf68}{string const \& \hyperlink{class_common_1_1_register_msg_a6a84fcf95b5e4a616fbe52b6c807bf68}{Get\-Host} () const }\label{class_common_1_1_register_msg_a6a84fcf95b5e4a616fbe52b6c807bf68}
+
+\begin{DoxyCompactList}\small\item\em Returns host name where the process is located. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_afc8d9e7d64970c83c45f0850f3b6f652}{string const \& \hyperlink{class_common_1_1_register_msg_afc8d9e7d64970c83c45f0850f3b6f652}{Get\-Task\-Name} () const }\label{class_common_1_1_register_msg_afc8d9e7d64970c83c45f0850f3b6f652}
+
+\begin{DoxyCompactList}\small\item\em Returns task name. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a4bfb4d83fbb9020e9599ab394a57f7b1}{void \hyperlink{class_common_1_1_register_msg_a4bfb4d83fbb9020e9599ab394a57f7b1}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_register_msg_a4bfb4d83fbb9020e9599ab394a57f7b1}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_register_msg_a0a6042f2b893a915c5f2eaf5e6933a6e}{void \hyperlink{class_common_1_1_register_msg_a0a6042f2b893a915c5f2eaf5e6933a6e}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_register_msg_a0a6042f2b893a915c5f2eaf5e6933a6e}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents message that is sent when D\-M\-Lib is registered with analyzer to send event messages. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_register_msg_ab97869aa4d99b10fad4df118f91784eb}{\index{Common\-::\-Register\-Msg@{Common\-::\-Register\-Msg}!Register\-Msg@{Register\-Msg}}
+\index{Register\-Msg@{Register\-Msg}!Common::RegisterMsg@{Common\-::\-Register\-Msg}}
+\subsubsection[{Register\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Register\-Msg\-::\-Register\-Msg (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{int}]{mpi\-Rank = {\ttfamily 0}, }
+\item[{std\-::string}]{host = {\ttfamily std\-:\-:string()}, }
+\item[{std\-::string}]{task\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{int}]{A\-Cport = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_register_msg_ab97869aa4d99b10fad4df118f91784eb}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the library will be registered. \\
+\hline
+{\em mpi\-Rank} & Mpi rank. \\
+\hline
+{\em host} & Host where the process is located. \\
+\hline
+{\em task\-Name} & Name of the task. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/E\-C\-P\-Msg.\-h\item 
+Common/E\-C\-P\-Msg.\-cpp\end{DoxyCompactItemize}

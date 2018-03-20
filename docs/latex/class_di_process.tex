@@ -1,0 +1,537 @@
+\hypertarget{class_di_process}{\section{Di\-Process Class Reference}
+\label{class_di_process}\index{Di\-Process@{Di\-Process}}
+}
+
+
+Operates on code in execution. This class can be used to manipulate the process.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_di_process_abc88219761bfa55e5b3b0ce31fd0721c}{Di\-Process} ()
+\item 
+\hyperlink{class_di_process_a29fffcfa25576de71c6b0dd64b1b166a}{Di\-Process} (char $\ast$mutatee\-Name, int pid)
+\begin{DoxyCompactList}\small\item\em Attaches the program to a running process. \end{DoxyCompactList}\item 
+\hyperlink{class_di_process_abe9d867d2622eddf74ab7cdc2951bd7b}{Di\-Process} (char $\ast$mutatee\-Name, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$envp\mbox{[}$\,$\mbox{]}=0)
+\begin{DoxyCompactList}\small\item\em Creates the program with the given arguments. \end{DoxyCompactList}\item 
+\hyperlink{class_di_process_af93de25bc325bea42a69c2df0fee7075}{Di\-Process} (char $\ast$mutatee\-Name)
+\begin{DoxyCompactList}\small\item\em Creates the program (mutatee) \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a7c46390461846d2baaff0164e5122ab7}{\hyperlink{class_di_process_a7c46390461846d2baaff0164e5122ab7}{$\sim$\-Di\-Process} ()}\label{class_di_process_a7c46390461846d2baaff0164e5122ab7}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a1c1615ae17ce6fa1d9a0b129db349e2b}{{\bfseries operator B\-Patch\-\_\-process \&} ()}\label{class_di_process_a1c1615ae17ce6fa1d9a0b129db349e2b}
+
+\item 
+int \hyperlink{class_di_process_ad83360d6f92a6ef991ad44075964fa85}{Get\-Pid} ()
+\begin{DoxyCompactList}\small\item\em Getter of the Pid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_di_process_a2e92f5f654ba4d0bc9f495cd58c571b2}{Is\-Stopped} ()
+\begin{DoxyCompactList}\small\item\em Asserts that \-\_\-bp\-Process has been created and returns a boolean. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_a3dc12883c432036edb7ea980ccdfa7d3}{Insert\-Snippet} (B\-Patch\-\_\-snippet const \&expr, B\-Patch\-\_\-point \&point)
+\begin{DoxyCompactList}\small\item\em Inserts a given snippet into the given point. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_a3d0cdbd8bae78306b311b03403e7fa8d}{Insert\-Snippet} (B\-Patch\-\_\-snippet const \&expr, B\-Patch\-\_\-point \&point, B\-Patch\-\_\-call\-When when, B\-Patch\-\_\-snippet\-Order order)
+\begin{DoxyCompactList}\small\item\em Inserts the snippet into the point in a given order. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_aec944980cc04cb6e05f2b033971d819e}{Insert\-Snippet\-Before} (B\-Patch\-\_\-snippet const \&expr, B\-Patch\-\_\-point \&point)
+\begin{DoxyCompactList}\small\item\em Inserts a given snippet before the given point. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_af381488cf52e8a790b0476c1d4da9c4f}{Insert\-Snippet\-After} (B\-Patch\-\_\-snippet const \&expr, B\-Patch\-\_\-point \&point)
+\begin{DoxyCompactList}\small\item\em Inserts a given snippet after the given point. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_a79ae7629dedcd84ab0776deaa166f7c4}{Insert\-Snippet} (B\-Patch\-\_\-snippet const \&expr, Point\-Vector \&points)
+\begin{DoxyCompactList}\small\item\em Inserts the given snippet in the given points. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_a39c00229b7533befd6edb616ce9df787}{Insert\-Snippet} (B\-Patch\-\_\-snippet const \&expr, Point\-Vector \&points, B\-Patch\-\_\-call\-When when, B\-Patch\-\_\-snippet\-Order order)
+\begin{DoxyCompactList}\small\item\em Inserts the given snippet in the series of points with the given order and moment. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_af6bcde05d9750fbba96e94da27116ac7}{Insert\-Snippet\-Before} (B\-Patch\-\_\-snippet const \&expr, Point\-Vector \&points)
+\begin{DoxyCompactList}\small\item\em Inserts the snippet before the given points. \end{DoxyCompactList}\item 
+B\-Patch\-Snippet\-Handle $\ast$ \hyperlink{class_di_process_a4efe5b0907efbcd8b95d681336e58a65}{Insert\-Snippet\-After} (B\-Patch\-\_\-snippet const \&expr, Point\-Vector \&points)
+\begin{DoxyCompactList}\small\item\em Inserts the snippet after the given points. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_process_a1358a94954ae1ef6d3fbffafbd95b567}{Delete\-Snippet} (B\-Patch\-Snippet\-Handle $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Deletes the snippet in the given handle. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_process_aa83c0791594eddab08a1a0e5952c5e5a}{One\-Time\-Code} (B\-Patch\-\_\-snippet const \&expr)
+\begin{DoxyCompactList}\small\item\em Executes the given snippet once. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_process_a73bd02c4104451077f2622efd1c708d6}{Replace\-Function} (B\-Patch\-\_\-function \&old\-Func, B\-Patch\-\_\-function \&new\-Func)
+\begin{DoxyCompactList}\small\item\em Replaces a function call with a call to another function. \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a047096a8e3be003544529f1ddfa4d3c5}{void \hyperlink{class_di_process_a047096a8e3be003544529f1ddfa4d3c5}{Continue\-Execution} ()}\label{class_di_process_a047096a8e3be003544529f1ddfa4d3c5}
+
+\begin{DoxyCompactList}\small\item\em Resumes the execution of mutatee process. \end{DoxyCompactList}\item 
+bool \hyperlink{class_di_process_afa4a0216ebd254a2d353b79ac1c197fe}{Stop\-Execution} ()
+\begin{DoxyCompactList}\small\item\em Stops the execution of the mutatee process. \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a9acf14711e3036fe76342fd9405ea933}{void \hyperlink{class_di_process_a9acf14711e3036fe76342fd9405ea933}{Wait\-For} ()}\label{class_di_process_a9acf14711e3036fe76342fd9405ea933}
+
+\begin{DoxyCompactList}\small\item\em Waits for the termination of the process. \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a3a0f5ac09a216b99bd43b8ad85d3ec46}{void \hyperlink{class_di_process_a3a0f5ac09a216b99bd43b8ad85d3ec46}{Test} ()}\label{class_di_process_a3a0f5ac09a216b99bd43b8ad85d3ec46}
+
+\begin{DoxyCompactList}\small\item\em Tests the current mutatee process by waiting for a status change. \end{DoxyCompactList}\item 
+bool \hyperlink{class_di_process_ad70fc9c4feb2c10e1810ea7b988cb87f}{Terminate} ()
+\begin{DoxyCompactList}\small\item\em Terminates the mutatee process. \end{DoxyCompactList}\item 
+bool \hyperlink{class_di_process_a9dece6fa09fa876026e6f0d989dd2b31}{Is\-Terminated} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the mutatee process is terminated. \end{DoxyCompactList}\item 
+\hypertarget{class_di_process_a55905bd1802af67249338f65deec5b9d}{void \hyperlink{class_di_process_a55905bd1802af67249338f65deec5b9d}{Wait\-For\-Stop} ()}\label{class_di_process_a55905bd1802af67249338f65deec5b9d}
+
+\begin{DoxyCompactList}\small\item\em Waits for the mutatee process to stop. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_process_a49c36844b4f223edb54b23e5bc3530d0}{load\-Library} (char $\ast$lib\-Name)
+\begin{DoxyCompactList}\small\item\em Loads a shared library into the mutatee's address space. Returns true if successful. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_process_a3fabae8f482f0141effb044bd5550850}{Get\-Line\-Number} (unsigned long addr, unsigned short \&line, char $\ast$file\-Name, int length)
+\begin{DoxyCompactList}\small\item\em Gets information about the given line number from the mutatee process. \end{DoxyCompactList}\item 
+B\-Patch\-\_\-variable\-Expr $\ast$ \hyperlink{class_di_process_af5dbaaf631e3a3746bfa5878a46999e8}{Malloc} (B\-Patch\-\_\-type \&type)
+\begin{DoxyCompactList}\small\item\em Allocates a new variable of the given type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Operates on code in execution. This class can be used to manipulate the process. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_di_process_abc88219761bfa55e5b3b0ce31fd0721c}{\index{Di\-Process@{Di\-Process}!Di\-Process@{Di\-Process}}
+\index{Di\-Process@{Di\-Process}!DiProcess@{Di\-Process}}
+\subsubsection[{Di\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Process\-::\-Di\-Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_abc88219761bfa55e5b3b0ce31fd0721c}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]\end{DoxyRefDesc}
+\hypertarget{class_di_process_a29fffcfa25576de71c6b0dd64b1b166a}{\index{Di\-Process@{Di\-Process}!Di\-Process@{Di\-Process}}
+\index{Di\-Process@{Di\-Process}!DiProcess@{Di\-Process}}
+\subsubsection[{Di\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Process\-::\-Di\-Process (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mutatee\-Name, }
+\item[{int}]{pid}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a29fffcfa25576de71c6b0dd64b1b166a}
+
+
+Attaches the program to a running process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mutatee\-Name} & Name of the mutatee \\
+\hline
+{\em pid} & P\-I\-D to give to the process \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_abe9d867d2622eddf74ab7cdc2951bd7b}{\index{Di\-Process@{Di\-Process}!Di\-Process@{Di\-Process}}
+\index{Di\-Process@{Di\-Process}!DiProcess@{Di\-Process}}
+\subsubsection[{Di\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Process\-::\-Di\-Process (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mutatee\-Name, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{envp\mbox{[}$\,$\mbox{]} = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_abe9d867d2622eddf74ab7cdc2951bd7b}
+
+
+Creates the program with the given arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mutatee\-Name} & Name of the mutatee \\
+\hline
+{\em argv} & Arguments to give to the program. This cannot be null \\
+\hline
+{\em envp} & Environment list \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_af93de25bc325bea42a69c2df0fee7075}{\index{Di\-Process@{Di\-Process}!Di\-Process@{Di\-Process}}
+\index{Di\-Process@{Di\-Process}!DiProcess@{Di\-Process}}
+\subsubsection[{Di\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Process\-::\-Di\-Process (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mutatee\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_af93de25bc325bea42a69c2df0fee7075}
+
+
+Creates the program (mutatee) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mutatee\-Name} & Name of the mutatee \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_di_process_a1358a94954ae1ef6d3fbffafbd95b567}{\index{Di\-Process@{Di\-Process}!Delete\-Snippet@{Delete\-Snippet}}
+\index{Delete\-Snippet@{Delete\-Snippet}!DiProcess@{Di\-Process}}
+\subsubsection[{Delete\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Process\-::\-Delete\-Snippet (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-Snippet\-Handle $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a1358a94954ae1ef6d3fbffafbd95b567}
+
+
+Deletes the snippet in the given handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_a3fabae8f482f0141effb044bd5550850}{\index{Di\-Process@{Di\-Process}!Get\-Line\-Number@{Get\-Line\-Number}}
+\index{Get\-Line\-Number@{Get\-Line\-Number}!DiProcess@{Di\-Process}}
+\subsubsection[{Get\-Line\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Process\-::\-Get\-Line\-Number (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{addr, }
+\item[{unsigned short \&}]{line, }
+\item[{char $\ast$}]{file\-Name, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a3fabae8f482f0141effb044bd5550850}
+
+
+Gets information about the given line number from the mutatee process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & \\
+\hline
+{\em line} & \\
+\hline
+{\em file\-Name} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_ad83360d6f92a6ef991ad44075964fa85}{\index{Di\-Process@{Di\-Process}!Get\-Pid@{Get\-Pid}}
+\index{Get\-Pid@{Get\-Pid}!DiProcess@{Di\-Process}}
+\subsubsection[{Get\-Pid}]{\setlength{\rightskip}{0pt plus 5cm}int Di\-Process\-::\-Get\-Pid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_ad83360d6f92a6ef991ad44075964fa85}
+
+
+Getter of the Pid. 
+
+\begin{DoxyReturn}{Returns}
+Pid 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a3dc12883c432036edb7ea980ccdfa7d3}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet@{Insert\-Snippet}}
+\index{Insert\-Snippet@{Insert\-Snippet}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{B\-Patch\-\_\-point \&}]{point}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a3dc12883c432036edb7ea980ccdfa7d3}
+
+
+Inserts a given snippet into the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em point} & Point where the Snippet will be inserted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a3d0cdbd8bae78306b311b03403e7fa8d}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet@{Insert\-Snippet}}
+\index{Insert\-Snippet@{Insert\-Snippet}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{B\-Patch\-\_\-point \&}]{point, }
+\item[{B\-Patch\-\_\-call\-When}]{when, }
+\item[{B\-Patch\-\_\-snippet\-Order}]{order}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a3d0cdbd8bae78306b311b03403e7fa8d}
+
+
+Inserts the snippet into the point in a given order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em point} & Point where the Snippet will be inserted \\
+\hline
+{\em when} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a79ae7629dedcd84ab0776deaa166f7c4}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet@{Insert\-Snippet}}
+\index{Insert\-Snippet@{Insert\-Snippet}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{Point\-Vector \&}]{points}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a79ae7629dedcd84ab0776deaa166f7c4}
+
+
+Inserts the given snippet in the given points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em points} & Vector of points\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a39c00229b7533befd6edb616ce9df787}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet@{Insert\-Snippet}}
+\index{Insert\-Snippet@{Insert\-Snippet}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{Point\-Vector \&}]{points, }
+\item[{B\-Patch\-\_\-call\-When}]{when, }
+\item[{B\-Patch\-\_\-snippet\-Order}]{order}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a39c00229b7533befd6edb616ce9df787}
+
+
+Inserts the given snippet in the series of points with the given order and moment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em points} & Vector of points \\
+\hline
+{\em when} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_af381488cf52e8a790b0476c1d4da9c4f}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet\-After@{Insert\-Snippet\-After}}
+\index{Insert\-Snippet\-After@{Insert\-Snippet\-After}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet\-After}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet\-After (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{B\-Patch\-\_\-point \&}]{point}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_af381488cf52e8a790b0476c1d4da9c4f}
+
+
+Inserts a given snippet after the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em point} & Point where the Snippet will be inserted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a4efe5b0907efbcd8b95d681336e58a65}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet\-After@{Insert\-Snippet\-After}}
+\index{Insert\-Snippet\-After@{Insert\-Snippet\-After}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet\-After}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet\-After (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{Point\-Vector \&}]{points}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a4efe5b0907efbcd8b95d681336e58a65}
+
+
+Inserts the snippet after the given points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em points} & Vector of points\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_aec944980cc04cb6e05f2b033971d819e}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet\-Before@{Insert\-Snippet\-Before}}
+\index{Insert\-Snippet\-Before@{Insert\-Snippet\-Before}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet\-Before}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet\-Before (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{B\-Patch\-\_\-point \&}]{point}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_aec944980cc04cb6e05f2b033971d819e}
+
+
+Inserts a given snippet before the given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em point} & Point where the Snippet will be inserted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_af6bcde05d9750fbba96e94da27116ac7}{\index{Di\-Process@{Di\-Process}!Insert\-Snippet\-Before@{Insert\-Snippet\-Before}}
+\index{Insert\-Snippet\-Before@{Insert\-Snippet\-Before}!DiProcess@{Di\-Process}}
+\subsubsection[{Insert\-Snippet\-Before}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-Snippet\-Handle $\ast$ Di\-Process\-::\-Insert\-Snippet\-Before (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr, }
+\item[{Point\-Vector \&}]{points}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_af6bcde05d9750fbba96e94da27116ac7}
+
+
+Inserts the snippet before the given points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+{\em points} & Vector of points\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a2e92f5f654ba4d0bc9f495cd58c571b2}{\index{Di\-Process@{Di\-Process}!Is\-Stopped@{Is\-Stopped}}
+\index{Is\-Stopped@{Is\-Stopped}!DiProcess@{Di\-Process}}
+\subsubsection[{Is\-Stopped}]{\setlength{\rightskip}{0pt plus 5cm}bool Di\-Process\-::\-Is\-Stopped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_a2e92f5f654ba4d0bc9f495cd58c571b2}
+
+
+Asserts that \-\_\-bp\-Process has been created and returns a boolean. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a9dece6fa09fa876026e6f0d989dd2b31}{\index{Di\-Process@{Di\-Process}!Is\-Terminated@{Is\-Terminated}}
+\index{Is\-Terminated@{Is\-Terminated}!DiProcess@{Di\-Process}}
+\subsubsection[{Is\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}bool Di\-Process\-::\-Is\-Terminated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_a9dece6fa09fa876026e6f0d989dd2b31}
+
+
+Returns true if the mutatee process is terminated. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_di_process_a49c36844b4f223edb54b23e5bc3530d0}{\index{Di\-Process@{Di\-Process}!load\-Library@{load\-Library}}
+\index{load\-Library@{load\-Library}!DiProcess@{Di\-Process}}
+\subsubsection[{load\-Library}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Process\-::load\-Library (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{lib\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a49c36844b4f223edb54b23e5bc3530d0}
+
+
+Loads a shared library into the mutatee's address space. Returns true if successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib\-Name} & Library name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_af5dbaaf631e3a3746bfa5878a46999e8}{\index{Di\-Process@{Di\-Process}!Malloc@{Malloc}}
+\index{Malloc@{Malloc}!DiProcess@{Di\-Process}}
+\subsubsection[{Malloc}]{\setlength{\rightskip}{0pt plus 5cm}B\-Patch\-\_\-variable\-Expr$\ast$ Di\-Process\-::\-Malloc (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-type \&}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_af5dbaaf631e3a3746bfa5878a46999e8}
+
+
+Allocates a new variable of the given type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_aa83c0791594eddab08a1a0e5952c5e5a}{\index{Di\-Process@{Di\-Process}!One\-Time\-Code@{One\-Time\-Code}}
+\index{One\-Time\-Code@{One\-Time\-Code}!DiProcess@{Di\-Process}}
+\subsubsection[{One\-Time\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Process\-::\-One\-Time\-Code (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-snippet const \&}]{expr}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_aa83c0791594eddab08a1a0e5952c5e5a}
+
+
+Executes the given snippet once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Snippet \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_a73bd02c4104451077f2622efd1c708d6}{\index{Di\-Process@{Di\-Process}!Replace\-Function@{Replace\-Function}}
+\index{Replace\-Function@{Replace\-Function}!DiProcess@{Di\-Process}}
+\subsubsection[{Replace\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Process\-::\-Replace\-Function (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-function \&}]{old\-Func, }
+\item[{B\-Patch\-\_\-function \&}]{new\-Func}
+\end{DoxyParamCaption}
+)}}\label{class_di_process_a73bd02c4104451077f2622efd1c708d6}
+
+
+Replaces a function call with a call to another function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\-Func} & \\
+\hline
+{\em new\-Func} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_process_afa4a0216ebd254a2d353b79ac1c197fe}{\index{Di\-Process@{Di\-Process}!Stop\-Execution@{Stop\-Execution}}
+\index{Stop\-Execution@{Stop\-Execution}!DiProcess@{Di\-Process}}
+\subsubsection[{Stop\-Execution}]{\setlength{\rightskip}{0pt plus 5cm}bool Di\-Process\-::\-Stop\-Execution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_afa4a0216ebd254a2d353b79ac1c197fe}
+
+
+Stops the execution of the mutatee process. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{class_di_process_ad70fc9c4feb2c10e1810ea7b988cb87f}{\index{Di\-Process@{Di\-Process}!Terminate@{Terminate}}
+\index{Terminate@{Terminate}!DiProcess@{Di\-Process}}
+\subsubsection[{Terminate}]{\setlength{\rightskip}{0pt plus 5cm}bool Di\-Process\-::\-Terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_process_ad70fc9c4feb2c10e1810ea7b988cb87f}
+
+
+Terminates the mutatee process. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\item 
+Common/di.\-cpp\end{DoxyCompactItemize}

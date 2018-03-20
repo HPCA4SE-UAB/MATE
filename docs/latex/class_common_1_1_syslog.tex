@@ -1,0 +1,225 @@
+\hypertarget{class_common_1_1_syslog}{\section{Common\-:\-:Syslog Class Reference}
+\label{class_common_1_1_syslog}\index{Common\-::\-Syslog@{Common\-::\-Syslog}}
+}
+
+
+Holds and manages a loggers on the system.  
+
+
+
+
+{\ttfamily \#include $<$Syslog.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_syslog_a96209c74bb11c81c5c887faf4979156e}{typedef \hyperlink{classauto__vector}{auto\-\_\-vector}$<$ \hyperlink{class_common_1_1_logger}{Logger} $>$ {\bfseries Logger\-Vector}}\label{class_common_1_1_syslog_a96209c74bb11c81c5c887faf4979156e}
+
+\item 
+\hypertarget{class_common_1_1_syslog_a387d7133565b639dcf9310e003c85e5c}{typedef \hyperlink{classauto__iterator}{auto\-\_\-iterator}$<$ \hyperlink{class_common_1_1_logger}{Logger} $>$ {\bfseries Logger\-Iterator}}\label{class_common_1_1_syslog_a387d7133565b639dcf9310e003c85e5c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_common_1_1_syslog_a21332be0f2687c9c49bdd43b1e953482}{Configure} ()
+\begin{DoxyCompactList}\small\item\em Configures the system with a default configuration. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_a6fe252be1940bf80fe602a52a5ed7d97}{static void \hyperlink{class_common_1_1_syslog_a6fe252be1940bf80fe602a52a5ed7d97}{Configure} (\hyperlink{class_common_1_1_config}{Config} \&cfg, string logger\-Name=\char`\"{}\char`\"{})}\label{class_common_1_1_syslog_a6fe252be1940bf80fe602a52a5ed7d97}
+
+\begin{DoxyCompactList}\small\item\em Configures the logger with a given \hyperlink{class_common_1_1_config}{Config}. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_a528fee777324dc5d821f727b5398e77e}{static void \hyperlink{class_common_1_1_syslog_a528fee777324dc5d821f727b5398e77e}{Log\-Event} (Log\-Severity s, std\-::string const \&message)}\label{class_common_1_1_syslog_a528fee777324dc5d821f727b5398e77e}
+
+\begin{DoxyCompactList}\small\item\em Adds an entry with the given event to all the loggers. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_aa4836b9e5a008b85f766d1674e9e25f7}{Debug} (std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Logs an event with D\-E\-B\-U\-G level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_ab152513069a1c082489b52cca7ab17c3}{Info} (std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Logs an event with I\-N\-F\-O level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_a24abc3e21a6ceabbbc790d17c9582ac6}{Warn} (std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Logs an event with W\-A\-R\-N\-I\-N\-G level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_a79e7fd2a1db96d16558c897e50c33d8c}{Error} (std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Logs an event with E\-R\-R\-O\-R level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_a08e318dbae67e74f0762a5c38cdfab73}{Fatal} (std\-::string const \&message)
+\begin{DoxyCompactList}\small\item\em Logs an event with F\-A\-T\-A\-L level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_acda09c5d8bc29e1cf252c11f37dfb4b9}{Debug} (char $\ast$format\-Str,...)
+\begin{DoxyCompactList}\small\item\em Logs an event with D\-E\-B\-U\-G level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_ae6c3ad265f135a9452d21719cbd51466}{Info} (char $\ast$format\-Str,...)
+\begin{DoxyCompactList}\small\item\em Logs an event with I\-N\-F\-O level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_a285653cc678ea3dc91963c5a686170e5}{Warn} (char $\ast$format\-Str,...)
+\begin{DoxyCompactList}\small\item\em Logs an event with W\-A\-R\-N\-I\-N\-G level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_aeb8b4ab02edb5f930c7feba4643ca217}{Error} (char $\ast$format\-Str,...)
+\begin{DoxyCompactList}\small\item\em Logs an event with E\-R\-R\-O\-R level of severity. \end{DoxyCompactList}\item 
+static void \hyperlink{class_common_1_1_syslog_ab80364a8cc256a412e9de63657d65fb1}{Fatal} (char $\ast$format\-Str,...)
+\begin{DoxyCompactList}\small\item\em Logs an event with F\-A\-T\-A\-L level of severity. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_ad4403cf7343af48bb04ea58cdff957b5}{static bool \hyperlink{class_common_1_1_syslog_ad4403cf7343af48bb04ea58cdff957b5}{Can\-Write} ()}\label{class_common_1_1_syslog_ad4403cf7343af48bb04ea58cdff957b5}
+
+\begin{DoxyCompactList}\small\item\em Returns true if the system log is enabled, false otherwise. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_a2e60380d49a6e177517496b15ba7a852}{static \hyperlink{class_common_1_1_logger}{Logger} const $\ast$ \hyperlink{class_common_1_1_syslog_a2e60380d49a6e177517496b15ba7a852}{Get\-Logger} (std\-::string const \&name)}\label{class_common_1_1_syslog_a2e60380d49a6e177517496b15ba7a852}
+
+\begin{DoxyCompactList}\small\item\em Returns logger with given name. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_ade49c3c9ecc8a7bad964d8a7685c2c19}{static void \hyperlink{class_common_1_1_syslog_ade49c3c9ecc8a7bad964d8a7685c2c19}{Add\-Logger} (Logger\-Ptr \&logger)}\label{class_common_1_1_syslog_ade49c3c9ecc8a7bad964d8a7685c2c19}
+
+\begin{DoxyCompactList}\small\item\em Adds a new logger to the system log. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_a5dcfdb0b2eb519ae849096346e118706}{static void \hyperlink{class_common_1_1_syslog_a5dcfdb0b2eb519ae849096346e118706}{Remove\-Logger} (std\-::string const \&name)}\label{class_common_1_1_syslog_a5dcfdb0b2eb519ae849096346e118706}
+
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_syslog_a6e23dbaf863c51bce9db6b2a396ef926}{static \hyperlink{classauto__iterator}{Logger\-Iterator} \hyperlink{class_common_1_1_syslog_a6e23dbaf863c51bce9db6b2a396ef926}{Get\-Loggers} ()}\label{class_common_1_1_syslog_a6e23dbaf863c51bce9db6b2a396ef926}
+
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the first logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds and manages a loggers on the system. 
+
+This is a static class that can't be instantiated.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_syslog_a21332be0f2687c9c49bdd43b1e953482}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Configure@{Configure}}
+\index{Configure@{Configure}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Configure}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Configure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_a21332be0f2687c9c49bdd43b1e953482}
+
+
+Configures the system with a default configuration. 
+
+This configuration uses an only \hyperlink{class_common_1_1_logger}{Logger} that outputs it's logs on the standard error output.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_common_1_1_syslog_aa4836b9e5a008b85f766d1674e9e25f7}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Debug@{Debug}}
+\index{Debug@{Debug}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Debug (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_common_1_1_syslog_aa4836b9e5a008b85f766d1674e9e25f7}
+
+
+Logs an event with D\-E\-B\-U\-G level of severity. 
+
+Uses a string as a parameter. \hypertarget{class_common_1_1_syslog_acda09c5d8bc29e1cf252c11f37dfb4b9}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Debug@{Debug}}
+\index{Debug@{Debug}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Debug (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format\-Str, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_acda09c5d8bc29e1cf252c11f37dfb4b9}
+
+
+Logs an event with D\-E\-B\-U\-G level of severity. 
+
+Uses a char $\ast$ as a parameter. \hypertarget{class_common_1_1_syslog_a79e7fd2a1db96d16558c897e50c33d8c}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Error@{Error}}
+\index{Error@{Error}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_common_1_1_syslog_a79e7fd2a1db96d16558c897e50c33d8c}
+
+
+Logs an event with E\-R\-R\-O\-R level of severity. 
+
+Uses a string as a parameter. \hypertarget{class_common_1_1_syslog_aeb8b4ab02edb5f930c7feba4643ca217}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Error@{Error}}
+\index{Error@{Error}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format\-Str, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_aeb8b4ab02edb5f930c7feba4643ca217}
+
+
+Logs an event with E\-R\-R\-O\-R level of severity. 
+
+Uses a char $\ast$ as a parameter. \hypertarget{class_common_1_1_syslog_a08e318dbae67e74f0762a5c38cdfab73}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Fatal@{Fatal}}
+\index{Fatal@{Fatal}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Fatal}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Fatal (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_common_1_1_syslog_a08e318dbae67e74f0762a5c38cdfab73}
+
+
+Logs an event with F\-A\-T\-A\-L level of severity. 
+
+Uses a string as a parameter. \hypertarget{class_common_1_1_syslog_ab80364a8cc256a412e9de63657d65fb1}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Fatal@{Fatal}}
+\index{Fatal@{Fatal}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Fatal}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Fatal (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format\-Str, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_ab80364a8cc256a412e9de63657d65fb1}
+
+
+Logs an event with F\-A\-T\-A\-L level of severity. 
+
+Uses a char $\ast$ as a parameter. \hypertarget{class_common_1_1_syslog_ab152513069a1c082489b52cca7ab17c3}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Info@{Info}}
+\index{Info@{Info}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Info}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Info (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_common_1_1_syslog_ab152513069a1c082489b52cca7ab17c3}
+
+
+Logs an event with I\-N\-F\-O level of severity. 
+
+Uses a string as a parameter. \hypertarget{class_common_1_1_syslog_ae6c3ad265f135a9452d21719cbd51466}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Info@{Info}}
+\index{Info@{Info}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Info}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Info (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format\-Str, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_ae6c3ad265f135a9452d21719cbd51466}
+
+
+Logs an event with I\-N\-F\-O level of severity. 
+
+Uses a char $\ast$ as a parameter. \hypertarget{class_common_1_1_syslog_a24abc3e21a6ceabbbc790d17c9582ac6}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Warn@{Warn}}
+\index{Warn@{Warn}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Warn}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Warn (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_common_1_1_syslog_a24abc3e21a6ceabbbc790d17c9582ac6}
+
+
+Logs an event with W\-A\-R\-N\-I\-N\-G level of severity. 
+
+Uses a string as a parameter. \hypertarget{class_common_1_1_syslog_a285653cc678ea3dc91963c5a686170e5}{\index{Common\-::\-Syslog@{Common\-::\-Syslog}!Warn@{Warn}}
+\index{Warn@{Warn}!Common::Syslog@{Common\-::\-Syslog}}
+\subsubsection[{Warn}]{\setlength{\rightskip}{0pt plus 5cm}void Syslog\-::\-Warn (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{format\-Str, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_common_1_1_syslog_a285653cc678ea3dc91963c5a686170e5}
+
+
+Logs an event with W\-A\-R\-N\-I\-N\-G level of severity. 
+
+Uses a char $\ast$ as a parameter. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Syslog.\-h\item 
+Common/Syslog.\-cpp\end{DoxyCompactItemize}

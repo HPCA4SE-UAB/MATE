@@ -1,0 +1,91 @@
+\hypertarget{class_d_m_lib_1_1_event_msg_writer}{\section{D\-M\-Lib\-:\-:Event\-Msg\-Writer Class Reference}
+\label{class_d_m_lib_1_1_event_msg_writer}\index{D\-M\-Lib\-::\-Event\-Msg\-Writer@{D\-M\-Lib\-::\-Event\-Msg\-Writer}}
+}
+
+
+Creates Event\-Msg objects.  
+
+
+
+
+{\ttfamily \#include $<$Event\-Msg\-Writer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a6d32817f98e810322d8cdbd434421062}{\hyperlink{class_d_m_lib_1_1_event_msg_writer_a6d32817f98e810322d8cdbd434421062}{Event\-Msg\-Writer} ()}\label{class_d_m_lib_1_1_event_msg_writer_a6d32817f98e810322d8cdbd434421062}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a6ec1eb44106b2a645d460ab94b79f3c7}{\hyperlink{class_d_m_lib_1_1_event_msg_writer_a6ec1eb44106b2a645d460ab94b79f3c7}{$\sim$\-Event\-Msg\-Writer} ()}\label{class_d_m_lib_1_1_event_msg_writer_a6ec1eb44106b2a645d460ab94b79f3c7}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_d_m_lib_1_1_event_msg_writer_a985cc5f25f0686a704cdacb811bf0063}{Open\-Event} (long\-\_\-t timestamp, int event\-Id, Instr\-Place place, int param\-Count)
+\begin{DoxyCompactList}\small\item\em Open the event and sets its specifications. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a8d07be13e565f1b85fd08912776f029c}{void \hyperlink{class_d_m_lib_1_1_event_msg_writer_a8d07be13e565f1b85fd08912776f029c}{Add\-Int\-Param} (int value)}\label{class_d_m_lib_1_1_event_msg_writer_a8d07be13e565f1b85fd08912776f029c}
+
+\begin{DoxyCompactList}\small\item\em Adds an integer parameter to the event. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a6659ef32319733f119dc95d57df8c930}{void \hyperlink{class_d_m_lib_1_1_event_msg_writer_a6659ef32319733f119dc95d57df8c930}{Add\-Float\-Param} (float value)}\label{class_d_m_lib_1_1_event_msg_writer_a6659ef32319733f119dc95d57df8c930}
+
+\begin{DoxyCompactList}\small\item\em Adds a float parameter to the event. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_ac714c0374d056788b11c8a2a2f723d1d}{void \hyperlink{class_d_m_lib_1_1_event_msg_writer_ac714c0374d056788b11c8a2a2f723d1d}{Add\-Double\-Param} (double value)}\label{class_d_m_lib_1_1_event_msg_writer_ac714c0374d056788b11c8a2a2f723d1d}
+
+\begin{DoxyCompactList}\small\item\em Adds a double parameter to the event. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a6d30cc9223a5edc6b6915f3a8ea73123}{void \hyperlink{class_d_m_lib_1_1_event_msg_writer_a6d30cc9223a5edc6b6915f3a8ea73123}{Add\-Char\-Param} (char c)}\label{class_d_m_lib_1_1_event_msg_writer_a6d30cc9223a5edc6b6915f3a8ea73123}
+
+\begin{DoxyCompactList}\small\item\em Adds a char parameter to the event. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_aa3ef7caf302451a70bbe89a39a067d35}{void \hyperlink{class_d_m_lib_1_1_event_msg_writer_aa3ef7caf302451a70bbe89a39a067d35}{Add\-String\-Param} (std\-::string const \&s)}\label{class_d_m_lib_1_1_event_msg_writer_aa3ef7caf302451a70bbe89a39a067d35}
+
+\begin{DoxyCompactList}\small\item\em Adds a string parameter to the event. \end{DoxyCompactList}\item 
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a3dc3875ac3561d53764e81bd95c45ce3}{\hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \& \hyperlink{class_d_m_lib_1_1_event_msg_writer_a3dc3875ac3561d53764e81bd95c45ce3}{Close\-Event} ()}\label{class_d_m_lib_1_1_event_msg_writer_a3dc3875ac3561d53764e81bd95c45ce3}
+
+\begin{DoxyCompactList}\small\item\em Closes the event and returns the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Creates Event\-Msg objects. 
+
+Loads the specifications of an Event\-Msg object and prepares it. Once it's been prepared it returns the object using the Close\-Event method.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2001 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_m_lib_1_1_event_msg_writer_a985cc5f25f0686a704cdacb811bf0063}{\index{D\-M\-Lib\-::\-Event\-Msg\-Writer@{D\-M\-Lib\-::\-Event\-Msg\-Writer}!Open\-Event@{Open\-Event}}
+\index{Open\-Event@{Open\-Event}!DMLib::EventMsgWriter@{D\-M\-Lib\-::\-Event\-Msg\-Writer}}
+\subsubsection[{Open\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Event\-Msg\-Writer\-::\-Open\-Event (
+\begin{DoxyParamCaption}
+\item[{long\-\_\-t}]{timestamp, }
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{place, }
+\item[{int}]{param\-Count}
+\end{DoxyParamCaption}
+)}}\label{class_d_m_lib_1_1_event_msg_writer_a985cc5f25f0686a704cdacb811bf0063}
+
+
+Open the event and sets its specifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & Timestamp when the event occurs. \\
+\hline
+{\em event\-Id} & Id of the event. \\
+\hline
+{\em place} & Place where the event is located \{instr\-Unknown, ip\-Func\-Entry, ip\-Func\-Exit\}. \\
+\hline
+{\em param\-Count} & Number of parameters. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+D\-M\-Lib/Event\-Msg\-Writer.\-h\item 
+D\-M\-Lib/Event\-Msg\-Writer.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{class_common_1_1_set_variable_value_request}{\section{Common\-:\-:Set\-Variable\-Value\-Request Class Reference}
+\label{class_common_1_1_set_variable_value_request}\index{Common\-::\-Set\-Variable\-Value\-Request@{Common\-::\-Set\-Variable\-Value\-Request}}
+}
+
+
+Encapsulates a tuning request to modify a value of a specified variable in a given application process.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Set\-Variable\-Value\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_common_1_1_set_variable_value_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_set_variable_value_request_ad7af1a5cfccd93ac5859b4cfea28faf2}{Set\-Variable\-Value\-Request} (int pid=0, std\-::string const \&var\-Name=std\-::string(), \hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} const \&var\-Value=\hyperlink{class_common_1_1_attribute_value}{Attribute\-Value}(), \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_common_1_1_set_variable_value_request_ad63b5427198d580bef9f629363ab045f}{Get\-Value\-Buffer} ()
+\begin{DoxyCompactList}\small\item\em Returns the value to set in a buffer format. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_a5434cdd52cae3ff0ab16af13ac2e6a48}{int \hyperlink{class_common_1_1_set_variable_value_request_a5434cdd52cae3ff0ab16af13ac2e6a48}{Get\-Value\-Size} () const }\label{class_common_1_1_set_variable_value_request_a5434cdd52cae3ff0ab16af13ac2e6a48}
+
+\begin{DoxyCompactList}\small\item\em Returns size of the variable new value. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_a2a911a1fab2d7c2cdda79d409a252787}{std\-::string \hyperlink{class_common_1_1_set_variable_value_request_a2a911a1fab2d7c2cdda79d409a252787}{Get\-Value\-String} () const }\label{class_common_1_1_set_variable_value_request_a2a911a1fab2d7c2cdda79d409a252787}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the value of the variable. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_acf9a8861376f922212feeafe2fd964a6}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_set_variable_value_request_acf9a8861376f922212feeafe2fd964a6}{Get\-Type} () const }\label{class_common_1_1_set_variable_value_request_acf9a8861376f922212feeafe2fd964a6}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Set\-Variable\-Value). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_ac39a95281f91ac848f816ade953f5b61}{std\-::string const \& \hyperlink{class_common_1_1_set_variable_value_request_ac39a95281f91ac848f816ade953f5b61}{Get\-Variable\-Name} () const }\label{class_common_1_1_set_variable_value_request_ac39a95281f91ac848f816ade953f5b61}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the variable name. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_a178e46256dcf6cd70193af3b688f5fb4}{void \hyperlink{class_common_1_1_set_variable_value_request_a178e46256dcf6cd70193af3b688f5fb4}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_set_variable_value_request_a178e46256dcf6cd70193af3b688f5fb4}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_set_variable_value_request_a042efd853ec134636a28775c304802df}{void \hyperlink{class_common_1_1_set_variable_value_request_a042efd853ec134636a28775c304802df}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_set_variable_value_request_a042efd853ec134636a28775c304802df}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request to modify a value of a specified variable in a given application process. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_set_variable_value_request_ad7af1a5cfccd93ac5859b4cfea28faf2}{\index{Common\-::\-Set\-Variable\-Value\-Request@{Common\-::\-Set\-Variable\-Value\-Request}!Set\-Variable\-Value\-Request@{Set\-Variable\-Value\-Request}}
+\index{Set\-Variable\-Value\-Request@{Set\-Variable\-Value\-Request}!Common::SetVariableValueRequest@{Common\-::\-Set\-Variable\-Value\-Request}}
+\subsubsection[{Set\-Variable\-Value\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Set\-Variable\-Value\-Request\-::\-Set\-Variable\-Value\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{var\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{{\bf Attribute\-Value} const \&}]{var\-Value = {\ttfamily {\bf Attribute\-Value}~()}, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_set_variable_value_request_ad7af1a5cfccd93ac5859b4cfea28faf2}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the variable will be modified, default 0. \\
+\hline
+{\em var\-Name} & Name of the variable, default \char`\"{}\char`\"{}. \\
+\hline
+{\em var\-Value} & New value to set, default empty \hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} object. \\
+\hline
+{\em brkpt} & Used for synchronization purposes, the actual tuning will be executed when the execution reaches the breakpoint, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_set_variable_value_request_ad63b5427198d580bef9f629363ab045f}{\index{Common\-::\-Set\-Variable\-Value\-Request@{Common\-::\-Set\-Variable\-Value\-Request}!Get\-Value\-Buffer@{Get\-Value\-Buffer}}
+\index{Get\-Value\-Buffer@{Get\-Value\-Buffer}!Common::SetVariableValueRequest@{Common\-::\-Set\-Variable\-Value\-Request}}
+\subsubsection[{Get\-Value\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Common\-::\-Set\-Variable\-Value\-Request\-::\-Get\-Value\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_set_variable_value_request_ad63b5427198d580bef9f629363ab045f}
+
+
+Returns the value to set in a buffer format. 
+
+If the type is known, it can be used using a cast, for example\-:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} foo = (int) VarRequest.GetValueBuffer();
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

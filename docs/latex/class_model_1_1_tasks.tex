@@ -1,0 +1,198 @@
+\hypertarget{class_model_1_1_tasks}{\section{Model\-:\-:Tasks Class Reference}
+\label{class_model_1_1_tasks}\index{Model\-::\-Tasks@{Model\-::\-Tasks}}
+}
+
+
+\hyperlink{class_model_1_1_tasks}{Tasks} encapsulate methods to work with lists of \hyperlink{class_model_1_1_task}{Task} objects. The data structure to hold the information is an \hyperlink{classauto__vector}{auto\-\_\-vector}. This class provides methods to add, remove, access \hyperlink{class_model_1_1_task}{Task} objects in an array. It also provides methods to find \hyperlink{class_model_1_1_tasks}{Tasks} and for measuring the array.  
+
+
+
+
+{\ttfamily \#include $<$App\-Task.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries Not\-Found} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_model_1_1_tasks_ac6ee174f91f1e37e0189f22dbd65f748}{\hyperlink{class_model_1_1_tasks_ac6ee174f91f1e37e0189f22dbd65f748}{Tasks} ()}\label{class_model_1_1_tasks_ac6ee174f91f1e37e0189f22dbd65f748}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_tasks_ada8481fd74feccd1c6d3b6969426ff00}{Add} (auto\-\_\-ptr$<$ \hyperlink{class_model_1_1_task}{Task} $>$ \&task)
+\begin{DoxyCompactList}\small\item\em Adds a task to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_tasks_a5a31b2d893e47f1a9c9dd6dbcaa37ef0}{Delete} (int index)
+\begin{DoxyCompactList}\small\item\em Deletes a task from the list. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_task}{Task} const $\ast$ \hyperlink{class_model_1_1_tasks_a2db64ec936b5080f59e43e7403b7ff23}{operator\mbox{[}$\,$\mbox{]}} (int index) const 
+\begin{DoxyCompactList}\small\item\em Accessor to the array. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_task}{Task} $\ast$ \hyperlink{class_model_1_1_tasks_acb440c2d39f40f972e16e3bd19ecba11}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\begin{DoxyCompactList}\small\item\em Accessor to the array. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_tasks_a0e48d6e7bc3c74d3975fecf86a7dc33e}{Find\-By\-Id} (int id)
+\begin{DoxyCompactList}\small\item\em Finds a task by I\-D and returns its index. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_tasks_a8639b9c81b3318e67442a59687b556e7}{Size} () const 
+\begin{DoxyCompactList}\small\item\em Size getter. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_task}{Task} \& \hyperlink{class_model_1_1_tasks_a05481ae4cfb771ced70b92f7b73cdd68}{Get\-By\-Id} (int id)
+\begin{DoxyCompactList}\small\item\em Finds a task by I\-D and returns a reference to it. \end{DoxyCompactList}\item 
+auto\-\_\-ptr$<$ \hyperlink{class_model_1_1_task}{Task} $>$ \hyperlink{class_model_1_1_tasks_a9e110299378797b757e805dafe6505b2}{Remove} (int id)
+\begin{DoxyCompactList}\small\item\em Removes a task by I\-D from the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_model_1_1_tasks}{Tasks} encapsulate methods to work with lists of \hyperlink{class_model_1_1_task}{Task} objects. The data structure to hold the information is an \hyperlink{classauto__vector}{auto\-\_\-vector}. This class provides methods to add, remove, access \hyperlink{class_model_1_1_task}{Task} objects in an array. It also provides methods to find \hyperlink{class_model_1_1_tasks}{Tasks} and for measuring the array. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_tasks_ada8481fd74feccd1c6d3b6969426ff00}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Add@{Add}}
+\index{Add@{Add}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Tasks\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{auto\-\_\-ptr$<$ {\bf Task} $>$ \&}]{task}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_ada8481fd74feccd1c6d3b6969426ff00}
+
+
+Adds a task to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & The task to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_tasks_a5a31b2d893e47f1a9c9dd6dbcaa37ef0}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Delete@{Delete}}
+\index{Delete@{Delete}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void Tasks\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_a5a31b2d893e47f1a9c9dd6dbcaa37ef0}
+
+
+Deletes a task from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position in the list of the task to delete. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_tasks_a0e48d6e7bc3c74d3975fecf86a7dc33e}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Find\-By\-Id@{Find\-By\-Id}}
+\index{Find\-By\-Id@{Find\-By\-Id}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Find\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Tasks\-::\-Find\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_a0e48d6e7bc3c74d3975fecf86a7dc33e}
+
+
+Finds a task by I\-D and returns its index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier of the task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the task or Not\-Found if a task with given I\-D is not stored in the collection. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_tasks_a05481ae4cfb771ced70b92f7b73cdd68}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Get\-By\-Id@{Get\-By\-Id}}
+\index{Get\-By\-Id@{Get\-By\-Id}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Get\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task} \& Tasks\-::\-Get\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_a05481ae4cfb771ced70b92f7b73cdd68}
+
+
+Finds a task by I\-D and returns a reference to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier of the task (pid). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the found task. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if not found. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_model_1_1_tasks_a2db64ec936b5080f59e43e7403b7ff23}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task} const $\ast$ Tasks\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_model_1_1_tasks_a2db64ec936b5080f59e43e7403b7ff23}
+
+
+Accessor to the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of the array to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the specified position 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_tasks_acb440c2d39f40f972e16e3bd19ecba11}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task} $\ast$ Tasks\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_acb440c2d39f40f972e16e3bd19ecba11}
+
+
+Accessor to the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of the array to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the specified position 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_tasks_a9e110299378797b757e805dafe6505b2}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Remove@{Remove}}
+\index{Remove@{Remove}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}auto\-\_\-ptr$<$ {\bf Task} $>$ Tasks\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_tasks_a9e110299378797b757e805dafe6505b2}
+
+
+Removes a task by I\-D from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier of the task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the removed task or a null pointer if it was not present. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_tasks_a8639b9c81b3318e67442a59687b556e7}{\index{Model\-::\-Tasks@{Model\-::\-Tasks}!Size@{Size}}
+\index{Size@{Size}!Model::Tasks@{Model\-::\-Tasks}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int Tasks\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_model_1_1_tasks_a8639b9c81b3318e67442a59687b556e7}
+
+
+Size getter. 
+
+\begin{DoxyReturn}{Returns}
+Number of stored tasks 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Task.\-h\item 
+Analyzer/App\-Task.\-cpp\end{DoxyCompactItemize}

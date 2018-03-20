@@ -1,0 +1,115 @@
+\hypertarget{class_common_1_1_add_instr_request}{\section{Common\-:\-:Add\-Instr\-Request Class Reference}
+\label{class_common_1_1_add_instr_request}\index{Common\-::\-Add\-Instr\-Request@{Common\-::\-Add\-Instr\-Request}}
+}
+
+
+Represents message sent when analyzer requests to add instrumentation.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Add\-Instr\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_add_instr_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_add_instr_request_a68a7aaf187b3d45a125f7de8ca76b780}{Add\-Instr\-Request} (int pid=0, int event\-Id=0, std\-::string const \&func\-Name=std\-::string(), Instr\-Place place=ip\-Func\-Entry, int n\-Attrs=0, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs=0, int n\-Papi=0, std\-::string $\ast$Papi\-Metrics=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a9c4bdab0d2f8cb229a6057a25674672d}{\hyperlink{class_common_1_1_add_instr_request_a9c4bdab0d2f8cb229a6057a25674672d}{$\sim$\-Add\-Instr\-Request} ()}\label{class_common_1_1_add_instr_request_a9c4bdab0d2f8cb229a6057a25674672d}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a9c1b7191b6289cc9b724d06428601b4b}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_add_instr_request_a9c1b7191b6289cc9b724d06428601b4b}{Get\-Type} () const }\label{class_common_1_1_add_instr_request_a9c1b7191b6289cc9b724d06428601b4b}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Add\-Instr). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_aeff18bc4bbbdd7e5df05d6ed697446e0}{int \hyperlink{class_common_1_1_add_instr_request_aeff18bc4bbbdd7e5df05d6ed697446e0}{Get\-Pid} () const }\label{class_common_1_1_add_instr_request_aeff18bc4bbbdd7e5df05d6ed697446e0}
+
+\begin{DoxyCompactList}\small\item\em Returns the process id. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_ac4799ac58ff77a45b4980478a04dd0b4}{Instr\-Place \hyperlink{class_common_1_1_add_instr_request_ac4799ac58ff77a45b4980478a04dd0b4}{Get\-Instr\-Place} () const }\label{class_common_1_1_add_instr_request_ac4799ac58ff77a45b4980478a04dd0b4}
+
+\begin{DoxyCompactList}\small\item\em Returns the place where the instruction should be added. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_af7a0c2f2796725b544d32c1fdb3983af}{std\-::string const \& \hyperlink{class_common_1_1_add_instr_request_af7a0c2f2796725b544d32c1fdb3983af}{Get\-Function\-Name} () const }\label{class_common_1_1_add_instr_request_af7a0c2f2796725b544d32c1fdb3983af}
+
+\begin{DoxyCompactList}\small\item\em Returns function name. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a2b426cdee36bb34befd7c352e311b091}{int \hyperlink{class_common_1_1_add_instr_request_a2b426cdee36bb34befd7c352e311b091}{Get\-Event\-Id} () const }\label{class_common_1_1_add_instr_request_a2b426cdee36bb34befd7c352e311b091}
+
+\begin{DoxyCompactList}\small\item\em Returns the event id. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a8641c2ae4a2a32535fb73be25ef39eb9}{\hyperlink{class_common_1_1_attribute}{Attribute} $\ast$ \hyperlink{class_common_1_1_add_instr_request_a8641c2ae4a2a32535fb73be25ef39eb9}{Get\-Attributes} () const }\label{class_common_1_1_add_instr_request_a8641c2ae4a2a32535fb73be25ef39eb9}
+
+\begin{DoxyCompactList}\small\item\em Returns array of attributes. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a969ac38ec14c83e16cbc9c74527f4121}{int \hyperlink{class_common_1_1_add_instr_request_a969ac38ec14c83e16cbc9c74527f4121}{Get\-Attrs\-Count} () const }\label{class_common_1_1_add_instr_request_a969ac38ec14c83e16cbc9c74527f4121}
+
+\begin{DoxyCompactList}\small\item\em Returns number of attributes the function has. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a5a19a930c393f48dce79c123ca1258ab}{std\-::string $\ast$ \hyperlink{class_common_1_1_add_instr_request_a5a19a930c393f48dce79c123ca1258ab}{Get\-Metrics} () const }\label{class_common_1_1_add_instr_request_a5a19a930c393f48dce79c123ca1258ab}
+
+\begin{DoxyCompactList}\small\item\em Returns array of Metrics. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a2754506cc3c0fe7d7e850199f9857f41}{int \hyperlink{class_common_1_1_add_instr_request_a2754506cc3c0fe7d7e850199f9857f41}{Get\-Metrics\-Count} () const }\label{class_common_1_1_add_instr_request_a2754506cc3c0fe7d7e850199f9857f41}
+
+\begin{DoxyCompactList}\small\item\em Returns number of metrics the function has. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a8405b78cf676da3be84514b7838665ee}{void \hyperlink{class_common_1_1_add_instr_request_a8405b78cf676da3be84514b7838665ee}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_add_instr_request_a8405b78cf676da3be84514b7838665ee}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_add_instr_request_a09b4fde5119b8f7ba662cfe38b195e4a}{void \hyperlink{class_common_1_1_add_instr_request_a09b4fde5119b8f7ba662cfe38b195e4a}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_add_instr_request_a09b4fde5119b8f7ba662cfe38b195e4a}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents message sent when analyzer requests to add instrumentation. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_add_instr_request_a68a7aaf187b3d45a125f7de8ca76b780}{\index{Common\-::\-Add\-Instr\-Request@{Common\-::\-Add\-Instr\-Request}!Add\-Instr\-Request@{Add\-Instr\-Request}}
+\index{Add\-Instr\-Request@{Add\-Instr\-Request}!Common::AddInstrRequest@{Common\-::\-Add\-Instr\-Request}}
+\subsubsection[{Add\-Instr\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Add\-Instr\-Request\-::\-Add\-Instr\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{int}]{event\-Id = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{func\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{Instr\-Place}]{place = {\ttfamily ipFuncEntry}, }
+\item[{int}]{n\-Attrs = {\ttfamily 0}, }
+\item[{{\bf Attribute} $\ast$}]{attrs = {\ttfamily 0}, }
+\item[{int}]{n\-Papi = {\ttfamily 0}, }
+\item[{std\-::string $\ast$}]{Papi\-Metrics = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_add_instr_request_a68a7aaf187b3d45a125f7de8ca76b780}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the instrumentation will be added, default 0. \\
+\hline
+{\em event\-Id} & \hyperlink{class_common_1_1_event}{Event} id, default 0. \\
+\hline
+{\em func\-Name} & Name of the function to modify, default \char`\"{}\char`\"{}. \\
+\hline
+{\em place} & Place where the instrumentation will be added, default ip\-Func\-Entry. \\
+\hline
+{\em n\-Attrs} & Number of attributes the function has, default 0. \\
+\hline
+{\em attrs} & \hyperlink{class_common_1_1_attribute}{Attribute} array, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

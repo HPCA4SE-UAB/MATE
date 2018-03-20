@@ -1,0 +1,62 @@
+\hypertarget{class_model_1_1_host_handler}{\section{Model\-:\-:Host\-Handler Class Reference}
+\label{class_model_1_1_host_handler}\index{Model\-::\-Host\-Handler@{Model\-::\-Host\-Handler}}
+}
+
+
+Provides mechanisms to handle the addition and removing of hosts.  
+
+
+
+
+{\ttfamily \#include $<$Host.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_model_1_1_host_handler_a234f66a339376c76ccbf09a3947e9bee}{Host\-Added} (\hyperlink{class_model_1_1_host}{Host} \&h)=0
+\begin{DoxyCompactList}\small\item\em Called when a new host is added to the virtual machine. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_model_1_1_host_handler_a659060baf2fdedf897d7ba2158def2b6}{Host\-Removed} (\hyperlink{class_model_1_1_host}{Host} \&h)=0
+\begin{DoxyCompactList}\small\item\em Called when a host is removed from the virtual machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides mechanisms to handle the addition and removing of hosts. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_host_handler_a234f66a339376c76ccbf09a3947e9bee}{\index{Model\-::\-Host\-Handler@{Model\-::\-Host\-Handler}!Host\-Added@{Host\-Added}}
+\index{Host\-Added@{Host\-Added}!Model::HostHandler@{Model\-::\-Host\-Handler}}
+\subsubsection[{Host\-Added}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Model\-::\-Host\-Handler\-::\-Host\-Added (
+\begin{DoxyParamCaption}
+\item[{{\bf Host} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_model_1_1_host_handler_a234f66a339376c76ccbf09a3947e9bee}
+
+
+Called when a new host is added to the virtual machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Added host. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_host_handler_a659060baf2fdedf897d7ba2158def2b6}{\index{Model\-::\-Host\-Handler@{Model\-::\-Host\-Handler}!Host\-Removed@{Host\-Removed}}
+\index{Host\-Removed@{Host\-Removed}!Model::HostHandler@{Model\-::\-Host\-Handler}}
+\subsubsection[{Host\-Removed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Model\-::\-Host\-Handler\-::\-Host\-Removed (
+\begin{DoxyParamCaption}
+\item[{{\bf Host} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_model_1_1_host_handler_a659060baf2fdedf897d7ba2158def2b6}
+
+
+Called when a host is removed from the virtual machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Removed host. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Host.\-h\end{DoxyCompactItemize}

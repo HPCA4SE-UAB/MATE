@@ -1,0 +1,110 @@
+\hypertarget{class_common_1_1_remote_process}{\section{Common\-:\-:Remote\-Process Class Reference}
+\label{class_common_1_1_remote_process}\index{Common\-::\-Remote\-Process@{Common\-::\-Remote\-Process}}
+}
+
+
+Remotely executes a command in another machine.  
+
+
+
+
+{\ttfamily \#include $<$Process.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Remote\-Process\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_remote_process}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_remote_process_a4391c49d837b2b1c9f5514d09cc82f61}{Remote\-Process} (std\-::string host\-Name, std\-::string command, std\-::string rsh\-Path=std\-::string(\char`\"{}/usr/bin/rsh\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_remote_process_afcbb01195482dc86fe8294c53ac4d422}{Remote\-Process} (std\-::string host\-Name, std\-::string user\-Name, std\-::string command, std\-::string rsh\-Path=std\-::string(\char`\"{}/usr/bin/rsh\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remote_process_a513136e2e9b13380a045f5d78a014afb}{void \hyperlink{class_common_1_1_remote_process_a513136e2e9b13380a045f5d78a014afb}{Set\-Output\-To\-Null} ()}\label{class_common_1_1_remote_process_a513136e2e9b13380a045f5d78a014afb}
+
+\begin{DoxyCompactList}\small\item\em Enables output to null property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_remote_process_a8cdc86c2191a88ef97a2a743b484fac5}{int \hyperlink{class_common_1_1_remote_process_a8cdc86c2191a88ef97a2a743b484fac5}{Run} ()}\label{class_common_1_1_remote_process_a8cdc86c2191a88ef97a2a743b484fac5}
+
+\begin{DoxyCompactList}\small\item\em Executes de process. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_remote_process_a8542d9bcd4bb05453c046c1497748b18}{std\-::string {\bfseries Get\-Host\-Name} () const }\label{class_common_1_1_remote_process_a8542d9bcd4bb05453c046c1497748b18}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Remotely executes a command in another machine. 
+
+Uses the rsh program to perform the execution of the process.
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2001 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_remote_process_a4391c49d837b2b1c9f5514d09cc82f61}{\index{Common\-::\-Remote\-Process@{Common\-::\-Remote\-Process}!Remote\-Process@{Remote\-Process}}
+\index{Remote\-Process@{Remote\-Process}!Common::RemoteProcess@{Common\-::\-Remote\-Process}}
+\subsubsection[{Remote\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Remote\-Process\-::\-Remote\-Process (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{host\-Name, }
+\item[{std\-::string}]{command, }
+\item[{std\-::string}]{rsh\-Path = {\ttfamily std\-:\-:string(\char`\"{}/usr/bin/rsh\char`\"{})}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_remote_process_a4391c49d837b2b1c9f5514d09cc82f61}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\-Name} & Host where the command will be executed remotely. \\
+\hline
+{\em command} & Command to execute. \\
+\hline
+{\em rsh\-Path} & Local path of the rsh program, default = \char`\"{}/usr/bin/rsh\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_remote_process_afcbb01195482dc86fe8294c53ac4d422}{\index{Common\-::\-Remote\-Process@{Common\-::\-Remote\-Process}!Remote\-Process@{Remote\-Process}}
+\index{Remote\-Process@{Remote\-Process}!Common::RemoteProcess@{Common\-::\-Remote\-Process}}
+\subsubsection[{Remote\-Process}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Remote\-Process\-::\-Remote\-Process (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{host\-Name, }
+\item[{std\-::string}]{user\-Name, }
+\item[{std\-::string}]{command, }
+\item[{std\-::string}]{rsh\-Path = {\ttfamily std\-:\-:string(\char`\"{}/usr/bin/rsh\char`\"{})}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_remote_process_afcbb01195482dc86fe8294c53ac4d422}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\-Name} & Host where the command will be executed remotely. \\
+\hline
+{\em command} & Command to execute. \\
+\hline
+{\em user\-Name} & Name of the user on the host to execute the command. \\
+\hline
+{\em rsh\-Path} & Local path of the rsh program, default = \char`\"{}/usr/bin/rsh\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Process.\-h\item 
+Common/Process.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,186 @@
+\hypertarget{class_instr_group}{\section{Instr\-Group Class Reference}
+\label{class_instr_group}\index{Instr\-Group@{Instr\-Group}}
+}
+
+
+Contains a group of snippets to be inserted in a function.  
+
+
+
+
+{\ttfamily \#include $<$Instr\-Set.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_instr_group_a4ef84ae062f916504d1cdd6f5f6437d7}{typedef vector$<$ \hyperlink{class_snippet_handler}{Snippet\-Handler} $\ast$ $>$\\*
+\-::iterator {\bfseries Iterator}}\label{class_instr_group_a4ef84ae062f916504d1cdd6f5f6437d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_instr_group_a5e42e6a1eee81a9b67852cf9cba38703}{\hyperlink{class_instr_group_a5e42e6a1eee81a9b67852cf9cba38703}{Instr\-Group} (int event\-Id, std\-::string const \&func\-Name)}\label{class_instr_group_a5e42e6a1eee81a9b67852cf9cba38703}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_instr_group_a0a3d7f4dc0c35b8f254ff19badec2d3a}{\hyperlink{class_instr_group_a0a3d7f4dc0c35b8f254ff19badec2d3a}{$\sim$\-Instr\-Group} ()}\label{class_instr_group_a0a3d7f4dc0c35b8f254ff19badec2d3a}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_instr_group_aa17d3fbb57017c6825fef8ea4a28deeb}{Get\-Event\-Id} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the variable \-\_\-event\-Id. \end{DoxyCompactList}\item 
+int \hyperlink{class_instr_group_a86f2165483dfa146d662eb7d35f15e23}{Get\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the size of \-\_\-vector. \end{DoxyCompactList}\item 
+bool \hyperlink{class_instr_group_ae58c61dd4ded42212e94e24dcc09133c}{Is\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em Checks if \-\_\-vector is empty. \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{class_instr_group_af563f5149b24343aed32dcc241d51861}{Get\-Func\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the name of the function. \end{DoxyCompactList}\item 
+void \hyperlink{class_instr_group_addcd3f41da597eb9b1a8bab88d906c6c}{Add\-Handler} (Instr\-Place place, B\-Patch\-Snippet\-Handle $\ast$handle)
+\begin{DoxyCompactList}\small\item\em Add the handler passed as a parameter to the \-\_\-vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_instr_group_aac2f0d8e6ae1d432634096016120f8dd}{Remove\-Handler} (Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Eliminates the handlers from the vector to be inserted in the place passed as a parameter. \end{DoxyCompactList}\item 
+Iterator \hyperlink{class_instr_group_a7397b4be484236b0e8a655a2a13abdc1}{begin} ()
+\begin{DoxyCompactList}\small\item\em Getter for an iterator pointing to the first element in the \hyperlink{class_instr_group}{Instr\-Group}. \end{DoxyCompactList}\item 
+Iterator \hyperlink{class_instr_group_ae975dcc604ba4d277d63e0889abb710d}{end} ()
+\begin{DoxyCompactList}\small\item\em Getter for an iterator pointing to the last instruction (handler) on the group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains a group of snippets to be inserted in a function. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_instr_group_addcd3f41da597eb9b1a8bab88d906c6c}{\index{Instr\-Group@{Instr\-Group}!Add\-Handler@{Add\-Handler}}
+\index{Add\-Handler@{Add\-Handler}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Add\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Instr\-Group\-::\-Add\-Handler (
+\begin{DoxyParamCaption}
+\item[{Instr\-Place}]{place, }
+\item[{B\-Patch\-Snippet\-Handle $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{class_instr_group_addcd3f41da597eb9b1a8bab88d906c6c}
+
+
+Add the handler passed as a parameter to the \-\_\-vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & Object that represents the place in the program in which the snippet will be inserted.\\
+\hline
+{\em handle} & Object of the class B\-Patch\-Snippet\-Handle that handles a Dyninst snippet. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_instr_group_a7397b4be484236b0e8a655a2a13abdc1}{\index{Instr\-Group@{Instr\-Group}!begin@{begin}}
+\index{begin@{begin}!InstrGroup@{Instr\-Group}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Iterator Instr\-Group\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_a7397b4be484236b0e8a655a2a13abdc1}
+
+
+Getter for an iterator pointing to the first element in the \hyperlink{class_instr_group}{Instr\-Group}. 
+
+\begin{DoxyReturn}{Returns}
+Iterator for the variable \-\_\-vector that points to its beginning. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_ae975dcc604ba4d277d63e0889abb710d}{\index{Instr\-Group@{Instr\-Group}!end@{end}}
+\index{end@{end}!InstrGroup@{Instr\-Group}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Iterator Instr\-Group\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_ae975dcc604ba4d277d63e0889abb710d}
+
+
+Getter for an iterator pointing to the last instruction (handler) on the group. 
+
+\begin{DoxyReturn}{Returns}
+Iterator for the variable \-\_\-vector that points to its final element. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_aa17d3fbb57017c6825fef8ea4a28deeb}{\index{Instr\-Group@{Instr\-Group}!Get\-Event\-Id@{Get\-Event\-Id}}
+\index{Get\-Event\-Id@{Get\-Event\-Id}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Get\-Event\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Instr\-Group\-::\-Get\-Event\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_aa17d3fbb57017c6825fef8ea4a28deeb}
+
+
+Getter for the variable \-\_\-event\-Id. 
+
+\begin{DoxyReturn}{Returns}
+Id of the event. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_af563f5149b24343aed32dcc241d51861}{\index{Instr\-Group@{Instr\-Group}!Get\-Func\-Name@{Get\-Func\-Name}}
+\index{Get\-Func\-Name@{Get\-Func\-Name}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Get\-Func\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& Instr\-Group\-::\-Get\-Func\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_af563f5149b24343aed32dcc241d51861}
+
+
+Getter of the name of the function. 
+
+\begin{DoxyReturn}{Returns}
+String that contains the name of the function. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_a86f2165483dfa146d662eb7d35f15e23}{\index{Instr\-Group@{Instr\-Group}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Instr\-Group\-::\-Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_a86f2165483dfa146d662eb7d35f15e23}
+
+
+Getter of the size of \-\_\-vector. 
+
+\begin{DoxyReturn}{Returns}
+Size of the vector \-\_\-vector. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_ae58c61dd4ded42212e94e24dcc09133c}{\index{Instr\-Group@{Instr\-Group}!Is\-Empty@{Is\-Empty}}
+\index{Is\-Empty@{Is\-Empty}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Instr\-Group\-::\-Is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_instr_group_ae58c61dd4ded42212e94e24dcc09133c}
+
+
+Checks if \-\_\-vector is empty. 
+
+\begin{DoxyReturn}{Returns}
+0 if not empty, 1 if empty. 
+\end{DoxyReturn}
+\hypertarget{class_instr_group_aac2f0d8e6ae1d432634096016120f8dd}{\index{Instr\-Group@{Instr\-Group}!Remove\-Handler@{Remove\-Handler}}
+\index{Remove\-Handler@{Remove\-Handler}!InstrGroup@{Instr\-Group}}
+\subsubsection[{Remove\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Instr\-Group\-::\-Remove\-Handler (
+\begin{DoxyParamCaption}
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_instr_group_aac2f0d8e6ae1d432634096016120f8dd}
+
+
+Eliminates the handlers from the vector to be inserted in the place passed as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & Object that represents the place in the program in which the snippet will be inserted. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Instr\-Set.\-h\item 
+A\-C/Instr\-Set.\-cpp\end{DoxyCompactItemize}

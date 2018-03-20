@@ -1,0 +1,148 @@
+\hypertarget{class_common_1_1_byte_stream}{\section{Common\-:\-:Byte\-Stream Class Reference}
+\label{class_common_1_1_byte_stream}\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}}
+}
+
+
+Stores stream of bytes.  
+
+
+
+
+{\ttfamily \#include $<$Byte\-Stream.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Byte\-Stream\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_byte_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_byte_stream_a40d319a2f4b29672216a7cc135f2aa84}{Byte\-Stream} (char $\ast$buf, size\-\_\-t buf\-Size)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_byte_stream_aa98249a6d0a862fbb35ad27a1a60d01d}{Byte\-Stream} (size\-\_\-t buf\-Size)
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an intern buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_byte_stream_a8ab16f23bce1e2cb0962761b9ac01be4}{Write} (char const $\ast$buf, size\-\_\-t buf\-Size)
+\begin{DoxyCompactList}\small\item\em Adds the content of the buffer to the stream. \end{DoxyCompactList}\item 
+char const $\ast$ \hyperlink{class_common_1_1_byte_stream_a91ca094a1637a948c279d9cab3f00887}{Get\-Data} () const 
+\begin{DoxyCompactList}\small\item\em Returns pointer to the intern buffer. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{class_common_1_1_byte_stream_a82ff2f3a9e446c716c6e0889691819d4}{Get\-Data\-Size} () const 
+\begin{DoxyCompactList}\small\item\em Returns size of the stream. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_byte_stream_a15ec1d409725f5ed875a733805bf0ba8}{void \hyperlink{class_common_1_1_byte_stream_a15ec1d409725f5ed875a733805bf0ba8}{Reset} ()}\label{class_common_1_1_byte_stream_a15ec1d409725f5ed875a733805bf0ba8}
+
+\begin{DoxyCompactList}\small\item\em Clears the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores stream of bytes. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_byte_stream_a40d319a2f4b29672216a7cc135f2aa84}{\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}!Byte\-Stream@{Byte\-Stream}}
+\index{Byte\-Stream@{Byte\-Stream}!Common::ByteStream@{Common\-::\-Byte\-Stream}}
+\subsubsection[{Byte\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Byte\-Stream\-::\-Byte\-Stream (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{size\-\_\-t}]{buf\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_byte_stream_a40d319a2f4b29672216a7cc135f2aa84}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Intern buffer to be used. \\
+\hline
+{\em buf\-Size} & Size of the intern buffer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_byte_stream_aa98249a6d0a862fbb35ad27a1a60d01d}{\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}!Byte\-Stream@{Byte\-Stream}}
+\index{Byte\-Stream@{Byte\-Stream}!Common::ByteStream@{Common\-::\-Byte\-Stream}}
+\subsubsection[{Byte\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Byte\-Stream\-::\-Byte\-Stream (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{buf\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_byte_stream_aa98249a6d0a862fbb35ad27a1a60d01d}
+
+
+Constructor. Creates an intern buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf\-Size} & Size of the intern buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_byte_stream_a91ca094a1637a948c279d9cab3f00887}{\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}!Get\-Data@{Get\-Data}}
+\index{Get\-Data@{Get\-Data}!Common::ByteStream@{Common\-::\-Byte\-Stream}}
+\subsubsection[{Get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}char const$\ast$ Common\-::\-Byte\-Stream\-::\-Get\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_byte_stream_a91ca094a1637a948c279d9cab3f00887}
+
+
+Returns pointer to the intern buffer. 
+
+When used the returned pointer should always use the \hyperlink{class_common_1_1_byte_stream_a82ff2f3a9e446c716c6e0889691819d4}{Get\-Data\-Size()} method to iterate over the buffer.
+
+\begin{DoxyReturn}{Returns}
+Read-\/only pointer to the intern buffer. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_byte_stream_a82ff2f3a9e446c716c6e0889691819d4}{\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}!Get\-Data\-Size@{Get\-Data\-Size}}
+\index{Get\-Data\-Size@{Get\-Data\-Size}!Common::ByteStream@{Common\-::\-Byte\-Stream}}
+\subsubsection[{Get\-Data\-Size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Common\-::\-Byte\-Stream\-::\-Get\-Data\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_byte_stream_a82ff2f3a9e446c716c6e0889691819d4}
+
+
+Returns size of the stream. 
+
+\begin{DoxyReturn}{Returns}
+Buffer size. 
+\end{DoxyReturn}
+\hypertarget{class_common_1_1_byte_stream_a8ab16f23bce1e2cb0962761b9ac01be4}{\index{Common\-::\-Byte\-Stream@{Common\-::\-Byte\-Stream}!Write@{Write}}
+\index{Write@{Write}!Common::ByteStream@{Common\-::\-Byte\-Stream}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Byte\-Stream\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{buf, }
+\item[{size\-\_\-t}]{buf\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_common_1_1_byte_stream_a8ab16f23bce1e2cb0962761b9ac01be4}
+
+
+Adds the content of the buffer to the stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to read. \\
+\hline
+{\em buf\-Size} & Size of the given buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_common_1_1_output_stream}{Common\-::\-Output\-Stream}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Byte\-Stream.\-h\item 
+Common/Byte\-Stream.\-cpp\end{DoxyCompactItemize}

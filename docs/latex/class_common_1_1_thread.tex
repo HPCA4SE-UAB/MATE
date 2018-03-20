@@ -1,0 +1,88 @@
+\hypertarget{class_common_1_1_thread}{\section{Common\-:\-:Thread Class Reference}
+\label{class_common_1_1_thread}\index{Common\-::\-Thread@{Common\-::\-Thread}}
+}
+
+
+Posix thread.  
+
+
+
+
+{\ttfamily \#include $<$Thread.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_thread_ae672e8e879bc5c048e2f81da2f614186}{Thread} (void $\ast$($\ast$p\-Fun)(void $\ast$arg), void $\ast$p\-Arg)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_thread_a95ca11575b136f8ec0c6514d9a4bd8ae}{Wait\-For\-Death} ()
+\begin{DoxyCompactList}\small\item\em Waits for termination of the thread. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_thread_a8c7f228ddb28d902727c412c834dd2b5}{void \hyperlink{class_common_1_1_thread_a8c7f228ddb28d902727c412c834dd2b5}{Exit} ()}\label{class_common_1_1_thread_a8c7f228ddb28d902727c412c834dd2b5}
+
+\begin{DoxyCompactList}\small\item\em Stops the thread execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Posix thread. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_thread_ae672e8e879bc5c048e2f81da2f614186}{\index{Common\-::\-Thread@{Common\-::\-Thread}!Thread@{Thread}}
+\index{Thread@{Thread}!Common::Thread@{Common\-::\-Thread}}
+\subsubsection[{Thread}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-::\-Thread (
+\begin{DoxyParamCaption}
+\item[{void $\ast$($\ast$)(void $\ast$arg)}]{p\-Fun, }
+\item[{void $\ast$}]{p\-Arg}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_thread_ae672e8e879bc5c048e2f81da2f614186}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to the function to run. \\
+\hline
+{\em p\-Arg} & Pointer to the function arguments.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_thread_a95ca11575b136f8ec0c6514d9a4bd8ae}{\index{Common\-::\-Thread@{Common\-::\-Thread}!Wait\-For\-Death@{Wait\-For\-Death}}
+\index{Wait\-For\-Death@{Wait\-For\-Death}!Common::Thread@{Common\-::\-Thread}}
+\subsubsection[{Wait\-For\-Death}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-::\-Wait\-For\-Death (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_thread_a95ca11575b136f8ec0c6514d9a4bd8ae}
+
+
+Waits for termination of the thread. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Thread.\-h\item 
+Common/Thread.\-cpp\end{DoxyCompactItemize}

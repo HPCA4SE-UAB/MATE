@@ -1,0 +1,85 @@
+\hypertarget{class_shut_down_slave}{\section{Shut\-Down\-Slave Class Reference}
+\label{class_shut_down_slave}\index{Shut\-Down\-Slave@{Shut\-Down\-Slave}}
+}
+
+
+Receives terminating message from \hyperlink{class_analyzer}{Analyzer}.  
+
+
+
+
+{\ttfamily \#include $<$Shut\-Down\-Slave.\-h$>$}
+
+Inheritance diagram for Shut\-Down\-Slave\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shut_down_slave}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shut_down_slave_a6b9ed7eb17f4c5fe5d9620ede8d3bf67}{Shut\-Down\-Slave} (string analyzer\-Host, int analyzer\-Port, \hyperlink{class_controller}{Controller} ctrl)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_slave_a13304b7e12f219b1642c60c728994e4c}{virtual \hyperlink{class_shut_down_slave_a13304b7e12f219b1642c60c728994e4c}{$\sim$\-Shut\-Down\-Slave} ()}\label{class_shut_down_slave_a13304b7e12f219b1642c60c728994e4c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_slave_abbaebdf216523fcc036671281a7c71ec}{void \hyperlink{class_shut_down_slave_abbaebdf216523fcc036671281a7c71ec}{Run} ()}\label{class_shut_down_slave_abbaebdf216523fcc036671281a7c71ec}
+
+\begin{DoxyCompactList}\small\item\em Contains the main function to be run by the thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_shut_down_slave_a35e968c4c2ae77a228b0fc1a39b03fe0}{void \hyperlink{class_shut_down_slave_a35e968c4c2ae77a228b0fc1a39b03fe0}{Init\-Thread} ()}\label{class_shut_down_slave_a35e968c4c2ae77a228b0fc1a39b03fe0}
+
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\item 
+\hypertarget{class_shut_down_slave_ad4615bf7718a147274d9deaa01331af7}{void \hyperlink{class_shut_down_slave_ad4615bf7718a147274d9deaa01331af7}{Flush\-Thread} ()}\label{class_shut_down_slave_ad4615bf7718a147274d9deaa01331af7}
+
+\begin{DoxyCompactList}\small\item\em Not implemented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Receives terminating message from \hyperlink{class_analyzer}{Analyzer}. 
+
+Runs a thread that waits blocked for a message from the analyzer. When it receives this message the main loop in the controller is stopped, and subsequently the A\-C is terminated.
+
+Note\-: the tasks should be deleted at this point.
+
+\begin{DoxyVersion}{Version}
+1.\-1 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-1 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shut_down_slave_a6b9ed7eb17f4c5fe5d9620ede8d3bf67}{\index{Shut\-Down\-Slave@{Shut\-Down\-Slave}!Shut\-Down\-Slave@{Shut\-Down\-Slave}}
+\index{Shut\-Down\-Slave@{Shut\-Down\-Slave}!ShutDownSlave@{Shut\-Down\-Slave}}
+\subsubsection[{Shut\-Down\-Slave}]{\setlength{\rightskip}{0pt plus 5cm}Shut\-Down\-Slave\-::\-Shut\-Down\-Slave (
+\begin{DoxyParamCaption}
+\item[{string}]{analyzer\-Host, }
+\item[{int}]{analyzer\-Port, }
+\item[{{\bf Controller}}]{ctrl}
+\end{DoxyParamCaption}
+)}}\label{class_shut_down_slave_a6b9ed7eb17f4c5fe5d9620ede8d3bf67}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em analyzer\-Host} & Host in which the \hyperlink{class_analyzer}{Analyzer} is running. \\
+\hline
+{\em analyzer\-Port} & Port through which the connection will happen. \\
+\hline
+{\em ctrl} & \hyperlink{class_controller}{Controller} object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Shut\-Down\-Slave.\-h\item 
+A\-C/Shut\-Down\-Slave.\-cpp\end{DoxyCompactItemize}

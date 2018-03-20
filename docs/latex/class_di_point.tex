@@ -1,0 +1,121 @@
+\hypertarget{class_di_point}{\section{Di\-Point Class Reference}
+\label{class_di_point}\index{Di\-Point@{Di\-Point}}
+}
+
+
+Dyninst's point class. An object of this class represents a location in an application's code at which \hyperlink{class_dyn_inst}{Dyn\-Inst} can insert instrumentation.  
+
+
+
+
+{\ttfamily \#include $<$di.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_di_point_a0cb0a2a951b711f680f51d7ca6719a83}{Di\-Point} (B\-Patch\-\_\-image \&bp\-Image, string const \&proc\-Name, B\-Patch\-\_\-procedure\-Location loc=B\-Patch\-\_\-entry)
+\begin{DoxyCompactList}\small\item\em Finds the given location in the function with a given name. \end{DoxyCompactList}\item 
+void \hyperlink{class_di_point_ad4a55eb8bb7e86dacfb443f7d374e3d0}{Get\-Called\-Func\-Name} (char $\ast$buf, int size)
+\begin{DoxyCompactList}\small\item\em Getter of the current function name. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_di_point_ae15f39a73445e20c48d120a43527d354}{Get\-Address} ()
+\begin{DoxyCompactList}\small\item\em Getter of the current address. \end{DoxyCompactList}\item 
+\hypertarget{class_di_point_a51d22da20645cfd7f51552ac73628032}{{\bfseries operator Point\-Vector \&} ()}\label{class_di_point_a51d22da20645cfd7f51552ac73628032}
+
+\item 
+Point\-Vector \& \hyperlink{class_di_point_a592e02eeeb615a57729cb54c9b8cc19b}{get\-Points} ()
+\begin{DoxyCompactList}\small\item\em \-\_\-bp\-Points getter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dyninst's point class. An object of this class represents a location in an application's code at which \hyperlink{class_dyn_inst}{Dyn\-Inst} can insert instrumentation. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_di_point_a0cb0a2a951b711f680f51d7ca6719a83}{\index{Di\-Point@{Di\-Point}!Di\-Point@{Di\-Point}}
+\index{Di\-Point@{Di\-Point}!DiPoint@{Di\-Point}}
+\subsubsection[{Di\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Di\-Point\-::\-Di\-Point (
+\begin{DoxyParamCaption}
+\item[{B\-Patch\-\_\-image \&}]{bp\-Image, }
+\item[{string const \&}]{proc\-Name, }
+\item[{B\-Patch\-\_\-procedure\-Location}]{loc = {\ttfamily BPatch\-\_\-entry}}
+\end{DoxyParamCaption}
+)}}\label{class_di_point_a0cb0a2a951b711f680f51d7ca6719a83}
+
+
+Finds the given location in the function with a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bp\-Image} & B\-Patch Image of the program \\
+\hline
+{\em proc\-Name} & Process Name \\
+\hline
+{\em loc} & Location \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_di_point_ae15f39a73445e20c48d120a43527d354}{\index{Di\-Point@{Di\-Point}!Get\-Address@{Get\-Address}}
+\index{Get\-Address@{Get\-Address}!DiPoint@{Di\-Point}}
+\subsubsection[{Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Di\-Point\-::\-Get\-Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_di_point_ae15f39a73445e20c48d120a43527d354}
+
+
+Getter of the current address. 
+
+\begin{DoxyReturn}{Returns}
+address 
+\end{DoxyReturn}
+\hypertarget{class_di_point_ad4a55eb8bb7e86dacfb443f7d374e3d0}{\index{Di\-Point@{Di\-Point}!Get\-Called\-Func\-Name@{Get\-Called\-Func\-Name}}
+\index{Get\-Called\-Func\-Name@{Get\-Called\-Func\-Name}!DiPoint@{Di\-Point}}
+\subsubsection[{Get\-Called\-Func\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Di\-Point\-::\-Get\-Called\-Func\-Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_di_point_ad4a55eb8bb7e86dacfb443f7d374e3d0}
+
+
+Getter of the current function name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Returned name \\
+\hline
+{\em size} & Max length of the buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_di_point_a592e02eeeb615a57729cb54c9b8cc19b}{\index{Di\-Point@{Di\-Point}!get\-Points@{get\-Points}}
+\index{get\-Points@{get\-Points}!DiPoint@{Di\-Point}}
+\subsubsection[{get\-Points}]{\setlength{\rightskip}{0pt plus 5cm}Point\-Vector\& Di\-Point\-::get\-Points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_di_point_a592e02eeeb615a57729cb54c9b8cc19b}
+
+
+\-\_\-bp\-Points getter 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-bp\-Points 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/di.\-h\item 
+Common/di.\-cpp\end{DoxyCompactItemize}

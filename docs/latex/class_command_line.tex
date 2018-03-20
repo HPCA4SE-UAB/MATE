@@ -1,0 +1,337 @@
+\hypertarget{class_command_line}{\section{Command\-Line Class Reference}
+\label{class_command_line}\index{Command\-Line@{Command\-Line}}
+}
+
+
+Encapsulates methods to interact with the user of analyzer. Basically reads the arguments of the analyzer and parses them to get the configuration file and the objective application with its parameters. Once read, encapsulates the information and provides accessors to it. There are two formats \hyperlink{class_analyzer}{Analyzer} can be called\-:  
+
+
+
+
+{\ttfamily \#include $<$cmdline.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}{\hyperlink{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}{Command\-Line} (int argc, char $\ast$$\ast$argv)}\label{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_command_line_a6651a1fa1136fef801c262e9801ea419}{Is\-Ok} () const 
+\begin{DoxyCompactList}\small\item\em Returns the value of \-\_\-is\-Ok. \end{DoxyCompactList}\item 
+int \hyperlink{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}{Get\-Argc} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-argc variable. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{class_command_line_a5e82914e4fc19968843cbaec712f627c}{Get\-Argv} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-argv variable. \end{DoxyCompactList}\item 
+int \hyperlink{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}{Get\-App\-Argc} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-app\-Argc variable. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_command_line_ade0b4faec1c6c947cbe3cd1d8da563ef}{Get\-App\-Path} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-app\-Path variable. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{class_command_line_ad0632810d7d2b73f7f362f419d2c58fa}{Get\-App\-Argv} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-app\-Argv variable. \end{DoxyCompactList}\item 
+bool \hyperlink{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}{Has\-Config} () const 
+\begin{DoxyCompactList}\small\item\em Checks if there's a path for the configuration file, if not returns 0. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_command_line_af0398729ceaef3b9660915eb7ae730b8}{Get\-Config\-File\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter for the \-\_\-config\-File variable. \end{DoxyCompactList}\item 
+\hypertarget{class_command_line_a6709a77ba7fc2d93e79526583481616b}{void \hyperlink{class_command_line_a6709a77ba7fc2d93e79526583481616b}{Display\-Help} () const }\label{class_command_line_a6709a77ba7fc2d93e79526583481616b}
+
+\begin{DoxyCompactList}\small\item\em Prints help message on the terminal. Tells the user how to introduce the necessary arguments. \end{DoxyCompactList}\item 
+\hyperlink{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}{Command\-Line} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Constructor, parses the arguments provided to analyzer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_command_line_a6651a1fa1136fef801c262e9801ea419}{Is\-Ok} () const 
+\begin{DoxyCompactList}\small\item\em Status of the arguments getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}{Get\-Argc} () const 
+\begin{DoxyCompactList}\small\item\em Number of arguments getter. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{class_command_line_a5e82914e4fc19968843cbaec712f627c}{Get\-Argv} () const 
+\begin{DoxyCompactList}\small\item\em Arguments getter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}{Has\-Config} () const 
+\begin{DoxyCompactList}\small\item\em Determines if the user has chosen his own configuration file. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_command_line_a3f0aaa56fbbb79af92d4d91d853ea23c}{Get\-Config\-File} () const 
+\begin{DoxyCompactList}\small\item\em Configuration file getter. \end{DoxyCompactList}\item 
+char const $\ast$ \hyperlink{class_command_line_a75d2c3e1757396de574c1375526a3f3f}{Get\-App\-Path} () const 
+\begin{DoxyCompactList}\small\item\em Application path getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}{Get\-App\-Argc} () const 
+\begin{DoxyCompactList}\small\item\em Application number of arguments getter. \end{DoxyCompactList}\item 
+char const $\ast$$\ast$ \hyperlink{class_command_line_a96c4896292425152d4200ff2a6821c22}{Get\-App\-Argv} () const 
+\begin{DoxyCompactList}\small\item\em Application arguments getter. \end{DoxyCompactList}\item 
+\hypertarget{class_command_line_a6709a77ba7fc2d93e79526583481616b}{void \hyperlink{class_command_line_a6709a77ba7fc2d93e79526583481616b}{Display\-Help} () const }\label{class_command_line_a6709a77ba7fc2d93e79526583481616b}
+
+\begin{DoxyCompactList}\small\item\em Explains the user which arguments can be provided to analyzer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates methods to interact with the user of analyzer. Basically reads the arguments of the analyzer and parses them to get the configuration file and the objective application with its parameters. Once read, encapsulates the information and provides accessors to it. There are two formats \hyperlink{class_analyzer}{Analyzer} can be called\-: 
+
+Checks for the necessary data in the arguments passed to main and parses them.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{class_analyzer}{Analyzer} $<$\-App\-Path$>$ \mbox{[}$<$\-App\-Args$>$\mbox{]}  
+\item \hyperlink{class_analyzer}{Analyzer} -\/config file.\-ini $<$\-App$>$ \mbox{[}$<$\-App\-Args$>$\mbox{]}  
+\end{DoxyItemize}
+
+Notes
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}{\index{Command\-Line@{Command\-Line}!Command\-Line@{Command\-Line}}
+\index{Command\-Line@{Command\-Line}!CommandLine@{Command\-Line}}
+\subsubsection[{Command\-Line}]{\setlength{\rightskip}{0pt plus 5cm}Command\-Line\-::\-Command\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a60e98cded6040cc7ba4ad64361809ddd}
+
+
+Constructor, parses the arguments provided to analyzer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number of arguments for analyzer \\
+\hline
+{\em argv} & arguments for analyzer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}{\index{Command\-Line@{Command\-Line}!Get\-App\-Argc@{Get\-App\-Argc}}
+\index{Get\-App\-Argc@{Get\-App\-Argc}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Argc}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Line\-::\-Get\-App\-Argc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}
+
+
+Getter for the \-\_\-app\-Argc variable. 
+
+\begin{DoxyReturn}{Returns}
+Size of the arguments vector for the app. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}{\index{Command\-Line@{Command\-Line}!Get\-App\-Argc@{Get\-App\-Argc}}
+\index{Get\-App\-Argc@{Get\-App\-Argc}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Argc}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Line\-::\-Get\-App\-Argc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_ac420a15eac8608dd0eacf36e8e09e913}
+
+
+Application number of arguments getter. 
+
+\begin{DoxyReturn}{Returns}
+The number of arguments of the target application. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_ad0632810d7d2b73f7f362f419d2c58fa}{\index{Command\-Line@{Command\-Line}!Get\-App\-Argv@{Get\-App\-Argv}}
+\index{Get\-App\-Argv@{Get\-App\-Argv}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Argv}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ Command\-Line\-::\-Get\-App\-Argv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_ad0632810d7d2b73f7f362f419d2c58fa}
+
+
+Getter for the \-\_\-app\-Argv variable. 
+
+\begin{DoxyReturn}{Returns}
+Vector that contains the app's arguments. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a96c4896292425152d4200ff2a6821c22}{\index{Command\-Line@{Command\-Line}!Get\-App\-Argv@{Get\-App\-Argv}}
+\index{Get\-App\-Argv@{Get\-App\-Argv}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Argv}]{\setlength{\rightskip}{0pt plus 5cm}char const$\ast$$\ast$ Command\-Line\-::\-Get\-App\-Argv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a96c4896292425152d4200ff2a6821c22}
+
+
+Application arguments getter. 
+
+\begin{DoxyReturn}{Returns}
+The arguments of the target application. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_ade0b4faec1c6c947cbe3cd1d8da563ef}{\index{Command\-Line@{Command\-Line}!Get\-App\-Path@{Get\-App\-Path}}
+\index{Get\-App\-Path@{Get\-App\-Path}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Path}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Command\-Line\-::\-Get\-App\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_ade0b4faec1c6c947cbe3cd1d8da563ef}
+
+
+Getter for the \-\_\-app\-Path variable. 
+
+\begin{DoxyReturn}{Returns}
+Path to the executable of the app. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a75d2c3e1757396de574c1375526a3f3f}{\index{Command\-Line@{Command\-Line}!Get\-App\-Path@{Get\-App\-Path}}
+\index{Get\-App\-Path@{Get\-App\-Path}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-App\-Path}]{\setlength{\rightskip}{0pt plus 5cm}char const$\ast$ Command\-Line\-::\-Get\-App\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a75d2c3e1757396de574c1375526a3f3f}
+
+
+Application path getter. 
+
+\begin{DoxyReturn}{Returns}
+The path of the target application. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}{\index{Command\-Line@{Command\-Line}!Get\-Argc@{Get\-Argc}}
+\index{Get\-Argc@{Get\-Argc}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Argc}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Line\-::\-Get\-Argc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}
+
+
+Getter for the \-\_\-argc variable. 
+
+\begin{DoxyReturn}{Returns}
+Size of the vector of arguments. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}{\index{Command\-Line@{Command\-Line}!Get\-Argc@{Get\-Argc}}
+\index{Get\-Argc@{Get\-Argc}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Argc}]{\setlength{\rightskip}{0pt plus 5cm}int Command\-Line\-::\-Get\-Argc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a5f3c2a10763e81dc91dfa2b8affbb1c7}
+
+
+Number of arguments getter. 
+
+\begin{DoxyReturn}{Returns}
+The number of arguments provided to analyzer. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a5e82914e4fc19968843cbaec712f627c}{\index{Command\-Line@{Command\-Line}!Get\-Argv@{Get\-Argv}}
+\index{Get\-Argv@{Get\-Argv}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Argv}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ Command\-Line\-::\-Get\-Argv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a5e82914e4fc19968843cbaec712f627c}
+
+
+Getter for the \-\_\-argv variable. 
+
+\begin{DoxyReturn}{Returns}
+Vector of arguments. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a5e82914e4fc19968843cbaec712f627c}{\index{Command\-Line@{Command\-Line}!Get\-Argv@{Get\-Argv}}
+\index{Get\-Argv@{Get\-Argv}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Argv}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ Command\-Line\-::\-Get\-Argv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a5e82914e4fc19968843cbaec712f627c}
+
+
+Arguments getter. 
+
+\begin{DoxyReturn}{Returns}
+The arguments provided to analyzer. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a3f0aaa56fbbb79af92d4d91d853ea23c}{\index{Command\-Line@{Command\-Line}!Get\-Config\-File@{Get\-Config\-File}}
+\index{Get\-Config\-File@{Get\-Config\-File}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Config\-File}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Command\-Line\-::\-Get\-Config\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a3f0aaa56fbbb79af92d4d91d853ea23c}
+
+
+Configuration file getter. 
+
+\begin{DoxyReturn}{Returns}
+The configuration file of \hyperlink{class_analyzer}{Analyzer}. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_af0398729ceaef3b9660915eb7ae730b8}{\index{Command\-Line@{Command\-Line}!Get\-Config\-File\-Name@{Get\-Config\-File\-Name}}
+\index{Get\-Config\-File\-Name@{Get\-Config\-File\-Name}!CommandLine@{Command\-Line}}
+\subsubsection[{Get\-Config\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Command\-Line\-::\-Get\-Config\-File\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_af0398729ceaef3b9660915eb7ae730b8}
+
+
+Getter for the \-\_\-config\-File variable. 
+
+\begin{DoxyReturn}{Returns}
+Path for the configuration file. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}{\index{Command\-Line@{Command\-Line}!Has\-Config@{Has\-Config}}
+\index{Has\-Config@{Has\-Config}!CommandLine@{Command\-Line}}
+\subsubsection[{Has\-Config}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\-Line\-::\-Has\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}
+
+
+Determines if the user has chosen his own configuration file. 
+
+\begin{DoxyReturn}{Returns}
+If the user provided a specific configuration file. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}{\index{Command\-Line@{Command\-Line}!Has\-Config@{Has\-Config}}
+\index{Has\-Config@{Has\-Config}!CommandLine@{Command\-Line}}
+\subsubsection[{Has\-Config}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\-Line\-::\-Has\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a1ef3920d53a63e97dbc3c823b1bf5060}
+
+
+Checks if there's a path for the configuration file, if not returns 0. 
+
+\begin{DoxyReturn}{Returns}
+Path for the configuration file. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a6651a1fa1136fef801c262e9801ea419}{\index{Command\-Line@{Command\-Line}!Is\-Ok@{Is\-Ok}}
+\index{Is\-Ok@{Is\-Ok}!CommandLine@{Command\-Line}}
+\subsubsection[{Is\-Ok}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\-Line\-::\-Is\-Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a6651a1fa1136fef801c262e9801ea419}
+
+
+Returns the value of \-\_\-is\-Ok. 
+
+\begin{DoxyReturn}{Returns}
+Boolean variable that is true if the configuration has been parsed correctly. 
+\end{DoxyReturn}
+\hypertarget{class_command_line_a6651a1fa1136fef801c262e9801ea419}{\index{Command\-Line@{Command\-Line}!Is\-Ok@{Is\-Ok}}
+\index{Is\-Ok@{Is\-Ok}!CommandLine@{Command\-Line}}
+\subsubsection[{Is\-Ok}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\-Line\-::\-Is\-Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_command_line_a6651a1fa1136fef801c262e9801ea419}
+
+
+Status of the arguments getter. 
+
+\begin{DoxyReturn}{Returns}
+if the arguments provided to analyzer are correct or not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/cmdline.\-h\item 
+Analyzer/cmdline.\-h\end{DoxyCompactItemize}

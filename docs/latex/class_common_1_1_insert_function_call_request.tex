@@ -1,0 +1,108 @@
+\hypertarget{class_common_1_1_insert_function_call_request}{\section{Common\-:\-:Insert\-Function\-Call\-Request Class Reference}
+\label{class_common_1_1_insert_function_call_request}\index{Common\-::\-Insert\-Function\-Call\-Request@{Common\-::\-Insert\-Function\-Call\-Request}}
+}
+
+
+Encapsulates a tuning request to insert a new function invocation code with a specified attributes at a given location in an application process.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Msg.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Insert\-Function\-Call\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_common_1_1_insert_function_call_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_insert_function_call_request_afa5cae0e9adb14835c8afcca958454aa}{Insert\-Function\-Call\-Request} (int pid=0, std\-::string const \&func\-Name=std\-::string(), int n\-Attrs=0, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs=0, std\-::string const \&dest\-Func=std\-::string(), Instr\-Place place=ip\-Func\-Entry, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_a0218e230b6e09b5cd8cba72940d716a7}{\hyperlink{class_common_1_1_insert_function_call_request_a0218e230b6e09b5cd8cba72940d716a7}{$\sim$\-Insert\-Function\-Call\-Request} ()}\label{class_common_1_1_insert_function_call_request_a0218e230b6e09b5cd8cba72940d716a7}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_ab421754e776375ae71ffebec5489999d}{P\-T\-P\-Msg\-Type \hyperlink{class_common_1_1_insert_function_call_request_ab421754e776375ae71ffebec5489999d}{Get\-Type} () const }\label{class_common_1_1_insert_function_call_request_ab421754e776375ae71ffebec5489999d}
+
+\begin{DoxyCompactList}\small\item\em Returns type of message (P\-T\-P\-Insert\-Func\-Call). \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_a019fbc8dad4649cd2ead98062b7abd69}{std\-::string const \& \hyperlink{class_common_1_1_insert_function_call_request_a019fbc8dad4649cd2ead98062b7abd69}{Get\-Func\-Name} () const }\label{class_common_1_1_insert_function_call_request_a019fbc8dad4649cd2ead98062b7abd69}
+
+\begin{DoxyCompactList}\small\item\em Returns name of the function to add. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_a1a23474cd80797817bb90e422f1b083f}{int \hyperlink{class_common_1_1_insert_function_call_request_a1a23474cd80797817bb90e422f1b083f}{Get\-Attr\-Count} () const }\label{class_common_1_1_insert_function_call_request_a1a23474cd80797817bb90e422f1b083f}
+
+\begin{DoxyCompactList}\small\item\em Returns number of attributes the function has. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_aa74cefa1bcb949dafec52a1786be88ce}{\hyperlink{class_common_1_1_attribute}{Attribute} $\ast$ \hyperlink{class_common_1_1_insert_function_call_request_aa74cefa1bcb949dafec52a1786be88ce}{Get\-Attributes} () const }\label{class_common_1_1_insert_function_call_request_aa74cefa1bcb949dafec52a1786be88ce}
+
+\begin{DoxyCompactList}\small\item\em Returns array of attributes. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_aa7bcff019a95a70e4c4e7816cc2e0050}{std\-::string const \& \hyperlink{class_common_1_1_insert_function_call_request_aa7bcff019a95a70e4c4e7816cc2e0050}{Get\-Dest\-Func} () const }\label{class_common_1_1_insert_function_call_request_aa7bcff019a95a70e4c4e7816cc2e0050}
+
+\begin{DoxyCompactList}\small\item\em Returns name of the function where the call will be added. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_af1f4d5592bebe033b790c3bae1c801a0}{Instr\-Place \hyperlink{class_common_1_1_insert_function_call_request_af1f4d5592bebe033b790c3bae1c801a0}{Get\-Instr\-Place} () const }\label{class_common_1_1_insert_function_call_request_af1f4d5592bebe033b790c3bae1c801a0}
+
+\begin{DoxyCompactList}\small\item\em Returns the place where the call will be added. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_af966bad75d6161fefd2683ff82504d74}{void \hyperlink{class_common_1_1_insert_function_call_request_af966bad75d6161fefd2683ff82504d74}{Serialize} (\hyperlink{class_common_1_1_serializer}{Serializer} \&out) const }\label{class_common_1_1_insert_function_call_request_af966bad75d6161fefd2683ff82504d74}
+
+\begin{DoxyCompactList}\small\item\em Sends the message. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_insert_function_call_request_a84571a179ad526574049a45066226171}{void \hyperlink{class_common_1_1_insert_function_call_request_a84571a179ad526574049a45066226171}{De\-Serialize} (\hyperlink{class_common_1_1_de_serializer}{De\-Serializer} \&in)}\label{class_common_1_1_insert_function_call_request_a84571a179ad526574049a45066226171}
+
+\begin{DoxyCompactList}\small\item\em Receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Encapsulates a tuning request to insert a new function invocation code with a specified attributes at a given location in an application process. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2003 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_insert_function_call_request_afa5cae0e9adb14835c8afcca958454aa}{\index{Common\-::\-Insert\-Function\-Call\-Request@{Common\-::\-Insert\-Function\-Call\-Request}!Insert\-Function\-Call\-Request@{Insert\-Function\-Call\-Request}}
+\index{Insert\-Function\-Call\-Request@{Insert\-Function\-Call\-Request}!Common::InsertFunctionCallRequest@{Common\-::\-Insert\-Function\-Call\-Request}}
+\subsubsection[{Insert\-Function\-Call\-Request}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Insert\-Function\-Call\-Request\-::\-Insert\-Function\-Call\-Request (
+\begin{DoxyParamCaption}
+\item[{int}]{pid = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{func\-Name = {\ttfamily std\-:\-:string()}, }
+\item[{int}]{n\-Attrs = {\ttfamily 0}, }
+\item[{{\bf Attribute} $\ast$}]{attrs = {\ttfamily 0}, }
+\item[{std\-::string const \&}]{dest\-Func = {\ttfamily std\-:\-:string()}, }
+\item[{Instr\-Place}]{place = {\ttfamily ipFuncEntry}, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_insert_function_call_request_afa5cae0e9adb14835c8afcca958454aa}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Id of the process where the call will be inserted, default 0. \\
+\hline
+{\em func\-Name} & Name of the function to call, default \char`\"{}\char`\"{}. \\
+\hline
+{\em n\-Attrs} & Number of attributes the function has, default 0. \\
+\hline
+{\em attrs} & \hyperlink{class_common_1_1_attribute}{Attribute} array, default 0. \\
+\hline
+{\em dest\-Func} & Function where the call will be inserted, default \char`\"{}\char`\"{}. \\
+\hline
+{\em place} & Place where the call will be added, default ip\-Func\-Entry. \\
+\hline
+{\em brkpt} & Used for synchronization purposes, the actual tuning will be executed when the execution reaches the breakpoint, default 0. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/P\-T\-P\-Msg.\-h\item 
+Common/P\-T\-P\-Msg.\-cpp\end{DoxyCompactItemize}

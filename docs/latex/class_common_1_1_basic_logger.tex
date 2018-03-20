@@ -1,0 +1,84 @@
+\hypertarget{class_common_1_1_basic_logger}{\section{Common\-:\-:Basic\-Logger Class Reference}
+\label{class_common_1_1_basic_logger}\index{Common\-::\-Basic\-Logger@{Common\-::\-Basic\-Logger}}
+}
+
+
+Stores information of events in a system.  
+
+
+
+
+{\ttfamily \#include $<$Syslog.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Basic\-Logger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_basic_logger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_basic_logger_ad36be68b705a5e866efb7e82edb40861}{\hyperlink{class_common_1_1_basic_logger_ad36be68b705a5e866efb7e82edb40861}{Basic\-Logger} ()}\label{class_common_1_1_basic_logger_ad36be68b705a5e866efb7e82edb40861}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_basic_logger_a70a3db86ad742d5f444722825b8fb8cc}{void \hyperlink{class_common_1_1_basic_logger_a70a3db86ad742d5f444722825b8fb8cc}{Set\-Filter} (Log\-Filter\-Ptr \&filter)}\label{class_common_1_1_basic_logger_a70a3db86ad742d5f444722825b8fb8cc}
+
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_common_1_1_log_filter}{Log\-Filter} to be used by the logger. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_basic_logger_ab65a233cdf5b7bb8c1e4f4c031207d92}{\hyperlink{class_common_1_1_log_filter}{Log\-Filter} const $\ast$ \hyperlink{class_common_1_1_basic_logger_ab65a233cdf5b7bb8c1e4f4c031207d92}{Get\-Filter} () const }\label{class_common_1_1_basic_logger_ab65a233cdf5b7bb8c1e4f4c031207d92}
+
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_common_1_1_log_filter}{Log\-Filter} the logger uses. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_basic_logger_ab5fd74a36a2c1ac3147c60cb1baf94f2}{void \hyperlink{class_common_1_1_basic_logger_ab5fd74a36a2c1ac3147c60cb1baf94f2}{Set\-Formatter} (Log\-Formatter\-Ptr \&formatter)}\label{class_common_1_1_basic_logger_ab5fd74a36a2c1ac3147c60cb1baf94f2}
+
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_common_1_1_log_formatter}{Log\-Formatter} to be used by the logger. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_basic_logger_a682266d982b8b8b10958dbbfbdaa40bc}{\hyperlink{class_common_1_1_log_formatter}{Log\-Formatter} const $\ast$ \hyperlink{class_common_1_1_basic_logger_a682266d982b8b8b10958dbbfbdaa40bc}{Get\-Formatter} () const }\label{class_common_1_1_basic_logger_a682266d982b8b8b10958dbbfbdaa40bc}
+
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_common_1_1_log_formatter}{Log\-Formatter} the logger uses. \end{DoxyCompactList}\item 
+bool \hyperlink{class_common_1_1_basic_logger_af9c0305a3341255bf7360be4f8f582c8}{Accept} (\hyperlink{class_common_1_1_log_entry}{Log\-Entry} const \&entry) const 
+\begin{DoxyCompactList}\small\item\em Inserts an entry to the log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_common_1_1_basic_logger_a9d99b4bb0e48f2b4e8ebbb552f3776d3}{Log\-Filter\-Ptr {\bfseries \-\_\-filter}}\label{class_common_1_1_basic_logger_a9d99b4bb0e48f2b4e8ebbb552f3776d3}
+
+\item 
+\hypertarget{class_common_1_1_basic_logger_a0642371048e5855fa99b1392b0b52ccd}{Log\-Formatter\-Ptr {\bfseries \-\_\-formatter}}\label{class_common_1_1_basic_logger_a0642371048e5855fa99b1392b0b52ccd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores information of events in a system. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_basic_logger_af9c0305a3341255bf7360be4f8f582c8}{\index{Common\-::\-Basic\-Logger@{Common\-::\-Basic\-Logger}!Accept@{Accept}}
+\index{Accept@{Accept}!Common::BasicLogger@{Common\-::\-Basic\-Logger}}
+\subsubsection[{Accept}]{\setlength{\rightskip}{0pt plus 5cm}bool Basic\-Logger\-::\-Accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Log\-Entry} const \&}]{entry}
+\end{DoxyParamCaption}
+) const}}\label{class_common_1_1_basic_logger_af9c0305a3341255bf7360be4f8f582c8}
+
+
+Inserts an entry to the log. 
+
+\begin{DoxyReturn}{Returns}
+True if the insert was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Syslog.\-h\item 
+Common/Syslog.\-cpp\end{DoxyCompactItemize}

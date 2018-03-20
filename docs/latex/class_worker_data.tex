@@ -1,0 +1,183 @@
+\hypertarget{class_worker_data}{\section{Worker\-Data Class Reference}
+\label{class_worker_data}\index{Worker\-Data@{Worker\-Data}}
+}
+
+
+Worker task statistics for a single batch.  
+
+
+
+
+{\ttfamily \#include $<$Factoring\-Stats\-\_\-nw.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_worker_data_a4acd585cf229475a925d7ca233a7716b}{\hyperlink{class_worker_data_a4acd585cf229475a925d7ca233a7716b}{Worker\-Data} ()}\label{class_worker_data_a4acd585cf229475a925d7ca233a7716b}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_worker_data_a7cdf820edb4a35a187b44867338df081}{On\-Calc\-Start} (long\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Sets the calculation start time. \end{DoxyCompactList}\item 
+void \hyperlink{class_worker_data_affaf7d4d2752b5ab9403a5ce4261d822}{On\-Calc\-End} (long\-\_\-t time)
+\begin{DoxyCompactList}\small\item\em Asserts that the final time is greater than the starting one, computes the elapsed time in milliseconds and sets the flag \-\_\-taken to 1. \end{DoxyCompactList}\item 
+bool \hyperlink{class_worker_data_a716d46f32ef6985c8d2a826730af3c11}{Is\-Complete} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_worker_data}{Worker\-Data} is complete. \end{DoxyCompactList}\item 
+int \hyperlink{class_worker_data_a883ef301ef48a0c31ad8a2d36386bdfa}{Get\-Num\-Processed\-Tuples} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the total number of tasks received. \end{DoxyCompactList}\item 
+int \hyperlink{class_worker_data_aba89b2bee47cb61a3811e7fd877108f4}{Get\-Size\-Processed\-Tuples} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the task size in bytes. \end{DoxyCompactList}\item 
+double \hyperlink{class_worker_data_a793c237b9158128a0db751f49bbaa6fa}{Get\-Total\-Calc\-Time} () const 
+\begin{DoxyCompactList}\small\item\em Getter of the total computing time in ms. \end{DoxyCompactList}\item 
+void \hyperlink{class_worker_data_a40a184b4e5b1a9a57577daf10add3e62}{On\-Tuple\-Start} (int n\-Tuples, int size\-Bytes)
+\begin{DoxyCompactList}\small\item\em Initializes the tuple by setting the number of tasks received to n\-Tuples and the size of the tasks to size\-Bytes. It also sets the flag \-\_\-initialized to 1. \end{DoxyCompactList}\item 
+bool \hyperlink{class_worker_data_ad30bae5ff3a1e6733f717e946986e317}{Is\-Taken} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of the \-\_\-taken flag. \end{DoxyCompactList}\item 
+bool \hyperlink{class_worker_data_ad2707a458175f985692153c5edb0f839}{Is\-Initialized} ()
+\begin{DoxyCompactList}\small\item\em Returns if the task has been initialized or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Worker task statistics for a single batch. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_worker_data_a883ef301ef48a0c31ad8a2d36386bdfa}{\index{Worker\-Data@{Worker\-Data}!Get\-Num\-Processed\-Tuples@{Get\-Num\-Processed\-Tuples}}
+\index{Get\-Num\-Processed\-Tuples@{Get\-Num\-Processed\-Tuples}!WorkerData@{Worker\-Data}}
+\subsubsection[{Get\-Num\-Processed\-Tuples}]{\setlength{\rightskip}{0pt plus 5cm}int Worker\-Data\-::\-Get\-Num\-Processed\-Tuples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_a883ef301ef48a0c31ad8a2d36386bdfa}
+
+
+Getter of the total number of tasks received. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-n\-Num\-Task\-Received 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_aba89b2bee47cb61a3811e7fd877108f4}{\index{Worker\-Data@{Worker\-Data}!Get\-Size\-Processed\-Tuples@{Get\-Size\-Processed\-Tuples}}
+\index{Get\-Size\-Processed\-Tuples@{Get\-Size\-Processed\-Tuples}!WorkerData@{Worker\-Data}}
+\subsubsection[{Get\-Size\-Processed\-Tuples}]{\setlength{\rightskip}{0pt plus 5cm}int Worker\-Data\-::\-Get\-Size\-Processed\-Tuples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_aba89b2bee47cb61a3811e7fd877108f4}
+
+
+Getter of the task size in bytes. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-size\-Task\-Bytes 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_a793c237b9158128a0db751f49bbaa6fa}{\index{Worker\-Data@{Worker\-Data}!Get\-Total\-Calc\-Time@{Get\-Total\-Calc\-Time}}
+\index{Get\-Total\-Calc\-Time@{Get\-Total\-Calc\-Time}!WorkerData@{Worker\-Data}}
+\subsubsection[{Get\-Total\-Calc\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double Worker\-Data\-::\-Get\-Total\-Calc\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_a793c237b9158128a0db751f49bbaa6fa}
+
+
+Getter of the total computing time in ms. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-\-Computing\-Time\-Ms 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_a716d46f32ef6985c8d2a826730af3c11}{\index{Worker\-Data@{Worker\-Data}!Is\-Complete@{Is\-Complete}}
+\index{Is\-Complete@{Is\-Complete}!WorkerData@{Worker\-Data}}
+\subsubsection[{Is\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Data\-::\-Is\-Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_a716d46f32ef6985c8d2a826730af3c11}
+
+
+Checks if the \hyperlink{class_worker_data}{Worker\-Data} is complete. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if the start and end calc times are greater than 0 and if the worker was initialized 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_ad2707a458175f985692153c5edb0f839}{\index{Worker\-Data@{Worker\-Data}!Is\-Initialized@{Is\-Initialized}}
+\index{Is\-Initialized@{Is\-Initialized}!WorkerData@{Worker\-Data}}
+\subsubsection[{Is\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Data\-::\-Is\-Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_ad2707a458175f985692153c5edb0f839}
+
+
+Returns if the task has been initialized or not. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-initialized 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_ad30bae5ff3a1e6733f717e946986e317}{\index{Worker\-Data@{Worker\-Data}!Is\-Taken@{Is\-Taken}}
+\index{Is\-Taken@{Is\-Taken}!WorkerData@{Worker\-Data}}
+\subsubsection[{Is\-Taken}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Data\-::\-Is\-Taken (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_worker_data_ad30bae5ff3a1e6733f717e946986e317}
+
+
+Returns the value of the \-\_\-taken flag. 
+
+\begin{DoxyReturn}{Returns}
+\-\_\-taken 
+\end{DoxyReturn}
+\hypertarget{class_worker_data_affaf7d4d2752b5ab9403a5ce4261d822}{\index{Worker\-Data@{Worker\-Data}!On\-Calc\-End@{On\-Calc\-End}}
+\index{On\-Calc\-End@{On\-Calc\-End}!WorkerData@{Worker\-Data}}
+\subsubsection[{On\-Calc\-End}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Data\-::\-On\-Calc\-End (
+\begin{DoxyParamCaption}
+\item[{long\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_worker_data_affaf7d4d2752b5ab9403a5ce4261d822}
+
+
+Asserts that the final time is greater than the starting one, computes the elapsed time in milliseconds and sets the flag \-\_\-taken to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Final time of computation \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_worker_data_a7cdf820edb4a35a187b44867338df081}{\index{Worker\-Data@{Worker\-Data}!On\-Calc\-Start@{On\-Calc\-Start}}
+\index{On\-Calc\-Start@{On\-Calc\-Start}!WorkerData@{Worker\-Data}}
+\subsubsection[{On\-Calc\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Data\-::\-On\-Calc\-Start (
+\begin{DoxyParamCaption}
+\item[{long\-\_\-t}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_worker_data_a7cdf820edb4a35a187b44867338df081}
+
+
+Sets the calculation start time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time to start in ms \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_worker_data_a40a184b4e5b1a9a57577daf10add3e62}{\index{Worker\-Data@{Worker\-Data}!On\-Tuple\-Start@{On\-Tuple\-Start}}
+\index{On\-Tuple\-Start@{On\-Tuple\-Start}!WorkerData@{Worker\-Data}}
+\subsubsection[{On\-Tuple\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Data\-::\-On\-Tuple\-Start (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Tuples, }
+\item[{int}]{size\-Bytes}
+\end{DoxyParamCaption}
+)}}\label{class_worker_data_a40a184b4e5b1a9a57577daf10add3e62}
+
+
+Initializes the tuple by setting the number of tasks received to n\-Tuples and the size of the tasks to size\-Bytes. It also sets the flag \-\_\-initialized to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\-Tuples} & Number of tasks received \\
+\hline
+{\em size\-Bytes} & Size of the task in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-h\item 
+Analyzer/Factoring\-Stats\-\_\-nw.\-cpp\end{DoxyCompactItemize}

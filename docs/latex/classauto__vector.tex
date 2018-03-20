@@ -1,0 +1,226 @@
+\hypertarget{classauto__vector}{\section{auto\-\_\-vector$<$ T $>$ Class Template Reference}
+\label{classauto__vector}\index{auto\-\_\-vector$<$ T $>$@{auto\-\_\-vector$<$ T $>$}}
+}
+
+
+Class with the methods to create, handle and destroy an array of {\itshape auto\-\_\-ptr} elements.  
+
+
+
+
+{\ttfamily \#include $<$auto\-\_\-vector.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classauto__vector_a0851c5a49cd4b8b5e5bc9d1319c53c9e}{typedef \hyperlink{classauto__iterator}{auto\-\_\-iterator}$<$ T $>$ {\bfseries iterator}}\label{classauto__vector_a0851c5a49cd4b8b5e5bc9d1319c53c9e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classauto__vector_ab463df1a0a9c3f3cb6943b33e3ef8e50}{auto\-\_\-vector} (size\-\_\-t capacity=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classauto__vector_a7858fbbe2f4d94be3df80d48f4862f3c}{\hyperlink{classauto__vector_a7858fbbe2f4d94be3df80d48f4862f3c}{$\sim$auto\-\_\-vector} ()}\label{classauto__vector_a7858fbbe2f4d94be3df80d48f4862f3c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classauto__vector_a3be25f0b235aae9b7f4d11fbd0388eee}{T const $\ast$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\-\_\-t i) const }\label{classauto__vector_a3be25f0b235aae9b7f4d11fbd0388eee}
+
+\item 
+\hypertarget{classauto__vector_ad8d0dc748236e2a49675918e114c9bf1}{T $\ast$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\-\_\-t i)}\label{classauto__vector_ad8d0dc748236e2a49675918e114c9bf1}
+
+\item 
+void \hyperlink{classauto__vector_aaa9c829b0a79ba7b04c6d670a0b4560c}{assign} (size\-\_\-t i, auto\-\_\-ptr$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Assigns {\itshape p} to the {\itshape ith} position in the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. \end{DoxyCompactList}\item 
+void \hyperlink{classauto__vector_ae912e8d33747dd0bd1dac1bd6253739d}{remove\-\_\-direct} (size\-\_\-t i, T $\ast$p)
+\begin{DoxyCompactList}\small\item\em Deletes position {\itshape i} in the array. \end{DoxyCompactList}\item 
+\hypertarget{classauto__vector_ac84a439202d7e6a8a7455b6bd9007f67}{void \hyperlink{classauto__vector_ac84a439202d7e6a8a7455b6bd9007f67}{Dump} ()}\label{classauto__vector_ac84a439202d7e6a8a7455b6bd9007f67}
+
+\begin{DoxyCompactList}\small\item\em Prints the contents in the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. \end{DoxyCompactList}\item 
+\hypertarget{classauto__vector_a764809bfe8ea1bce8f0bde7c79839ba3}{void \hyperlink{classauto__vector_a764809bfe8ea1bce8f0bde7c79839ba3}{clear} ()}\label{classauto__vector_a764809bfe8ea1bce8f0bde7c79839ba3}
+
+\begin{DoxyCompactList}\small\item\em Deletes all contents in the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. \end{DoxyCompactList}\item 
+void \hyperlink{classauto__vector_a0495393c94517c0a25af3f00f9afb845}{push\-\_\-back} (auto\-\_\-ptr$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Pushes an element {\itshape p} at the end of the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. \end{DoxyCompactList}\item 
+auto\-\_\-ptr$<$ T $>$ \hyperlink{classauto__vector_a4d6b60c1b38d1c8bbe9c9dc808743f29}{pop\-\_\-back} ()
+\begin{DoxyCompactList}\small\item\em Pops the last element of the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. \end{DoxyCompactList}\item 
+auto\-\_\-ptr$<$ T $>$ \hyperlink{classauto__vector_a53de704658c049839e5e75da35b14602}{acquire} (size\-\_\-t i)
+\begin{DoxyCompactList}\small\item\em Gets the contents from vector \-\_\-arr in the given position. \end{DoxyCompactList}\item 
+\hyperlink{classauto__iterator}{iterator} \hyperlink{classauto__vector_a0690df2f134d5e8318508fe2f00ed7fd}{begin} () const 
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the first position in the array \-\_\-arr. \end{DoxyCompactList}\item 
+\hyperlink{classauto__iterator}{iterator} \hyperlink{classauto__vector_a266e4fb18cbd0af7d685c97ddf18100d}{end} () const 
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the last position in the array \-\_\-arr. \end{DoxyCompactList}\item 
+int \hyperlink{classauto__vector_a5cac8d686d7fd1ae675932737661607a}{size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the size of \-\_\-arr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class auto\-\_\-vector$<$ T $>$}
+
+Class with the methods to create, handle and destroy an array of {\itshape auto\-\_\-ptr} elements. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classauto__vector_ab463df1a0a9c3f3cb6943b33e3ef8e50}{\index{auto\-\_\-vector@{auto\-\_\-vector}!auto\-\_\-vector@{auto\-\_\-vector}}
+\index{auto\-\_\-vector@{auto\-\_\-vector}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{auto\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf auto\-\_\-vector}$<$ T $>$\-::{\bf auto\-\_\-vector} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{capacity = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classauto__vector_ab463df1a0a9c3f3cb6943b33e3ef8e50}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Vector capacity. By default this is 0 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classauto__vector_a53de704658c049839e5e75da35b14602}{\index{auto\-\_\-vector@{auto\-\_\-vector}!acquire@{acquire}}
+\index{acquire@{acquire}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{acquire}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ auto\-\_\-ptr$<$T$>$ {\bf auto\-\_\-vector}$<$ T $>$\-::acquire (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a53de704658c049839e5e75da35b14602}
+
+
+Gets the contents from vector \-\_\-arr in the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Position of the element we want to get from \-\_\-arr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contents of the {\itshape ith} element in \-\_\-arr 
+\end{DoxyReturn}
+\hypertarget{classauto__vector_aaa9c829b0a79ba7b04c6d670a0b4560c}{\index{auto\-\_\-vector@{auto\-\_\-vector}!assign@{assign}}
+\index{assign@{assign}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf auto\-\_\-vector}$<$ T $>$\-::assign (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{i, }
+\item[{auto\-\_\-ptr$<$ T $>$ \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_aaa9c829b0a79ba7b04c6d670a0b4560c}
+
+
+Assigns {\itshape p} to the {\itshape ith} position in the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Position where to make the assignment \\
+\hline
+{\em p} & Data that will be assigned \\
+\hline
+\end{DoxyParams}
+\hypertarget{classauto__vector_a0690df2f134d5e8318508fe2f00ed7fd}{\index{auto\-\_\-vector@{auto\-\_\-vector}!begin@{begin}}
+\index{begin@{begin}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf iterator} {\bf auto\-\_\-vector}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a0690df2f134d5e8318508fe2f00ed7fd}
+
+
+Returns a pointer to the first position in the array \-\_\-arr. 
+
+\begin{DoxyReturn}{Returns}
+First position in \-\_\-arr 
+\end{DoxyReturn}
+\hypertarget{classauto__vector_a266e4fb18cbd0af7d685c97ddf18100d}{\index{auto\-\_\-vector@{auto\-\_\-vector}!end@{end}}
+\index{end@{end}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf iterator} {\bf auto\-\_\-vector}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a266e4fb18cbd0af7d685c97ddf18100d}
+
+
+Returns a pointer to the last position in the array \-\_\-arr. 
+
+\begin{DoxyReturn}{Returns}
+Ending position in \-\_\-arr 
+\end{DoxyReturn}
+\hypertarget{classauto__vector_a4d6b60c1b38d1c8bbe9c9dc808743f29}{\index{auto\-\_\-vector@{auto\-\_\-vector}!pop\-\_\-back@{pop\-\_\-back}}
+\index{pop\-\_\-back@{pop\-\_\-back}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{pop\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ auto\-\_\-ptr$<$T$>$ {\bf auto\-\_\-vector}$<$ T $>$\-::pop\-\_\-back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a4d6b60c1b38d1c8bbe9c9dc808743f29}
+
+
+Pops the last element of the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. 
+
+\begin{DoxyReturn}{Returns}
+Last element in \-\_\-arr 
+\end{DoxyReturn}
+\hypertarget{classauto__vector_a0495393c94517c0a25af3f00f9afb845}{\index{auto\-\_\-vector@{auto\-\_\-vector}!push\-\_\-back@{push\-\_\-back}}
+\index{push\-\_\-back@{push\-\_\-back}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{push\-\_\-back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf auto\-\_\-vector}$<$ T $>$\-::push\-\_\-back (
+\begin{DoxyParamCaption}
+\item[{auto\-\_\-ptr$<$ T $>$ \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a0495393c94517c0a25af3f00f9afb845}
+
+
+Pushes an element {\itshape p} at the end of the \hyperlink{classauto__vector}{auto\-\_\-vector} array \-\_\-arr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classauto__vector_ae912e8d33747dd0bd1dac1bd6253739d}{\index{auto\-\_\-vector@{auto\-\_\-vector}!remove\-\_\-direct@{remove\-\_\-direct}}
+\index{remove\-\_\-direct@{remove\-\_\-direct}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{remove\-\_\-direct}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf auto\-\_\-vector}$<$ T $>$\-::remove\-\_\-direct (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{i, }
+\item[{T $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_ae912e8d33747dd0bd1dac1bd6253739d}
+
+
+Deletes position {\itshape i} in the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classauto__vector_a5cac8d686d7fd1ae675932737661607a}{\index{auto\-\_\-vector@{auto\-\_\-vector}!size@{size}}
+\index{size@{size}!auto_vector@{auto\-\_\-vector}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf auto\-\_\-vector}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classauto__vector_a5cac8d686d7fd1ae675932737661607a}
+
+
+Returns the size of \-\_\-arr. 
+
+\begin{DoxyReturn}{Returns}
+Number of elements in \-\_\-arr 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Common/auto\-\_\-vector.\-h\end{DoxyCompactItemize}

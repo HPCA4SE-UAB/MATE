@@ -1,0 +1,107 @@
+\hypertarget{class_controller}{\section{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+}
+
+
+Provides the logic and controls the execution flow of the application.  
+
+
+
+
+{\ttfamily \#include $<$Ctrl.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_controller_a43e23ba480023bc5066c0f80f8c964bd}{Controller} (\hyperlink{class_command_line}{Command\-Line} \&cmd\-Line)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\-Controller} ()}\label{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a17abb2cec6c0109e9b2df3cdc082eaad}{Run} ()
+\begin{DoxyCompactList}\small\item\em Initializes all the necessary fields and starts the main loop of the A\-C. \end{DoxyCompactList}\item 
+\hypertarget{class_controller_a4bb78bf21b480dce2e726c92ccc125f7}{void \hyperlink{class_controller_a4bb78bf21b480dce2e726c92ccc125f7}{Interrupt} ()}\label{class_controller_a4bb78bf21b480dce2e726c92ccc125f7}
+
+\begin{DoxyCompactList}\small\item\em Sets the \-\_\-f\-Interrupted variable to 1. \end{DoxyCompactList}\item 
+\hypertarget{class_controller_a89f48ed959f8719dab032cc0b7cd5718}{\hyperlink{class_controller_a89f48ed959f8719dab032cc0b7cd5718}{Controller} (\hyperlink{class_command_line}{Command\-Line} \&cmd\-Line, std\-::string const \&cfg\-File)}\label{class_controller_a89f48ed959f8719dab032cc0b7cd5718}
+
+\begin{DoxyCompactList}\small\item\em Constructor, sets the command line for the user, determines the configuration for the application and prepares the system log. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a5b7edd9c004d719faa10d7ed0bfdc2b0}{Run} (\hyperlink{class_shut_down_manager}{Shut\-Down\-Manager} $\ast$sdm)
+\begin{DoxyCompactList}\small\item\em Manages the execution flow of the application. The execution flow of analyzer is\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides the logic and controls the execution flow of the application. 
+
+Contains the main functionality of the A\-C, including its main loop which runs until all tuning operations have been finished.
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_controller_a43e23ba480023bc5066c0f80f8c964bd}{\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\subsubsection[{Controller}]{\setlength{\rightskip}{0pt plus 5cm}Controller\-::\-Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Command\-Line} \&}]{cmd\-Line}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a43e23ba480023bc5066c0f80f8c964bd}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\-Line} & Class that provides commandline communications with the user. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_a5b7edd9c004d719faa10d7ed0bfdc2b0}{\index{Controller@{Controller}!Run@{Run}}
+\index{Run@{Run}!Controller@{Controller}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::\-Run (
+\begin{DoxyParamCaption}
+\item[{{\bf Shut\-Down\-Manager} $\ast$}]{sdm}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a5b7edd9c004d719faa10d7ed0bfdc2b0}
+
+
+Manages the execution flow of the application. The execution flow of analyzer is\-: 
+
+
+\begin{DoxyItemize}
+\item create D\-T\-A\-P\-I, initialize collector, etc. 
+\item create application model 
+\item initialize all tunlets 
+\item start application 
+\item handle events 
+\item destroy tunlets 
+\item destroy app model 
+\end{DoxyItemize}\hypertarget{class_controller_a17abb2cec6c0109e9b2df3cdc082eaad}{\index{Controller@{Controller}!Run@{Run}}
+\index{Run@{Run}!Controller@{Controller}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void Controller\-::\-Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_controller_a17abb2cec6c0109e9b2df3cdc082eaad}
+
+
+Initializes all the necessary fields and starts the main loop of the A\-C. 
+
+Creates a \hyperlink{class_task_manager}{Task\-Manager} objects and a Reactor and \hyperlink{class_p_t_p_acceptor}{P\-T\-P\-Acceptor} which will provide event handling and tuning capabilities. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/Ctrl.\-h\item 
+Analyzer/Ctrl.\-h\item 
+A\-C/Ctrl.\-cpp\item 
+Analyzer/Ctrl.\-cpp\end{DoxyCompactItemize}

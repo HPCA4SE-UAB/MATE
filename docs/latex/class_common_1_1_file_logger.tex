@@ -1,0 +1,75 @@
+\hypertarget{class_common_1_1_file_logger}{\section{Common\-:\-:File\-Logger Class Reference}
+\label{class_common_1_1_file_logger}\index{Common\-::\-File\-Logger@{Common\-::\-File\-Logger}}
+}
+
+
+Stores information of interest into a file.  
+
+
+
+
+{\ttfamily \#include $<$Syslog.\-h$>$}
+
+Inheritance diagram for Common\-:\-:File\-Logger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_common_1_1_file_logger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_file_logger_a23395819e1621d8825a9685fbc61857c}{File\-Logger} (std\-::string const \&filepath, bool append=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_file_logger_ab08af44f2de3fe1b51158132f9a399dd}{\hyperlink{class_common_1_1_file_logger_ab08af44f2de3fe1b51158132f9a399dd}{$\sim$\-File\-Logger} ()}\label{class_common_1_1_file_logger_ab08af44f2de3fe1b51158132f9a399dd}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_file_logger_a2f487ff3e7c10476f371e5cc7166a6f3}{void \hyperlink{class_common_1_1_file_logger_a2f487ff3e7c10476f371e5cc7166a6f3}{Log} (\hyperlink{class_common_1_1_log_entry}{Log\-Entry} const \&entry)}\label{class_common_1_1_file_logger_a2f487ff3e7c10476f371e5cc7166a6f3}
+
+\begin{DoxyCompactList}\small\item\em Inserts a new entry to the log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Stores information of interest into a file. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_file_logger_a23395819e1621d8825a9685fbc61857c}{\index{Common\-::\-File\-Logger@{Common\-::\-File\-Logger}!File\-Logger@{File\-Logger}}
+\index{File\-Logger@{File\-Logger}!Common::FileLogger@{Common\-::\-File\-Logger}}
+\subsubsection[{File\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}File\-Logger\-::\-File\-Logger (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{filepath, }
+\item[{bool}]{append = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_common_1_1_file_logger_a23395819e1621d8825a9685fbc61857c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path of the file where the log will be stored.  append Flag that determines if the file will be overwritten or the logs will be appended, default false.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_common_1_1_sys_exception}{Sys\-Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Syslog.\-h\item 
+Common/Syslog.\-cpp\end{DoxyCompactItemize}

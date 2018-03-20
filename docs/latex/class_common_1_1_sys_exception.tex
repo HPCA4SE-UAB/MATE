@@ -1,0 +1,118 @@
+\hypertarget{class_common_1_1_sys_exception}{\section{Common\-:\-:Sys\-Exception Class Reference}
+\label{class_common_1_1_sys_exception}\index{Common\-::\-Sys\-Exception@{Common\-::\-Sys\-Exception}}
+}
+
+
+System exception.  
+
+
+
+
+{\ttfamily \#include $<$Sys\-Exception.\-h$>$}
+
+Inheritance diagram for Common\-:\-:Sys\-Exception\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_common_1_1_sys_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_common_1_1_sys_exception_ada013850f3777f267a722a079cdd73bb}{Sys\-Exception} (std\-::string const \&msg, std\-::string const \&obj\-Name=std\-::string())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_common_1_1_sys_exception_a817906c853895e73d19a523dbd9ee3ea}{Sys\-Exception} (std\-::string const \&msg, long error\-Code)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_common_1_1_sys_exception_a9d45fb4b1344896490b926ccb976a7a6}{Display} (std\-::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em Displays exception message on the given output stream. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_sys_exception_a4237f4bf193d2ef321c1a0a6933186c7}{void \hyperlink{class_common_1_1_sys_exception_a4237f4bf193d2ef321c1a0a6933186c7}{Display} () const }\label{class_common_1_1_sys_exception_a4237f4bf193d2ef321c1a0a6933186c7}
+
+\begin{DoxyCompactList}\small\item\em Displays exception message on the standard error output. \end{DoxyCompactList}\item 
+\hypertarget{class_common_1_1_sys_exception_ae5f3e60dfa392b0901bc550fd51a2488}{std\-::string \hyperlink{class_common_1_1_sys_exception_ae5f3e60dfa392b0901bc550fd51a2488}{Get\-Reason} () const }\label{class_common_1_1_sys_exception_ae5f3e60dfa392b0901bc550fd51a2488}
+
+\begin{DoxyCompactList}\small\item\em Returns a string containing the error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+System exception. 
+
+\begin{DoxyVersion}{Version}
+1.\-0b 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0b 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_common_1_1_sys_exception_ada013850f3777f267a722a079cdd73bb}{\index{Common\-::\-Sys\-Exception@{Common\-::\-Sys\-Exception}!Sys\-Exception@{Sys\-Exception}}
+\index{Sys\-Exception@{Sys\-Exception}!Common::SysException@{Common\-::\-Sys\-Exception}}
+\subsubsection[{Sys\-Exception}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Sys\-Exception\-::\-Sys\-Exception (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{msg, }
+\item[{std\-::string const \&}]{obj\-Name = {\ttfamily std\-:\-:string~()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_sys_exception_ada013850f3777f267a722a079cdd73bb}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \hyperlink{class_common_1_1_exception}{Exception} message. \\
+\hline
+{\em obj\-Name} & Name of the object causing the exception, \char`\"{}\char`\"{} by default. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_common_1_1_sys_exception_a817906c853895e73d19a523dbd9ee3ea}{\index{Common\-::\-Sys\-Exception@{Common\-::\-Sys\-Exception}!Sys\-Exception@{Sys\-Exception}}
+\index{Sys\-Exception@{Sys\-Exception}!Common::SysException@{Common\-::\-Sys\-Exception}}
+\subsubsection[{Sys\-Exception}]{\setlength{\rightskip}{0pt plus 5cm}Common\-::\-Sys\-Exception\-::\-Sys\-Exception (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{msg, }
+\item[{long}]{error\-Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_common_1_1_sys_exception_a817906c853895e73d19a523dbd9ee3ea}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \hyperlink{class_common_1_1_exception}{Exception} message. \\
+\hline
+{\em error\-Code} & \hyperlink{class_common_1_1_exception}{Exception} error code. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_common_1_1_sys_exception_a9d45fb4b1344896490b926ccb976a7a6}{\index{Common\-::\-Sys\-Exception@{Common\-::\-Sys\-Exception}!Display@{Display}}
+\index{Display@{Display}!Common::SysException@{Common\-::\-Sys\-Exception}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}void Common\-::\-Sys\-Exception\-::\-Display (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_common_1_1_sys_exception_a9d45fb4b1344896490b926ccb976a7a6}
+
+
+Displays exception message on the given output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream to display the message. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_common_1_1_exception_a2633eeaab3220268739977a04643a3cf}{Common\-::\-Exception}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Common/Sys\-Exception.\-h\item 
+Common/Sys\-Exception.\-cpp\end{DoxyCompactItemize}

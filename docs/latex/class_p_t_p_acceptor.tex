@@ -1,0 +1,95 @@
+\hypertarget{class_p_t_p_acceptor}{\section{P\-T\-P\-Acceptor Class Reference}
+\label{class_p_t_p_acceptor}\index{P\-T\-P\-Acceptor@{P\-T\-P\-Acceptor}}
+}
+
+
+Manages socket connection and handles data input through them.  
+
+
+
+
+{\ttfamily \#include $<$P\-T\-P\-Acceptor.\-h$>$}
+
+Inheritance diagram for P\-T\-P\-Acceptor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_t_p_acceptor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_t_p_acceptor_a2886d7acd766d591b94b61063e4b6348}{P\-T\-P\-Acceptor} (\hyperlink{class_common_1_1_reactor}{Reactor} \&reactor, \hyperlink{class_task_manager}{Task\-Manager} \&tm, int port)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_p_t_p_acceptor_abfff4da1e33e6957e8a349bd8671a342}{\hyperlink{class_p_t_p_acceptor_abfff4da1e33e6957e8a349bd8671a342}{$\sim$\-P\-T\-P\-Acceptor} ()}\label{class_p_t_p_acceptor_abfff4da1e33e6957e8a349bd8671a342}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_p_t_p_acceptor_a3c280f3a20cd06fe94d72d6a715d9ebe}{void \hyperlink{class_p_t_p_acceptor_a3c280f3a20cd06fe94d72d6a715d9ebe}{Handle\-Input} ()}\label{class_p_t_p_acceptor_a3c280f3a20cd06fe94d72d6a715d9ebe}
+
+\begin{DoxyCompactList}\small\item\em Gets the socket for the client and binds it with the task manager. \end{DoxyCompactList}\item 
+int \hyperlink{class_p_t_p_acceptor_abbe21f4a532eb23a96ea696f7b344a32}{Get\-Handle} ()
+\begin{DoxyCompactList}\small\item\em Getter of a handler for the variable \-\_\-socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages socket connection and handles data input through them. 
+
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxySince}{Since}
+1.\-0 
+\end{DoxySince}
+\begin{DoxyAuthor}{Author}
+Ania Sikora, 2002 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_p_t_p_acceptor_a2886d7acd766d591b94b61063e4b6348}{\index{P\-T\-P\-Acceptor@{P\-T\-P\-Acceptor}!P\-T\-P\-Acceptor@{P\-T\-P\-Acceptor}}
+\index{P\-T\-P\-Acceptor@{P\-T\-P\-Acceptor}!PTPAcceptor@{P\-T\-P\-Acceptor}}
+\subsubsection[{P\-T\-P\-Acceptor}]{\setlength{\rightskip}{0pt plus 5cm}P\-T\-P\-Acceptor\-::\-P\-T\-P\-Acceptor (
+\begin{DoxyParamCaption}
+\item[{{\bf Reactor} \&}]{reactor, }
+\item[{{\bf Task\-Manager} \&}]{tm, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_p_t_p_acceptor_a2886d7acd766d591b94b61063e4b6348}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reactor} & Object of class reactor that manages event handlers. \\
+\hline
+{\em tm} & \hyperlink{class_task}{Task} manager. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_t_p_acceptor_abbe21f4a532eb23a96ea696f7b344a32}{\index{P\-T\-P\-Acceptor@{P\-T\-P\-Acceptor}!Get\-Handle@{Get\-Handle}}
+\index{Get\-Handle@{Get\-Handle}!PTPAcceptor@{P\-T\-P\-Acceptor}}
+\subsubsection[{Get\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}int P\-T\-P\-Acceptor\-::\-Get\-Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_p_t_p_acceptor_abbe21f4a532eb23a96ea696f7b344a32}
+
+
+Getter of a handler for the variable \-\_\-socket. 
+
+\begin{DoxyReturn}{Returns}
+Handle of the server socket. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_common_1_1_event_handler_aaf6cb56038c6fe6b91c9d1e34ee6b3af}{Common\-::\-Event\-Handler}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-C/P\-T\-P\-Acceptor.\-h\item 
+A\-C/P\-T\-P\-Acceptor.\-cpp\end{DoxyCompactItemize}

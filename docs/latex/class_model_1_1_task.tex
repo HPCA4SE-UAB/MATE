@@ -1,0 +1,482 @@
+\hypertarget{class_model_1_1_task}{\section{Model\-:\-:Task Class Reference}
+\label{class_model_1_1_task}\index{Model\-::\-Task@{Model\-::\-Task}}
+}
+
+
+Encapsulates information to define the tasks that form the application. The data structure of a task consists of identification data (pid, mpi\-Rank, name), status data, where it is running (host), which events are being collected from it and if it is either a master task or not. Provides methods to\-:  
+
+
+
+
+{\ttfamily \#include $<$App\-Task.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_model_1_1_task_a8010c7e23d76c3738d3b747c90ef07da}{Get\-Pid} () const 
+\begin{DoxyCompactList}\small\item\em Pid getter. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_1_1_task_aa41c18d9000230367ade253dbf502e0b}{Get\-Mpi\-Rank} () const 
+\begin{DoxyCompactList}\small\item\em M\-P\-I Rank getter. \end{DoxyCompactList}\item 
+string \hyperlink{class_model_1_1_task_a185e564c04782f27d2f84e91b1d09304}{Get\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Name getter. \end{DoxyCompactList}\item 
+\hyperlink{class_model_1_1_host}{Host} \& \hyperlink{class_model_1_1_task_aff61f76ad875de34e318d845b87741af}{Get\-Host} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_1_1_host}{Host} getter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_model_1_1_task_a1bdf559ebb230680f6d2d347c15b6617}{Is\-Running} () const 
+\begin{DoxyCompactList}\small\item\em Indicates if the task is still running. \end{DoxyCompactList}\item 
+bool \hyperlink{class_model_1_1_task_affaa9bbd393f322bbfea25dcc775345c}{Is\-Master} () const 
+\begin{DoxyCompactList}\small\item\em Indicates if the task is the master task. \end{DoxyCompactList}\item 
+Status \hyperlink{class_model_1_1_task_a9778f54fef67722f1f785608e0aff0c5}{Get\-Status} () const 
+\begin{DoxyCompactList}\small\item\em Status getter. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a4f4799f377c36a6790b4984fdae85351}{Add\-Event} (\hyperlink{class_model_1_1_event}{Event} const \&e)
+\begin{DoxyCompactList}\small\item\em Adds a definition of new event to be traced in this task. \end{DoxyCompactList}\item 
+bool \hyperlink{class_model_1_1_task_ac68058101cd807c900ab0b8770ce974d}{Remove\-Event} (int event\-Id, Instr\-Place place)
+\begin{DoxyCompactList}\small\item\em Removes previously added event from this task. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_aaf4b60b2178d6ae90bfe2415b4b8268b}{Load\-Library} (string const \&lib\-Path)
+\begin{DoxyCompactList}\small\item\em Loads a shared library to this task. This enables the \hyperlink{class_analyzer}{Analyzer} to load any additional code required for the tuning. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a07a8c9caca410a1ae929c3ed47203bf4}{Set\-Variable\-Value} (string const \&var\-Name, \hyperlink{class_common_1_1_attribute_value}{Attribute\-Value} const \&var\-Value, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Modifies a value of a specified variable in the running task application process. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a0702cd172b122148a87150189771b378}{Replace\-Function} (string const \&old\-Func, string const \&new\-Func, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Replaces all calls to a function with calls to another one in this task. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a99b8545c85396bb6ab2d9ebe3fd87296}{Insert\-Function\-Call} (string const \&func\-Name, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, string const \&dest\-Func, Instr\-Place dest\-Place, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Inserts a new function invocation code at a given location in this task. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_ae0413fd63f38721da68b6c425f18feaf}{One\-Time\-Func\-Call} (string const \&func\-Name, int n\-Attrs, \hyperlink{class_common_1_1_attribute}{Attribute} $\ast$attrs, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Inserts a new function invocation code in this task and invokes it once. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a6f5361d812cf7958d151736734762652}{Remove\-Func\-Call} (string const \&func\-Name, string const \&caller\-Func, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Removes all calls to a given function from the given caller function in this task. For example this method can be used to remove all flush() function calls from a debug() function. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a09f3bb2f03a05d8d60fb391b0cb40249}{Func\-Param\-Change} (string const \&func\-Name, int param\-Idx, int new\-Value, int $\ast$required\-Old\-Value, \hyperlink{class_common_1_1_breakpoint}{Breakpoint} $\ast$brkpt)
+\begin{DoxyCompactList}\small\item\em Sets the value of an input parameter of a given function in this task. This parameter value is modified before the function body is invoked. It is also possible to change the parameter value under condition, namely if the parameter has a value equal to required\-Old\-Value, only then its value is changed to new one. If the required\-Old\-Value is zero, then the value of the parameter is changed unconditionally. \end{DoxyCompactList}\item 
+\hypertarget{class_model_1_1_task_a025e9649f68df2692157770f04ce6921}{void \hyperlink{class_model_1_1_task_a025e9649f68df2692157770f04ce6921}{Set\-Task\-Exit\-Handler} (\hyperlink{class_model_1_1_task_handler}{Task\-Handler} \&h)}\label{class_model_1_1_task_a025e9649f68df2692157770f04ce6921}
+
+\begin{DoxyCompactList}\small\item\em Installs a callback function that is called when this task terminates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_task_a334ea9c1df40aebee576d9cf0646c0ea}{Task} (int pid, int mpi\-Rank, string const \&name, \hyperlink{class_model_1_1_host}{Host} \&h)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_1_1_task_a013b50c42c6a729869d665c610b3cd09}{Set\-Master} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets if this task is Master or not. \end{DoxyCompactList}\item 
+\hyperlink{class_a_c_proxy}{A\-C\-Proxy} $\ast$ \hyperlink{class_model_1_1_task_aec9e577c6b17988481d08e3922800e7d}{Get\-A\-C\-Proxy} ()
+\item 
+void \hyperlink{class_model_1_1_task_a632d2809726ca0afc77f04639860d5e5}{Dispatch\-Event} (\hyperlink{class_common_1_1_event_msg}{Event\-Msg} const \&msg)
+\begin{DoxyCompactList}\small\item\em Finds the \hyperlink{class_model_1_1_event}{Event} of the given message, gets its handler and Record and passes it to Handle\-Event() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_model_1_1_task_a23f25bcc02a0e94c2f5a4188496b04d0}{class {\bfseries Application}}\label{class_model_1_1_task_a23f25bcc02a0e94c2f5a4188496b04d0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulates information to define the tasks that form the application. The data structure of a task consists of identification data (pid, mpi\-Rank, name), status data, where it is running (host), which events are being collected from it and if it is either a master task or not. Provides methods to\-: 
+
+
+\begin{DoxyItemize}
+\item Retrieve application information 
+\item Monitoring\-: add/remove events to trace. 
+\item Tuning\-: loading libraries, changing variables \& parameter values, adding/removing function calls and calling them explicitly.  
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_task_a334ea9c1df40aebee576d9cf0646c0ea}{\index{Model\-::\-Task@{Model\-::\-Task}!Task@{Task}}
+\index{Task@{Task}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Task}]{\setlength{\rightskip}{0pt plus 5cm}Task\-::\-Task (
+\begin{DoxyParamCaption}
+\item[{int}]{pid, }
+\item[{int}]{mpi\-Rank, }
+\item[{string const \&}]{name, }
+\item[{{\bf Host} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_1_1_task_a334ea9c1df40aebee576d9cf0646c0ea}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & Globally unique task id. \\
+\hline
+{\em mpi\-Rank} & Id associated to M\-P\-I \\
+\hline
+{\em name} & Process name. \\
+\hline
+{\em h} & Reference to the host object this task is running on. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_task_a4f4799f377c36a6790b4984fdae85351}{\index{Model\-::\-Task@{Model\-::\-Task}!Add\-Event@{Add\-Event}}
+\index{Add\-Event@{Add\-Event}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Add\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Add\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Event} const \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a4f4799f377c36a6790b4984fdae85351}
+
+
+Adds a definition of new event to be traced in this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{class_model_1_1_event}{Event} to be traced. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the event tracing was added. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a632d2809726ca0afc77f04639860d5e5}{\index{Model\-::\-Task@{Model\-::\-Task}!Dispatch\-Event@{Dispatch\-Event}}
+\index{Dispatch\-Event@{Dispatch\-Event}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Dispatch\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Dispatch\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Msg} const \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_1_1_task_a632d2809726ca0afc77f04639860d5e5}
+
+
+Finds the \hyperlink{class_model_1_1_event}{Event} of the given message, gets its handler and Record and passes it to Handle\-Event() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_task_a09f3bb2f03a05d8d60fb391b0cb40249}{\index{Model\-::\-Task@{Model\-::\-Task}!Func\-Param\-Change@{Func\-Param\-Change}}
+\index{Func\-Param\-Change@{Func\-Param\-Change}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Func\-Param\-Change}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Func\-Param\-Change (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{func\-Name, }
+\item[{int}]{param\-Idx, }
+\item[{int}]{new\-Value, }
+\item[{int $\ast$}]{required\-Old\-Value, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a09f3bb2f03a05d8d60fb391b0cb40249}
+
+
+Sets the value of an input parameter of a given function in this task. This parameter value is modified before the function body is invoked. It is also possible to change the parameter value under condition, namely if the parameter has a value equal to required\-Old\-Value, only then its value is changed to new one. If the required\-Old\-Value is zero, then the value of the parameter is changed unconditionally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\-Name} & Name of the function \\
+\hline
+{\em param\-Idx} & Id of the parameter to change \\
+\hline
+{\em new\-Value} & New value for the parameter \\
+\hline
+{\em required\-Old\-Value} & Required old value of the parameter to change \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the parameter was changed. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_aec9e577c6b17988481d08e3922800e7d}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-A\-C\-Proxy@{Get\-A\-C\-Proxy}}
+\index{Get\-A\-C\-Proxy@{Get\-A\-C\-Proxy}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-A\-C\-Proxy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-C\-Proxy} $\ast$ Task\-::\-Get\-A\-C\-Proxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_1_1_task_aec9e577c6b17988481d08e3922800e7d}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_a_c_proxy}{A\-C\-Proxy} object of this task. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_aff61f76ad875de34e318d845b87741af}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-Host@{Get\-Host}}
+\index{Get\-Host@{Get\-Host}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-Host}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Host}\& Model\-::\-Task\-::\-Get\-Host (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_aff61f76ad875de34e318d845b87741af}
+
+
+\hyperlink{class_model_1_1_host}{Host} getter. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the host object this task is running on. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_aa41c18d9000230367ade253dbf502e0b}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-Mpi\-Rank@{Get\-Mpi\-Rank}}
+\index{Get\-Mpi\-Rank@{Get\-Mpi\-Rank}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-Mpi\-Rank}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Task\-::\-Get\-Mpi\-Rank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_aa41c18d9000230367ade253dbf502e0b}
+
+
+M\-P\-I Rank getter. 
+
+\begin{DoxyReturn}{Returns}
+M\-P\-I Rank of the task. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a185e564c04782f27d2f84e91b1d09304}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Model\-::\-Task\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_a185e564c04782f27d2f84e91b1d09304}
+
+
+Name getter. 
+
+\begin{DoxyReturn}{Returns}
+Process name 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a8010c7e23d76c3738d3b747c90ef07da}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-Pid@{Get\-Pid}}
+\index{Get\-Pid@{Get\-Pid}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-Pid}]{\setlength{\rightskip}{0pt plus 5cm}int Model\-::\-Task\-::\-Get\-Pid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_a8010c7e23d76c3738d3b747c90ef07da}
+
+
+Pid getter. 
+
+\begin{DoxyReturn}{Returns}
+Globally unique process id 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a9778f54fef67722f1f785608e0aff0c5}{\index{Model\-::\-Task@{Model\-::\-Task}!Get\-Status@{Get\-Status}}
+\index{Get\-Status@{Get\-Status}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Get\-Status}]{\setlength{\rightskip}{0pt plus 5cm}Status Model\-::\-Task\-::\-Get\-Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_a9778f54fef67722f1f785608e0aff0c5}
+
+
+Status getter. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_model_1_1_task}{Task} Status information 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a99b8545c85396bb6ab2d9ebe3fd87296}{\index{Model\-::\-Task@{Model\-::\-Task}!Insert\-Function\-Call@{Insert\-Function\-Call}}
+\index{Insert\-Function\-Call@{Insert\-Function\-Call}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Insert\-Function\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Insert\-Function\-Call (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{func\-Name, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{string const \&}]{dest\-Func, }
+\item[{Instr\-Place}]{dest\-Place, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a99b8545c85396bb6ab2d9ebe3fd87296}
+
+
+Inserts a new function invocation code at a given location in this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\-Name} & Name of the function to call. \\
+\hline
+{\em n\-Attrs} & Number of parameters of the function. \\
+\hline
+{\em attrs} & Values for each parameter. \\
+\hline
+{\em dest\-Func} & Function where the calls will be placed. \\
+\hline
+{\em dest\-Place} & Place of the function where the calls will be placed. \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the function calls were added. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_affaa9bbd393f322bbfea25dcc775345c}{\index{Model\-::\-Task@{Model\-::\-Task}!Is\-Master@{Is\-Master}}
+\index{Is\-Master@{Is\-Master}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Is\-Master}]{\setlength{\rightskip}{0pt plus 5cm}bool Model\-::\-Task\-::\-Is\-Master (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_affaa9bbd393f322bbfea25dcc775345c}
+
+
+Indicates if the task is the master task. 
+
+\begin{DoxyReturn}{Returns}
+True if master false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a1bdf559ebb230680f6d2d347c15b6617}{\index{Model\-::\-Task@{Model\-::\-Task}!Is\-Running@{Is\-Running}}
+\index{Is\-Running@{Is\-Running}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}bool Model\-::\-Task\-::\-Is\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_model_1_1_task_a1bdf559ebb230680f6d2d347c15b6617}
+
+
+Indicates if the task is still running. 
+
+\begin{DoxyReturn}{Returns}
+True if still running false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_aaf4b60b2178d6ae90bfe2415b4b8268b}{\index{Model\-::\-Task@{Model\-::\-Task}!Load\-Library@{Load\-Library}}
+\index{Load\-Library@{Load\-Library}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Load\-Library}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Load\-Library (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{lib\-Path}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_aaf4b60b2178d6ae90bfe2415b4b8268b}
+
+
+Loads a shared library to this task. This enables the \hyperlink{class_analyzer}{Analyzer} to load any additional code required for the tuning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib\-Path} & Path to the library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the library is loaded. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_ae0413fd63f38721da68b6c425f18feaf}{\index{Model\-::\-Task@{Model\-::\-Task}!One\-Time\-Func\-Call@{One\-Time\-Func\-Call}}
+\index{One\-Time\-Func\-Call@{One\-Time\-Func\-Call}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{One\-Time\-Func\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-One\-Time\-Func\-Call (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{func\-Name, }
+\item[{int}]{n\-Attrs, }
+\item[{{\bf Attribute} $\ast$}]{attrs, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_ae0413fd63f38721da68b6c425f18feaf}
+
+
+Inserts a new function invocation code in this task and invokes it once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\-Name} & Name of the function to call \\
+\hline
+{\em n\-Attrs} & Number of arguments of the function \\
+\hline
+{\em attrs} & Values for each argument of the function \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the function was called. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_ac68058101cd807c900ab0b8770ce974d}{\index{Model\-::\-Task@{Model\-::\-Task}!Remove\-Event@{Remove\-Event}}
+\index{Remove\-Event@{Remove\-Event}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Remove\-Event}]{\setlength{\rightskip}{0pt plus 5cm}bool Task\-::\-Remove\-Event (
+\begin{DoxyParamCaption}
+\item[{int}]{event\-Id, }
+\item[{Instr\-Place}]{place}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_ac68058101cd807c900ab0b8770ce974d}
+
+
+Removes previously added event from this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\-Id} & Id of the event \\
+\hline
+{\em place} & Place of the function where the event is recorded\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the event was removed. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a6f5361d812cf7958d151736734762652}{\index{Model\-::\-Task@{Model\-::\-Task}!Remove\-Func\-Call@{Remove\-Func\-Call}}
+\index{Remove\-Func\-Call@{Remove\-Func\-Call}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Remove\-Func\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Remove\-Func\-Call (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{func\-Name, }
+\item[{string const \&}]{caller\-Func, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a6f5361d812cf7958d151736734762652}
+
+
+Removes all calls to a given function from the given caller function in this task. For example this method can be used to remove all flush() function calls from a debug() function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\-Name} & Name of the function \\
+\hline
+{\em caller\-Func} & Function that calls the function that will be removed \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the function call is removed. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a0702cd172b122148a87150189771b378}{\index{Model\-::\-Task@{Model\-::\-Task}!Replace\-Function@{Replace\-Function}}
+\index{Replace\-Function@{Replace\-Function}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Replace\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Replace\-Function (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{old\-Func, }
+\item[{string const \&}]{new\-Func, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a0702cd172b122148a87150189771b378}
+
+
+Replaces all calls to a function with calls to another one in this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\-Func} & Name of the function to replace. \\
+\hline
+{\em new\-Func} & Name of the new function. \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the function calls were changed. 
+\end{DoxyReturn}
+\hypertarget{class_model_1_1_task_a013b50c42c6a729869d665c610b3cd09}{\index{Model\-::\-Task@{Model\-::\-Task}!Set\-Master@{Set\-Master}}
+\index{Set\-Master@{Set\-Master}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Set\-Master}]{\setlength{\rightskip}{0pt plus 5cm}void Model\-::\-Task\-::\-Set\-Master (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_model_1_1_task_a013b50c42c6a729869d665c610b3cd09}
+
+
+Sets if this task is Master or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Determines if its Master or not. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_task_a07a8c9caca410a1ae929c3ed47203bf4}{\index{Model\-::\-Task@{Model\-::\-Task}!Set\-Variable\-Value@{Set\-Variable\-Value}}
+\index{Set\-Variable\-Value@{Set\-Variable\-Value}!Model::Task@{Model\-::\-Task}}
+\subsubsection[{Set\-Variable\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void Task\-::\-Set\-Variable\-Value (
+\begin{DoxyParamCaption}
+\item[{string const \&}]{var\-Name, }
+\item[{{\bf Attribute\-Value} const \&}]{var\-Value, }
+\item[{{\bf Breakpoint} $\ast$}]{brkpt}
+\end{DoxyParamCaption}
+)}}\label{class_model_1_1_task_a07a8c9caca410a1ae929c3ed47203bf4}
+
+
+Modifies a value of a specified variable in the running task application process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\-Name} & Name of the variable. \\
+\hline
+{\em var\-Value} & New value for the variable. \\
+\hline
+{\em brkpt} & --- \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks where the values were changed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/App\-Task.\-h\item 
+Analyzer/App\-Task.\-cpp\end{DoxyCompactItemize}
