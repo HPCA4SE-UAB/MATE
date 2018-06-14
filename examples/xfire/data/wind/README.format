@@ -1,0 +1,9 @@
+FORMAT dels fitxers de mesures de vent
+--------------------------------------
+
+Numero de estacions
+
+Codi estacio
+Coordenades UTM (x y)
+direccio (en graus)
+velocitat (en Km/h)

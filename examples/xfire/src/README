@@ -1,0 +1,23 @@
+Project Xfire : Source Directory for Parallel Version
+-------------------------------------------------------
+by Josep Jorba @Juliol 1998 CAOS-UAB
+
+
+.backup.log		Informacio dels ultims canvis
+Make.src		Make per a cada directori
+Makefile		Makefile generic pel projecte
+
+factor1			Calcul de la velocitat normal
+factor2			Calcul del factor d'orientacio
+factor3			Calcul del factor de curvatura
+gisfuncs		Rutines (like gis) pel tractament del terreny
+globmod			Model global de propagacio
+localmod		Model local nuclear
+main			Programa principal -> Xfirep (master program)
+numeric			Algorismes numerics
+simulator		Rutines del simulador
+sysio			Rutines de E/S
+vegetmod		Models de vegetacio
+windmod			Model de camp de vents
+
+slave			Slave program of the parallel version

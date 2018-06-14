@@ -1,0 +1,5 @@
+FORMAT dels fitxers de terrenys
+--------------------------------
+
+Numero de punts en cada dimensio x,y (sencers)
+Coordenades de cada punt i model de vegetacio (x y z c) (floats)

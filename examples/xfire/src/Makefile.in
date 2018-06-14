@@ -1,0 +1,49 @@
+# 
+# MPI XFIRE makefile
+#
+# Anna y Oleg Morajko
+#
+# Imports:
+#  ARCHCFLAGS = special cc flags
+#  ARCHLIB    = special libs needed for daemon
+#
+# Version for SunSolaris 2.8/LINUX
+#
+
+SHELL=@SHELL@
+
+# Xfire source root directory
+XFIRE_ROOT=@prefix@
+
+# globals
+INSTALL_DIR=@prefix@
+MPI_DIR=$(XFIRE_ROOT)/src
+INCLUDES=-I.
+
+# use debug info
+CFLOPTS=-g -Wall 
+CFLAGS=$(CFLOPTS) $(INCLUDES) $(ARCHCFLAGS)
+LIBS=-lnsl $(ARCHLIB)
+
+CC=@CXX@
+
+OBJECTS	= 	factor1.o factor2.o factor3.o gisfuncs.o \
+ 				localmod.o numeric.o sysio.o \
+				windmod.o globmod.o main.o simulator.o vegetmod.o utils.o tune.o scheduler.o \
+				fireslave.o comm_utils.o
+				
+default:	all
+
+all:	$(INSTALL_DIR)/xfire
+		cp $(XFIRE_ROOT)/xfire ../
+
+$(INSTALL_DIR)/xfire: $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(LIBS)
+
+%.o:	%.c
+	$(CC) $(CFLAGS) -c $<
+
+clean:
+	rm -f *.o
+
+again: clean all

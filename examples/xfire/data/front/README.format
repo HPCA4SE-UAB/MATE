@@ -1,0 +1,8 @@
+FORMAT dels fitxers de definicio de fronts
+------------------------------------------
+
+Numero de fronts
+	Tipus de front : POINT,LINE,OPENCURVE,CLOSEDCURVE
+	Numero de punts de la corba (POINT i LINE no el tenen)
+	Coordenades dels punts en UTM (x y)
+		(EN CLOSEDCURVE no es repeteix el primer punt)

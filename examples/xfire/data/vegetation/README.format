@@ -1,0 +1,7 @@
+FORMAT pels models de vegetacio
+-------------------------------
+
+Numero de submodels
+	Codi submodel
+	Params (se suposa que n'hi han vuit)
+		w0,beta,sigma,St,Se,Mx,Mf,h,rhop

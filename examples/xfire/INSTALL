@@ -1,0 +1,29 @@
+Project Xfire : Source Directory for Parallel Version
+--------------------------------------------------------
+by Josep Jorba @July 1998 CAOS-UAB
+
+########################################################
+#                  XFIRE INSTALLATION                  #
+########################################################
+
+Dependencies:
+-------------
+
+  -OpenMPI (>1.8.8)
+
+Installation:
+-------------
+
+$ cd src/
+$ ./configure
+$ make
+
+The XFire executable will be in the root directory
+and in the same src/ folder with the name `xfire`. 
+
+Demo executions:
+----------------
+
+$ mpirun -np 4 xfire demo
+$ mpirun -np 4 xfire demo2
+
