@@ -31,10 +31,9 @@ It is only required to specify the path of those libraries that are not in the s
 Note: By default, if `--prefix` is not specified, MATE will be installed in `/lib` and `/bin` (with sudo). 
 
 ***
-## XFire
-**TODO: Description of what XFIRE is here**
-##### How to download and run XFire #####
-* Download and install XFire from [here](https://bitbucket.org/alberto_olmo/xfire/) **(TODO: create a GitHub repo)**
+## XFire example
+##### How to install and run XFire #####
+* Install XFire from examples/xfire and following the instructions in file INSTALL
 * Once installed, change the following two lines in AC.ini inside the XFire download directory:
 
     `ACPath=/path/to/MATEs/AC`
