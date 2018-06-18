@@ -23,7 +23,7 @@ It is only required to specify the path of those libraries that are not in the s
   
     `$ make && make install`
     
-    Finally refresh the .bashrc file:
+    Finally refresh the .bashrc file (if a prefix was specified):
 
     `$ source ~/.bashrc`
 
