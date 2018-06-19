@@ -31,8 +31,6 @@ install: all
 	@if [ $(PREFIX) = "." ]; then\
 		cp ./bin/Analyzer /bin/Analyzer;\
 	else\
-		cp $(TO_SRC)/$(PROGRAMS_CONF)/analyzer_template.ini $(PREFIX)/bin/Analyzer.ini;\
-		cp $(TO_SRC)/$(PROGRAMS_CONF)/tunlet_template.ini $(PREFIX)/bin/Tunlet.ini;\
 		cp ./bin/Analyzer $(PROGRAMS_DEST)/Analyzer;\
 	fi
 
@@ -40,6 +38,7 @@ all: bin/Analyzer
 	@echo "Analyzer finished"
 
 bin/Analyzer: $(objects)
+	$(MKDIR) bin/
 	$(GXX) $(CFLAGS) -o $@ $(objects) $(lib_objs) $(LDFLAGS) -I../Common -L../Common -lanalyzer
 
 %.o: %.cpp

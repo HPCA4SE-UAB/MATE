@@ -31,7 +31,6 @@ install: all
 	@if [ $(PREFIX) = "." ]; then\
 		cp ./bin/AC /bin/AC;\
 	else\
-		cp $(TO_SRC)/$(PROGRAMS_CONF)/ac_template.ini $(PROGRAMS_DEST)/AC.ini;\
 		cp ./bin/AC $(PROGRAMS_DEST)/AC;\
 	fi
 	
