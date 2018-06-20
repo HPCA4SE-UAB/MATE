@@ -20,7 +20,8 @@ LDFLAGS		+= -lnsl -lpthread -lrt $(ARCHLIB) -ldl
 objects =  AppEvent.o AppTask.o AppModel.o main.o Ctrl.o Service.o ECPHandler.o \
 		   ACProxy.o ECPProtocol.o \
 		  EventCollector.o DTAPI.o FactoringStats_nw.o FactoringTunlet_nw.o \
-		  EventMsgReader.o ShutDownManager.o
+		  EventMsgReader.o ShutDownManager.o \
+		  MyTunlet.o
 	
 #		   EventCollector.o DTAPI.o FactoringStats.o AdjustingNWTunlet.o 
 #FactoringTunlet.o FactoringOptimizer.o FactoringStats.o 
