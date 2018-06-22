@@ -30,6 +30,14 @@ virtual void \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Initiali
 \hypertarget{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}{virtual void \hyperlink{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}{Destroy} ()=0}\label{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}
 
 \begin{DoxyCompactList}\small\item\em Sets \-\_\-app = 0. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Initialize} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)=0
+\begin{DoxyCompactList}\small\item\em Initializes the tunlet. \end{DoxyCompactList}\item 
+\hypertarget{class_tunlet_aa4b222d6267660d272febf75c9abaa6a}{virtual void \hyperlink{class_tunlet_aa4b222d6267660d272febf75c9abaa6a}{Before\-App\-Start} ()}\label{class_tunlet_aa4b222d6267660d272febf75c9abaa6a}
+
+\begin{DoxyCompactList}\small\item\em Asserts that \-\_\-app != 0 and sets the task handler of the app to the current one. \end{DoxyCompactList}\item 
+\hypertarget{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}{virtual void \hyperlink{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}{Destroy} ()=0}\label{class_tunlet_a182f5368c0cd635a1ce8fe80ef4c013b}
+
+\begin{DoxyCompactList}\small\item\em Sets \-\_\-app = 0. \end{DoxyCompactList}\item 
 \hypertarget{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{virtual void \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Initialize} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)=0}\label{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}
 
 \begin{DoxyCompactList}\small\item\em Virtual Initialize method. \end{DoxyCompactList}\item 
@@ -66,11 +74,32 @@ Initializes the tunlet.
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}{Factoring\-Tunlet}.
+Implemented in \hyperlink{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}{Factoring\-Tunlet}, and \hyperlink{class_my_tunlet_a1a43b296664b690282faa724f8e0e6e4}{My\-Tunlet}.
+
+\hypertarget{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{\index{Tunlet@{Tunlet}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Tunlet@{Tunlet}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tunlet\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Application} \&}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}
+
+
+Initializes the tunlet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & App associated to the tunlet \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_factoring_tunlet_a4883ba0a05903fb09b9f420d72927d86}{Factoring\-Tunlet}, and \hyperlink{class_my_tunlet_a1a43b296664b690282faa724f8e0e6e4}{My\-Tunlet}.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
 Analyzer/Factoring\-Tunlet\-\_\-nw.\-h\item 
+Analyzer/My\-Tunlet.\-h\item 
 Analyzer/Tunlet.\-h\end{DoxyCompactItemize}

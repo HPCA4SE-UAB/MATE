@@ -1,0 +1,121 @@
+\hypertarget{class_my_tunlet}{\section{My\-Tunlet Class Reference}
+\label{class_my_tunlet}\index{My\-Tunlet@{My\-Tunlet}}
+}
+Inheritance diagram for My\-Tunlet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_tunlet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_my_tunlet_a1a43b296664b690282faa724f8e0e6e4}{Initialize} (\hyperlink{class_model_1_1_application}{Model\-::\-Application} \&app)
+\begin{DoxyCompactList}\small\item\em Initializes the tunlet. \end{DoxyCompactList}\item 
+\hypertarget{class_my_tunlet_acd86c1b956d58572b33c82e24edc4997}{void \hyperlink{class_my_tunlet_acd86c1b956d58572b33c82e24edc4997}{Before\-App\-Start} ()}\label{class_my_tunlet_acd86c1b956d58572b33c82e24edc4997}
+
+\begin{DoxyCompactList}\small\item\em Asserts that \-\_\-app != 0 and sets the task handler of the app to the current one. \end{DoxyCompactList}\item 
+\hypertarget{class_my_tunlet_a72e08d134dbefd3373538a8d678d772d}{void \hyperlink{class_my_tunlet_a72e08d134dbefd3373538a8d678d772d}{Destroy} ()}\label{class_my_tunlet_a72e08d134dbefd3373538a8d678d772d}
+
+\begin{DoxyCompactList}\small\item\em Sets \-\_\-app = 0. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_tunlet_af1b66922cbdce93415ef288ca36b3106}{Handle\-Event} (\hyperlink{class_model_1_1_event_record}{Model\-::\-Event\-Record} const \&r)
+\begin{DoxyCompactList}\small\item\em Handles an event record (virtual). \end{DoxyCompactList}\item 
+\hypertarget{class_my_tunlet_a3e39fdac93b5f03be7e6cfce3dda6619}{void {\bfseries Create\-Event} ()}\label{class_my_tunlet_a3e39fdac93b5f03be7e6cfce3dda6619}
+
+\item 
+\hypertarget{class_my_tunlet_abe4efe380551313dd3b4b0c606d182c3}{void {\bfseries Create\-Event} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)}\label{class_my_tunlet_abe4efe380551313dd3b4b0c606d182c3}
+
+\item 
+void \hyperlink{class_my_tunlet_aba791586506c8aace6668e0d9c78a2ed}{Task\-Started} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Called when a new task is started. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_tunlet_a1dbfd5d056e172441e58e182ab38bf1b}{Task\-Terminated} (\hyperlink{class_model_1_1_task}{Model\-::\-Task} \&t)
+\begin{DoxyCompactList}\small\item\em Called when a task is terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_my_tunlet_af1b66922cbdce93415ef288ca36b3106}{\index{My\-Tunlet@{My\-Tunlet}!Handle\-Event@{Handle\-Event}}
+\index{Handle\-Event@{Handle\-Event}!MyTunlet@{My\-Tunlet}}
+\subsubsection[{Handle\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Tunlet\-::\-Handle\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Event\-Record} const \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_my_tunlet_af1b66922cbdce93415ef288ca36b3106}
+
+
+Handles an event record (virtual). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Event record to be handled \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_event_handler_a0a84c727f41c358350a2f3522ffba03b}{Model\-::\-Event\-Handler}.
+
+\hypertarget{class_my_tunlet_a1a43b296664b690282faa724f8e0e6e4}{\index{My\-Tunlet@{My\-Tunlet}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!MyTunlet@{My\-Tunlet}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Tunlet\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Application} \&}]{app}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_my_tunlet_a1a43b296664b690282faa724f8e0e6e4}
+
+
+Initializes the tunlet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & App associated to the tunlet \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tunlet_aeb84d0844192764dc9aef3cb905c4e7e}{Tunlet}.
+
+\hypertarget{class_my_tunlet_aba791586506c8aace6668e0d9c78a2ed}{\index{My\-Tunlet@{My\-Tunlet}!Task\-Started@{Task\-Started}}
+\index{Task\-Started@{Task\-Started}!MyTunlet@{My\-Tunlet}}
+\subsubsection[{Task\-Started}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Tunlet\-::\-Task\-Started (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_my_tunlet_aba791586506c8aace6668e0d9c78a2ed}
+
+
+Called when a new task is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Started task object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a357c8d730fd4e95582f99046d3474dae}{Model\-::\-Task\-Handler}.
+
+\hypertarget{class_my_tunlet_a1dbfd5d056e172441e58e182ab38bf1b}{\index{My\-Tunlet@{My\-Tunlet}!Task\-Terminated@{Task\-Terminated}}
+\index{Task\-Terminated@{Task\-Terminated}!MyTunlet@{My\-Tunlet}}
+\subsubsection[{Task\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Tunlet\-::\-Task\-Terminated (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\-::\-Task} \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_my_tunlet_a1dbfd5d056e172441e58e182ab38bf1b}
+
+
+Called when a task is terminated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Terminated task object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_model_1_1_task_handler_a7c19d0ad21f0cd431ee31f022a7455b7}{Model\-::\-Task\-Handler}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Analyzer/My\-Tunlet.\-h\item 
+Analyzer/My\-Tunlet.\-cpp\end{DoxyCompactItemize}
