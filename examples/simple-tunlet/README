@@ -1,0 +1,32 @@
+Compilation of the program:
+
+$ cd src/
+$ make
+
+-----------------------------------------------------------------------
+                                - Files -
+-----------------------------------------------------------------------
+
+The following are the main initialization files that a tunlet needs 
+and the source files of this particular example. For more information
+on them, please see the User's Guide under docs/ in the root directory
+of MATE:
+
+                           Initialization files
+-----------------------------------------------------------------------
+
+- Tunlet.ini:		This is where the events are defined and 
+					will be added as instrumentation to the program. 
+- AC.ini:			This is the AC's configuration file - Needs to be
+                    configured to point to your MATE's AC and DMLib.
+- Analyzer.ini:		This is the Analyzer's configuration file.
+- DMLib.ini: 		This is the DMLib's configuration file.
+
+                              Source files    
+-----------------------------------------------------------------------
+
+- Ctrl.cpp:			The class Controller is responsible for calling 
+					the instrumentation functions from our tunlet.
+- MyTunlet.cpp:		Source file of the tunlet.
+- MyTunlet.h:		Header file of the tunlet.
+- my-app.c:			Application to monitor.
