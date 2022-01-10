@@ -51,6 +51,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <string>
+#include <omp.h>
 
 extern "C"
 {
@@ -78,7 +79,10 @@ extern "C"
 				const char *analyzerHost,
 				int analyzerPort,  const char *configFile);
 
-
+		void GetNumThreads();
+		
+		void DMLib_SetNumThreads(int NewNumberThreads);
+		
 		void DMLib_ECreate(const char* func_name);
 
 		void DMLib_PAPIAdd(char* EventName, const char* func_name);

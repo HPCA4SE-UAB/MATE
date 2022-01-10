@@ -135,61 +135,6 @@ void Controller::Run ()
 {
 	int level = 0;
 	TaskManager taskMngr (_cfg);
-
-	/*
-	int retval;
-	retval = PAPI_library_init( PAPI_VER_CURRENT );
-	printf("%d\n", PAPI_VER_CURRENT);
-	printf("%d\n", retval);
-	if (retval != PAPI_VER_CURRENT) {
-		if(retval == PAPI_EINVAL)
-			printf("PAPI_EINVAL\n");
-		if(retval == PAPI_ENOMEM)
-			printf("PAPI_ENOMEM\n");
-		if(retval == PAPI_ESBSTR)
-			printf("PAPI_ESBSTR\n");
-		if(retval == PAPI_ESYS)
-			printf("PAPI_ESYS\n");
-		exit(0);
-	}
-
-
-	if(_cfg.Contains("AC","PAPIEvents"))
-	{
-		int count_PAPI_events = _cfg.GetIntValue("AC","PAPIEvents");
-		int PAPI_failed = 0;
-
-		PAPI_event_info_t info;
-		int event_code;
-		int i;
-		for(i=0; i<count_PAPI_events; i++)
-		{
-			stringstream eventP;
-			eventP << "PAPI";
-			eventP << i;
-			string name = _cfg.GetStringValue("AC",eventP.str());	
-			if ( PAPI_event_name_to_code( (char *)name.c_str(), &event_code ) == PAPI_OK ) 
-			{
-				if ( PAPI_get_event_info( event_code, &info ) == PAPI_OK )
-					if(info.count==0)
-					{
-						printf( "An event by the name '%s' is not available.\n\n", name.c_str() );			
-						PAPI_failed++;
-					}
-			} 
-			else 
-			{
-				printf( "Sorry, an event by the name '%s' could not be found.\n", name.c_str() );
-				PAPI_failed++;
-			}   
-		}
-		
-		int failed_max;
-		if(failed_max > 0)
-			return;
-	}
-
-	*/
 	
 	int dmLibDebugLevel = _cfg.GetIntValue ("TraceLib", "DebugLevel", -1);
 	int dmLibStdErr = _cfg.GetIntValue ("TraceLib", "StdErr", 0);

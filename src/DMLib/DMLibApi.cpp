@@ -62,6 +62,8 @@
 #include <map>
 #include <iterator>
 #include <vector>
+#include <omp.h>
+#include <errno.h>
 
 using namespace DMLib;
 
@@ -81,7 +83,10 @@ static char						_taskName [MAXPATHLEN+1];
 string 		 					_configFile;
 Config 							_cfg;
 
-static std::map<std::string, std::pair<int,int> > map_EventSets;
+static std::string Func_EventSet;
+static int eventSetId = PAPI_NULL;
+static int nMetrics = 0;
+PAPI_option_t opt_EventSets;
 
 static long long int			_eventValues[20];
 //static int EventSet[10]={PAPI_NULL};
@@ -202,12 +207,6 @@ void signalWait()
 		printf("error\n");
 	Syslog::Debug ( "SIGNAL RECEIVED pid:%d...\n", getpid());
 	sem_unlink(ss.str().c_str());
-	/*printf("[JORDI] Check EventSetMap:\n");
-	for(std::map<std::string, std::pair<int, int> > ::const_iterator it = map_EventSets.begin(); 
-		it != map_EventSets.end(); ++it)
-    {
-        std::cout << "[" << it->first << "] " << it->second.first << " " << it->second.second << std::endl;
-    }*/
 }
 
 // --------------------------- API --------------------------- 
@@ -251,40 +250,66 @@ bool DMLib::DMLib_Init (const char *taskName, const char *analyzerHost, int anal
 	return true;
 }
 
+void DMLib::GetNumThreads()
+{
+	#pragma omp parallel
+	{
+		#pragma omp master
+		{
+			printf("DMLIB Threads: %d\n", omp_get_num_threads());
+			Syslog::Info ("DMLIB Threads: %d", omp_get_num_threads());
+			#ifdef _OPENMP
+			printf("OpenMP detected\n");
+			#endif
+		}
+	}
+}
+
+void DMLib::DMLib_SetNumThreads(int NewNumberThreads)
+{
+	omp_set_num_threads(NewNumberThreads);
+	#pragma omp parallel
+	{
+		#pragma omp master
+		{
+			printf("DMLIB Threads: %d requested: %d\n", omp_get_num_threads(), NewNumberThreads);
+			Syslog::Info ("DMLIB Threads: %d requested: %d", omp_get_num_threads(), NewNumberThreads);
+		}
+	}
+}
+
 //EventSet al inicio debe ser PAPI_NULL, después tener el valor asignado al finalizar la función
 void DMLib::DMLib_ECreate(const char* func_name)
 {
 	Syslog::Debug ( "[API] DMLib_PAPICreate: %s",  func_name );
 	
 	
-	
-	std::map<std::string, std::pair<int, int> >::iterator find_eventset = map_EventSets.find(func_name);
-	if(find_eventset == map_EventSets.end())
+	if(eventSetId == PAPI_NULL)
 	{
 		int retval;
-		int eventSetId = PAPI_NULL;
 		// Create an EventSet 
 		if ((retval=PAPI_create_eventset(&eventSetId)) != PAPI_OK)
+		{
 			Syslog::Debug ( "[API] DMLib_PAPICreate, PAPI error: %d", retval );
+		}
 		else
 		{
 			Syslog::Debug ( "[API] DMLib_PAPICreate EventSetId: %d created", eventSetId );
 			//Create in map
-			map_EventSets[func_name] = std::make_pair(eventSetId, 0);
+			Func_EventSet = func_name;
 			if ( ( retval = PAPI_assign_eventset_component( eventSetId, 0 ) ) != PAPI_OK )
 				Syslog::Debug ( "[API] DMLib_PAPICreate, PAPI error: %d", retval );
-
-			PAPI_option_t opt;
-			memset(&opt,0x0,sizeof(PAPI_option_t));
-			opt.inherit.eventset = eventSetId;
-			opt.inherit.inherit = PAPI_INHERIT_ALL;
-			if (PAPI_set_opt(PAPI_INHERIT, &opt) != PAPI_OK)
+			memset(&opt_EventSets,0x0,sizeof(PAPI_option_t));
+			opt_EventSets.inherit.eventset = eventSetId;
+			opt_EventSets.inherit.inherit = PAPI_INHERIT_ALL;
+			if (PAPI_set_opt(PAPI_INHERIT, &opt_EventSets) != PAPI_OK)
 				Syslog::Debug ( "[API] DMLib_PAPICreate, PAPI error: %d", retval );
+			
 		}
 	}
 	else
 	{
-		Syslog::Debug ( "ERROR: FUNCTION %s was created before!!!!!!!!!\n", func_name);
+		Syslog::Debug ( "Eventset %d was created before in %s\n", eventSetId, Func_EventSet.c_str());
 	}
 	
 	//printf("[JORDI]DMLib_ECreate END %d %d!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n", n_EventSet, EventSet[n_EventSet]);
@@ -294,17 +319,13 @@ void DMLib::DMLib_PAPIAdd(char* EventName, const char* func_name)
 {
 	int retval;
 	PAPI_event_info_t info;
-	Syslog::Debug ("[API] DMLib_PAPIAdd EventName: %s to %s \n", EventName, func_name );
+	Syslog::Debug ("[API] DMLib_PAPIAdd EventName: %s in %s  to %d\n", EventName, func_name, eventSetId );
 
-
-	//std::cout << "[JORDI] DMLib_PAPIAdd EventName: " << EventName << " in " << func_name << std::endl;
-	std::map<std::string, std::pair<int, int> >::iterator find_eventset = map_EventSets.find(func_name);
-	if(find_eventset == map_EventSets.end())
+	if(Func_EventSet.compare(func_name) != 0)
 	{
-		Syslog::Debug ( "ERROR: FUNCTION %s NOT FOUND IN MAP!!!!!!!!!\n", func_name);
+		Syslog::Debug ( "Ignored, FUNCTION %s used to initialize!\n", Func_EventSet.c_str());
+		return;
 	}
-	int eventSetId= find_eventset->second.first;
-	// find_eventset->second.second;
 	if(eventSetId != PAPI_NULL)
 	{
 		int event_code;
@@ -315,23 +336,21 @@ void DMLib::DMLib_PAPIAdd(char* EventName, const char* func_name)
 				Syslog::Debug ("[API] DMLib_PAPIAdd failed, event not available");
 				return;
 			}
-      else
-      {
-     	  if ((retval=PAPI_add_event(eventSetId, event_code)) != PAPI_OK)
-    		{
-    			Syslog::Debug ( "[API] DMLib_PAPIAdd failed, PAPI error: %d", retval );
-    		}
-    		else
-    		{
-    			Syslog::Debug ( "[API] DMLib_PAPIAdd success!");
-    			find_eventset->second.second ++;
-    		}
-      }
+			else
+			{
+				if ((retval=PAPI_add_event(eventSetId, event_code)) != PAPI_OK)
+				{
+					Syslog::Debug ( "[API] DMLib_PAPIAdd failed, PAPI error: %d", retval );
+				}
+				else
+				{
+					Syslog::Debug ( "[API] DMLib_PAPIAdd success!");
+					nMetrics ++;
+				}
+			}
 		} 
 		else 
-		{
 			Syslog::Debug ( "[API] DMLib_PAPIAdd failed, event %s does not exist", EventName );
-		}   
 	}
 	else
 	{
@@ -341,56 +360,44 @@ void DMLib::DMLib_PAPIAdd(char* EventName, const char* func_name)
 
 void DMLib::DMLib_PAPI_Start(const char *func_name)
 {
-	Syslog::Debug ( "DMLib_PAPI_Start %s\n", func_name);
+	Syslog::Debug ( "DMLib_PAPI_Start %d in function %s", eventSetId, func_name);
 	int retval;
-	std::map<std::string, std::pair<int, int> >::iterator find_eventset = map_EventSets.find(func_name);
-	if(find_eventset == map_EventSets.end())
-		Syslog::Debug ( "ERROR: FUNCTION NOT FOUND IN MAP!!!!!!!!!\n");
-	int eventSetId = find_eventset->second.first;
 	/* Start counting */
 	if ((retval=PAPI_start(eventSetId)) != PAPI_OK)
+	{
 		Syslog::Debug ( "[API] DMLib_PAPI_Start, PAPI error: %d", retval );
+		Syslog::Debug ( "[API] DMLib_PAPI_Start, errno: %d", errno );
+	}
 }
 
 void DMLib::DMLib_PAPI_Stop(const char *func_name)
 {
-  Syslog::Debug ( "DMLib_PAPI_Stop %s\n", func_name);
-	std::map<std::string, std::pair<int, int> >::iterator find_eventset = map_EventSets.find(func_name);
-	if(find_eventset == map_EventSets.end())
-		Syslog::Debug ( "ERROR: FUNCTION NOT FOUND IN MAP!!!!!!!!!\n");
-	int eventSetId = find_eventset->second.first;
-	int nMetrics = find_eventset->second.second;
+	
+    Syslog::Debug ( "DMLib_PAPI_Stop %d in function %s", eventSetId, func_name);
+    //GetNumThreads();
 	int retval;
 	/* Stop events and read*/
 	if ((retval=PAPI_stop(eventSetId, _eventValues)) != PAPI_OK)
 	{
-		Syslog::Debug ( "[API] DMLib_PAPI_Add_Event failed, PAPI error: %d", retval );
-		return;
+		Syslog::Debug ( "[API] DMLib_PAPI_Stop, PAPI error: %d", retval );
+		Syslog::Debug ( "[API] DMLib_PAPI_Start, errno: %d", errno );
 	}
 	int i;
-	//std::cout << "[JORDI]Metrics: ";
 	for (i=0; i<nMetrics; i++)
 	{
-		//std::cout << _eventValues[i] << " "; 
 		double eventValue;
 		memcpy(&eventValue, &_eventValues[i], sizeof(eventValue));
-		//std::cout << "("<<  eventValue << ") "; 
+		if(retval != PAPI_OK)
+			eventValue = 0;
 		DMLib_AddDoubleParam(eventValue);
-		//int eventValue = (int)_eventValues[i];
-		//DMLib_AddIntParam(eventValue);
 	}
-	//std::cout << std::endl; 
-
+	
 }
 
 void DMLib::DMLib_PAPI_Destroy_EventSet(const char *func_name)
 {
-  Syslog::Debug ( "DMLib_PAPI_Destroy_EventSet %s\n", func_name);
+	Syslog::Debug ( "DMLib_PAPI_Destroy_EventSet %s\n", func_name);
 	int retval;
-	std::map<std::string, std::pair<int, int> >::iterator find_eventset = map_EventSets.find(func_name);
-	if(find_eventset == map_EventSets.end())
-		Syslog::Debug ( "ERROR: FUNCTION NOT FOUND IN MAP!!!!!!!!!\n");
-	int eventSetId = find_eventset->second.first;
     if ((retval=PAPI_cleanup_eventset(eventSetId)) != PAPI_OK)
   	 	Syslog::Debug ( "[API] DMLib_PAPI_Destroy_EventSet failed, PAPI error: %d", retval );
   
