@@ -47,6 +47,12 @@ Note: By default, if `--prefix` is not specified, MATE will be installed in `/li
 * In a new terminal and inside the same download directory of XFire, run the AC:
 
     `$ mpirun -np 4 AC xfire demo`
+
+## Tunlet Selection
+To select a Tunlet, modify the file `Ctrl.cpp` under `src/Analyzer`.
+
+In this file look at the includes, where you should check that no other Tunlets are included 
+and only include the one you want.
     
 ## References ##
 * Dynamic instrumentation library. http://www.paradyn.org/html/dyninst7.0-software.html
