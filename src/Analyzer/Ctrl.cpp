@@ -40,7 +40,7 @@
 #include "Syslog.h"
 //#include "FactoringTunlet.h"
 //#include "AdjustingNWTunlet.h"
-#include "FactoringTunlet_nw.h"
+#include "PAPITunlet.h"
 #include <unistd.h>
 
 Controller::Controller(CommandLine & cmdLine, std::string const & cfgFile)

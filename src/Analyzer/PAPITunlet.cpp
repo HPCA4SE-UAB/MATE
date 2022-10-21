@@ -6,7 +6,7 @@
 //
 //----------------------------------------------------------------------
 
-#include "PAPITunlet_nw.h"
+#include "PAPITunlet.h"
 #include "FactoringStats_nw.h" 
 #include "Syslog.h"
 #include "Utils.h"
@@ -30,7 +30,11 @@ curState workersCurState[128];
 
 
 
-
+//Map with the names of each region to measure
+//an entry point and exit point is necessary for
+//each region,  the exit point is identified with
+//the _e at the end of the name. enum FactoringEvent
+//in PAPITunlet.h should also be modified.
 std::map<std::string, FactoringEvent> FactoringEventMap = boost::assign::map_list_of("Copy",idCopy)("Copy_E",idCopy_End)\
 	("Scale",idScale)("Scale_E",idScale_End)("Add",idAdd)("Add_E",idAdd_End)("Triad",idTriad)("Triad_E",idTriad_End)\
 	("Reduction",idReduction)("Reduction_E",idReduction_End)("2PStencil",id2PStencil)("2PStencil_E",id2PStencil_End)\
@@ -39,7 +43,7 @@ std::map<std::string, FactoringEvent> FactoringEventMap = boost::assign::map_lis
 	("Stride4_E",idStride4_End)("Stride16",idStride16)("Stride16_E",idStride16_End)("Stride64",idStride64)("Stride64_E",idStride64_End)\
 	("Rows",idRows)("Rows_E",idRows_End)("Test",idTest)("Test_E",idTest_End);
 
-int threads_func[40] = {0};
+
 long_t timestamps[40] = {0};
 long_t timestamp_total[40] = {0};
 	
@@ -64,7 +68,7 @@ FactoringTunlet::~FactoringTunlet() {
 }
 
 //----------------------------------------------------------------------------------------------------
-// new
+// Test function to check if the event is correct
 //----------------------------------------------------------------------------------------------------
 void FactoringTunlet::TestEvent (Event e)
 {
@@ -95,11 +99,17 @@ void FactoringTunlet::TestEvent (Event e)
 	Syslog::Info("Test event: End");
 }
 
-
+//----------------------------------------------------------------------------------------------------
+// Create Events for the different regions
+// The tunlet.ini file is read and for each region and entry/exit 
+// point, the appropriate action is taken. In this case, the PAPI events
+// are read and initialized in the application. The same events are used
+// for all regions.
+//----------------------------------------------------------------------------------------------------
 void FactoringTunlet::CreateEvent(Task & t)
 {
 	Syslog::Info("[FT---]CreateEvent(Task & t)");
-	// The functions into tunlet.ini file is read
+	// The functions into tunlet.ini file are read
 	std::string nameFunc,base = "function",func,option;
 	bool existsFunction =1, existsAtribute;
 	int iter=1,iterA;
@@ -111,6 +121,7 @@ void FactoringTunlet::CreateEvent(Task & t)
 	InstrPlace entry;
 	FactoringEvent idEvent;
 	int NumberEvents = 2;
+	// For each region
 	while (existsFunction)
 	{
 		Syslog::Info("[FT---]CreateEvent---while");
@@ -122,6 +133,7 @@ void FactoringTunlet::CreateEvent(Task & t)
 			func = _cfg.GetStringValue("Functions",nameFunc);
 			iterA =1;
 			existsAtribute =1;
+			//for each region attribute
 			while (existsAtribute)
 			{
 				numA << iterA;
@@ -141,6 +153,7 @@ void FactoringTunlet::CreateEvent(Task & t)
 			}
 			iterA =1;
 			existsAtribute =1;
+			//For each PAPI event
 			while (existsAtribute)
 			{
 				
@@ -201,6 +214,8 @@ void FactoringTunlet::CreateEvent(Task & t)
 	TestEvent(dummyEvent);
 	t.AddEvent(dummyEvent);
 	Syslog::Debug("[FT---]MonitorSignal sent, Number of PAPI events to measure %d", listPAPI.size());
+	//Create the header for the metrics file, one field for each metrics
+	// plus time and region´s label
 	for (std::vector<std::string>::iterator it = listPAPI.begin() ; it != listPAPI.end(); ++it)
 		fs << *it << ";";
 	fs << "time;label;" << std::endl;
@@ -272,32 +287,17 @@ std::string FactoringTunlet::GetFuncName(int event_id)
 void FactoringTunlet::HandleEvent (EventRecord const & r) {
 	Syslog::Info("[FT Event---] HandleEvent START");
 	switch (r.GetEventId()%2) {
-		case 0:
+		// For even events, the counters are obtained with a timestamp to measure
+		// execution time of the monitored region
+		case 0: // End of event/function
 		{
 			Syslog::Info("[FT Event---0] %s",GetFuncName(r.GetEventId()).c_str());
-			/*double PAPI_value_d = r.GetAttributeValue(0).GetDoubleValue();
-			long long int  PAPI_value_ll;
-			memcpy(&PAPI_value_ll, &PAPI_value_d, sizeof(PAPI_value_d));
-			Syslog::Info ("[FT Event] Papi Metric1 %lld", PAPI_value_ll );
-			fs << PAPI_value_ll;
-			
-			PAPI_value_d =  r.GetAttributeValue(1).GetDoubleValue();
-			memcpy(&PAPI_value_ll, &PAPI_value_d, sizeof(PAPI_value_d));
-			Syslog::Info ("[FT Event] Papi Metric2 %lld", PAPI_value_ll );
-			fs << ";" << PAPI_value_ll;
-			totalprefetch[r.GetEventId()] += PAPI_value_ll;
-			Syslog::Info ("[FT Event] Papi Metric2 total %lld", totalprefetch[r.GetEventId()] );									  																	   
-			PAPI_value_d =  r.GetAttributeValue(2).GetDoubleValue();
-			memcpy(&PAPI_value_ll, &PAPI_value_d, sizeof(PAPI_value_d));
-			fs << ";" << PAPI_value_ll;
-			totalLLC[r.GetEventId()] += PAPI_value_ll;
-			Syslog::Info ("[FT Event] Papi Metric3 %lld", PAPI_value_ll );
-			Syslog::Info ("[FT Event] Papi Metric3 total %lld", totalLLC[r.GetEventId()] );
-			*/
 			int iter;
 			int num_iters = listPAPI.size();
+			//For each PAPI event
 			for(iter=0; iter<num_iters; iter++)
 			{
+				// read the counter value and write it to the output file (data.csv)
 				double PAPI_value_d = r.GetAttributeValue(iter).GetDoubleValue();
 				long long int  PAPI_value_ll;
 				memcpy(&PAPI_value_ll, &PAPI_value_d, sizeof(PAPI_value_d));
@@ -306,13 +306,13 @@ void FactoringTunlet::HandleEvent (EventRecord const & r) {
 			}
 			
 			
-			
-			
 			if (_lastIterIdx != -1) {
 				IterData * data = FindIterData(_lastIterIdx);
 				data->OnIterEnd (r.GetTimestamp());
 			} else
 				Syslog::Info ("[FT Event] end iter ignored");
+			//Compare the starting timestamp to the one obtained at the end
+			// to obtain execution time and write it to the output file
 			long_t calc_time_iter= r.GetTimestamp()- timestamps[r.GetEventId()-1];
 			fs << calc_time_iter;
 			fs << ";" << GetFuncName(r.GetEventId()).c_str();
@@ -329,7 +329,8 @@ void FactoringTunlet::HandleEvent (EventRecord const & r) {
    
 			break;
 		}
-		case 1:
+		// For odd events, the starting time is obtained
+		case 1: // Start of event/function
 		{
 			timestamps[r.GetEventId()] = r.GetTimestamp();
 			Syslog::Info("[FT Event---1] %s",GetFuncName(r.GetEventId()).c_str()); 
